@@ -13,15 +13,15 @@ export function HeroVisual({ image }: HeroVisualProps) {
       <div className="absolute -right-6 top-8 h-32 w-32 rounded-full bg-accent/10 blur-2xl" />
       <div className="absolute -bottom-4 -left-4 h-24 w-24 rounded-full bg-indigo-200/40 blur-xl" />
 
-      <div className="relative overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-xl shadow-slate-900/8">
+      <div className="relative overflow-hidden rounded-2xl border border-gray-200 bg-slate-50 shadow-xl shadow-slate-900/8">
         {image ? (
-          <div className="relative aspect-[4/3]">
+          <div className="relative aspect-[4/3] bg-slate-100">
             <CmsImage
               src={image}
-              alt=""
+              alt="Industrial laundry equipment"
               fill
               priority
-              className="object-contain p-6"
+              className="object-cover"
               sizes="(max-width: 1024px) 100vw, 50vw"
             />
           </div>

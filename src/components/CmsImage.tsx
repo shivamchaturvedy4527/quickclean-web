@@ -1,4 +1,7 @@
+"use client";
+
 import Image from "next/image";
+import { useState } from "react";
 import { cn } from "@/lib/utils";
 
 interface CmsImageProps {
@@ -33,44 +36,25 @@ export function CmsImage({
   priority,
   sizes,
 }: CmsImageProps) {
+  const [failed, setFailed] = useState(false);
+
   if (!src) {
     return (
       <div
-        className={cn(
-          "bg-gradient-to-br from-slate-200 to-slate-300",
-          className
-        )}
+        className={cn("bg-gradient-to-br from-slate-200 to-slate-300", className)}
         aria-hidden
       />
     );
   }
 
-  if (isExternal(src)) {
-    if (fill) {
-      return (
-        <Image
-          src={src}
-          alt={alt}
-          fill
-          className={cn(objectFitClass(className), className)}
-          priority={priority}
-          sizes={sizes ?? "100vw"}
-          unoptimized
-        />
-      );
-    }
-    return (
-      <Image
-        src={src}
-        alt={alt}
-        width={width ?? 800}
-        height={height ?? 600}
-        className={cn(objectFitClass(className), className)}
-        priority={priority}
-        unoptimized
-      />
-    );
-  }
+  const external = isExternal(src);
+  const useUnoptimized = !external || failed;
+
+  const handleError = () => {
+    if (!failed) setFailed(true);
+  };
+
+  const imageClass = cn(objectFitClass(className), className);
 
   if (fill) {
     return (
@@ -78,9 +62,11 @@ export function CmsImage({
         src={src}
         alt={alt}
         fill
-        className={cn(objectFitClass(className), className)}
+        className={imageClass}
         priority={priority}
         sizes={sizes ?? "100vw"}
+        unoptimized={useUnoptimized}
+        onError={handleError}
       />
     );
   }
@@ -91,8 +77,10 @@ export function CmsImage({
       alt={alt}
       width={width ?? 800}
       height={height ?? 600}
-      className={cn(objectFitClass(className), className)}
+      className={imageClass}
       priority={priority}
+      unoptimized={useUnoptimized}
+      onError={handleError}
     />
   );
 }
