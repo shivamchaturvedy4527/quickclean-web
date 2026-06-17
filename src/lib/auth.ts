@@ -2,7 +2,7 @@ import { SignJWT, jwtVerify } from "jose";
 import { cookies } from "next/headers";
 
 const COOKIE_NAME = "admin_session";
-const DEFAULT_PASSWORD = "ProLaundry@2026";
+const DEFAULT_PASSWORD = "QuickClean@2026";
 
 function getSecret(): Uint8Array {
   const secret = process.env.ADMIN_PASSWORD ?? DEFAULT_PASSWORD;

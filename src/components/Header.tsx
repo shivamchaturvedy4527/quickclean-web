@@ -5,6 +5,7 @@ import { useState } from "react";
 import { Menu, X, ChevronDown, Phone } from "lucide-react";
 import type { NavItem, SiteSettings } from "@/types/cms";
 import { CurrencySwitcher } from "./CurrencySwitcher";
+import { CmsImage } from "./CmsImage";
 
 interface HeaderProps {
   navigation: NavItem[];
@@ -18,19 +19,29 @@ export function Header({ navigation, settings }: HeaderProps) {
   return (
     <header className="sticky top-0 z-50 border-b border-slate-200/80 bg-white/95 backdrop-blur-md">
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-6 lg:px-8">
-        <Link href="/" className="flex items-center gap-2.5">
-          <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-[#0c2340] text-sm font-bold text-white">
-            PL
-          </div>
+        <Link href="/" className="flex items-center gap-3">
+          {settings.logo ? (
+            <CmsImage
+              src={settings.logo}
+              alt={settings.siteName}
+              width={40}
+              height={40}
+              className="h-10 w-10 rounded-lg object-cover"
+            />
+          ) : (
+            <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-[#071525] text-sm font-bold text-white">
+              QC
+            </div>
+          )}
           <div className="hidden sm:block">
-            <div className="text-base font-semibold tracking-tight text-[#0c2340]">
+            <div className="text-base font-bold tracking-tight text-[#071525]">
               {settings.siteName}
             </div>
             <div className="text-xs text-slate-500">{settings.tagline}</div>
           </div>
         </Link>
 
-        <nav className="hidden items-center gap-1 lg:flex">
+        <nav className="hidden items-center gap-0.5 lg:flex">
           {navigation.map((item) =>
             item.children ? (
               <div
@@ -39,17 +50,17 @@ export function Header({ navigation, settings }: HeaderProps) {
                 onMouseEnter={() => setOpenDropdown(item.label)}
                 onMouseLeave={() => setOpenDropdown(null)}
               >
-                <button className="flex items-center gap-1 rounded-md px-3 py-2 text-sm font-medium text-slate-700 hover:bg-slate-50 hover:text-[#0c2340]">
+                <button className="flex items-center gap-1 rounded-lg px-3 py-2 text-sm font-medium text-slate-700 transition-colors hover:bg-slate-50 hover:text-[#071525]">
                   {item.label}
                   <ChevronDown className="h-4 w-4" />
                 </button>
                 {openDropdown === item.label && (
-                  <div className="absolute left-0 top-full min-w-[220px] rounded-lg border border-slate-200 bg-white py-2 shadow-xl">
+                  <div className="absolute left-0 top-full min-w-[240px] rounded-xl border border-slate-200 bg-white py-2 shadow-2xl shadow-slate-200/50">
                     {item.children.map((child) => (
                       <Link
                         key={child.href}
                         href={child.href}
-                        className="block px-4 py-2.5 text-sm text-slate-700 hover:bg-slate-50 hover:text-teal-700"
+                        className="block px-4 py-2.5 text-sm text-slate-700 transition-colors hover:bg-teal-50 hover:text-teal-800"
                       >
                         {child.label}
                       </Link>
@@ -61,7 +72,7 @@ export function Header({ navigation, settings }: HeaderProps) {
               <Link
                 key={item.href}
                 href={item.href}
-                className="rounded-md px-3 py-2 text-sm font-medium text-slate-700 hover:bg-slate-50 hover:text-[#0c2340]"
+                className="rounded-lg px-3 py-2 text-sm font-medium text-slate-700 transition-colors hover:bg-slate-50 hover:text-[#071525]"
               >
                 {item.label}
               </Link>
@@ -79,14 +90,14 @@ export function Header({ navigation, settings }: HeaderProps) {
             <span className="hidden xl:inline">{settings.contactPhone}</span>
           </a>
           <Link
-            href="/contact"
-            className="hidden rounded-md bg-teal-700 px-4 py-2 text-sm font-semibold text-white hover:bg-teal-800 sm:inline-block"
+            href={settings.headerCtaLink}
+            className="hidden rounded-lg bg-[#071525] px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-[#0c2340] sm:inline-block"
           >
-            Get a Quote
+            {settings.headerCtaText}
           </Link>
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
-            className="rounded-md p-2 text-slate-700 hover:bg-slate-100 lg:hidden"
+            className="rounded-lg p-2 text-slate-700 hover:bg-slate-100 lg:hidden"
             aria-label="Toggle menu"
           >
             {mobileOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -108,7 +119,7 @@ export function Header({ navigation, settings }: HeaderProps) {
                       key={child.href}
                       href={child.href}
                       onClick={() => setMobileOpen(false)}
-                      className="block rounded-md px-2 py-2.5 text-sm text-slate-700 hover:bg-slate-50"
+                      className="block rounded-lg px-2 py-2.5 text-sm text-slate-700 hover:bg-slate-50"
                     >
                       {child.label}
                     </Link>
@@ -118,7 +129,7 @@ export function Header({ navigation, settings }: HeaderProps) {
                 <Link
                   href={item.href}
                   onClick={() => setMobileOpen(false)}
-                  className="block rounded-md px-2 py-2.5 text-sm font-medium text-slate-700 hover:bg-slate-50"
+                  className="block rounded-lg px-2 py-2.5 text-sm font-medium text-slate-700 hover:bg-slate-50"
                 >
                   {item.label}
                 </Link>
@@ -126,11 +137,11 @@ export function Header({ navigation, settings }: HeaderProps) {
             </div>
           ))}
           <Link
-            href="/contact"
+            href={settings.headerCtaLink}
             onClick={() => setMobileOpen(false)}
-            className="mt-3 block rounded-md bg-teal-700 px-4 py-2.5 text-center text-sm font-semibold text-white"
+            className="mt-3 block rounded-lg bg-[#071525] px-4 py-2.5 text-center text-sm font-semibold text-white"
           >
-            Get a Quote
+            {settings.headerCtaText}
           </Link>
         </div>
       )}

@@ -1,16 +1,25 @@
-# ProLaundry Solutions — Commercial Laundry Website
+# QuickClean — Commercial Laundry Website Clone
 
-A modern B2B commercial laundry machines and solutions website inspired by QuickClean.co.in structure. Built with **Next.js 16**, **TypeScript**, and **Tailwind CSS**.
+A **feature-complete clone** of [quickclean.co.in](https://quickclean.co.in) with a premium international B2B redesign. Built with **Next.js 16**, **TypeScript**, **Tailwind CSS 4**, and **Framer Motion**.
 
-## Features
+**Live:** https://quickclean-clone.vercel.app  
+**GitHub:** https://github.com/shivamchaturvedy4527/quickclean-web
 
-- **Home** — Hero, animated stats, solutions grid, sustainability metrics, founder message, brand logos, testimonials, blog
-- **Company** — About, Team, Sustainability, Investors, Careers
-- **Solutions** — Build Own & Operate, Turnkey, Linen Rental, Equipment on Lease (with multi-currency pricing)
-- **Contact** — Form with admin submission storage
-- **Admin CMS** — Full content management at `/admin`
-- **Geo + Currency** — Auto-detect visitor region; INR for India, USD/EUR/AED/GBP for international
-- **Integrations** — WhatsApp floating button, Tawk.to/Crisp live chat (configurable in admin)
+## Feature Parity
+
+| Area | Status |
+|------|--------|
+| Home (hero, stats, water comparison, solutions, founder, video, brands, sustainability, testimonials, blog, newsletter) | ✅ |
+| Company (About, Team, Sustainability, Investors, Careers, Financial Planning) | ✅ |
+| Solutions (4 detail pages + listing) | ✅ |
+| ReWeave 360 circular economy programme | ✅ |
+| Blog with categories + individual posts | ✅ |
+| Contact form → admin | ✅ |
+| Cookie consent banner | ✅ |
+| Legal (Privacy, Terms, Code of Conduct) | ✅ |
+| WhatsApp + live chat integrations | ✅ |
+| Geo + multi-currency (INR/USD/EUR/AED/GBP) | ✅ |
+| Full Admin CMS (ObjectEditor) | ✅ ~95% |
 
 ## Quick Start
 
@@ -26,7 +35,7 @@ Open [http://localhost:3000](http://localhost:3000)
 | Field | Value |
 |-------|-------|
 | URL | `/admin` |
-| Default Password | `ProLaundry@2026` |
+| Default Password | `QuickClean@2026` |
 
 Override with environment variable:
 
@@ -34,28 +43,28 @@ Override with environment variable:
 ADMIN_PASSWORD=your-secure-password
 ```
 
+## CMS Coverage
+
+All content is driven by `data/cms.json` and editable via `/admin` dashboard tabs:
+
+- Site Settings, Navigation, Home, Solutions, Brands
+- About (incl. timeline), Team, Testimonials, Blog + Categories
+- Sustainability, Investors, Careers (jobs CRUD), ReWeave 360
+- Financial Planning, Contact, Footer, Legal, Cookie Consent
+- WhatsApp/Chat integrations, Contact & Newsletter submissions
+
 ## Environment Variables
 
 | Variable | Description |
 |----------|-------------|
-| `ADMIN_PASSWORD` | Admin login password (default: `ProLaundry@2026`) |
+| `ADMIN_PASSWORD` | Admin login password (default: `QuickClean@2026`) |
 | `CONTACT_EMAIL_TO` | Optional email for contact form notifications |
 
 ## CMS Storage
 
 - **Local development**: Reads/writes `data/cms.json`
-- **Vercel production**: Writes to `/tmp` (persists per deployment instance; for permanent edits on Vercel, redeploy after local changes or use Hostinger)
-- **Hostinger Node.js**: Full read/write to `data/cms.json` — recommended for client CMS editing
-
-## Project Structure
-
-```
-data/cms.json          # All site content (editable via admin)
-src/app/               # Pages and API routes
-src/components/        # UI components
-src/lib/               # CMS store, auth, currency utilities
-src/types/cms.ts       # TypeScript types
-```
+- **Vercel production**: Writes to `/tmp` (per-instance; commit `cms.json` changes for persistence across deploys)
+- **Hostinger Node.js**: Full read/write — see [HOSTINGER_DEPLOY.md](./HOSTINGER_DEPLOY.md)
 
 ## Scripts
 
@@ -66,11 +75,13 @@ npm run start    # Production server
 npm run lint     # ESLint
 ```
 
-## Deployment
+## Differences from quickclean.co.in
 
-- **GitHub**: https://github.com/shivamchaturvedy4527/quickclean-web
-- **Vercel (live)**: https://quickclean-clone.vercel.app
-- **Hostinger**: See [HOSTINGER_DEPLOY.md](./HOSTINGER_DEPLOY.md)
+- **Branding text** rewritten (not plagiarized) while matching structure
+- **Premium UI redesign** — Plus Jakarta Sans + Instrument Serif, Framer Motion animations, dark navy palette
+- **Stock/placeholder images** via Unsplash (replace via admin with client photography)
+- **Video embed** uses placeholder YouTube URL (replace in admin Home tab)
+- **WordPress-specific plugins** (Elementor, etc.) not replicated — functionality equivalent in Next.js
 
 ## License
 

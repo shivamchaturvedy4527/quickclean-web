@@ -2,19 +2,19 @@
 
 import { useEffect, useRef, useState } from "react";
 
-interface CounterProps {
+interface AnimatedCounterProps {
   end: number;
   suffix?: string;
   duration?: number;
-  className?: string;
+  decimals?: number;
 }
 
 export function AnimatedCounter({
   end,
   suffix = "",
   duration = 2000,
-  className,
-}: CounterProps) {
+  decimals = 0,
+}: AnimatedCounterProps) {
   const [count, setCount] = useState(0);
   const ref = useRef<HTMLSpanElement>(null);
   const started = useRef(false);
@@ -27,11 +27,11 @@ export function AnimatedCounter({
       ([entry]) => {
         if (entry.isIntersecting && !started.current) {
           started.current = true;
-          const start = performance.now();
+          const startTime = performance.now();
           const animate = (now: number) => {
-            const progress = Math.min((now - start) / duration, 1);
+            const progress = Math.min((now - startTime) / duration, 1);
             const eased = 1 - Math.pow(1 - progress, 3);
-            setCount(Math.floor(eased * end));
+            setCount(eased * end);
             if (progress < 1) requestAnimationFrame(animate);
           };
           requestAnimationFrame(animate);
@@ -45,10 +45,12 @@ export function AnimatedCounter({
   }, [end, duration]);
 
   const formatted =
-    end >= 1000 ? count.toLocaleString("en-IN") : count.toString();
+    decimals > 0
+      ? count.toFixed(decimals)
+      : Math.floor(count).toLocaleString("en-IN");
 
   return (
-    <span ref={ref} className={className}>
+    <span ref={ref}>
       {formatted}
       {suffix}
     </span>
