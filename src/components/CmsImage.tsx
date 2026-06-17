@@ -16,6 +16,13 @@ function isExternal(src: string) {
   return src.startsWith("http://") || src.startsWith("https://");
 }
 
+function objectFitClass(className?: string) {
+  if (className && /\bobject-(contain|cover|fill|none|scale-down)\b/.test(className)) {
+    return "";
+  }
+  return "object-cover";
+}
+
 export function CmsImage({
   src,
   alt,
@@ -45,7 +52,7 @@ export function CmsImage({
           src={src}
           alt={alt}
           fill
-          className={cn("object-cover", className)}
+          className={cn(objectFitClass(className), className)}
           priority={priority}
           sizes={sizes ?? "100vw"}
           unoptimized
@@ -58,7 +65,7 @@ export function CmsImage({
         alt={alt}
         width={width ?? 800}
         height={height ?? 600}
-        className={cn("object-cover", className)}
+        className={cn(objectFitClass(className), className)}
         priority={priority}
         unoptimized
       />
@@ -71,7 +78,7 @@ export function CmsImage({
         src={src}
         alt={alt}
         fill
-        className={cn("object-cover", className)}
+        className={cn(objectFitClass(className), className)}
         priority={priority}
         sizes={sizes ?? "100vw"}
       />
@@ -84,7 +91,7 @@ export function CmsImage({
       alt={alt}
       width={width ?? 800}
       height={height ?? 600}
-      className={cn("object-cover", className)}
+      className={cn(objectFitClass(className), className)}
       priority={priority}
     />
   );

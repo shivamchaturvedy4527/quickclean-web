@@ -45,7 +45,7 @@ export default async function SustainabilityPage() {
                     </div>
                   )}
                   <div className="p-6">
-                    <h3 className="font-semibold text-[primary]">{item.title}</h3>
+                    <h3 className="font-semibold text-primary">{item.title}</h3>
                     <p className="mt-3 text-sm text-slate-600">{item.description}</p>
                   </div>
                 </div>

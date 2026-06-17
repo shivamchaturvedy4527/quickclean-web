@@ -88,7 +88,7 @@ export default async function BlogPage({
                             })}
                           </time>
                         </div>
-                        <h2 className="mt-2 font-semibold text-[primary] group-hover:text-accent-hover">
+                        <h2 className="mt-2 font-semibold text-primary group-hover:text-accent-hover">
                           {post.title}
                         </h2>
                         <p className="mt-2 line-clamp-2 text-sm text-slate-600">{post.excerpt}</p>

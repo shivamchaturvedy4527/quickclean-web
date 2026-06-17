@@ -21,7 +21,7 @@ export function HeroVisual({ image }: HeroVisualProps) {
               alt=""
               fill
               priority
-              className="object-contain p-8"
+              className="object-contain p-6"
               sizes="(max-width: 1024px) 100vw, 50vw"
             />
           </div>

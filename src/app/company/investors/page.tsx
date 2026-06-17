@@ -34,7 +34,7 @@ export default async function InvestorsPage() {
       {investors.partners.length > 0 && (
         <section className="bg-slate-50 py-16">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <h2 className="text-center text-2xl font-bold text-[primary]">Our Partners</h2>
+            <h2 className="text-center text-2xl font-bold text-primary">Our Partners</h2>
             <div className="mt-10 grid gap-6 sm:grid-cols-2">
               {investors.partners.map((partner, i) => (
                 <SectionReveal key={partner.id} delay={i * 0.1}>
@@ -43,7 +43,7 @@ export default async function InvestorsPage() {
                       <CmsImage src={partner.logo} alt={partner.name} fill className="object-contain p-2" sizes="128px" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-[primary]">{partner.name}</h3>
+                      <h3 className="font-semibold text-primary">{partner.name}</h3>
                       <p className="mt-1 text-sm text-slate-600">{partner.description}</p>
                     </div>
                   </div>

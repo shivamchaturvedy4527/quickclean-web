@@ -13,7 +13,9 @@ export function PageHero({ title, subtitle, image, breadcrumb }: PageHeroProps) 
     <section className="relative overflow-hidden gradient-primary py-20 text-white sm:py-24">
       {image && (
         <>
-          <CmsImage src={image} alt="" fill className="object-cover opacity-15" sizes="100vw" />
+          <div className="absolute inset-0">
+            <CmsImage src={image} alt="" fill className="object-cover opacity-15" sizes="100vw" />
+          </div>
           <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary/95 to-primary-light/90" />
         </>
       )}

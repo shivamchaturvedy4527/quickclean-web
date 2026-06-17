@@ -31,7 +31,7 @@ export default async function SolutionsPage() {
                   href={`/solutions/${solution.slug}`}
                   className="card card-lift group flex overflow-hidden p-0"
                 >
-                  <div className="relative hidden w-48 shrink-0 sm:block">
+                  <div className="relative hidden aspect-[4/3] w-48 shrink-0 overflow-hidden sm:block">
                     <CmsImage src={solution.image} alt={solution.title} fill sizes="192px" className="object-cover" />
                   </div>
                   <div className="flex flex-1 flex-col p-8">
