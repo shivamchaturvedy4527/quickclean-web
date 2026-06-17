@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
 import { cn } from "@/lib/utils";
 
 interface CmsImageProps {
@@ -34,10 +33,7 @@ export function CmsImage({
   width,
   height,
   priority,
-  sizes,
 }: CmsImageProps) {
-  const [failed, setFailed] = useState(false);
-
   if (!src) {
     return (
       <div
@@ -47,14 +43,33 @@ export function CmsImage({
     );
   }
 
-  const external = isExternal(src);
-  const useUnoptimized = !external || failed;
-
-  const handleError = () => {
-    if (!failed) setFailed(true);
-  };
-
   const imageClass = cn(objectFitClass(className), className);
+
+  if (!isExternal(src)) {
+    if (fill) {
+      return (
+        <img
+          src={src}
+          alt={alt}
+          className={cn("absolute inset-0 h-full w-full", imageClass)}
+          loading={priority ? "eager" : "lazy"}
+          decoding="async"
+        />
+      );
+    }
+
+    return (
+      <img
+        src={src}
+        alt={alt}
+        width={width ?? 800}
+        height={height ?? 600}
+        className={imageClass}
+        loading={priority ? "eager" : "lazy"}
+        decoding="async"
+      />
+    );
+  }
 
   if (fill) {
     return (
@@ -64,9 +79,7 @@ export function CmsImage({
         fill
         className={imageClass}
         priority={priority}
-        sizes={sizes ?? "100vw"}
-        unoptimized={useUnoptimized}
-        onError={handleError}
+        unoptimized
       />
     );
   }
@@ -79,8 +92,7 @@ export function CmsImage({
       height={height ?? 600}
       className={imageClass}
       priority={priority}
-      unoptimized={useUnoptimized}
-      onError={handleError}
+      unoptimized
     />
   );
 }
