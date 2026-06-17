@@ -17,10 +17,11 @@ const instrument = Instrument_Serif({
 
 export const metadata: Metadata = {
   title: {
-    default: "QuickClean",
-    template: "%s | QuickClean",
+    default: "Pcts Infrastructures",
+    template: "%s | Pcts Infrastructures",
   },
-  description: "Quick Clean Laundry Systems — Sustainable Laundry Solutions",
+  description:
+    "Pcts infrastructures Pvt Ltd — laundry & dry cleaning equipment, consultancy and service across India.",
   icons: { icon: "/images/favicon-32.png" },
 };
 
