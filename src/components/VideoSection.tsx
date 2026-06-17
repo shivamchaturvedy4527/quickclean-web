@@ -18,20 +18,20 @@ export function VideoSection({ title, videoUrl, thumbnail, sinceYear }: VideoSec
 
   return (
     <section className="relative overflow-hidden gradient-primary py-20 text-white sm:py-24">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(0,180,216,0.1)_0%,transparent_55%)]" />
+      <div className="absolute inset-0 bg-gradient-mesh opacity-50" />
       <Container className="relative">
         <SectionReveal>
           <div className="text-center">
             <p className="text-xs font-semibold uppercase tracking-wider text-accent-bright">
               {title}
             </p>
-            <h2 className="mt-4 text-5xl font-bold tracking-tight sm:text-6xl lg:text-7xl">
+            <h2 className="mt-4 text-5xl font-extrabold tracking-tight sm:text-6xl lg:text-7xl">
               {sinceYear}
             </h2>
           </div>
         </SectionReveal>
         <SectionReveal delay={0.15}>
-          <div className="relative mx-auto mt-14 aspect-video max-w-4xl overflow-hidden rounded-xl border border-white/10 shadow-2xl shadow-black/30 ring-1 ring-white/5">
+          <div className="relative mx-auto mt-14 aspect-video max-w-5xl overflow-hidden rounded-3xl border border-white/10 shadow-2xl shadow-black/40 ring-1 ring-white/5">
             {playing ? (
               <iframe
                 src={`${videoUrl}?autoplay=1`}

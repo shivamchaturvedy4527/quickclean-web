@@ -28,13 +28,13 @@ export default async function HomePage() {
             <p className="eyebrow-line mb-4 text-xs font-bold uppercase tracking-wider text-accent">
               {home.heroEyebrow || cms.settings.tagline}
             </p>
-            <h1 className="text-4xl font-bold leading-tight tracking-tight text-primary sm:text-5xl lg:text-6xl">
+            <h1 className="text-balance text-5xl font-extrabold leading-[1.1] tracking-tight text-primary sm:text-6xl lg:text-7xl">
               {home.heroTitle}
               <br />
-              <span className="text-primary">{home.heroTitleLine2}</span>
+              <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">{home.heroTitleLine2}</span>
             </h1>
             {home.heroSubtitle && (
-              <p className="mt-6 max-w-xl text-base leading-relaxed text-gray-600 sm:text-lg">
+              <p className="mt-6 max-w-xl text-balance text-lg leading-relaxed text-gray-500 sm:text-xl">
                 {home.heroSubtitle}
               </p>
             )}
@@ -92,10 +92,10 @@ export default async function HomePage() {
           <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {solutions.map((solution, i) => (
               <SectionReveal key={solution.id} delay={i * 0.06}>
-                <Link
-                  href={`/solutions/${solution.slug}`}
-                  className="card card-lift group flex h-full flex-col overflow-hidden p-0"
-                >
+                  <Link
+                    href={`/solutions/${solution.slug}`}
+                    className="card card-lift group flex h-full flex-col overflow-hidden rounded-2xl p-0"
+                  >
                   <div className="relative aspect-[4/3] overflow-hidden">
                     <CmsImage
                       src={solution.image}
@@ -140,7 +140,7 @@ export default async function HomePage() {
                 <SectionReveal key={product.id} delay={(i % 4) * 0.04}>
                   <Link
                     href={`/products/${product.slug}`}
-                    className="card card-lift group flex h-full flex-col overflow-hidden p-0"
+                    className="card card-lift group flex h-full flex-col overflow-hidden rounded-2xl p-0"
                   >
                     <div className="relative aspect-[4/3] overflow-hidden">
                       <CmsImage
@@ -210,16 +210,16 @@ export default async function HomePage() {
             </SectionReveal>
             {testimonials.map((t, i) => (
               <SectionReveal key={t.id} delay={i * 0.1}>
-                <blockquote className="mx-auto mt-12 max-w-3xl text-center">
+                <blockquote className="mx-auto mt-12 max-w-4xl text-center">
                   {t.image && (
-                    <div className="relative mx-auto mb-6 h-16 w-16 overflow-hidden rounded-full ring-2 ring-accent/20">
+                    <div className="relative mx-auto mb-8 h-20 w-20 overflow-hidden rounded-full ring-4 ring-accent/20">
                       <CmsImage src={t.image} alt={t.author} fill />
                     </div>
                   )}
-                  <p className="text-lg leading-relaxed text-gray-700 sm:text-xl">
+                  <p className="text-balance text-xl font-medium leading-relaxed text-primary sm:text-2xl lg:text-3xl">
                     &ldquo;{t.quote}&rdquo;
                   </p>
-                  <footer className="mt-6 text-sm font-semibold uppercase tracking-wider text-primary">
+                  <footer className="mt-8 text-sm font-bold uppercase tracking-widest text-accent">
                     — {t.author}
                   </footer>
                 </blockquote>
@@ -239,7 +239,7 @@ export default async function HomePage() {
             <div className="grid gap-6 sm:grid-cols-2 lg:col-span-2">
               {blog.map((post, i) => (
                 <SectionReveal key={post.id} delay={i * 0.06}>
-                  <Link href={`/${post.slug}`} className="card card-lift group block overflow-hidden">
+                  <Link href={`/${post.slug}`} className="card card-lift group block overflow-hidden rounded-2xl">
                     <div className="relative aspect-video overflow-hidden">
                       <CmsImage
                         src={post.image}

@@ -23,15 +23,15 @@ export function PressingMachinesGrid({ content, compact }: PressingMachinesGridP
         <div className={`grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 ${compact ? "" : "mt-14"}`}>
           {content.items.map((item, i) => (
             <SectionReveal key={item.name} delay={i * 0.04}>
-              <div className="card card-lift overflow-hidden p-0">
-                <div className="relative aspect-square overflow-hidden bg-gray-50">
+              <div className="card card-lift group overflow-hidden rounded-2xl p-0">
+                <div className="relative aspect-square overflow-hidden bg-gray-50/50">
                   {item.image ? (
                     <CmsImage
                       src={item.image}
                       alt={item.name}
                       fill
                       sizes="(max-width: 768px) 50vw, 20vw"
-                      className="object-cover"
+                      className="object-cover transition-transform duration-500 group-hover:scale-105"
                     />
                   ) : (
                     <div className="flex h-full items-center justify-center text-sm text-gray-400">No image</div>
