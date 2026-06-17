@@ -19,6 +19,11 @@ const ASSETS = [
   ["blog-hotel-revenue.jpg", "https://quickclean.co.in/wp-content/uploads/2025/12/Why-Linen-Management-Directly-Impacts-Hotel-Revenue.jpg"],
   ["blog-hospital-linen.jpg", "https://quickclean.co.in/wp-content/uploads/2025/12/linen-hygiene-blog.jpg"],
   ["blog-outdated-systems.jpg", "https://quickclean.co.in/wp-content/uploads/2025/12/The-Hidden-Cost-of-Outdated-Laundry-Systems.jpg"],
+  ["solution-boo.jpg", "https://quickclean.co.in/wp-content/uploads/2025/10/2.jpg"],
+  ["solution-turnkey.jpg", "https://quickclean.co.in/wp-content/uploads/2025/10/867.jpg"],
+  ["solution-linen.jpg", "https://quickclean.co.in/wp-content/uploads/2025/10/897.jpg"],
+  ["solution-lease.jpg", "https://quickclean.co.in/wp-content/uploads/2025/10/556.jpg"],
+  ["solution-boo-cover.jpg", "https://quickclean.co.in/wp-content/uploads/2025/11/Build-Own-and-Operate-Title-Cover.jpg"],
   ...Array.from({ length: 18 }, (_, i) => [
     `brands/${i + 1}.jpg`,
     `https://i.postimg.cc/${[
