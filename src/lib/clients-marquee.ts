@@ -1,12 +1,11 @@
 import type { BrandLogo, Client } from "@/types/cms";
+import { brandLogoUrlForIndex } from "@/lib/brand-logos";
 
-const BRAND_IMAGE_COUNT = 18;
-
-/** Map CMS client names to cycling brand logo images for the marquee. */
+/** Map CMS client names to logo marquee items (names unchanged, CDN logos for display). */
 export function clientsToMarqueeBrands(clients: Client[]): BrandLogo[] {
   return clients.map((client, index) => ({
     id: client.id,
     name: client.name,
-    image: `/images/brands/${(index % BRAND_IMAGE_COUNT) + 1}.jpg`,
+    image: brandLogoUrlForIndex(index),
   }));
 }

@@ -12,6 +12,8 @@ import { HeroVisual } from "@/components/HeroVisual";
 
 import { LogoMarquee } from "@/components/LogoMarquee";
 
+import { ClientsMarquee } from "@/components/ClientsMarquee";
+
 import { clientsToMarqueeBrands } from "@/lib/clients-marquee";
 
 import { VideoSection } from "@/components/VideoSection";
@@ -536,12 +538,7 @@ export default async function HomePage() {
 
       <LogoMarquee brands={brands} title={home.brandsTitle} />
 
-      <LogoMarquee
-        brands={clientsToMarqueeBrands(clients)}
-        title={home.clientsTitle}
-        showCaptions
-        variant="clients"
-      />
+      <ClientsMarquee items={clientsToMarqueeBrands(clients)} title={home.clientsTitle} />
 
 
 
