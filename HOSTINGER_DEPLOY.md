@@ -1,6 +1,6 @@
 # Hostinger Premium Deployment Guide
 
-Step-by-step instructions for deploying ProLaundry Solutions on **Hostinger Premium** hosting.
+Step-by-step instructions for deploying Quick Clean Laundry Systems on **Hostinger Premium** hosting.
 
 ---
 

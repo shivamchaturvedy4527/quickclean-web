@@ -17,11 +17,11 @@ const instrument = Instrument_Serif({
 
 export const metadata: Metadata = {
   title: {
-    default: "QuickClean | Commercial Laundry Solutions",
+    default: "QuickClean | Sustainable Laundry Solutions",
     template: "%s | QuickClean",
   },
   description:
-    "Commercial laundry machines, turnkey installations, BOO operations, linen rental, and equipment leasing for hotels, hospitals, and institutions across India.",
+    "Quick Clean Laundry Systems — B2B on-premise laundry solutions for hotels, hospitals, and institutions. Build Own & Operate, turnkey projects, linen rental, and equipment leasing.",
 };
 
 export default function RootLayout({

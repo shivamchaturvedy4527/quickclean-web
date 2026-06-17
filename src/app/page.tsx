@@ -67,7 +67,7 @@ export default async function HomePage() {
 
       {/* Stats */}
       <section className="relative -mt-8 z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-2 gap-4 rounded-2xl border border-slate-200 bg-white p-6 shadow-xl shadow-slate-200/50 md:grid-cols-4 lg:p-8">
+        <div className="grid grid-cols-1 gap-4 rounded-2xl border border-slate-200 bg-white p-6 shadow-xl shadow-slate-200/50 sm:grid-cols-3 lg:p-8">
           {home.stats.map((stat, i) => (
             <SectionReveal key={stat.label} delay={i * 0.1}>
               <div className="text-center">
@@ -91,6 +91,9 @@ export default async function HomePage() {
             <p className="mt-2 font-serif text-6xl font-light text-[#071525] sm:text-7xl">
               <AnimatedCounter end={home.linenWashedValue} suffix={home.linenWashedSuffix} />
             </p>
+            {home.linenWashedUnit && (
+              <p className="mt-2 text-lg text-slate-600">{home.linenWashedUnit}</p>
+            )}
           </SectionReveal>
         </div>
       </section>
@@ -178,7 +181,7 @@ export default async function HomePage() {
             <h2 className="text-3xl font-bold">{home.sustainabilityTitle}</h2>
             <p className="mx-auto mt-4 max-w-2xl text-teal-100">{home.sustainabilityImpactTitle}</p>
           </SectionReveal>
-          <div className="mt-14 grid grid-cols-2 gap-8 md:grid-cols-4">
+          <div className="mt-14 grid grid-cols-1 gap-8 sm:grid-cols-2">
             {home.sustainabilityStats.map((stat, i) => (
               <SectionReveal key={stat.label} delay={i * 0.1} className="text-center">
                 <div className="text-3xl font-bold text-teal-300 sm:text-4xl">

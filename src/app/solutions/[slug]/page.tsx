@@ -3,7 +3,6 @@ import { notFound } from "next/navigation";
 import { CheckCircle2, ArrowRight } from "lucide-react";
 import { SiteLayout } from "@/components/SiteLayout";
 import { CmsImage } from "@/components/CmsImage";
-import { SolutionPrice } from "@/components/SolutionPrice";
 import { getCMS } from "@/lib/cms-store";
 import type { Metadata } from "next";
 
@@ -42,7 +41,7 @@ export default async function SolutionDetailPage({ params }: Props) {
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <p className="text-sm font-medium text-teal-400">
             <Link href="/solutions" className="hover:underline">
-              Solutions
+              Our Solutions
             </Link>{" "}
             / {solution.title}
           </p>
@@ -69,18 +68,16 @@ export default async function SolutionDetailPage({ params }: Props) {
             </ul>
           </div>
           <div className="h-fit rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
-            <h3 className="font-semibold text-[#071525]">Pricing</h3>
-            <div className="mt-3 text-2xl font-bold text-teal-700">
-              <SolutionPrice solution={solution} />
-            </div>
-            <p className="mt-2 text-sm text-slate-500">
-              Prices shown in your local currency. Contact us for detailed quotations.
+            <h3 className="font-semibold text-[#071525]">Partner With Us</h3>
+            <p className="mt-3 text-sm leading-relaxed text-slate-600">
+              Every on-premise laundry is unique. Speak with our solutions team for a tailored
+              proposal — BOO, turnkey, linen, or equipment lease models scoped to your facility.
             </p>
             <Link
               href={solution.ctaLink ?? "/contact"}
               className="mt-6 flex w-full items-center justify-center gap-2 rounded-lg bg-teal-700 px-4 py-3 text-sm font-semibold text-white hover:bg-teal-800"
             >
-              {solution.ctaText ?? "Request Quote"} <ArrowRight className="h-4 w-4" />
+              {solution.ctaText ?? "Contact Us"} <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
         </div>

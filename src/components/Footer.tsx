@@ -9,7 +9,8 @@ interface FooterProps {
 }
 
 export function Footer({ navigation, settings, footer }: FooterProps) {
-  const solutions = navigation.find((n) => n.label === "Solutions")?.children ?? [];
+  const solutions =
+    navigation.find((n) => n.label === "Our Solutions" || n.label === "Solutions")?.children ?? [];
   const company = navigation.find((n) => n.label === "Company")?.children ?? [];
 
   return (
@@ -17,7 +18,7 @@ export function Footer({ navigation, settings, footer }: FooterProps) {
       <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
           <div>
-            <div className="mb-4 text-lg font-bold text-white">{settings.siteName}</div>
+            <div className="mb-4 text-lg font-bold text-white">{settings.companyLegalName || settings.siteName}</div>
             <p className="text-sm leading-relaxed text-slate-400">{footer.aboutText}</p>
           </div>
 

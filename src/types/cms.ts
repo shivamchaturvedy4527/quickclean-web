@@ -91,6 +91,7 @@ export interface LegalLink {
 
 export interface SiteSettings {
   siteName: string;
+  companyLegalName: string;
   tagline: string;
   logo: string;
   favicon: string;
@@ -138,6 +139,7 @@ export interface HomeContent {
   linenWashedLabel: string;
   linenWashedValue: number;
   linenWashedSuffix: string;
+  linenWashedUnit: string;
   waterComparison: WaterComparison;
   solutionsTitle: string;
   solutionsSubtitle: string;
