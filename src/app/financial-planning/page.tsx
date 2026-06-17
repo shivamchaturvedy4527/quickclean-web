@@ -21,7 +21,7 @@ export default async function FinancialPlanningPage() {
           {fp.sections.map((section, i) => (
             <SectionReveal key={section.title} delay={i * 0.1}>
               <div className="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
-                <h2 className="text-xl font-semibold text-[#071525]">{section.title}</h2>
+                <h2 className="text-xl font-semibold text-[primary]">{section.title}</h2>
                 <p className="mt-4 leading-relaxed text-slate-700">{section.content}</p>
               </div>
             </SectionReveal>

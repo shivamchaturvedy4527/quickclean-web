@@ -4,6 +4,7 @@ import { SiteLayout } from "@/components/SiteLayout";
 import { PageHero } from "@/components/PageHero";
 import { CmsImage } from "@/components/CmsImage";
 import { SectionReveal } from "@/components/SectionReveal";
+import { Container } from "@/components/ui/Container";
 import { getCMS } from "@/lib/cms-store";
 import type { Metadata } from "next";
 
@@ -23,11 +24,11 @@ export default async function ProductsPage() {
         image={productsPage.heroImage}
       />
 
-      <section className="py-16">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <section className="section-pad">
+        <Container>
           {productsPage.intro && (
             <SectionReveal>
-              <div className="mx-auto mb-14 max-w-3xl space-y-4 text-lg leading-relaxed text-slate-600">
+              <div className="mx-auto mb-14 max-w-3xl space-y-4 text-lg leading-relaxed text-gray-600">
                 {productsPage.intro.split("\n\n").map((p, i) => (
                   <p key={i}>{p}</p>
                 ))}
@@ -39,7 +40,7 @@ export default async function ProductsPage() {
               <SectionReveal key={product.id} delay={i * 0.05}>
                 <Link
                   href={`/products/${product.slug}`}
-                  className="group flex h-full flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition-all hover:-translate-y-1 hover:shadow-xl"
+                  className="card card-lift group flex h-full flex-col overflow-hidden p-0"
                 >
                   <div className="relative aspect-[4/3] overflow-hidden">
                     <CmsImage
@@ -52,15 +53,15 @@ export default async function ProductsPage() {
                   </div>
                   <div className="flex flex-1 flex-col p-6">
                     {product.category && (
-                      <span className="text-[0.65rem] font-bold uppercase tracking-[0.18em] text-teal-700">
+                      <span className="text-xs font-bold uppercase tracking-wider text-accent">
                         {product.category}
                       </span>
                     )}
-                    <h2 className="mt-2 text-xl font-bold text-[#071525] group-hover:text-teal-800">
+                    <h2 className="mt-2 text-xl font-bold text-gray-900 transition-colors group-hover:text-accent">
                       {product.title}
                     </h2>
-                    <p className="mt-3 flex-1 text-sm text-slate-600">{product.shortDescription}</p>
-                    <span className="mt-5 inline-flex items-center gap-1 text-sm font-semibold text-teal-700">
+                    <p className="mt-3 flex-1 text-sm text-gray-600">{product.shortDescription}</p>
+                    <span className="mt-5 inline-flex items-center gap-1 text-sm font-semibold text-accent">
                       View details <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                     </span>
                   </div>
@@ -68,7 +69,7 @@ export default async function ProductsPage() {
               </SectionReveal>
             ))}
           </div>
-        </div>
+        </Container>
       </section>
     </SiteLayout>
   );

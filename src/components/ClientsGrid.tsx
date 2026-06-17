@@ -13,15 +13,15 @@ export function ClientsGrid({ clients, title }: { clients: Client[]; title?: str
         {title && (
           <SectionReveal>
             <h2
-              className="font-display mb-12 text-center text-2xl font-medium text-navy sm:text-3xl"
+              className="mb-12 text-center text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl"
               dangerouslySetInnerHTML={{ __html: title.replace(/\n/g, "<br/>") }}
             />
           </SectionReveal>
         )}
-        <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {clients.map((client, i) => (
             <SectionReveal key={client.id} delay={(i % 9) * 0.03}>
-              <div className="rounded-xl border border-border bg-white px-5 py-4 text-sm font-medium text-slate-700 shadow-sm">
+              <div className="rounded-lg border border-gray-200 bg-white px-5 py-4 text-sm font-medium text-gray-700 shadow-sm">
                 {client.name}
               </div>
             </SectionReveal>

@@ -136,7 +136,7 @@ function ArrayEditor({
         <button
           type="button"
           onClick={addItem}
-          className="inline-flex items-center gap-1 rounded-md bg-teal-700 px-2 py-1 text-xs font-medium text-white hover:bg-teal-800"
+          className="inline-flex items-center gap-1 rounded-md bg-accent px-2 py-1 text-xs font-medium text-white hover:bg-accent-hover"
         >
           <Plus className="h-3 w-3" /> Add
         </button>

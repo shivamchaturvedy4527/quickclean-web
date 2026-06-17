@@ -17,21 +17,21 @@ export function VideoSection({ title, videoUrl, thumbnail, sinceYear }: VideoSec
   const [playing, setPlaying] = useState(false);
 
   return (
-    <section className="relative overflow-hidden gradient-navy py-20 text-white sm:py-28">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(13,148,136,0.15)_0%,transparent_55%)]" />
+    <section className="relative overflow-hidden gradient-primary py-20 text-white sm:py-24">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(79,70,229,0.12)_0%,transparent_55%)]" />
       <Container className="relative">
         <SectionReveal>
           <div className="text-center">
-            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent-bright">
+            <p className="text-xs font-semibold uppercase tracking-wider text-accent-bright">
               {title}
             </p>
-            <h2 className="font-display mt-4 text-5xl font-medium tracking-tight sm:text-6xl lg:text-7xl">
+            <h2 className="mt-4 text-5xl font-bold tracking-tight sm:text-6xl lg:text-7xl">
               {sinceYear}
             </h2>
           </div>
         </SectionReveal>
         <SectionReveal delay={0.15}>
-          <div className="relative mx-auto mt-14 aspect-video max-w-4xl overflow-hidden rounded-2xl border border-white/10 shadow-2xl shadow-black/30 ring-1 ring-white/5">
+          <div className="relative mx-auto mt-14 aspect-video max-w-4xl overflow-hidden rounded-xl border border-white/10 shadow-2xl shadow-black/30 ring-1 ring-white/5">
             {playing ? (
               <iframe
                 src={`${videoUrl}?autoplay=1`}
@@ -52,7 +52,7 @@ export function VideoSection({ title, videoUrl, thumbnail, sinceYear }: VideoSec
                   fill
                   className="object-cover transition-transform duration-700 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-navy/50 transition-colors group-hover:bg-navy/40" />
+                <div className="absolute inset-0 bg-primary/50 transition-colors group-hover:bg-primary/40" />
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="flex h-20 w-20 items-center justify-center rounded-full bg-accent shadow-lg shadow-accent/40 transition-all duration-300 group-hover:scale-110 group-hover:shadow-accent/60">
                     <Play className="ml-1 h-8 w-8 fill-white text-white" />

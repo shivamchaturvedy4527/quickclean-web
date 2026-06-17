@@ -32,63 +32,63 @@ export function ContactForm() {
     <form onSubmit={handleSubmit} className="space-y-5">
       <div className="grid gap-5 sm:grid-cols-2">
         <div>
-          <label className="block text-sm font-medium text-slate-700">Name *</label>
+          <label className="block text-sm font-medium text-gray-700">Name *</label>
           <input
             required
             value={form.name}
             onChange={(e) => setForm({ ...form, name: e.target.value })}
-            className="mt-1 w-full rounded-md border border-slate-300 px-3 py-2.5 text-sm focus:border-teal-500 focus:outline-none focus:ring-1 focus:ring-teal-500"
+            className="input-field mt-1"
           />
         </div>
         <div>
-          <label className="block text-sm font-medium text-slate-700">Email *</label>
+          <label className="block text-sm font-medium text-gray-700">Email *</label>
           <input
             type="email"
             required
             value={form.email}
             onChange={(e) => setForm({ ...form, email: e.target.value })}
-            className="mt-1 w-full rounded-md border border-slate-300 px-3 py-2.5 text-sm focus:border-teal-500 focus:outline-none focus:ring-1 focus:ring-teal-500"
+            className="input-field mt-1"
           />
         </div>
       </div>
       <div className="grid gap-5 sm:grid-cols-2">
         <div>
-          <label className="block text-sm font-medium text-slate-700">Phone</label>
+          <label className="block text-sm font-medium text-gray-700">Phone</label>
           <input
             value={form.phone}
             onChange={(e) => setForm({ ...form, phone: e.target.value })}
             placeholder="+91"
-            className="mt-1 w-full rounded-md border border-slate-300 px-3 py-2.5 text-sm focus:border-teal-500 focus:outline-none focus:ring-1 focus:ring-teal-500"
+            className="input-field mt-1"
           />
         </div>
         <div>
-          <label className="block text-sm font-medium text-slate-700">Company</label>
+          <label className="block text-sm font-medium text-gray-700">Company</label>
           <input
             value={form.company}
             onChange={(e) => setForm({ ...form, company: e.target.value })}
-            className="mt-1 w-full rounded-md border border-slate-300 px-3 py-2.5 text-sm focus:border-teal-500 focus:outline-none focus:ring-1 focus:ring-teal-500"
+            className="input-field mt-1"
           />
         </div>
       </div>
       <div>
-        <label className="block text-sm font-medium text-slate-700">Message *</label>
+        <label className="block text-sm font-medium text-gray-700">Message *</label>
         <textarea
           required
           rows={5}
           value={form.message}
           onChange={(e) => setForm({ ...form, message: e.target.value })}
-          className="mt-1 w-full rounded-md border border-slate-300 px-3 py-2.5 text-sm focus:border-teal-500 focus:outline-none focus:ring-1 focus:ring-teal-500"
+          className="input-field mt-1"
         />
       </div>
       <button
         type="submit"
         disabled={status === "loading"}
-        className="rounded-md bg-teal-700 px-6 py-3 text-sm font-semibold text-white hover:bg-teal-800 disabled:opacity-60"
+        className="btn-primary disabled:opacity-60"
       >
         {status === "loading" ? "Sending..." : "Send Message"}
       </button>
       {status === "success" && (
-        <p className="text-sm text-teal-700">Thank you. We will respond within one business day.</p>
+        <p className="text-sm text-accent">Thank you. We will respond within one business day.</p>
       )}
       {status === "error" && (
         <p className="text-sm text-red-600">Something went wrong. Please try again.</p>

@@ -25,20 +25,19 @@ export function SectionHeading({
       {eyebrow && (
         <p
           className={cn(
-            "mb-4 text-xs font-bold uppercase tracking-[0.22em] text-accent",
-            align === "center" ? "justify-center" : "",
-            "eyebrow-line"
+            "eyebrow-line mb-4 text-xs font-bold uppercase tracking-wider text-accent",
+            align === "center" ? "justify-center" : ""
           )}
         >
           {eyebrow}
         </p>
       )}
       <h2
-        className="font-display text-3xl font-medium leading-tight tracking-tight text-navy sm:text-4xl lg:text-[2.75rem]"
+        className="text-3xl font-bold leading-tight tracking-tight text-gray-900 sm:text-4xl lg:text-5xl"
         dangerouslySetInnerHTML={{ __html: title }}
       />
       {subtitle && (
-        <p className="mt-5 text-base leading-relaxed text-slate-600 sm:text-lg">{subtitle}</p>
+        <p className="mt-5 text-base leading-relaxed text-gray-600 sm:text-lg">{subtitle}</p>
       )}
     </div>
   );

@@ -27,7 +27,7 @@ export default async function ContactPage() {
             <h2 className="text-xl font-semibold text-[#0c2340]">Get in Touch</h2>
             <ul className="mt-6 space-y-4">
               <li className="flex gap-3 text-slate-700">
-                <MapPin className="mt-0.5 h-5 w-5 shrink-0 text-teal-600" />
+                <MapPin className="mt-0.5 h-5 w-5 shrink-0 text-accent" />
                 <span>
                   {settings.addressLine1}
                   <br />
@@ -37,14 +37,14 @@ export default async function ContactPage() {
                 </span>
               </li>
               <li className="flex gap-3 text-slate-700">
-                <Phone className="h-5 w-5 shrink-0 text-teal-600" />
-                <a href={`tel:${settings.contactPhone.replace(/\s/g, "")}`} className="hover:text-teal-700">
+                <Phone className="h-5 w-5 shrink-0 text-accent" />
+                <a href={`tel:${settings.contactPhone.replace(/\s/g, "")}`} className="hover:text-accent">
                   {settings.contactPhone}
                 </a>
               </li>
               <li className="flex gap-3 text-slate-700">
-                <Mail className="h-5 w-5 shrink-0 text-teal-600" />
-                <a href={`mailto:${settings.contactEmail}`} className="hover:text-teal-700">
+                <Mail className="h-5 w-5 shrink-0 text-accent" />
+                <a href={`mailto:${settings.contactEmail}`} className="hover:text-accent">
                   {settings.contactEmail}
                 </a>
               </li>

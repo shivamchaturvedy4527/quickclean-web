@@ -27,7 +27,7 @@ export default async function SustainabilityPage() {
           <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
             {sustainability.metrics.map((stat, i) => (
               <SectionReveal key={stat.label} delay={i * 0.1} className="text-center">
-                <div className="text-3xl font-bold text-teal-700">
+                <div className="text-3xl font-bold text-accent">
                   <AnimatedCounter end={stat.value} suffix={stat.suffix} />
                 </div>
                 <p className="mt-2 text-sm text-slate-600">{stat.label}</p>
@@ -45,7 +45,7 @@ export default async function SustainabilityPage() {
                     </div>
                   )}
                   <div className="p-6">
-                    <h3 className="font-semibold text-[#071525]">{item.title}</h3>
+                    <h3 className="font-semibold text-[primary]">{item.title}</h3>
                     <p className="mt-3 text-sm text-slate-600">{item.description}</p>
                   </div>
                 </div>

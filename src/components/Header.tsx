@@ -36,15 +36,15 @@ export function Header({ navigation, settings }: HeaderProps) {
 
   const navLinkClass = (active: boolean) =>
     cn(
-      "inline-flex items-center gap-1 border-b-2 px-3 py-4 text-[15px] font-medium tracking-tight transition-colors",
+      "inline-flex items-center gap-1 border-b-2 px-3 py-4 text-sm font-medium tracking-tight transition-colors",
       active
-        ? "border-[#00B4D8] text-navy"
-        : "border-transparent text-slate-600 hover:text-navy"
+        ? "border-accent text-gray-900"
+        : "border-transparent text-gray-600 hover:text-gray-900"
     );
 
   return (
-    <header className="sticky top-0 z-50 border-b border-slate-200/80 bg-white shadow-sm">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-2 sm:px-6 lg:grid lg:grid-cols-[1fr_auto_1fr] lg:items-stretch lg:px-8">
+    <header className="sticky top-0 z-50 border-b border-gray-200/80 bg-white/80 backdrop-blur-md">
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-3 lg:grid lg:grid-cols-[1fr_auto_1fr] lg:items-stretch lg:px-8">
         <Link href="/" className="group flex shrink-0 items-center justify-self-start">
           {settings.logo ? (
             <CmsImage
@@ -55,7 +55,7 @@ export function Header({ navigation, settings }: HeaderProps) {
               className="h-9 w-auto max-w-[160px] object-contain transition-opacity group-hover:opacity-90 sm:h-10 sm:max-w-[200px]"
             />
           ) : (
-            <span className="font-display text-xl font-medium text-navy">{settings.siteName}</span>
+            <span className="text-xl font-bold tracking-tight text-gray-900">{settings.siteName}</span>
           )}
         </Link>
 
@@ -82,14 +82,14 @@ export function Header({ navigation, settings }: HeaderProps) {
                 </button>
                 {openDropdown === item.label && (
                   <div className="absolute left-1/2 top-full z-50 min-w-[240px] -translate-x-1/2 pt-3">
-                    <div className="rounded-lg border border-slate-200 bg-white py-1.5 shadow-lg shadow-slate-900/8">
+                    <div className="rounded-lg border border-gray-200 bg-white py-1.5 shadow-lg shadow-slate-900/8">
                       {item.children.map((child) => (
                         <Link
                           key={child.href}
                           href={child.href}
                           className={cn(
-                            "block px-4 py-2.5 text-sm transition-colors hover:bg-slate-50 hover:text-[#0077B6]",
-                            pathname === child.href ? "font-medium text-[#0077B6]" : "text-slate-600"
+                            "block px-4 py-2.5 text-sm transition-colors hover:bg-gray-50 hover:text-accent",
+                            pathname === child.href ? "font-medium text-accent" : "text-gray-600"
                           )}
                         >
                           {child.label}
@@ -114,13 +114,13 @@ export function Header({ navigation, settings }: HeaderProps) {
         <div className="flex items-center justify-end gap-2">
           <Link
             href={settings.headerCtaLink}
-            className="btn-cta hidden sm:inline-flex"
+            className="btn-primary hidden sm:inline-flex"
           >
             {settings.headerCtaText}
           </Link>
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
-            className="rounded-md p-2 text-slate-600 transition-colors hover:bg-slate-100 lg:hidden"
+            className="rounded-lg p-2 text-gray-600 transition-colors hover:bg-gray-100 lg:hidden"
             aria-label="Toggle menu"
             aria-expanded={mobileOpen}
           >
@@ -130,12 +130,12 @@ export function Header({ navigation, settings }: HeaderProps) {
       </div>
 
       {mobileOpen && (
-        <div className="border-t border-slate-200 bg-white px-4 py-4 lg:hidden">
+        <div className="border-t border-gray-200 bg-white px-6 py-4 lg:hidden">
           {navItems.map((item) => (
             <div key={item.label} className="mb-1">
               {item.children ? (
                 <>
-                  <div className="px-2 py-2 text-xs font-semibold uppercase tracking-wider text-slate-400">
+                  <div className="px-2 py-2 text-xs font-semibold uppercase tracking-wider text-gray-400">
                     {item.label}
                   </div>
                   {item.children.map((child) => (
@@ -144,8 +144,8 @@ export function Header({ navigation, settings }: HeaderProps) {
                       href={child.href}
                       onClick={() => setMobileOpen(false)}
                       className={cn(
-                        "block rounded-md px-2 py-2.5 text-sm transition-colors hover:bg-slate-50",
-                        pathname === child.href ? "font-medium text-[#0077B6]" : "text-slate-700"
+                        "block rounded-lg px-2 py-2.5 text-sm transition-colors hover:bg-gray-50",
+                        pathname === child.href ? "font-medium text-accent" : "text-gray-700"
                       )}
                     >
                       {child.label}
@@ -157,8 +157,8 @@ export function Header({ navigation, settings }: HeaderProps) {
                   href={item.href}
                   onClick={() => setMobileOpen(false)}
                   className={cn(
-                    "block rounded-md px-2 py-2.5 text-sm font-medium transition-colors hover:bg-slate-50",
-                    isNavActive(pathname, item) ? "text-[#0077B6]" : "text-slate-700"
+                    "block rounded-lg px-2 py-2.5 text-sm font-medium transition-colors hover:bg-gray-50",
+                    isNavActive(pathname, item) ? "text-accent" : "text-gray-700"
                   )}
                 >
                   {item.label}
@@ -169,7 +169,7 @@ export function Header({ navigation, settings }: HeaderProps) {
           <Link
             href={settings.headerCtaLink}
             onClick={() => setMobileOpen(false)}
-            className="btn-cta mt-4 w-full"
+            className="btn-primary mt-4 w-full"
           >
             {settings.headerCtaText}
           </Link>

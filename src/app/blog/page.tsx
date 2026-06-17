@@ -36,7 +36,7 @@ export default async function BlogPage({
               href="/blog"
               className={`rounded-full px-4 py-1.5 text-sm font-medium transition-colors ${
                 !category
-                  ? "bg-[#071525] text-white"
+                  ? "bg-[primary] text-white"
                   : "bg-slate-100 text-slate-700 hover:bg-slate-200"
               }`}
             >
@@ -48,7 +48,7 @@ export default async function BlogPage({
                 href={`/blog?category=${encodeURIComponent(cat)}`}
                 className={`rounded-full px-4 py-1.5 text-sm font-medium transition-colors ${
                   category === cat
-                    ? "bg-[#071525] text-white"
+                    ? "bg-[primary] text-white"
                     : "bg-slate-100 text-slate-700 hover:bg-slate-200"
                 }`}
               >
@@ -77,7 +77,7 @@ export default async function BlogPage({
                       </div>
                       <div className="p-5">
                         <div className="flex items-center justify-between text-xs text-slate-500">
-                          <span className="font-semibold uppercase tracking-wider text-teal-700">
+                          <span className="font-semibold uppercase tracking-wider text-accent">
                             {post.category}
                           </span>
                           <time dateTime={post.date}>
@@ -88,7 +88,7 @@ export default async function BlogPage({
                             })}
                           </time>
                         </div>
-                        <h2 className="mt-2 font-semibold text-[#071525] group-hover:text-teal-800">
+                        <h2 className="mt-2 font-semibold text-[primary] group-hover:text-accent-hover">
                           {post.title}
                         </h2>
                         <p className="mt-2 line-clamp-2 text-sm text-slate-600">{post.excerpt}</p>

@@ -27,11 +27,11 @@ export async function SolutionDetail({ slug }: { slug: string }) {
         image={solution.image}
         breadcrumb="Our Solutions"
       />
-      <section className="py-16 sm:py-24">
+      <section className="section-pad">
         <Container>
           <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
             {solution.image && (
-              <div className="relative aspect-video overflow-hidden rounded-2xl shadow-lg shadow-navy/10">
+              <div className="relative aspect-video overflow-hidden rounded-lg border border-gray-200 shadow-lg">
                 <CmsImage src={solution.image} alt={solution.title} fill className="object-cover" />
               </div>
             )}
@@ -43,10 +43,10 @@ export async function SolutionDetail({ slug }: { slug: string }) {
               </div>
               {solution.features.length > 0 && (
                 <>
-                  <h2 className="mt-10 font-display text-2xl font-medium text-navy">Key Points</h2>
+                  <h2 className="mt-10 text-2xl font-bold tracking-tight text-gray-900">Key Points</h2>
                   <ul className="mt-5 space-y-3">
                     {solution.features.map((f) => (
-                      <li key={f} className="flex gap-3 text-slate-700">
+                      <li key={f} className="flex gap-3 text-gray-700">
                         <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
                         {f}
                       </li>
@@ -54,7 +54,7 @@ export async function SolutionDetail({ slug }: { slug: string }) {
                   </ul>
                 </>
               )}
-              <Link href="/contact-us" className="btn-accent mt-10 inline-flex">
+              <Link href="/contact-us" className="btn-secondary mt-10 inline-flex">
                 {solution.ctaText ?? "Contact Us"}
                 <ArrowRight className="h-4 w-4" />
               </Link>

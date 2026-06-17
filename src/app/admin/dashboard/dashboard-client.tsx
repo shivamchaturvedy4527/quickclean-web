@@ -325,7 +325,7 @@ export default function AdminDashboard() {
     <div className="flex min-h-screen bg-slate-100">
       <aside className="w-64 shrink-0 overflow-y-auto border-r border-slate-200 bg-white">
         <div className="border-b border-slate-200 p-4">
-          <h1 className="font-bold text-[#071525]">CMS Admin</h1>
+          <h1 className="font-bold text-[primary]">CMS Admin</h1>
           <p className="text-xs text-slate-500">{cms.settings.siteName}</p>
         </div>
         <nav className="p-2">
@@ -335,7 +335,7 @@ export default function AdminDashboard() {
               onClick={() => setTab(t.id)}
               className={`mb-0.5 flex w-full items-center gap-2 rounded-md px-3 py-2 text-left text-sm ${
                 tab === t.id
-                  ? "bg-teal-50 font-medium text-teal-800"
+                  ? "bg-accent/5 font-medium text-accent-hover"
                   : "text-slate-600 hover:bg-slate-50"
               }`}
             >
@@ -357,13 +357,13 @@ export default function AdminDashboard() {
 
       <main className="flex-1 overflow-auto">
         <div className="sticky top-0 z-10 flex items-center justify-between border-b border-slate-200 bg-white px-6 py-4">
-          <h2 className="text-lg font-semibold text-[#071525]">
+          <h2 className="text-lg font-semibold text-[primary]">
             {tabs.find((t) => t.id === tab)?.label}
           </h2>
           <div className="flex items-center gap-3">
             {message && (
               <span
-                className={`text-sm ${message.includes("failed") ? "text-red-600" : "text-teal-700"}`}
+                className={`text-sm ${message.includes("failed") ? "text-red-600" : "text-accent"}`}
               >
                 {message}
               </span>
@@ -371,7 +371,7 @@ export default function AdminDashboard() {
             <button
               onClick={save}
               disabled={saving}
-              className="inline-flex items-center gap-2 rounded-md bg-teal-700 px-4 py-2 text-sm font-semibold text-white hover:bg-teal-800 disabled:opacity-60"
+              className="inline-flex items-center gap-2 rounded-md bg-accent px-4 py-2 text-sm font-semibold text-white hover:bg-accent-hover disabled:opacity-60"
             >
               <Save className="h-4 w-4" />
               {saving ? "Saving..." : "Save Changes"}

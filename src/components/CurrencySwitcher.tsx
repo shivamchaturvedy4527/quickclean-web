@@ -22,8 +22,8 @@ export function CurrencySwitcher({ variant = "default" }: CurrencySwitcherProps)
         className={cn(
           "flex items-center gap-1.5 text-sm font-medium transition-colors",
           isFooter
-            ? "rounded-md border border-white/15 bg-white/5 px-2.5 py-1.5 text-slate-400 hover:border-white/25 hover:text-slate-200"
-            : "rounded-md border border-slate-200 bg-white px-2.5 py-1.5 text-slate-700 hover:bg-slate-50"
+            ? "rounded-lg border border-white/15 bg-white/5 px-2.5 py-1.5 text-gray-400 hover:border-white/25 hover:text-gray-200"
+            : "rounded-lg border border-gray-200 bg-white px-2.5 py-1.5 text-gray-700 hover:bg-gray-50"
         )}
         aria-label="Select currency"
       >
@@ -41,10 +41,10 @@ export function CurrencySwitcher({ variant = "default" }: CurrencySwitcherProps)
           <div className="fixed inset-0 z-40" onClick={() => setOpen(false)} />
           <div
             className={cn(
-              "absolute right-0 top-full z-50 mt-1 min-w-[148px] rounded-md border py-1 shadow-lg",
+              "absolute right-0 top-full z-50 mt-1 min-w-[148px] rounded-lg border py-1 shadow-lg",
               isFooter
-                ? "border-white/15 bg-navy-light text-slate-200 shadow-black/30"
-                : "border-slate-200 bg-white"
+                ? "border-white/15 bg-primary-light text-gray-200 shadow-black/30"
+                : "border-gray-200 bg-white"
             )}
           >
             {(Object.keys(currencies) as CurrencyCode[]).map((code) => (
@@ -56,14 +56,14 @@ export function CurrencySwitcher({ variant = "default" }: CurrencySwitcherProps)
                 }}
                 className={cn(
                   "block w-full px-3 py-2 text-left text-sm transition-colors",
-                  isFooter ? "hover:bg-white/8" : "hover:bg-slate-50",
+                  isFooter ? "hover:bg-white/8" : "hover:bg-gray-50",
                   code === currency
                     ? isFooter
-                      ? "font-semibold text-[#48CAE4]"
-                      : "font-semibold text-[#0077B6]"
+                      ? "font-semibold text-accent-bright"
+                      : "font-semibold text-accent"
                     : isFooter
-                      ? "text-slate-300"
-                      : "text-slate-700"
+                      ? "text-gray-300"
+                      : "text-gray-700"
                 )}
               >
                 {currencies[code].symbol}
