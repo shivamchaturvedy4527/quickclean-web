@@ -116,9 +116,11 @@ export interface SiteSettings {
 export interface WaterComparison {
   title: string;
   industryLabel: string;
+  industryDisplayValue: number;
   industryValue: number;
   industryUnit: string;
   qcLabel: string;
+  qcDisplayValue: number;
   qcValue: number;
   qcUnit: string;
   monthlySavedLabel: string;
@@ -129,6 +131,7 @@ export interface WaterComparison {
 
 export interface HomeContent {
   heroTitle: string;
+  heroTitleLine2: string;
   heroSubtitle: string;
   heroCtaText: string;
   heroCtaLink: string;

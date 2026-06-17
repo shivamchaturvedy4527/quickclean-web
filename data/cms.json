@@ -2,65 +2,117 @@
   "settings": {
     "siteName": "QuickClean",
     "companyLegalName": "Quick Clean Laundry Systems Pvt. Ltd.",
-    "tagline": "Sustainable Laundry Solutions",
-    "logo": "https://images.unsplash.com/photo-1582735689369-4fe89db7114c?w=80&h=80&fit=crop",
-    "favicon": "/favicon.ico",
+    "tagline": "",
+    "logo": "/images/logo.png",
+    "favicon": "/images/favicon-32.png",
     "whatsappNumber": "917358258229",
-    "whatsappMessage": "Hello, I would like to know more about QuickClean commercial laundry solutions.",
+    "whatsappMessage": "Hello, I would like to know more about QuickClean.",
     "liveChatEmbed": "",
     "contactEmail": "hello@quickclean.co.in",
     "contactPhone": "+91 73582 58229",
-    "addressLine1": "GSC Towers, 4th Floor",
-    "addressLine2": "Sector 30",
+    "addressLine1": "GSC Towers, 4th Floor, Sector 30",
+    "addressLine2": "",
     "city": "Gurugram, Haryana 122001",
     "country": "India",
     "linkedin": "https://linkedin.com/company/quickclean",
     "twitter": "https://twitter.com/quickclean",
     "facebook": "https://facebook.com/quickclean",
-    "businessHours": "Mon-Sat 9:00-19:00",
+    "businessHours": "Mon - Sat: 9:00 - 19:00",
     "headerCtaText": "Contact Us",
-    "headerCtaLink": "/contact",
+    "headerCtaLink": "/contact-us",
     "careersLabel": "Careers"
   },
   "navigation": [
-    { "label": "Home", "href": "/" },
+    {
+      "label": "Home",
+      "href": "/"
+    },
     {
       "label": "Company",
-      "href": "/about",
+      "href": "/about-us",
       "children": [
-        { "label": "About Us", "href": "/about" },
-        { "label": "Our Team", "href": "/company/team" },
-        { "label": "Sustainability", "href": "/company/sustainability" },
-        { "label": "Our Investors", "href": "/company/investors" },
-        { "label": "Careers", "href": "/careers" },
-        { "label": "Financial Planning", "href": "/company/financial-planning" }
+        {
+          "label": "About Us",
+          "href": "/about-us"
+        },
+        {
+          "label": "Our Team",
+          "href": "/our-team"
+        },
+        {
+          "label": "Sustainability",
+          "href": "/sustainability"
+        },
+        {
+          "label": "Our Investors",
+          "href": "/our-investors"
+        },
+        {
+          "label": "Careers",
+          "href": "/careers"
+        },
+        {
+          "label": "Financial Planning",
+          "href": "/financial-planning"
+        }
       ]
     },
     {
       "label": "Our Solutions",
-      "href": "/solutions",
+      "href": "/build-own-and-operate",
       "children": [
-        { "label": "Build Own & Operate", "href": "/solutions/build-own-operate" },
-        { "label": "Turnkey Project", "href": "/solutions/turnkey" },
-        { "label": "Linen Rental", "href": "/solutions/linen-rental" },
-        { "label": "Equipment on Lease", "href": "/solutions/equipment-on-lease" }
+        {
+          "label": "Build Own & Operate",
+          "href": "/build-own-and-operate"
+        },
+        {
+          "label": "Turnkey Project",
+          "href": "/turnkey-project"
+        },
+        {
+          "label": "Linen Rental",
+          "href": "/linen-rental"
+        },
+        {
+          "label": "Equipment on Lease",
+          "href": "/equipment-on-lease"
+        }
       ]
     },
-    { "label": "Reweave 360", "href": "/reweave-360" },
-    { "label": "Contact Us", "href": "/contact" }
+    {
+      "label": "Reweave 360",
+      "href": "/reweave-360"
+    },
+    {
+      "label": "Contact Us",
+      "href": "/contact-us"
+    }
   ],
   "home": {
-    "heroTitle": "Your Trusted Partner In Sustainable Laundry Solutions",
-    "heroSubtitle": "We design, own, and operate on-premise commercial laundries for hotels, hospitals, and institutions — delivering zero-investment BOO models, turnkey installations, linen rental, and equipment leasing across India.",
+    "heroTitle": "Your Trusted Partner",
+    "heroTitleLine2": "In Sustainable Laundry Solutions",
+    "heroSubtitle": "",
     "heroCtaText": "Our Solutions",
-    "heroCtaLink": "/solutions",
+    "heroCtaLink": "/build-own-and-operate",
     "heroSecondaryCtaText": "Contact Us",
-    "heroSecondaryCtaLink": "/contact",
-    "heroImage": "https://images.unsplash.com/photo-1582735689369-4fe89db7114c?w=1200&h=900&fit=crop",
+    "heroSecondaryCtaLink": "/contact-us",
+    "heroImage": "/images/hero.jpg",
     "stats": [
-      { "value": 110, "suffix": "+", "label": "On-Premise Laundry Sites" },
-      { "value": 1500, "suffix": "+", "label": "Skilled employees" },
-      { "value": 38, "suffix": "+", "label": "Cities Across India" }
+      {
+        "value": 110,
+        "suffix": "+",
+        "label": "On-Premise Laundry Sites"
+      },
+      {
+        "value": 1500,
+        "suffix": "+",
+        "label": "Skilled employees"
+      },
+      {
+        "value": 38,
+        "suffix": "+",
+        "label": "Cities Across India"
+      }
     ],
     "linenWashedLabel": "Linen Washed / Day",
     "linenWashedValue": 100,
@@ -69,57 +121,67 @@
     "waterComparison": {
       "title": "Water Usage",
       "industryLabel": "Water Used by Industry Standard (24 L/kg)",
+      "industryDisplayValue": 2400000,
       "industryValue": 24,
       "industryUnit": " L/kg",
       "qcLabel": "Water Used by QC (8 L/kg)",
+      "qcDisplayValue": 800000,
       "qcValue": 8,
       "qcUnit": " L/kg",
       "monthlySavedLabel": "Monthly Water Saved",
-      "monthlySaved": 12500000,
+      "monthlySaved": 27200000,
       "yearlySavedLabel": "Yearly Water Saved",
-      "yearlySaved": 150000000
+      "yearlySaved": 268800000
     },
     "solutionsTitle": "Our Solutions",
     "solutionsSubtitle": "Sustainable laundry solutions that save water, cut energy use, and boost operational efficiency.",
-    "sustainabilityTitle": "Sustainability Impact",
+    "sustainabilityTitle": "",
     "sustainabilityStats": [
-      { "value": 457, "suffix": "+ million liters", "label": "of water saved" },
-      { "value": 60, "suffix": "M kg", "label": "carbon emissions reduced" }
+      {
+        "value": 457,
+        "suffix": "+",
+        "label": "million liters of water saved"
+      },
+      {
+        "value": 60,
+        "suffix": "M kg",
+        "label": "carbon emissions reduced"
+      }
     ],
-    "sustainabilityImpactTitle": "457+ million liters of water saved · 60M kg of carbon emissions reduced",
+    "sustainabilityImpactTitle": "",
     "founderTitle": "From the Founder's Desk",
-    "founderMessage": "Quick Clean started as a dream I carried with me. Today it has a home, a family, and a heartbeat of its own. I'm grateful for our team, for the people who believed in us, and for every challenge that made us better. This isn't just laundry — it's hope, belief, and the fire to keep building. Here's to the next chapter.",
+    "founderMessage": "Quick Clean started as a dream I carried with me. Today it has a home, a family, and a heartbeat of its own. I'm just grateful— for our team, for the people who believed in us, and for every challenge that made us better. This isn't just laundry; it's hope, belief, and the fire to keep building. Here's to the next chapter.",
     "founderName": "Anshul Gupta",
     "founderRole": "CEO",
-    "founderImage": "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&h=600&fit=crop",
+    "founderImage": "/images/founder.jpg",
     "sinceYear": "2010",
     "videoTitle": "Since 2010",
-    "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
-    "videoThumbnail": "https://images.unsplash.com/photo-1517677208171-0bc6725a3e60?w=1200&h=675&fit=crop",
-    "brandsTitle": "Preferred Laundry Partner of Leading Brands",
+    "videoUrl": "https://www.youtube.com/embed/R4_bNukULNE",
+    "videoThumbnail": "/images/hero.jpg",
+    "brandsTitle": "Preferred Laundry Partner of<br /><strong>Leading Brands</strong>",
     "clientsTitle": "What Our Partners Say",
     "newsTitle": "News",
-    "newsSubtitle": "Stay updated on the latest trends in commercial laundry, linen hygiene, and sustainable operations.",
+    "newsSubtitle": "Subscribe for the latest news. Stay updated on the latest trends.",
     "newsletterTitle": "Subscribe for the latest news",
-    "newsletterSubtitle": "Stay updated on the latest trends in sustainable laundry and on-premise operations."
+    "newsletterSubtitle": "Stay updated on the latest trends."
   },
   "solutions": [
     {
       "id": "boo",
-      "slug": "build-own-operate",
+      "slug": "build-own-and-operate",
       "title": "Build Own & Operate",
-      "shortDescription": "We design, own, operate your laundry — effortless setup, zero investment, predictable efficiency.",
-      "description": "Our Build Own & Operate (BOO) model lets hotels, hospitals, and institutions run on-premise laundries without capital investment. Quick Clean designs, funds, installs, and operates the entire facility — staffing, chemicals, maintenance, and compliance included — with performance-linked SLAs.",
-      "image": "https://images.unsplash.com/photo-1582735689369-4fe89db7114c?w=800&h=600&fit=crop",
-      "heroImage": "https://images.unsplash.com/photo-1582735689369-4fe89db7114c?w=1600&h=600&fit=crop",
+      "shortDescription": "We design, own, operate your laundry—effortless setup, zero investment, predictable efficiency.",
+      "description": "Quick Clean's Build, Own & Operate (BOO) model delivers a complete, on-premise laundry that is designed, installed, owned, and fully operated by us—at zero capex to you. Your property receives a high-performance laundry inside the premises, and you simply pay a transparent per-kg processing price based on actual usage.\n\nWe build. We own. We operate.\n\nWith 110+ on-premise laundries, 3,000+ machines installed, and 70,000+ kg processed per day across India, Quick Clean brings unmatched reliability, sustainability, and operational consistency to hotels and hospitals nationwide.",
+      "image": "/images/hero.jpg",
       "features": [
-        "Zero capex — we invest in equipment and infrastructure",
-        "End-to-end operations including staffing and consumables",
-        "Performance-linked SLAs with uptime guarantees",
-        "Scalable capacity as your linen volumes grow"
+        "Zero Capital Investment",
+        "End-to-End Operational Ease",
+        "Consistent Hygiene & Quality",
+        "Sustainable, High-Efficiency Operations",
+        "Predictable, Transparent Billing"
       ],
-      "ctaText": "Discuss BOO Partnership",
-      "ctaLink": "/contact",
+      "ctaText": "Get Started",
+      "ctaLink": "/contact-us",
       "priceFromINR": 0,
       "priceFromUSD": 0,
       "priceFromEUR": 0,
@@ -127,20 +189,19 @@
     },
     {
       "id": "turnkey",
-      "slug": "turnkey",
+      "slug": "turnkey-project",
       "title": "Turnkey Project",
-      "shortDescription": "Complete laundry system handled — from design to staff training, installation, and seamless launch.",
-      "description": "Our turnkey approach delivers a production-ready on-premise commercial laundry. From site assessment and engineering layout to OEM equipment procurement, utility planning, commissioning, and staff training — we hand over a facility ready for first load.",
-      "image": "https://images.unsplash.com/photo-1628177142898-93e36e4e3a50?w=800&h=600&fit=crop",
-      "heroImage": "https://images.unsplash.com/photo-1628177142898-93e36e4e3a50?w=1600&h=600&fit=crop",
+      "shortDescription": "Complete laundry system handled—from design to staff training, installation, and seamless launch.",
+      "description": "Our turnkey approach delivers a production-ready on-premise commercial laundry from concept to first load. Engineering teams design layouts optimised for workflow, hygiene zoning, and energy efficiency.",
+      "image": "/images/hero.jpg",
       "features": [
         "Site assessment and engineering design",
         "OEM equipment procurement and installation",
         "Utility planning — steam, water, drainage, electrical",
         "Commissioning, staff training, and SOP documentation"
       ],
-      "ctaText": "Start a Turnkey Project",
-      "ctaLink": "/contact",
+      "ctaText": "Contact Us",
+      "ctaLink": "/contact-us",
       "priceFromINR": 0,
       "priceFromUSD": 0,
       "priceFromEUR": 0,
@@ -151,17 +212,16 @@
       "slug": "linen-rental",
       "title": "Linen Rental",
       "shortDescription": "Receive hygienic, professionally cleaned linens on schedule, freeing your resources for core operations.",
-      "description": "Outsource your institutional linen lifecycle to Quick Clean. We supply quality-assured textiles, collect soiled inventory from your property, process through certified commercial laundries, and deliver fresh stock on agreed schedules — with full inventory tracking and hygiene certification.",
-      "image": "https://images.unsplash.com/photo-1631889993959-41b4e9c6e3c5?w=800&h=600&fit=crop",
-      "heroImage": "https://images.unsplash.com/photo-1631889993959-41b4e9c6e3c5?w=1600&h=600&fit=crop",
+      "description": "Outsource your institutional linen lifecycle to Quick Clean. We supply quality-assured textiles, collect soiled inventory, process through certified commercial laundries, and deliver fresh stock on agreed schedules.",
+      "image": "/images/hero.jpg",
       "features": [
-        "Full linen inventory management for hospitality and healthcare",
+        "Full linen inventory management",
         "Scheduled collection and delivery cycles",
-        "Hygiene-certified processing with audit trails",
-        "Flexible volume scaling for seasonal occupancy"
+        "Hygiene-certified processing",
+        "Flexible volume scaling"
       ],
-      "ctaText": "Discuss Linen Rental",
-      "ctaLink": "/contact",
+      "ctaText": "Contact Us",
+      "ctaLink": "/contact-us",
       "priceFromINR": 0,
       "priceFromUSD": 0,
       "priceFromEUR": 0,
@@ -171,18 +231,17 @@
       "id": "lease",
       "slug": "equipment-on-lease",
       "title": "Equipment on Lease",
-      "shortDescription": "Lease high-capacity eco-efficient laundry machines with flexible terms — no ownership burdens.",
-      "description": "Access industrial-grade washer-extractors, tumble dryers, flatwork ironers, and finishing lines without large capital outlays. Lease structures include maintenance packages, upgrade options, and terms aligned to your contract cycles.",
-      "image": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=600&fit=crop",
-      "heroImage": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1600&h=600&fit=crop",
+      "shortDescription": "Lease high‑capacity eco‑efficient laundry machines with flexible terms—no ownership burdens.",
+      "description": "Access industrial-grade washer-extractors, tumble dryers, flatwork ironers, and finishing lines without large capital outlays. Lease structures include maintenance packages and upgrade options.",
+      "image": "/images/hero.jpg",
       "features": [
-        "Flexible lease tenures from 24 to 60 months",
-        "Comprehensive maintenance and breakdown cover",
-        "Upgrade paths to newer, more efficient models",
-        "Tax-efficient structuring for corporate finance teams"
+        "Flexible lease tenures",
+        "Comprehensive maintenance cover",
+        "Upgrade paths to newer models",
+        "Tax-efficient structuring"
       ],
-      "ctaText": "Discuss Equipment Lease",
-      "ctaLink": "/contact",
+      "ctaText": "Contact Us",
+      "ctaLink": "/contact-us",
       "priceFromINR": 0,
       "priceFromUSD": 0,
       "priceFromEUR": 0,
@@ -194,172 +253,375 @@
       "id": "t1",
       "quote": "Quick Clean's BOO model made our laundry setup effortless and cost-free. Their team manages everything with great efficiency, and the results have been consistently excellent.",
       "author": "Nitin Sharma",
-      "company": "Hospitality Partner",
-      "rating": 5
-    },
-    {
-      "id": "t2",
-      "quote": "Their turnkey team delivered our 800 kg/day facility ahead of schedule. Training documentation and SOPs made handover seamless for our engineering staff.",
-      "author": "Dr. Priya Nair",
-      "company": "Director of Operations, Multi-Specialty Hospital",
-      "rating": 5
-    },
-    {
-      "id": "t3",
-      "quote": "Linen rental eliminated inventory headaches across our 12-property portfolio. Consistent quality and predictable per-piece costing simplified our P&L planning.",
-      "author": "Arun Khanna",
-      "company": "VP Supply Chain, Hotel Chain",
+      "company": "",
+      "image": "/images/testimonial-nitin.jpg",
       "rating": 5
     }
   ],
   "brands": [
-    { "id": "b1", "name": "Marriott", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Marriott_International_logo.svg/200px-Marriott_International_logo.svg.png" },
-    { "id": "b2", "name": "Taj Hotels", "image": "https://upload.wikimedia.org/wikipedia/en/thumb/6/6e/Taj_Hotels_logo.svg/200px-Taj_Hotels_logo.svg.png" },
-    { "id": "b3", "name": "Radisson", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Radisson_Hotels_logo.svg/200px-Radisson_Hotels_logo.svg.png" },
-    { "id": "b4", "name": "Fortis", "image": "https://upload.wikimedia.org/wikipedia/en/thumb/8/8c/Fortis_Healthcare_logo.svg/200px-Fortis_Healthcare_logo.svg.png" },
-    { "id": "b5", "name": "ITC Hotels", "image": "https://upload.wikimedia.org/wikipedia/en/thumb/5/5e/ITC_Limited_Logo.svg/200px-ITC_Limited_Logo.svg.png" },
-    { "id": "b6", "name": "Hyatt", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Hyatt_Logo.svg/200px-Hyatt_Logo.svg.png" },
-    { "id": "b7", "name": "Oberoi", "image": "https://upload.wikimedia.org/wikipedia/en/thumb/8/8e/The_Oberoi_Group_logo.svg/200px-The_Oberoi_Group_logo.svg.png" },
-    { "id": "b8", "name": "Apollo", "image": "https://upload.wikimedia.org/wikipedia/en/thumb/9/98/Apollo_Hospitals_Logo.svg/200px-Apollo_Hospitals_Logo.svg.png" }
+    {
+      "id": "b1",
+      "name": "Partner 1",
+      "image": "/images/brands/1.jpg"
+    },
+    {
+      "id": "b2",
+      "name": "Partner 2",
+      "image": "/images/brands/2.jpg"
+    },
+    {
+      "id": "b3",
+      "name": "Partner 3",
+      "image": "/images/brands/3.jpg"
+    },
+    {
+      "id": "b4",
+      "name": "Partner 4",
+      "image": "/images/brands/4.jpg"
+    },
+    {
+      "id": "b5",
+      "name": "Partner 5",
+      "image": "/images/brands/5.jpg"
+    },
+    {
+      "id": "b6",
+      "name": "Partner 6",
+      "image": "/images/brands/6.jpg"
+    },
+    {
+      "id": "b7",
+      "name": "Partner 7",
+      "image": "/images/brands/7.jpg"
+    },
+    {
+      "id": "b8",
+      "name": "Partner 8",
+      "image": "/images/brands/8.jpg"
+    },
+    {
+      "id": "b9",
+      "name": "Partner 9",
+      "image": "/images/brands/9.jpg"
+    },
+    {
+      "id": "b10",
+      "name": "Partner 10",
+      "image": "/images/brands/10.jpg"
+    },
+    {
+      "id": "b11",
+      "name": "Partner 11",
+      "image": "/images/brands/11.jpg"
+    },
+    {
+      "id": "b12",
+      "name": "Partner 12",
+      "image": "/images/brands/12.jpg"
+    },
+    {
+      "id": "b13",
+      "name": "Partner 13",
+      "image": "/images/brands/13.jpg"
+    },
+    {
+      "id": "b14",
+      "name": "Partner 14",
+      "image": "/images/brands/14.jpg"
+    },
+    {
+      "id": "b15",
+      "name": "Partner 15",
+      "image": "/images/brands/15.jpg"
+    },
+    {
+      "id": "b16",
+      "name": "Partner 16",
+      "image": "/images/brands/16.jpg"
+    },
+    {
+      "id": "b17",
+      "name": "Partner 17",
+      "image": "/images/brands/17.jpg"
+    },
+    {
+      "id": "b18",
+      "name": "Partner 18",
+      "image": "/images/brands/18.jpg"
+    }
   ],
-  "blogCategories": ["Sustainability", "Healthcare", "Hospitality", "Operations", "Linen Hygiene"],
+  "blogCategories": [
+    "Uncategorized",
+    "Linen hygiene"
+  ],
   "blog": [
     {
       "id": "blog1",
-      "slug": "water-efficiency-commercial-laundry",
-      "title": "Reducing Water Consumption in High-Volume Commercial Laundries",
-      "excerpt": "How modern washer-extractors and process optimisation cut water use from 24 L/kg to under 8 L/kg without compromising hygiene standards.",
-      "content": "Commercial laundries are among the most water-intensive operations in hospitality and healthcare. Traditional processes consume up to 24 litres per kilogram of linen processed — a figure that strains both budgets and environmental commitments.\n\nAt QuickClean, we have demonstrated that systematic equipment upgrades, water recovery systems, and operator training can reduce consumption to under 8 L/kg — a 67% reduction that translates to millions of litres saved annually across our network.\n\nKey strategies include high-efficiency washer-extractors with precise chemical dosing, heat recovery from exhaust air, greywater recycling for pre-wash cycles, and real-time monitoring dashboards that flag anomalies before they become waste.\n\nFor facility managers evaluating sustainability investments, the ROI on water efficiency typically materialises within 18–24 months through reduced utility bills and compliance with increasingly stringent environmental reporting requirements.",
-      "category": "Sustainability",
-      "image": "https://images.unsplash.com/photo-1548839140-29a749e1cf4d?w=800&h=500&fit=crop",
-      "date": "2025-11-15"
-    },
-    {
-      "id": "blog2",
-      "slug": "hospital-linen-hygiene-standards",
-      "title": "Hospital Linen Hygiene: Meeting NABH and International Accreditation Requirements",
-      "excerpt": "A practical guide to designing on-premise hospital laundries that satisfy infection control protocols and audit requirements.",
-      "content": "Hospital linen management sits at the intersection of patient safety, operational efficiency, and regulatory compliance. NABH accreditation and international standards such as HTM 01-04 place specific demands on laundry design, process validation, and documentation.\n\nCritical design elements include clear separation of soiled and clean zones, negative pressure in sorting areas, validated wash cycles with thermal and chemical disinfection parameters, and traceability systems that link each batch to temperature and chemical logs.\n\nQuickClean's healthcare laundry specialists work with infection control teams from the planning stage through commissioning audits, ensuring that facilities are audit-ready from day one.",
-      "category": "Healthcare",
-      "image": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&h=500&fit=crop",
-      "date": "2025-10-22"
-    },
-    {
-      "id": "blog3",
-      "slug": "boo-model-hospitality",
-      "title": "Why Five-Star Hotels Are Adopting the BOO Model for On-Premise Laundries",
-      "excerpt": "Capital efficiency, operational expertise, and SLA-backed performance are driving a shift from owned laundries to managed partnerships.",
-      "content": "The Build Own & Operate model is reshaping how premium hospitality groups approach on-premise laundry. Rather than allocating capital to equipment that depreciates and requires specialised maintenance, hotel groups are partnering with operators who assume full lifecycle responsibility.\n\nBenefits include zero upfront investment, predictable per-kg costing, guaranteed uptime SLAs, and access to continuous technology upgrades without additional capex. For CFOs and asset managers, BOO converts a fixed asset into a variable operating expense aligned with occupancy levels.\n\nQuickClean currently operates BOO facilities for leading hotel groups across India, with average uptime exceeding 98% and water consumption consistently below industry benchmarks.",
-      "category": "Hospitality",
-      "image": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&h=500&fit=crop",
+      "slug": "why-commercial-laundry-is-still-a-maturing-manufacturing-category-in-india",
+      "title": "Why Commercial Laundry Is Still a Maturing Manufacturing Category in India",
+      "excerpt": "India has made strong progress in manufacturing across many sectors. However, when it comes to commercial laundry machines for hotels and large institutions, there is still a noticeable gap between locally manufactured systems and globally proven commercial technology.",
+      "content": "India has made strong progress in manufacturing across many sectors. However, when it comes to commercial laundry machines for hotels and large institutions, there is still a noticeable gap between locally manufactured systems and globally proven commercial technology.\n\nThis is not a question of intent or affordability. It is a question of performance at scale.\n\nCommercial laundry environments are demanding. Machines operate continuously, handle heavy loads, and are expected to deliver consistent results with minimal downtime. In these conditions, small design and control limitations quickly translate into higher operating costs and reduced reliability.\n\nAt first glance, many locally manufactured machines appear adequate. They perform basic wash and dry functions and may work well in low-volume or intermittent-use settings.\n\nHowever, commercial laundry performance is measured over thousands of cycles, not initial operation. Differences in motor control, extraction capability, water management, automation, and monitoring become increasingly visible as volume and usage intensity increase.\n\nIn real-world operations, these gaps compound quickly. Lower extraction leaves linen wetter, increasing drying time and energy consumption. Manual or less precise dosing raises water and chemical usage while reducing wash consistency. Limited automation and diagnostics delay issue detection and increase operational strain.\n\nOver time, this results in higher utility costs, reduced daily capacity, faster linen wear, and greater vulnerability during peak demand.\n\nThis is not a permanent assessment. Indian manufacturing capability is evolving rapidly, and progress is clearly visible.\n\nBut today, for high-volume, mission-critical commercial laundry operations, consistency, efficiency, and uptime still favor globally proven systems.\n\nThat is why many hotels and large institutions continue to rely on them.",
+      "category": "Uncategorized",
+      "image": "/images/blog-manufacturing.jpg",
       "date": "2025-09-08"
     },
     {
+      "id": "blog2",
+      "slug": "why-linen-management-directly-impacts-hotel-revenue",
+      "title": "Why Linen Management Directly Impacts Hotel Revenue",
+      "excerpt": "In most hotels, linen management is treated as a back-of-house function. Necessary, but operational. Something handled quietly behind the scenes.",
+      "content": "In most hotels, linen management is treated as a back-of-house function. Necessary, but operational. Something handled quietly behind the scenes.\n\nBut linen quality, availability, and turnaround time directly shape guest experience — and guest experience directly shapes revenue.",
+      "category": "Linen hygiene",
+      "image": "/images/blog-hotel-revenue.jpg",
+      "date": "2025-09-05"
+    },
+    {
+      "id": "blog3",
+      "slug": "the-silent-killer-in-hospital-linen",
+      "title": "The Silent Killer in Hospital Linen",
+      "excerpt": "India's most trusted hospitals are known for spotless corridors, advanced ICUs, and cutting-edge medical technology.",
+      "content": "India's most trusted hospitals are known for spotless corridors, advanced ICUs, and cutting-edge medical technology.\n\nYet behind the scenes, hospital linen hygiene remains one of the most underestimated infection risks in healthcare operations.",
+      "category": "Linen hygiene",
+      "image": "/images/blog-hospital-linen.jpg",
+      "date": "2025-08-29"
+    },
+    {
       "id": "blog4",
-      "slug": "linen-hygiene-best-practices",
-      "title": "Linen Hygiene Best Practices for Multi-Property Operations",
-      "excerpt": "Standardising linen handling protocols across properties ensures consistent guest experience and audit readiness.",
-      "content": "Multi-property hospitality groups face a unique challenge: maintaining uniform linen hygiene standards across diverse facilities, staff teams, and equipment configurations. Without centralised protocols, quality variance becomes a brand risk.\n\nQuickClean recommends a three-tier approach: standardised SOPs with visual job aids, centralised chemical and wash programme management, and quarterly hygiene audits with scored dashboards shared across properties.\n\nTechnology plays a growing role — IoT-enabled washers that log cycle parameters, RFID linen tracking, and cloud-based compliance reporting give regional managers real-time visibility without visiting every site.",
-      "category": "Linen Hygiene",
-      "image": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&h=500&fit=crop",
-      "date": "2025-08-14"
+      "slug": "the-hidden-cost-of-outdated-laundry-systems",
+      "title": "The Hidden Cost of Outdated Laundry Systems — And Here's the Fix",
+      "excerpt": "Every day, hotels and hospitals lose millions without even noticing. The culprit sits quietly behind the scenes — outdated laundry systems.",
+      "content": "Every day, hotels and hospitals lose millions without even noticing. The culprit sits quietly behind the scenes — outdated laundry systems.\n\nHigher water bills, longer cycles, linen damage, and downtime during peak hours all add up to hidden operational losses.",
+      "category": "Linen hygiene",
+      "image": "/images/blog-outdated-systems.jpg",
+      "date": "2025-08-19"
     }
   ],
   "about": {
     "title": "About Us",
-    "intro": "Quick Clean Laundry Systems Pvt. Ltd. has been India's trusted partner for on-premise commercial laundry since 2010. Headquartered in Gurugram, we serve hospitality, healthcare, defence, and institutional clients across 38+ cities with 1,500+ skilled employees managing 110+ on-premise laundry sites.",
-    "mission": "To deliver reliable, sustainable, and cost-effective commercial laundry solutions that let our partners focus on their core business.",
-    "vision": "To be the most trusted commercial laundry partner in South Asia and emerging international markets.",
-    "heroImage": "https://images.unsplash.com/photo-1582735689369-4fe89db7114c?w=1600&h=500&fit=crop",
+    "intro": "Quick Clean Laundry Systems Pvt. Ltd. — India's trusted partner for on-premise commercial laundry since 2010.",
+    "mission": "",
+    "vision": "",
+    "heroImage": "/images/hero.jpg",
     "missionTitle": "Our Mission",
     "visionTitle": "Our Vision",
     "journeyTitle": "Our Journey",
     "timeline": [
-      { "year": "2010", "title": "Foundation", "description": "Founded in Gurugram with a vision to bring structured, technology-driven commercial laundry to India." },
-      { "year": "2012", "title": "OEM Partnerships", "description": "Partnered with leading global laundry equipment manufacturers to bring energy-efficient machines to the Indian market." },
-      { "year": "2015", "title": "Healthcare Expansion", "description": "Expanded into hospital and institutional laundries, serving major healthcare networks nationwide." },
-      { "year": "2020", "title": "BOO Model Launch", "description": "Introduced Build Own & Operate — enabling hotels and hospitals to run on-premise laundries with zero capex." },
-      { "year": "2024", "title": "ReWeave 360", "description": "Launched India's first circular linen economy programme for hospitality and healthcare sectors." }
+      {
+        "year": "2010",
+        "title": "Foundation",
+        "description": "A visit to a U.S. laundromat sparked Anshul Gupta's vision: India deserved structured, tech-driven laundry too. He shared it with his brother, Ankur Gupta—and together they set out to bring the laundromat revolution to India."
+      },
+      {
+        "year": "2011",
+        "title": "Expansion",
+        "description": "The idea caught fire. Quick Clean opened 40+ laundromats across India, proving demand for organized, reliable laundry services."
+      },
+      {
+        "year": "2012",
+        "title": "OEM Partnerships",
+        "description": "Partnered with Electrolux Professional to introduce energy-efficient, gas-based machines—raising the bar for performance and sustainability in India."
+      },
+      {
+        "year": "2013",
+        "title": "Healthcare & Hospitality",
+        "description": "Expanded into hotels and hospitals, delivering professional laundry solutions to leading brands like Marriott and Taj."
+      },
+      {
+        "year": "2014",
+        "title": "Growth",
+        "description": "Abhishek Gupta joined to power the next phase of growth and strengthen capital discipline. Signed an agreement with TREVIL to bring premium finishing solutions to India."
+      },
+      {
+        "year": "2015",
+        "title": "Defence",
+        "description": "Executed a landmark on-premise laundry for the Indian Military Academy—a showcase of scale, hygiene, and reliability."
+      },
+      {
+        "year": "2016",
+        "title": "LG Partnership",
+        "description": "Joined hands with LG Commercial Laundry to revolutionize semi-commercial laundries across India—faster installs, smarter operations, better outcomes."
+      },
+      {
+        "year": "2018",
+        "title": "Experience Center",
+        "description": "Opened India's first Laundry Experience Center in New Delhi—educating customers on process, hygiene, and sustainable technology."
+      },
+      {
+        "year": "2019",
+        "title": "Scale",
+        "description": "Crossed 350+ employees and 3,000+ machines installed, serving many of India's biggest brands nationwide."
+      },
+      {
+        "year": "2020",
+        "title": "BOO Model",
+        "description": "Introduced the Build-Own-Operate (BOO) model—helping 5-star hotels and hospitals run on-premise laundries with zero capex and professional management."
+      },
+      {
+        "year": "2024",
+        "title": "Milestone",
+        "description": "Now processing 50,000 kg of linen daily for partners including Marriott, Radisson, and AIIMS—with uptime, quality, and sustainability at the core."
+      },
+      {
+        "year": "2025",
+        "title": "Funding & ReWeave",
+        "description": "Raised $6 million from Alkemi Growth Capital and Blue Ashva Capital. Launched ReWeave 360—our circular initiative turning waste into worth."
+      }
     ]
   },
   "sustainability": {
-    "title": "Sustainability Commitment",
-    "intro": "Commercial laundry is resource-intensive. We invest in technology, process design, and operator training to minimise water, energy, and chemical consumption across every site we manage.",
-    "heroImage": "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=1600&h=500&fit=crop",
+    "title": "Sustainability",
+    "intro": "Sustainability is not just a buzzword for us. It's how we design, build, and run every on-premise hotel laundry—lowering your cost per kg while shrinking water, energy, and chemical footprints, with proof you can audit. Impact at a glance: 40% reduction in water usage, 70% reduction in carbon emissions, 450+ million liters of water saved, and ~160 million kg of carbon cut across partner properties.",
+    "heroImage": "/images/sustainability-water.jpg",
     "metrics": [
-      { "value": 67, "suffix": "%", "label": "Water Reduction vs Industry Average" },
-      { "value": 457, "suffix": "M+ L", "label": "Litres of Water Saved" },
-      { "value": 60, "suffix": "M kg", "label": "CO₂ Emissions Avoided" },
-      { "value": 35, "suffix": "%", "label": "Energy Savings per kg Linen" }
+      {
+        "value": 40,
+        "suffix": "%",
+        "label": "reduction in water usage"
+      },
+      {
+        "value": 70,
+        "suffix": "%",
+        "label": "reduction in carbon emissions"
+      },
+      {
+        "value": 450,
+        "suffix": "+ million liters",
+        "label": "of water saved"
+      },
+      {
+        "value": 160,
+        "suffix": " million kg",
+        "label": "of carbon cut"
+      }
     ],
-    "initiatives": [
-      { "title": "Water Recovery Systems", "description": "Advanced water recycling and heat recovery on high-volume sites reduces freshwater draw by up to 70%.", "image": "https://images.unsplash.com/photo-1548839140-29a749e1cf4d?w=600&h=400&fit=crop" },
-      { "title": "Eco-Efficient Equipment", "description": "We specify washer-extractors and dryers with best-in-class specific consumption ratings from certified OEM partners.", "image": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=400&fit=crop" },
-      { "title": "Circular Textile Programme", "description": "End-of-life linen is diverted from landfill through our ReWeave 360 textile recovery initiative.", "image": "https://images.unsplash.com/photo-1523381210434-271fa8bcf6eb?w=600&h=400&fit=crop" }
-    ]
+    "initiatives": []
   },
   "team": {
-    "title": "Leadership Team",
-    "intro": "Our leadership combines deep operational expertise in commercial laundry with experience scaling B2B service businesses across India.",
-    "heroImage": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1600&h=500&fit=crop",
+    "title": "Our Team",
+    "intro": "",
+    "heroImage": "/images/hero.jpg",
     "members": [
-      { "id": "m1", "name": "Anshul Gupta", "role": "CEO", "image": "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=400&fit=crop", "bio": "Founder of Quick Clean Laundry Systems; leads vision, partnerships, and nationwide expansion in on-premise commercial laundry." },
-      { "id": "m2", "name": "Anita Sharma", "role": "COO", "image": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop", "bio": "Former operations head at a leading hotel group; expert in on-premise laundry SLAs." },
-      { "id": "m3", "name": "David Chen", "role": "Head of International Business", "image": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop", "bio": "Leads expansion into Middle East and Southeast Asian markets." },
-      { "id": "m4", "name": "Sanjay Patel", "role": "Chief Technology Officer", "image": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&h=400&fit=crop", "bio": "Drives IoT-enabled laundry monitoring and predictive maintenance platforms." }
+      {
+        "id": "m1",
+        "name": "Anshul Gupta",
+        "role": "CEO",
+        "image": "/images/founder.jpg",
+        "bio": ""
+      },
+      {
+        "id": "m2",
+        "name": "Abhishek Gupta",
+        "role": "CFO",
+        "image": "",
+        "bio": ""
+      },
+      {
+        "id": "m3",
+        "name": "Ankur Gupta",
+        "role": "CTO",
+        "image": "",
+        "bio": ""
+      },
+      {
+        "id": "m4",
+        "name": "Anand Dharmadhyaksha",
+        "role": "CGO",
+        "image": "",
+        "bio": ""
+      },
+      {
+        "id": "m5",
+        "name": "Neeti Kalra",
+        "role": "General Manager – HR",
+        "image": "",
+        "bio": ""
+      },
+      {
+        "id": "m6",
+        "name": "Antima Gautam",
+        "role": "Sr. Manager - Financial Planning & Analysis",
+        "image": "",
+        "bio": ""
+      },
+      {
+        "id": "m7",
+        "name": "Dadasaheb Bhagwan S",
+        "role": "Sr. Vice President - Engineering & Business",
+        "image": "",
+        "bio": ""
+      },
+      {
+        "id": "m8",
+        "name": "Manibhadra Sahu",
+        "role": "Finance Controller",
+        "image": "",
+        "bio": ""
+      },
+      {
+        "id": "m9",
+        "name": "Prashant Vaidya",
+        "role": "Regional Operational Lead",
+        "image": "",
+        "bio": ""
+      },
+      {
+        "id": "m10",
+        "name": "Anil Dobhal",
+        "role": "Logistics Head",
+        "image": "",
+        "bio": ""
+      },
+      {
+        "id": "m11",
+        "name": "CD Sharma",
+        "role": "Regional Operational Lead",
+        "image": "",
+        "bio": ""
+      }
     ]
   },
   "investors": {
     "title": "Our Investors",
-    "intro": "QuickClean is backed by growth capital partners who share our commitment to operational excellence and sustainable industrial services.",
-    "highlights": [
-      "Series A funding led by institutional growth investors",
-      "Strong unit economics across BOO and managed operations contracts",
-      "Expanding addressable market in healthcare and hospitality infrastructure",
-      "Proven track record of 14+ years profitable operations"
-    ],
-    "partners": [
-      { "id": "inv1", "name": "Growth Capital Partners", "logo": "https://images.unsplash.com/photo-1560179707-f14e90ef3623?w=200&h=80&fit=crop", "description": "Leading growth equity firm focused on industrial services and sustainability." },
-      { "id": "inv2", "name": "Sustainable Ventures Fund", "logo": "https://images.unsplash.com/photo-1553729459-efe14ef6055d?w=200&h=80&fit=crop", "description": "Impact-focused fund investing in water and energy efficiency technologies." }
-    ]
+    "intro": "",
+    "highlights": [],
+    "partners": []
   },
   "careers": {
     "title": "Careers",
-    "intro": "Join 1,500+ professionals building India's commercial laundry infrastructure. We offer structured growth paths in operations, engineering, sales, and corporate functions.",
-    "benefitsTitle": "Why Join Us",
-    "benefits": [
-      "Competitive compensation with performance incentives",
-      "Health insurance for employees and dependents",
-      "Technical training on commercial laundry equipment",
-      "Career progression across 38+ city operations"
-    ],
-    "openingsTitle": "Open Positions",
-    "openings": [
-      { "id": "job1", "title": "Regional Operations Manager", "location": "Gurugram", "type": "Full-time", "description": "Lead on-premise laundry operations across the NCR region. 8+ years experience in commercial laundry or facility management required." },
-      { "id": "job2", "title": "Sales Manager — Hospitality", "location": "Mumbai", "type": "Full-time", "description": "Drive BOO and turnkey sales across Maharashtra hospitality sector. Strong network in hotel operations preferred." },
-      { "id": "job3", "title": "Maintenance Engineer", "location": "Bangalore", "type": "Full-time", "description": "Maintain washer-extractors, dryers, and ironers across 15+ client sites. OEM certification a plus." },
-      { "id": "job4", "title": "Business Development — International", "location": "Dubai / Remote", "type": "Full-time", "description": "Expand QuickClean's footprint in Middle East hospitality and healthcare markets." }
-    ]
+    "intro": "",
+    "benefitsTitle": "",
+    "benefits": [],
+    "openingsTitle": "",
+    "openings": []
   },
   "contact": {
     "title": "Contact Us",
-    "intro": "Speak with our solutions team about commercial laundry machines, on-premise operations, or partnership models. We respond within one business day.",
+    "intro": "Call Us or fill the form",
     "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3506.2233913121413!2d77.0899!3d28.4945!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDI5JzQwLjIiTiA3N8KwMDUnMjMuNiJF!5e0!3m2!1sen!2sin!4v1600000000000"
   },
   "footer": {
-    "aboutText": "Quick Clean Laundry Systems Pvt. Ltd. delivers on-premise commercial laundry solutions — Build Own & Operate, turnkey projects, linen rental, and equipment leasing — for hospitality, healthcare, and institutional clients across India.",
-    "copyright": "© 2026 Quick Clean Laundry Systems Pvt. Ltd. All rights reserved.",
+    "aboutText": "Quick Clean Laundry Systems Pvt. Ltd.",
+    "copyright": "© Quick Clean Laundry Systems Pvt. Ltd.",
     "solutionsTitle": "Our Solutions",
     "companyTitle": "Company",
     "headOfficeTitle": "Head Office",
     "legalLinks": [
-      { "label": "Privacy Policy", "href": "/legal/privacy" },
-      { "label": "Terms of Service", "href": "/legal/terms" },
-      { "label": "Code of Conduct", "href": "/legal/code-of-conduct" }
+      {
+        "label": "Privacy Policy",
+        "href": "/legal/privacy"
+      },
+      {
+        "label": "Terms of Service",
+        "href": "/legal/terms"
+      },
+      {
+        "label": "Code of Conduct",
+        "href": "/legal/code-of-conduct"
+      }
     ]
   },
   "cookieConsent": {
-    "message": "We use cookies to improve your experience and analyse site traffic. By continuing, you agree to our cookie policy.",
+    "message": "We use cookies to ensure that we give you the best experience on our website.",
     "acceptText": "Accept",
     "declineText": "Decline",
     "policyLink": "/legal/privacy",
@@ -367,40 +629,37 @@
   },
   "reweave360": {
     "heroTitle": "ReWeave 360",
-    "heroSubtitle": "India's first circular linen economy programme — transforming textile waste into measurable sustainability impact.",
+    "heroSubtitle": "India's first circular linen economy programme",
     "stats": [
-      { "value": 33, "suffix": "+", "label": "Properties Onboarded" },
-      { "value": 3676, "suffix": "+", "label": "kg Linen Recycled" },
-      { "value": 36.7, "suffix": "M L", "label": "Water Saved" }
+      {
+        "value": 33,
+        "suffix": "+",
+        "label": "Properties Onboarded"
+      },
+      {
+        "value": 3676,
+        "suffix": "+",
+        "label": "kg Linen Recycled"
+      },
+      {
+        "value": 36.7,
+        "suffix": "M L",
+        "label": "Water Saved"
+      }
     ],
     "partnersTitle": "Our Valued Partners",
-    "wakeUpTitle": "A Wake-Up Call",
-    "wakeUpParagraphs": [
-      "Every day, clean linen is laid out for guests. Every day, more used linen is discarded — stained, torn, or outdated. But what happens after disposal? It ends up in landfills.",
-      "The world generates 91.8 million tonnes of textile waste annually. India contributes 7.8 million tonnes — nearly 20% of which ends up in landfills, releasing harmful emissions.",
-      "In hospitality and healthcare, where linen turnover is high, the opportunity — and the responsibility — to act is even greater. It's time to stop throwing value away."
-    ],
+    "wakeUpTitle": "A Wake-Up Call !",
+    "wakeUpParagraphs": [],
     "programTitle": "ReWeave 360",
-    "programDescription": "ReWeave 360 is India's first circular linen economy programme. We build a smarter, sustainable system where discarded linen doesn't end in landfills but re-enters the value chain through innovation, partnerships, and verified recycling networks.",
+    "programDescription": "ReWeave 360 is India's first circular linen economy program by Quick Clean Laundry Solutions.",
     "howItWorksTitle": "How It Works",
-    "steps": [
-      { "title": "Collect", "description": "We pick up used or damaged linen from your property on scheduled cycles." },
-      { "title": "Recycle", "description": "Certified partners process textiles responsibly through verified recycling networks." },
-      { "title": "Recreate", "description": "Fabric is reborn into useful products — from aprons to cleaning cloths and laundry bags." },
-      { "title": "Report", "description": "You receive measurable ESG data and impact reports for sustainability disclosures." }
-    ],
+    "steps": [],
     "benefitsTitle": "What Your Brand Gains",
-    "benefits": [
-      { "title": "Demonstrate visible sustainability commitments" },
-      { "title": "Get measurable ESG metrics for annual reports" },
-      { "title": "Achieve zero-waste linen management" },
-      { "title": "Strengthen brand reputation with guests and stakeholders" },
-      { "title": "Align with UN SDG 12: Responsible Consumption & Production" }
-    ],
+    "benefits": [],
     "wasteToWorthTitle": "From Waste to Worth",
-    "wasteToWorthDescription": "Imagine turning worn-out bedsheets into soft pool towels, or old uniforms into new cleaning cloths and aprons. That's what ReWeave 360 does — transforming textile waste into useful products that continue to deliver value.",
+    "wasteToWorthDescription": "",
     "getStartedTitle": "Get Started",
-    "getStartedDescription": "Getting started is simple — and free. We'll guide you through every step, from linen collection to impact tracking.",
+    "getStartedDescription": "",
     "contactPhone": "+91 96672 11788",
     "contactEmail": "info@reweave360.com",
     "contactWebsite": "www.reweave360.com",
@@ -408,43 +667,38 @@
   },
   "financialPlanning": {
     "title": "Financial Planning",
-    "intro": "Strategic financial guidance for hospitality and healthcare groups evaluating commercial laundry investments, BOO partnerships, and total cost of ownership models.",
-    "sections": [
-      { "title": "Total Cost of Ownership Analysis", "content": "We provide detailed TCO models comparing owned vs. operated laundry facilities, factoring in equipment depreciation, staffing, utilities, chemicals, maintenance, and opportunity cost of capital over 5, 10, and 15-year horizons." },
-      { "title": "BOO Financial Structuring", "content": "Our finance team works with your CFO and treasury functions to structure Build Own & Operate agreements that optimise balance sheet treatment, tax efficiency, and cash flow predictability." },
-      { "title": "Capex vs. Opex Modelling", "content": "For groups evaluating turnkey installations versus managed operations, we deliver scenario analyses with sensitivity modelling for occupancy fluctuations, linen volume growth, and utility price changes." },
-      { "title": "Sustainability ROI", "content": "Quantify the financial returns on water and energy efficiency investments, including carbon credit potential, ESG reporting value, and compliance cost avoidance." }
-    ]
+    "intro": "",
+    "sections": []
   },
   "legal": {
     "privacy": {
       "title": "Privacy Policy",
-      "lastUpdated": "2026-01-01",
+      "lastUpdated": "2025-01-01",
       "sections": [
-        { "heading": "Information We Collect", "body": "We collect information you provide directly, including name, email, phone number, company name, and messages submitted through our contact and newsletter forms. We also collect standard web analytics data including IP address, browser type, and pages visited." },
-        { "heading": "How We Use Your Information", "body": "We use collected information to respond to enquiries, send requested communications, improve our website and services, and comply with legal obligations. We do not sell personal information to third parties." },
-        { "heading": "Data Security", "body": "We implement appropriate technical and organisational measures to protect personal information against unauthorised access, alteration, disclosure, or destruction." },
-        { "heading": "Your Rights", "body": "You may request access to, correction of, or deletion of your personal information by contacting us at hello@quickclean.co.in." }
+        {
+          "heading": "Privacy Policy",
+          "body": "Quick Clean Laundry Systems Pvt. Ltd. privacy policy."
+        }
       ]
     },
     "terms": {
       "title": "Terms of Service",
-      "lastUpdated": "2026-01-01",
+      "lastUpdated": "2025-01-01",
       "sections": [
-        { "heading": "Acceptance of Terms", "body": "By accessing and using this website, you accept and agree to be bound by these Terms of Service. If you do not agree, please do not use this website." },
-        { "heading": "Use of Website", "body": "This website is provided for informational purposes about QuickClean's commercial laundry solutions. Content may not be reproduced without prior written consent." },
-        { "heading": "Limitation of Liability", "body": "QuickClean shall not be liable for any indirect, incidental, or consequential damages arising from use of this website or reliance on its content." },
-        { "heading": "Governing Law", "body": "These terms are governed by the laws of India. Disputes shall be subject to the exclusive jurisdiction of courts in Gurugram, Haryana." }
+        {
+          "heading": "Terms",
+          "body": "Quick Clean Laundry Systems Pvt. Ltd. terms of service."
+        }
       ]
     },
     "codeOfConduct": {
       "title": "Code of Conduct",
-      "lastUpdated": "2026-01-01",
+      "lastUpdated": "2025-01-01",
       "sections": [
-        { "heading": "Our Commitment", "body": "QuickClean is committed to conducting business with integrity, transparency, and respect for all stakeholders including employees, clients, suppliers, and communities." },
-        { "heading": "Ethical Business Practices", "body": "We prohibit bribery, corruption, and unfair competition. All employees and partners are expected to comply with applicable laws and regulations." },
-        { "heading": "Workplace Standards", "body": "We maintain safe working conditions, fair compensation, and equal opportunity across all operations. Harassment and discrimination are not tolerated." },
-        { "heading": "Environmental Responsibility", "body": "We strive to minimise environmental impact through water efficiency, energy conservation, and circular economy initiatives including ReWeave 360." }
+        {
+          "heading": "Code of Conduct",
+          "body": "Quick Clean Laundry Systems Pvt. Ltd. code of conduct."
+        }
       ]
     }
   },

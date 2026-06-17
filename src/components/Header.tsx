@@ -24,9 +24,9 @@ export function Header({ navigation, settings }: HeaderProps) {
             <CmsImage
               src={settings.logo}
               alt={settings.siteName}
-              width={40}
-              height={40}
-              className="h-10 w-10 rounded-lg object-cover"
+              width={250}
+              height={44}
+              className="h-11 w-auto max-w-[200px] object-contain"
             />
           ) : (
             <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-[#071525] text-sm font-bold text-white">
