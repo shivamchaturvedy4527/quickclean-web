@@ -1,11 +1,20 @@
 import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 import { SiteLayout } from "@/components/SiteLayout";
 import { AnimatedCounter } from "@/components/AnimatedCounter";
 import { CmsImage } from "@/components/CmsImage";
 import { LogoMarquee } from "@/components/LogoMarquee";
 import { VideoSection } from "@/components/VideoSection";
 import { NewsletterForm } from "@/components/NewsletterForm";
+import { SectionReveal } from "@/components/SectionReveal";
+import { Container } from "@/components/ui/Container";
+import { SectionHeading } from "@/components/ui/SectionHeading";
 import { getCMS } from "@/lib/cms-store";
+
+const SUSTAINABILITY_IMAGES = [
+  "/images/sustainability-water.jpg",
+  "/images/sustainability-carbon.jpg",
+];
 
 export default async function HomePage() {
   const cms = await getCMS();
@@ -14,101 +23,138 @@ export default async function HomePage() {
   return (
     <SiteLayout>
       {/* Hero */}
-      <section className="relative min-h-[500px] bg-[#c5dbe9]">
+      <section className="relative min-h-[560px] overflow-hidden bg-hero-tint sm:min-h-[620px]">
         <CmsImage src={home.heroImage} alt="" fill priority className="object-cover" sizes="100vw" />
-        <div className="relative mx-auto flex min-h-[500px] max-w-6xl items-center px-4 py-16">
-          <div>
-            <h1 className="text-4xl font-semibold text-[#06163a] md:text-5xl">{home.heroTitle}</h1>
-            <h1 className="text-4xl font-semibold text-[#06163a] md:text-5xl">{home.heroTitleLine2}</h1>
-          </div>
-        </div>
+        <div className="absolute inset-0 bg-gradient-to-r from-white/95 via-white/80 to-white/30" />
+        <div className="absolute inset-0 gradient-mesh opacity-40" />
+        <Container className="relative flex min-h-[560px] items-center py-20 sm:min-h-[620px]">
+          <SectionReveal className="max-w-2xl">
+            <h1 className="font-display text-4xl font-medium leading-[1.1] tracking-tight text-navy sm:text-5xl lg:text-6xl">
+              {home.heroTitle}
+            </h1>
+            <h1 className="font-display mt-1 text-4xl font-medium leading-[1.1] tracking-tight text-navy sm:text-5xl lg:text-6xl">
+              {home.heroTitleLine2}
+            </h1>
+          </SectionReveal>
+        </Container>
       </section>
 
       {/* Stats */}
-      <section className="bg-white py-12">
-        <div className="mx-auto grid max-w-6xl grid-cols-1 gap-8 px-4 sm:grid-cols-3">
-          {home.stats.map((stat) => (
-            <div key={stat.label} className="text-center">
-              <div className="text-4xl font-semibold text-[#06163a]">
-                <AnimatedCounter end={stat.value} suffix={stat.suffix} />
-              </div>
-              <p className="mt-2 text-sm text-slate-600">{stat.label}</p>
-            </div>
-          ))}
-        </div>
+      <section className="border-b border-border bg-white py-16">
+        <Container>
+          <div className="grid grid-cols-1 gap-10 sm:grid-cols-3">
+            {home.stats.map((stat, i) => (
+              <SectionReveal key={stat.label} delay={i * 0.08}>
+                <div className="text-center">
+                  <div className="stat-value">
+                    <AnimatedCounter end={stat.value} suffix={stat.suffix} />
+                  </div>
+                  <p className="mt-2 text-sm font-medium text-slate-600">{stat.label}</p>
+                </div>
+              </SectionReveal>
+            ))}
+          </div>
+        </Container>
       </section>
 
-      {/* Linen + Water (4 boxes) */}
-      <section className="bg-slate-50 py-12">
-        <div className="mx-auto grid max-w-6xl grid-cols-1 gap-6 px-4 sm:grid-cols-2 lg:grid-cols-4">
-          <div className="rounded border border-slate-200 bg-white p-6 text-center">
-            <div className="text-sm text-slate-600">{home.linenWashedLabel}</div>
-            <div className="mt-2 text-4xl font-semibold text-[#06163a]">
-              <AnimatedCounter end={home.linenWashedValue} suffix={home.linenWashedSuffix} />
-            </div>
-            <div className="mt-1 text-sm text-slate-500">{home.linenWashedUnit}</div>
+      {/* Linen + Water */}
+      <section className="bg-background py-16 sm:py-20">
+        <Container>
+          <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
+            <SectionReveal className="card card-lift p-7 text-center">
+              <div className="text-sm font-medium text-slate-500">{home.linenWashedLabel}</div>
+              <div className="stat-value mt-3">
+                <AnimatedCounter end={home.linenWashedValue} suffix={home.linenWashedSuffix} />
+              </div>
+              <div className="mt-1 text-sm text-slate-500">{home.linenWashedUnit}</div>
+            </SectionReveal>
+
+            <SectionReveal delay={0.06} className="card card-lift p-7 text-center">
+              <div className="text-sm font-medium text-slate-500">{home.waterComparison.title}</div>
+              <div className="mt-3 text-2xl font-semibold text-navy">
+                <AnimatedCounter end={home.waterComparison.industryDisplayValue} />
+              </div>
+              <div className="text-xs text-slate-500">{home.waterComparison.industryLabel}</div>
+              <div className="mt-4 text-2xl font-semibold text-accent-bright">
+                <AnimatedCounter end={home.waterComparison.qcDisplayValue} />
+              </div>
+              <div className="text-xs text-slate-500">{home.waterComparison.qcLabel}</div>
+            </SectionReveal>
+
+            <SectionReveal delay={0.12} className="card card-lift p-7 text-center">
+              <div className="text-sm font-medium text-slate-500">{home.waterComparison.monthlySavedLabel}</div>
+              <div className="stat-value mt-3">
+                <AnimatedCounter end={home.waterComparison.monthlySaved} />
+              </div>
+              <div className="text-xs text-slate-500">Litres saved this month</div>
+            </SectionReveal>
+
+            <SectionReveal delay={0.18} className="card card-lift p-7 text-center">
+              <div className="text-sm font-medium text-slate-500">{home.waterComparison.yearlySavedLabel}</div>
+              <div className="stat-value mt-3">
+                <AnimatedCounter end={home.waterComparison.yearlySaved} />
+              </div>
+              <div className="text-xs text-slate-500">Litres saved this year</div>
+            </SectionReveal>
           </div>
-          <div className="rounded border border-slate-200 bg-white p-6 text-center sm:col-span-1">
-            <div className="text-sm text-slate-600">{home.waterComparison.title}</div>
-            <div className="mt-2 text-3xl font-semibold text-[#06163a]">
-              <AnimatedCounter end={home.waterComparison.industryDisplayValue} />
-            </div>
-            <div className="text-xs text-slate-500">{home.waterComparison.industryLabel}</div>
-            <div className="mt-3 text-3xl font-semibold text-[#00b67a]">
-              <AnimatedCounter end={home.waterComparison.qcDisplayValue} />
-            </div>
-            <div className="text-xs text-slate-500">{home.waterComparison.qcLabel}</div>
-          </div>
-          <div className="rounded border border-slate-200 bg-white p-6 text-center">
-            <div className="text-sm text-slate-600">{home.waterComparison.monthlySavedLabel}</div>
-            <div className="mt-2 text-3xl font-semibold text-[#06163a]">
-              <AnimatedCounter end={home.waterComparison.monthlySaved} />
-            </div>
-            <div className="text-xs text-slate-500">Litres saved this month</div>
-          </div>
-          <div className="rounded border border-slate-200 bg-white p-6 text-center">
-            <div className="text-sm text-slate-600">{home.waterComparison.yearlySavedLabel}</div>
-            <div className="mt-2 text-3xl font-semibold text-[#06163a]">
-              <AnimatedCounter end={home.waterComparison.yearlySaved} />
-            </div>
-            <div className="text-xs text-slate-500">Litres saved this year</div>
-          </div>
-        </div>
+        </Container>
       </section>
 
       {/* Solutions */}
-      <section className="py-12">
-        <div className="mx-auto max-w-6xl px-4 text-center">
-          <h2 className="text-2xl font-semibold text-[#06163a]">{home.solutionsTitle}</h2>
-          <p className="mx-auto mt-3 max-w-2xl text-slate-600">{home.solutionsSubtitle}</p>
-          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {solutions.map((solution) => (
-              <Link
-                key={solution.id}
-                href={`/${solution.slug}`}
-                className="block rounded border border-slate-200 bg-white p-5 text-left hover:border-[#00b67a]"
-              >
-                <h3 className="font-semibold text-[#06163a]">{solution.title}</h3>
-                <p className="mt-2 text-sm text-slate-600">{solution.shortDescription}</p>
-                <span className="mt-3 inline-block text-sm font-medium text-[#00b67a]">Read More</span>
-              </Link>
+      <section className="py-16 sm:py-24">
+        <Container>
+          <SectionReveal>
+            <SectionHeading
+              title={home.solutionsTitle}
+              subtitle={home.solutionsSubtitle}
+            />
+          </SectionReveal>
+          <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {solutions.map((solution, i) => (
+              <SectionReveal key={solution.id} delay={i * 0.06}>
+                <Link
+                  href={`/${solution.slug}`}
+                  className="card card-lift group flex h-full flex-col p-6"
+                >
+                  <h3 className="font-semibold text-navy transition-colors group-hover:text-accent">
+                    {solution.title}
+                  </h3>
+                  <p className="mt-3 flex-1 text-sm leading-relaxed text-slate-600">
+                    {solution.shortDescription}
+                  </p>
+                  <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-accent">
+                    Read More
+                    <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                  </span>
+                </Link>
+              </SectionReveal>
             ))}
           </div>
-        </div>
+        </Container>
       </section>
 
       {/* Founder */}
-      <section className="bg-slate-50 py-12">
-        <div className="mx-auto grid max-w-6xl gap-10 px-4 lg:grid-cols-2 lg:items-center">
-          <div className="relative aspect-square max-w-md overflow-hidden rounded">
-            <CmsImage src={home.founderImage} alt={home.founderName} fill />
+      <section className="bg-white py-16 sm:py-24">
+        <Container>
+          <div className="grid gap-12 lg:grid-cols-2 lg:items-center lg:gap-16">
+            <SectionReveal>
+              <div className="relative mx-auto aspect-square max-w-md overflow-hidden rounded-2xl shadow-xl shadow-navy/10">
+                <CmsImage src={home.founderImage} alt={home.founderName} fill className="object-cover" />
+              </div>
+            </SectionReveal>
+            <SectionReveal delay={0.1}>
+              <h2 className="font-display text-3xl font-medium text-navy sm:text-4xl">
+                {home.founderTitle}
+              </h2>
+              <p className="mt-6 text-base leading-relaxed text-slate-600 sm:text-lg">
+                {home.founderMessage}
+              </p>
+              <p className="mt-6 font-semibold text-navy">
+                {home.founderRole}: {home.founderName}
+              </p>
+            </SectionReveal>
           </div>
-          <div>
-            <h2 className="text-2xl font-semibold text-[#06163a]">{home.founderTitle}</h2>
-            <p className="mt-4 leading-relaxed text-slate-700">{home.founderMessage}</p>
-            <p className="mt-4 font-semibold text-[#06163a]">CEO: {home.founderName}</p>
-          </div>
-        </div>
+        </Container>
       </section>
 
       <VideoSection
@@ -121,66 +167,99 @@ export default async function HomePage() {
       <LogoMarquee brands={brands} title={home.brandsTitle} />
 
       {/* Sustainability impact */}
-      <section className="relative py-16">
-        <div className="mx-auto grid max-w-6xl grid-cols-1 gap-8 px-4 md:grid-cols-2">
-          <div className="relative aspect-video overflow-hidden rounded">
-            <CmsImage src="/images/sustainability-water.jpg" alt="Water saved" fill />
-            <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/40 text-white">
-              <div className="text-5xl font-semibold"><AnimatedCounter end={457} suffix="+" /></div>
-              <div className="text-center text-lg">million liters of<br />water saved</div>
-            </div>
+      <section className="py-16 sm:py-24">
+        <Container>
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+            {home.sustainabilityStats.map((stat, i) => (
+              <SectionReveal key={stat.label} delay={i * 0.1}>
+                <div className="group relative aspect-[16/10] overflow-hidden rounded-2xl shadow-lg">
+                  <CmsImage
+                    src={SUSTAINABILITY_IMAGES[i] ?? SUSTAINABILITY_IMAGES[0]}
+                    alt={stat.label}
+                    fill
+                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/50 to-transparent" />
+                  <div className="absolute inset-0 flex flex-col items-center justify-center p-6 text-center text-white">
+                    <div className="font-display text-5xl font-medium sm:text-6xl">
+                      <AnimatedCounter end={stat.value} suffix={stat.suffix} />
+                    </div>
+                    <div className="mt-3 max-w-xs text-lg leading-snug text-slate-200">
+                      {stat.label}
+                    </div>
+                  </div>
+                </div>
+              </SectionReveal>
+            ))}
           </div>
-          <div className="relative aspect-video overflow-hidden rounded">
-            <CmsImage src="/images/sustainability-carbon.jpg" alt="Carbon reduced" fill />
-            <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/40 text-white">
-              <div className="text-5xl font-semibold"><AnimatedCounter end={60} suffix="M kg" /></div>
-              <div className="text-center text-lg">of carbon emissions reduced</div>
-            </div>
-          </div>
-        </div>
+        </Container>
       </section>
 
       {/* Testimonials */}
-      <section className="bg-white py-12">
-        <div className="mx-auto max-w-4xl px-4 text-center">
-          <p className="text-sm font-semibold uppercase text-slate-500">Clients</p>
-          <h2 className="mt-2 text-2xl font-semibold text-[#06163a]">{home.clientsTitle}</h2>
-          {testimonials.map((t) => (
-            <blockquote key={t.id} className="mt-8">
-              {t.image && (
-                <div className="relative mx-auto mb-4 h-16 w-16 overflow-hidden rounded-full">
-                  <CmsImage src={t.image} alt={t.author} fill />
-                </div>
-              )}
-              <p className="text-lg text-slate-700">&ldquo;{t.quote}&rdquo;</p>
-              <footer className="mt-4 font-semibold text-[#06163a]">— {t.author}</footer>
-            </blockquote>
+      <section className="border-y border-border bg-white py-16 sm:py-24">
+        <Container>
+          <SectionReveal>
+            <SectionHeading eyebrow="Clients" title={home.clientsTitle} />
+          </SectionReveal>
+          {testimonials.map((t, i) => (
+            <SectionReveal key={t.id} delay={i * 0.1}>
+              <blockquote className="mx-auto mt-12 max-w-3xl text-center">
+                {t.image && (
+                  <div className="relative mx-auto mb-6 h-20 w-20 overflow-hidden rounded-full ring-4 ring-accent/20">
+                    <CmsImage src={t.image} alt={t.author} fill />
+                  </div>
+                )}
+                <p className="font-display text-xl leading-relaxed text-slate-700 sm:text-2xl">
+                  &ldquo;{t.quote}&rdquo;
+                </p>
+                <footer className="mt-6 text-sm font-semibold uppercase tracking-wider text-navy">
+                  — {t.author}
+                </footer>
+              </blockquote>
+            </SectionReveal>
           ))}
-        </div>
+        </Container>
       </section>
 
       {/* News */}
-      <section className="bg-slate-50 py-12">
-        <div className="mx-auto max-w-6xl px-4">
-          <h2 className="text-center text-2xl font-semibold text-[#06163a]">{home.newsTitle}</h2>
-          <p className="mt-2 text-center text-slate-600">{home.newsSubtitle}</p>
-          <div className="mt-10 grid gap-6 lg:grid-cols-3">
-            <div className="lg:col-span-2 grid gap-6 sm:grid-cols-2">
-              {blog.map((post) => (
-                <Link key={post.id} href={`/${post.slug}`} className="block overflow-hidden rounded border border-slate-200 bg-white">
-                  <div className="relative aspect-video">
-                    <CmsImage src={post.image} alt={post.title} fill />
-                  </div>
-                  <div className="p-4">
-                    <span className="text-xs uppercase text-[#00b67a]">{post.category}</span>
-                    <h3 className="mt-1 font-semibold text-[#06163a]">{post.title}</h3>
-                  </div>
-                </Link>
+      <section className="bg-background py-16 sm:py-24">
+        <Container>
+          <SectionReveal>
+            <SectionHeading title={home.newsTitle} subtitle={home.newsSubtitle} />
+          </SectionReveal>
+          <div className="mt-14 grid gap-8 lg:grid-cols-3">
+            <div className="grid gap-6 sm:grid-cols-2 lg:col-span-2">
+              {blog.map((post, i) => (
+                <SectionReveal key={post.id} delay={i * 0.06}>
+                  <Link
+                    href={`/${post.slug}`}
+                    className="card card-lift group block overflow-hidden"
+                  >
+                    <div className="relative aspect-video overflow-hidden">
+                      <CmsImage
+                        src={post.image}
+                        alt={post.title}
+                        fill
+                        className="object-cover transition-transform duration-500 group-hover:scale-105"
+                      />
+                    </div>
+                    <div className="p-5">
+                      <span className="text-xs font-semibold uppercase tracking-wider text-accent">
+                        {post.category}
+                      </span>
+                      <h3 className="mt-2 font-semibold text-navy transition-colors group-hover:text-accent">
+                        {post.title}
+                      </h3>
+                    </div>
+                  </Link>
+                </SectionReveal>
               ))}
             </div>
-            <NewsletterForm title={home.newsletterTitle} subtitle={home.newsletterSubtitle} />
+            <SectionReveal delay={0.15}>
+              <NewsletterForm title={home.newsletterTitle} subtitle={home.newsletterSubtitle} />
+            </SectionReveal>
           </div>
-        </div>
+        </Container>
       </section>
     </SiteLayout>
   );

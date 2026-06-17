@@ -1,22 +1,113 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
+  --background: #f8fafc;
   --foreground: #06163a;
-  --brand-navy: #06163a;
-  --brand-green: #00b67a;
+  --navy: #06163a;
+  --navy-light: #0c2340;
+  --accent: #0d9488;
+  --accent-bright: #00b67a;
+  --surface: #ffffff;
+  --muted: #64748b;
+  --border: #e2e8f0;
+  --hero-tint: #c5dbe9;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-montserrat);
+  --color-navy: var(--navy);
+  --color-navy-light: var(--navy-light);
+  --color-accent: var(--accent);
+  --color-accent-bright: var(--accent-bright);
+  --color-surface: var(--surface);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --font-sans: var(--font-jakarta);
+  --font-display: var(--font-instrument);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-montserrat), Arial, sans-serif;
+  font-family: var(--font-jakarta), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.font-display {
+  font-family: var(--font-instrument), Georgia, serif;
+}
+
+/* Cards & surfaces */
+.card {
+  border-radius: 1rem;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  box-shadow: 0 1px 3px rgb(6 22 58 / 4%);
+  transition: box-shadow 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+}
+
+.card:hover {
+  border-color: rgb(13 148 136 / 25%);
+  box-shadow: 0 12px 40px rgb(6 22 58 / 8%);
+}
+
+.card-lift:hover {
+  transform: translateY(-4px);
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 0.5rem;
+  background: var(--navy);
+  padding: 0.75rem 1.5rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: white;
+  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-primary:hover {
+  background: var(--navy-light);
+  box-shadow: 0 4px 14px rgb(6 22 58 / 20%);
+}
+
+.btn-accent {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 0.5rem;
+  background: var(--accent);
+  padding: 0.75rem 1.5rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: white;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.btn-accent:hover {
+  background: #0f766e;
+}
+
+.stat-value {
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--navy);
+}
+
+.gradient-navy {
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+}
+
+.gradient-mesh {
+  background:
+    radial-gradient(ellipse 80% 50% at 50% -20%, rgb(13 148 136 / 12%), transparent),
+    radial-gradient(ellipse 60% 40% at 100% 0%, rgb(197 219 233 / 40%), transparent);
 }
 
 @keyframes marquee {
@@ -32,15 +123,33 @@ body {
 .marquee-track {
   display: flex;
   width: max-content;
-  animation: marquee 40s linear infinite;
+  animation: marquee 45s linear infinite;
 }
 
 .marquee-reverse {
   animation-name: marquee-reverse;
 }
 
+.marquee-row:hover .marquee-track {
+  animation-play-state: paused;
+}
+
 .prose-legal p {
   color: #475569;
-  line-height: 1.75;
+  line-height: 1.8;
   margin-bottom: 1rem;
+}
+
+.prose-legal h2 {
+  color: var(--navy);
+  font-weight: 600;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgb(13 148 136 / 15%);
 }

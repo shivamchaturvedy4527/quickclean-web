@@ -1,8 +1,10 @@
 import { getCMS } from "@/lib/cms-store";
 import { SiteLayout } from "@/components/SiteLayout";
 import { CmsImage } from "@/components/CmsImage";
+import { Container } from "@/components/ui/Container";
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import { ArrowLeft } from "lucide-react";
 import type { Metadata } from "next";
 
 export async function generateBlogMetadata(slug: string): Promise<Metadata> {
@@ -19,22 +21,35 @@ export async function BlogPostDetail({ slug }: { slug: string }) {
   return (
     <SiteLayout>
       <article>
-        <div className="relative h-64 bg-[#06163a] sm:h-80">
-          <CmsImage src={post.image} alt={post.title} fill className="object-cover opacity-40" />
-          <div className="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-[#06163a] to-transparent p-6">
-            <Link href="/news" className="text-sm text-[#00b67a]">← News</Link>
-            <span className="mt-2 text-xs uppercase text-slate-400">{post.category}</span>
-            <h1 className="mt-1 text-2xl font-semibold text-white sm:text-3xl">{post.title}</h1>
-            <time className="mt-2 text-sm text-slate-400" dateTime={post.date}>{post.date}</time>
-          </div>
+        <div className="relative h-72 bg-navy sm:h-96">
+          <CmsImage src={post.image} alt={post.title} fill className="object-cover opacity-50" />
+          <div className="absolute inset-0 bg-gradient-to-t from-navy via-navy/60 to-navy/30" />
+          <Container className="relative flex h-full flex-col justify-end pb-10">
+            <Link
+              href="/news"
+              className="inline-flex items-center gap-1.5 text-sm font-medium text-accent-bright transition-colors hover:text-white"
+            >
+              <ArrowLeft className="h-4 w-4" />
+              News
+            </Link>
+            <span className="mt-4 text-xs font-semibold uppercase tracking-wider text-slate-400">
+              {post.category}
+            </span>
+            <h1 className="font-display mt-2 max-w-3xl text-3xl font-medium text-white sm:text-4xl lg:text-5xl">
+              {post.title}
+            </h1>
+            <time className="mt-4 text-sm text-slate-400" dateTime={post.date}>
+              {post.date}
+            </time>
+          </Container>
         </div>
-        <div className="mx-auto max-w-3xl px-4 py-10">
-          <div className="prose-legal space-y-4">
+        <Container className="py-12 sm:py-16">
+          <div className="prose-legal mx-auto max-w-3xl space-y-5 text-base sm:text-lg">
             {post.content.split("\n\n").map((para, i) => (
               <p key={i}>{para}</p>
             ))}
           </div>
-        </div>
+        </Container>
       </article>
     </SiteLayout>
   );

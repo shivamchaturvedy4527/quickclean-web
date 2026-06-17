@@ -1,4 +1,5 @@
 import { CmsImage } from "./CmsImage";
+import { Container } from "./ui/Container";
 
 interface PageHeroProps {
   title: string;
@@ -9,22 +10,25 @@ interface PageHeroProps {
 
 export function PageHero({ title, subtitle, image, breadcrumb }: PageHeroProps) {
   return (
-    <section className="relative overflow-hidden bg-[#071525] py-20 text-white">
+    <section className="relative overflow-hidden gradient-navy py-20 text-white sm:py-24">
       {image && (
         <>
-          <CmsImage src={image} alt="" fill className="object-cover opacity-20" sizes="100vw" />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#071525] to-[#071525]/80" />
+          <CmsImage src={image} alt="" fill className="object-cover opacity-25" sizes="100vw" />
+          <div className="absolute inset-0 bg-gradient-to-r from-navy via-navy/90 to-navy/70" />
         </>
       )}
-      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className="absolute inset-0 gradient-mesh opacity-60" />
+      <Container className="relative">
         {breadcrumb && (
-          <p className="text-sm font-medium text-teal-400">{breadcrumb}</p>
+          <p className="text-sm font-medium tracking-wide text-accent-bright">{breadcrumb}</p>
         )}
-        <h1 className="mt-2 text-4xl font-bold tracking-tight sm:text-5xl">{title}</h1>
+        <h1 className="font-display mt-3 text-4xl font-medium tracking-tight sm:text-5xl lg:text-[3.25rem]">
+          {title}
+        </h1>
         {subtitle && (
-          <p className="mt-4 max-w-2xl text-lg text-slate-300">{subtitle}</p>
+          <p className="mt-5 max-w-2xl text-lg leading-relaxed text-slate-300">{subtitle}</p>
         )}
-      </div>
+      </Container>
     </section>
   );
 }

@@ -2,8 +2,17 @@
 
 A **feature-complete clone** of [quickclean.co.in](https://quickclean.co.in) with a premium international B2B redesign. Built with **Next.js 16**, **TypeScript**, **Tailwind CSS 4**, and **Framer Motion**.
 
-**Live:** https://quickclean-clone.vercel.app  
+**Canonical production URL:** https://quickclean-clone.vercel.app  
 **GitHub:** https://github.com/shivamchaturvedy4527/quickclean-web
+
+### Vercel deployment
+
+| Project | URL | Status |
+|---------|-----|--------|
+| `quickclean-clone` | https://quickclean-clone.vercel.app | **Production (canonical)** |
+| `laundry-luxe` | https://laundry-luxe-woad.vercel.app | Separate project — do not merge |
+
+Only one Vercel **project** exists for QuickClean (`quickclean-clone`), linked to the `quickclean-web` GitHub repo. Older deployment URLs under the same project are deployment history, not duplicate projects.
 
 ## Feature Parity
 
@@ -77,10 +86,9 @@ npm run lint     # ESLint
 
 ## Differences from quickclean.co.in
 
-- **Branding text** rewritten (not plagiarized) while matching structure
-- **Premium UI redesign** — Plus Jakarta Sans + Instrument Serif, Framer Motion animations, dark navy palette
-- **Stock/placeholder images** via Unsplash (replace via admin with client photography)
-- **Video embed** uses placeholder YouTube URL (replace in admin Home tab)
+- **Premium UI redesign** — Plus Jakarta Sans + Instrument Serif, Framer Motion section reveals, refined cards and hover states
+- **Content** seeded from quickclean.co.in (images in `public/images/`)
+- **Video embed** URL editable in admin Home tab
 - **WordPress-specific plugins** (Elementor, etc.) not replicated — functionality equivalent in Next.js
 
 ## License

@@ -21,24 +21,24 @@ export function CookieConsent({ content }: { content: CookieConsentContent }) {
   }
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 z-[60] border-t border-slate-200 bg-white/95 p-4 shadow-2xl backdrop-blur-md sm:p-6">
+    <div className="fixed bottom-0 left-0 right-0 z-[60] border-t border-border bg-white/95 p-4 shadow-2xl backdrop-blur-xl sm:p-6">
       <div className="mx-auto flex max-w-7xl flex-col items-start justify-between gap-4 sm:flex-row sm:items-center">
         <p className="text-sm leading-relaxed text-slate-600">
           {content.message}{" "}
-          <Link href={content.policyLink} className="font-medium text-teal-700 hover:underline">
+          <Link href={content.policyLink} className="font-medium text-accent hover:underline">
             {content.policyLabel}
           </Link>
         </p>
         <div className="flex shrink-0 gap-3">
           <button
             onClick={() => accept("declined")}
-            className="rounded-lg border border-slate-300 px-4 py-2 text-sm font-medium text-slate-700 hover:bg-slate-50"
+            className="rounded-lg border border-border px-4 py-2.5 text-sm font-medium text-slate-700 transition-colors hover:bg-slate-50"
           >
             {content.declineText}
           </button>
           <button
             onClick={() => accept("accepted")}
-            className="rounded-lg bg-[#071525] px-4 py-2 text-sm font-semibold text-white hover:bg-[#0c2340]"
+            className="btn-primary !py-2.5"
           >
             {content.acceptText}
           </button>
