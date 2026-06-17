@@ -3,7 +3,8 @@ import { notFound } from "next/navigation";
 import { CheckCircle2, ArrowRight } from "lucide-react";
 import { SiteLayout } from "@/components/SiteLayout";
 import { PageHero } from "@/components/PageHero";
-import { CmsImage } from "@/components/CmsImage";
+import { ImageGalleryCarousel } from "@/components/ImageGalleryCarousel";
+import { PressingMachinesGrid } from "@/components/PressingMachinesGrid";
 import { Container } from "@/components/ui/Container";
 import { getCMS } from "@/lib/cms-store";
 import type { Metadata } from "next";
@@ -32,6 +33,8 @@ export default async function ProductDetailPage({ params }: Props) {
   if (!product) notFound();
 
   const gallery = product.gallery?.length ? product.gallery : [product.image];
+  const specs = product.specs?.length ? product.specs : product.features;
+  const isPressingPortfolio = product.slug === "pressing-machines-portfolio";
 
   return (
     <SiteLayout>
@@ -46,42 +49,38 @@ export default async function ProductDetailPage({ params }: Props) {
         <Container>
           <div className="grid gap-12 lg:grid-cols-3">
             <div className="lg:col-span-2">
-              <div className="relative mb-10 aspect-video overflow-hidden rounded-lg border border-gray-200">
-                <CmsImage src={product.image} alt={product.title} fill sizes="(max-width: 1024px) 100vw, 66vw" />
+              <ImageGalleryCarousel images={gallery} alt={product.title} className="mb-10" />
+
+              <div className="prose-legal">
+                {product.description.split("\n\n").map((para, i) => (
+                  <p key={i}>{para}</p>
+                ))}
               </div>
-              {product.description.split("\n\n").map((para, i) => (
-                <p key={i} className={i > 0 ? "mt-4 text-lg leading-relaxed text-gray-700" : "text-lg leading-relaxed text-gray-700"}>
-                  {para}
-                </p>
-              ))}
-              {product.features.length > 0 && (
+
+              {specs.length > 0 && (
                 <>
-                  <h2 className="mt-10 text-xl font-semibold text-gray-900">Key Features</h2>
-                  <ul className="mt-4 space-y-3">
-                    {product.features.map((feature) => (
-                      <li key={feature} className="flex gap-3 text-gray-700">
+                  <h2 className="mt-10 text-2xl font-bold tracking-tight text-primary">
+                    {product.category === "Commercial Laundry" ? "Specifications" : "Key Features"}
+                  </h2>
+                  <ul className="mt-5 space-y-3">
+                    {specs.map((feature) => (
+                      <li key={feature} className="flex gap-3 rounded-lg border border-gray-100 bg-gray-50/80 px-4 py-3 text-gray-700">
                         <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-accent" />
-                        {feature}
+                        <span className="text-sm leading-relaxed sm:text-base">{feature}</span>
                       </li>
                     ))}
                   </ul>
                 </>
               )}
-              {gallery.length > 1 && (
-                <div className="mt-10 grid gap-4 sm:grid-cols-2">
-                  {gallery.slice(1).map((src) => (
-                    <div key={src} className="relative aspect-video overflow-hidden rounded-lg border border-gray-200">
-                      <CmsImage src={src} alt={product.title} fill sizes="50vw" className="object-cover" />
-                    </div>
-                  ))}
-                </div>
-              )}
             </div>
-            <div className="card h-fit p-6">
-              <h3 className="font-semibold text-gray-900">Enquire About This Product</h3>
+            <div className="card h-fit p-6 lg:sticky lg:top-24">
+              <h3 className="text-lg font-bold text-primary">Enquire About This Product</h3>
               <p className="mt-3 text-sm leading-relaxed text-gray-600">
                 Contact Pcts Infrastructures for specifications, pricing and installation support across India.
               </p>
+              {product.category && (
+                <p className="mt-4 text-xs font-bold uppercase tracking-wider text-accent">{product.category}</p>
+              )}
               <Link href="/contact-us" className="btn-primary mt-6 w-full">
                 Contact Us <ArrowRight className="h-4 w-4" />
               </Link>
@@ -89,6 +88,10 @@ export default async function ProductDetailPage({ params }: Props) {
           </div>
         </Container>
       </section>
+
+      {isPressingPortfolio && cms.pressingMachines && (
+        <PressingMachinesGrid content={cms.pressingMachines} compact />
+      )}
     </SiteLayout>
   );
 }

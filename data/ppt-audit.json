@@ -1,0 +1,396 @@
+{
+  "totalSlides": 32,
+  "slidesFullyIntegrated": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32
+  ],
+  "slidesPartial": [],
+  "pptImagesTotal": 112,
+  "pptImagesUsed": 112,
+  "orphanImages": [],
+  "orphanCount": 0,
+  "rows": [
+    {
+      "slide": 1,
+      "content": "Company Profile\nPcts infrastructURES PVT LTD",
+      "onWebsite": true,
+      "pages": [
+        "Home (company profile)"
+      ],
+      "missing": [],
+      "imageCount": 0,
+      "imagesUsed": 0
+    },
+    {
+      "slide": 2,
+      "content": "About us\nPcts infrastructures Pvt Ltd is a reliable partner in laundry & dry cleaning room solutions since a decade. We ...",
+      "onWebsite": true,
+      "pages": [
+        "About Us"
+      ],
+      "missing": [],
+      "imageCount": 0,
+      "imagesUsed": 0
+    },
+    {
+      "slide": 3,
+      "content": "What We Do\nWe are one of the known supplier of laundry, dry cleaning & pressing machines in India. We mix high quality e...",
+      "onWebsite": true,
+      "pages": [
+        "About Us"
+      ],
+      "missing": [],
+      "imageCount": 0,
+      "imagesUsed": 0
+    },
+    {
+      "slide": 4,
+      "content": "Why Choose Us\nQuality\nWe constantly striving to produce reliable and durable solutions which are satisfying quality requ...",
+      "onWebsite": true,
+      "pages": [
+        "About Us"
+      ],
+      "missing": [],
+      "imageCount": 0,
+      "imagesUsed": 0
+    },
+    {
+      "slide": 5,
+      "content": "Our Expert Solutions\nBasic Analysis\nMarket Research & Feasibility Analysis\nLaundry & Dry-Cleaning Load Analysis\nBudget A...",
+      "onWebsite": true,
+      "pages": [
+        "Solutions + About (slide 5)"
+      ],
+      "missing": [],
+      "imageCount": 0,
+      "imagesUsed": 0
+    },
+    {
+      "slide": 6,
+      "content": "Our Expert Solutions\nProcess Improvement\nOperational development & Planning\nProductivity, Quality & Cost Control\nEnergy ...",
+      "onWebsite": true,
+      "pages": [
+        "Solutions + About (slide 6)"
+      ],
+      "missing": [],
+      "imageCount": 0,
+      "imagesUsed": 0
+    },
+    {
+      "slide": 7,
+      "content": "Laundry Consultancy Services\nMarket & Feasibility study of the project\nLaundry load/volume assessment\nInitial analysis a...",
+      "onWebsite": true,
+      "pages": [
+        "Solutions + About (slide 7)"
+      ],
+      "missing": [],
+      "imageCount": 0,
+      "imagesUsed": 0
+    },
+    {
+      "slide": 8,
+      "content": "Products Portfolio\nIntroducing our Transferon series CBW System and series laundry machines which is the best in the ind...",
+      "onWebsite": true,
+      "pages": [
+        "Products /products/p8"
+      ],
+      "missing": [],
+      "imageCount": 5,
+      "imagesUsed": 5
+    },
+    {
+      "slide": 9,
+      "content": "Product Portfolio\nContinuous Batch Washer (CBW)\nWasher Extractor\nOpen Pocket Washer Extractor\nBarrier Washer\nTumble Drye...",
+      "onWebsite": true,
+      "pages": [
+        "Products /products/p9"
+      ],
+      "missing": [],
+      "imageCount": 4,
+      "imagesUsed": 4
+    },
+    {
+      "slide": 10,
+      "content": "Continuous Batch Washer (CBW) – 1200 – 2000 Kg production per hour – Transferon\nCBW loading capacity ranging from 50 Kg ...",
+      "onWebsite": true,
+      "pages": [
+        "Products /products/p10"
+      ],
+      "missing": [],
+      "imageCount": 1,
+      "imagesUsed": 1
+    },
+    {
+      "slide": 11,
+      "content": "Washer Extractor\nWasher Extractors are characterized by their compact, robust design and reliable technology. The comput...",
+      "onWebsite": true,
+      "pages": [
+        "Products /products/p11"
+      ],
+      "missing": [],
+      "imageCount": 1,
+      "imagesUsed": 1
+    },
+    {
+      "slide": 12,
+      "content": "Open Pocket Washer Extractor\nOpen Pocket Washer/Extractors feature are designed as two-way tilting for safe, easy loadin...",
+      "onWebsite": true,
+      "pages": [
+        "Products /products/p12"
+      ],
+      "missing": [],
+      "imageCount": 1,
+      "imagesUsed": 1
+    },
+    {
+      "slide": 13,
+      "content": "Barrier Washer Extractor\nBarrier Washer Extractor with clean/unclean sides provide the ideal solution for processing lau...",
+      "onWebsite": true,
+      "pages": [
+        "Products /products/p13"
+      ],
+      "missing": [],
+      "imageCount": 2,
+      "imagesUsed": 2
+    },
+    {
+      "slide": 14,
+      "content": "Tumble Driers\ndryers have been developed to ensure high productivity with a minimal use of energy. Shorter drying time m...",
+      "onWebsite": true,
+      "pages": [
+        "Products /products/p14"
+      ],
+      "missing": [],
+      "imageCount": 1,
+      "imagesUsed": 1
+    },
+    {
+      "slide": 15,
+      "content": "Automatic Clamp Feeder\nAutomatic Clamp Feeder is a revolutionary product in our profile which ease the linen feeding pro...",
+      "onWebsite": true,
+      "pages": [
+        "Products /products/p15"
+      ],
+      "missing": [],
+      "imageCount": 0,
+      "imagesUsed": 0
+    },
+    {
+      "slide": 16,
+      "content": "Automatic Vacuum Feeder\nVacuum Feeder is a powerful and extremely compact feeder designed to produce more linen with the...",
+      "onWebsite": true,
+      "pages": [
+        "Products /products/p16"
+      ],
+      "missing": [],
+      "imageCount": 1,
+      "imagesUsed": 1
+    },
+    {
+      "slide": 17,
+      "content": "Flat Work Ironer\nFlat Work Ironers produces high quality linen finishes easily and efficiently. The cylinder is mirror p...",
+      "onWebsite": true,
+      "pages": [
+        "Products /products/p17"
+      ],
+      "missing": [],
+      "imageCount": 1,
+      "imagesUsed": 1
+    },
+    {
+      "slide": 18,
+      "content": "Chest Ironer\nChest ironer is a high-speed ironer with the upper and lower chest heating. 800mm dia rollers ensures the q...",
+      "onWebsite": true,
+      "pages": [
+        "Products /products/p18"
+      ],
+      "missing": [],
+      "imageCount": 1,
+      "imagesUsed": 1
+    },
+    {
+      "slide": 19,
+      "content": "Automatic Linen Folder\nFolders can fold the dried & ironed linens automatically with perfect folding. Fully automatic an...",
+      "onWebsite": true,
+      "pages": [
+        "Products /products/p19"
+      ],
+      "missing": [],
+      "imageCount": 2,
+      "imagesUsed": 2
+    },
+    {
+      "slide": 20,
+      "content": "Dry Cleaning Machine\nDry-cleaning machines are packed with high-performance and exclusive features that guarantee you th...",
+      "onWebsite": true,
+      "pages": [
+        "Products /products/p20"
+      ],
+      "missing": [],
+      "imageCount": 2,
+      "imagesUsed": 2
+    },
+    {
+      "slide": 21,
+      "content": "Professional Garment Pressing Machines\nPcts Press USA pressing machines are one of the most versatile machine in the ind...",
+      "onWebsite": true,
+      "pages": [
+        "Products /products/p21"
+      ],
+      "missing": [],
+      "imageCount": 1,
+      "imagesUsed": 1
+    },
+    {
+      "slide": 22,
+      "content": "Pressing Machines Portfolio\nDry-cleaning Press\nLaundry  Press\nShirt Press\nTrouser Press\nMushroom Press\nCuff & Collar Pre...",
+      "onWebsite": true,
+      "pages": [
+        "Products /products/p22"
+      ],
+      "missing": [],
+      "imageCount": 9,
+      "imagesUsed": 9
+    },
+    {
+      "slide": 23,
+      "content": "(6 images only)",
+      "onWebsite": true,
+      "pages": [
+        "Installation Gallery (Home + About)"
+      ],
+      "missing": [],
+      "imageCount": 6,
+      "imagesUsed": 6
+    },
+    {
+      "slide": 24,
+      "content": "(5 images only)",
+      "onWebsite": true,
+      "pages": [
+        "Installation Gallery (Home + About)"
+      ],
+      "missing": [],
+      "imageCount": 5,
+      "imagesUsed": 5
+    },
+    {
+      "slide": 25,
+      "content": "(6 images only)",
+      "onWebsite": true,
+      "pages": [
+        "Installation Gallery (Home + About)"
+      ],
+      "missing": [],
+      "imageCount": 6,
+      "imagesUsed": 6
+    },
+    {
+      "slide": 26,
+      "content": "(6 images only)",
+      "onWebsite": true,
+      "pages": [
+        "Installation Gallery (Home + About)"
+      ],
+      "missing": [],
+      "imageCount": 6,
+      "imagesUsed": 6
+    },
+    {
+      "slide": 27,
+      "content": "(5 images only)",
+      "onWebsite": true,
+      "pages": [
+        "Installation Gallery (Home + About)"
+      ],
+      "missing": [],
+      "imageCount": 5,
+      "imagesUsed": 5
+    },
+    {
+      "slide": 28,
+      "content": "(5 images only)",
+      "onWebsite": true,
+      "pages": [
+        "Installation Gallery (Home + About)"
+      ],
+      "missing": [],
+      "imageCount": 5,
+      "imagesUsed": 5
+    },
+    {
+      "slide": 29,
+      "content": "(5 images only)",
+      "onWebsite": true,
+      "pages": [
+        "Installation Gallery (Home + About)"
+      ],
+      "missing": [],
+      "imageCount": 5,
+      "imagesUsed": 5
+    },
+    {
+      "slide": 30,
+      "content": "Few of our Prestigious Clients\nFabrique Laundromat Services – Chennai\nFabrique Laundromat Services – Bangalore\nSparkles ...",
+      "onWebsite": true,
+      "pages": [
+        "Clients marquee"
+      ],
+      "missing": [],
+      "imageCount": 0,
+      "imagesUsed": 0
+    },
+    {
+      "slide": 31,
+      "content": "Few of our Prestigious Clients\nSparkles Laundry Services - Jaipur\nSparkles Laundry Services - Tirupati\nSparkles Laundry ...",
+      "onWebsite": true,
+      "pages": [
+        "Clients marquee"
+      ],
+      "missing": [],
+      "imageCount": 0,
+      "imagesUsed": 0
+    },
+    {
+      "slide": 32,
+      "content": "Contact Us\nPcts infrastructures Pvt Ltd,\nC-909, KAILAS BUSINESS PARK,VIKHROLI WEST\nMUMBAI - 400079\nMobile : 9821354872/8...",
+      "onWebsite": true,
+      "pages": [
+        "Contact Us"
+      ],
+      "missing": [],
+      "imageCount": 1,
+      "imagesUsed": 1
+    }
+  ]
+}

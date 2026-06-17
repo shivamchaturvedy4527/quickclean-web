@@ -33,7 +33,7 @@ export function SectionHeading({
         </p>
       )}
       <h2
-        className="text-3xl font-bold leading-tight tracking-tight text-primary sm:text-4xl"
+        className="text-3xl font-extrabold leading-tight tracking-tight text-primary sm:text-4xl lg:text-[2.75rem]"
         dangerouslySetInnerHTML={{ __html: title }}
       />
       {subtitle && (

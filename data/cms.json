@@ -134,7 +134,9 @@
     "newsletterTitle": "Subscribe for the latest news",
     "newsletterSubtitle": "Stay updated on the latest trends.",
     "productsTitle": "Products Portfolio",
-    "productsSubtitle": "Transferon series CBW systems and commercial laundry machines — proven quality, pan India."
+    "productsSubtitle": "Transferon series CBW systems and commercial laundry machines — proven quality, pan India.",
+    "companyProfile": "Company Profile\nPcts infrastructURES PVT LTD",
+    "heroEyebrow": "Pcts infrastructURES PVT LTD"
   },
   "solutions": [
     {
@@ -539,8 +541,29 @@
     "heroImage": "/images/ppt/slide08_img07.jpg",
     "missionTitle": "What We Do",
     "visionTitle": "Why Choose Us",
-    "journeyTitle": "",
-    "timeline": [],
+    "journeyTitle": "Our Journey",
+    "timeline": [
+      {
+        "year": "10+",
+        "title": "Years of Industry Experience",
+        "description": "Reliable partner in laundry & dry cleaning room solutions across India."
+      },
+      {
+        "year": "12+",
+        "title": "Product Categories",
+        "description": "CBW systems, washer extractors, ironers, folders, dry-cleaning and pressing machines."
+      },
+      {
+        "year": "51+",
+        "title": "Prestigious Clients",
+        "description": "Hotels, hospitals, universities and commercial laundries trust Pcts Infrastructures."
+      },
+      {
+        "year": "12",
+        "title": "Service Centres",
+        "description": "Bangalore, Chennai, Hyderabad, Mumbai, Pune, Delhi and more — pan India support."
+      }
+    ],
     "expertSolutions": {
       "title": "Our Expert Solutions",
       "sections": [
@@ -653,7 +676,7 @@
   },
   "contact": {
     "title": "Contact Us",
-    "intro": "Pcts infrastructures Pvt Ltd — C-909, Kailas Business Park, Vikroli West, Mumbai 400079. Mobile: +91 98213 54872 / +91 86899 11455. Email: kjandrew67@gmail.com. Service Centres: Bangalore, Coimbatore, Chennai, Hyderabad, Hubli, Jaipur, Mumbai, New Delhi, Pune, Tirupati, Vijayawada, Visakhapatnam.",
+    "intro": "Pcts infrastructures Pvt Ltd,\nC-909, KAILAS BUSINESS PARK,VIKHROLI WEST\nMUMBAI - 400079\nMobile : 9821354872/8689911455\nEmail : kjandrew67@gmail.com\nService Centres: Bangalore, Coimbatore, Chennai, Hyderabad, Hubli, Jaipur, Mumbai, New Delhi, Pune, Tirupati, Vijayawada, Visakhapatnam.",
     "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3506.2233913121413!2d77.0899!3d28.4945!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDI5JzQwLjIiTiA3N8KwMDUnMjMuNiJF!5e0!3m2!1sen!2sin!4v1600000000000",
     "serviceCentres": [
       "Bangalore",
@@ -668,7 +691,8 @@
       "Tirupati",
       "Vijayawada",
       "Visakhapatnam"
-    ]
+    ],
+    "heroImage": "/images/ppt/slide32_img03.png"
   },
   "footer": {
     "aboutText": "Pcts infrastructures Pvt Ltd — reliable partner in laundry & dry cleaning room solutions, supplying world-class equipment and consultancy across India.",
@@ -784,16 +808,20 @@
       "description": "Introducing our Transferon series CBW System and series laundry machines which is the best in the industry. High standards of quality which is already proven in the market since a decade.\n\nManufactured in one of the largest manufacturing plant in the world with the best technological advancement.\n\nSeries machines are “Best value for Money” due to it’s low energy consumption & low production cost.\n\nlaundry & dry cleaning equipment has wide installations in pan India.",
       "image": "/images/ppt/slide08_img07.jpg",
       "gallery": [
-        "/images/ppt/slide08_img07.jpg",
-        "/images/ppt/slide08_img07.jpg",
-        "/images/ppt/slide10_img01.png",
-        "/images/ppt/slide11_img00.jpg",
+        "/images/ppt/slide08_img01.png",
+        "/images/ppt/slide08_img02.png",
+        "/images/ppt/slide08_img04.png",
+        "/images/ppt/slide08_img05.png",
         "/images/ppt/slide08_img07.jpg"
       ],
       "features": [
+        "Introducing our Transferon series CBW System and series laundry machines which is the best in the industry. High standards of quality which is already proven in the market since a decade.",
+        "Manufactured in one of the largest manufacturing plant in the world with the best technological advancement.",
+        "Series machines are “Best value for Money” due to it’s low energy consumption & low production cost.",
         "laundry & dry cleaning equipment has wide installations in pan India."
       ],
-      "category": "Products Portfolio"
+      "category": "Products Portfolio",
+      "specs": []
     },
     {
       "id": "p9",
@@ -801,12 +829,12 @@
       "title": "Product Portfolio",
       "shortDescription": "Continuous Batch Washer (CBW)",
       "description": "Continuous Batch Washer (CBW)\n\nWasher Extractor\n\nOpen Pocket Washer Extractor\n\nBarrier Washer\n\nTumble Dryer\n\nAutomatic Clamp Feeder\n\nAutomatic Vacuum Feeder\n\nFlatwork Ironers\n\nChest Ironers\n\nAutomatic Linen Folders\n\nDry-cleaning Machines\n\nPressing Machines",
-      "image": "/images/ppt/slide10_img01.png",
+      "image": "/images/ppt/slide09_img01.png",
       "gallery": [
-        "/images/ppt/slide10_img01.png",
-        "/images/ppt/slide11_img00.jpg",
-        "/images/ppt/slide12_img02.png",
-        "/images/ppt/slide13_img03.jpg"
+        "/images/ppt/slide09_img01.png",
+        "/images/ppt/slide09_img02.png",
+        "/images/ppt/slide09_img04.png",
+        "/images/ppt/slide09_img05.png"
       ],
       "features": [
         "Continuous Batch Washer (CBW)",
@@ -816,9 +844,14 @@
         "Tumble Dryer",
         "Automatic Clamp Feeder",
         "Automatic Vacuum Feeder",
-        "Flatwork Ironers"
+        "Flatwork Ironers",
+        "Chest Ironers",
+        "Automatic Linen Folders",
+        "Dry-cleaning Machines",
+        "Pressing Machines"
       ],
-      "category": "Products Portfolio"
+      "category": "Products Portfolio",
+      "specs": []
     },
     {
       "id": "p10",
@@ -828,16 +861,26 @@
       "description": "CBW loading capacity ranging from 50 Kg to 100 Kg.\n\nThe number of batches from 7 up to 20 compartments.\n\nThe Hydraulic Press capacity ranging from 36 Kg, to 100 Kg\n\nStandard Membrane pressure 35 bar or high pressure 50 bar.\n\nThe Batch Dryers as stand-alone   capacity ranging from 50 Kg to 200 Kg.\n\nThe deep chest Ironers size starts from diameter 1000-1200-1300 and 1600mm and the working width from 2000 to 4500 mm.",
       "image": "/images/ppt/slide10_img01.png",
       "gallery": [
-        "/images/ppt/slide10_img01.png"
+        "/images/ppt/slide10_img01.png",
+        "/images/ppt/slide23_img01.png"
       ],
       "features": [
         "CBW loading capacity ranging from 50 Kg to 100 Kg.",
         "The number of batches from 7 up to 20 compartments.",
         "The Hydraulic Press capacity ranging from 36 Kg, to 100 Kg",
         "Standard Membrane pressure 35 bar or high pressure 50 bar.",
-        "The Batch Dryers as stand-alone   capacity ranging from 50 Kg to 200 Kg."
+        "The Batch Dryers as stand-alone   capacity ranging from 50 Kg to 200 Kg.",
+        "The deep chest Ironers size starts from diameter 1000-1200-1300 and 1600mm and the working width from 2000 to 4500 mm."
       ],
-      "category": "Commercial Laundry"
+      "category": "Commercial Laundry",
+      "specs": [
+        "CBW loading capacity ranging from 50 Kg to 100 Kg.",
+        "The number of batches from 7 up to 20 compartments.",
+        "The Hydraulic Press capacity ranging from 36 Kg, to 100 Kg",
+        "Standard Membrane pressure 35 bar or high pressure 50 bar.",
+        "The Batch Dryers as stand-alone   capacity ranging from 50 Kg to 200 Kg.",
+        "The deep chest Ironers size starts from diameter 1000-1200-1300 and 1600mm and the working width from 2000 to 4500 mm."
+      ]
     },
     {
       "id": "p11",
@@ -847,13 +890,18 @@
       "description": "Washer Extractors are characterized by their compact, robust design and reliable technology. The computer panel has super UI and excellent programs to ease the washing process. User can control work liquid-level, wash temperature, wash time and efficiently satisfy with wash request in different situations. The high extraction speeds considerably reduce drying time, resulting in energy and time savings in the drying process.\n\nConstructed with the latest advanced technologies, our Washer Extractor are rugged and can operate in heavy load conditions.",
       "image": "/images/ppt/slide11_img00.jpg",
       "gallery": [
-        "/images/ppt/slide11_img00.jpg"
+        "/images/ppt/slide11_img00.jpg",
+        "/images/ppt/slide23_img02.png"
       ],
       "features": [
         "Washer Extractors are characterized by their compact, robust design and reliable technology. The computer panel has super UI and excellent programs to ease the washing process. User can control work liquid-level, wash temperature, wash time and efficiently satisfy with wash request in different situations. The high extraction speeds considerably reduce drying time, resulting in energy and time savings in the drying process.",
         "Constructed with the latest advanced technologies, our Washer Extractor are rugged and can operate in heavy load conditions."
       ],
-      "category": "Commercial Laundry"
+      "category": "Commercial Laundry",
+      "specs": [
+        "Washer Extractors are characterized by their compact, robust design and reliable technology. The computer panel has super UI and excellent programs to ease the washing process. User can control work liquid-level, wash temperature, wash time and efficiently satisfy with wash request in different situations. The high extraction speeds considerably reduce drying time, resulting in energy and time savings in the drying process.",
+        "Constructed with the latest advanced technologies, our Washer Extractor are rugged and can operate in heavy load conditions."
+      ]
     },
     {
       "id": "p12",
@@ -863,13 +911,18 @@
       "description": "Open Pocket Washer/Extractors feature are designed as two-way tilting for safe, easy loading and unloading. Sealion makes the most of G-forces in the extraction process with increased cylinder diameters, providing maximum, efficient water removal.\n\nOpen Pocket Washer/Extractors were designed to smoothly integrate into various plant layouts. These machines offer the largest processing capability in the industry to conserve the floor space. This is significant as operators look to maximize their productivity in their existing facilities. These type of washer extractors are designed and engineered for ease of use, space allocation limitation concerns and ergonomics. A unique feature to these machines is that the suspension has been redesigned to reduce the washer/extractor’s profile and to provide a reduction in vibration.",
       "image": "/images/ppt/slide12_img02.png",
       "gallery": [
-        "/images/ppt/slide12_img02.png"
+        "/images/ppt/slide12_img02.png",
+        "/images/ppt/slide23_img04.png"
       ],
       "features": [
         "Open Pocket Washer/Extractors feature are designed as two-way tilting for safe, easy loading and unloading. Sealion makes the most of G-forces in the extraction process with increased cylinder diameters, providing maximum, efficient water removal.",
         "Open Pocket Washer/Extractors were designed to smoothly integrate into various plant layouts. These machines offer the largest processing capability in the industry to conserve the floor space. This is significant as operators look to maximize their productivity in their existing facilities. These type of washer extractors are designed and engineered for ease of use, space allocation limitation concerns and ergonomics. A unique feature to these machines is that the suspension has been redesigned to reduce the washer/extractor’s profile and to provide a reduction in vibration."
       ],
-      "category": "Commercial Laundry"
+      "category": "Commercial Laundry",
+      "specs": [
+        "Open Pocket Washer/Extractors feature are designed as two-way tilting for safe, easy loading and unloading. Sealion makes the most of G-forces in the extraction process with increased cylinder diameters, providing maximum, efficient water removal.",
+        "Open Pocket Washer/Extractors were designed to smoothly integrate into various plant layouts. These machines offer the largest processing capability in the industry to conserve the floor space. This is significant as operators look to maximize their productivity in their existing facilities. These type of washer extractors are designed and engineered for ease of use, space allocation limitation concerns and ergonomics. A unique feature to these machines is that the suspension has been redesigned to reduce the washer/extractor’s profile and to provide a reduction in vibration."
+      ]
     },
     {
       "id": "p13",
@@ -877,16 +930,21 @@
       "title": "Barrier Washer Extractor",
       "shortDescription": "Barrier Washer Extractor with clean/unclean sides provide the ideal solution for processing laundry in hospitals and laundries. Sealion barrier washer extractors are designed to reduces risk of Hospit",
       "description": "Barrier Washer Extractor with clean/unclean sides provide the ideal solution for processing laundry in hospitals and laundries. Sealion barrier washer extractors are designed to reduces risk of Hospital-Acquired-Infection (HAI) in hospital theatre linen laundries.\n\nThe 6th generation microprocessors enables a simple and easy to use control system for the user. This free-standing machine has a stainless-steel cabinet, drum and tub. The door of this machine is big enough to allow easy loading and unloading of clothes. This is an ideal solution for sanitary washing in hospitals because it can prevent the washing stuff from being contaminated after cleaned by the germs during the loading and unloading process in the un-clean area.",
-      "image": "/images/ppt/slide13_img03.jpg",
+      "image": "/images/ppt/slide13_img05.png",
       "gallery": [
         "/images/ppt/slide13_img03.jpg",
-        "/images/ppt/slide13_img05.png"
+        "/images/ppt/slide13_img05.png",
+        "/images/ppt/slide23_img05.png"
       ],
       "features": [
         "Barrier Washer Extractor with clean/unclean sides provide the ideal solution for processing laundry in hospitals and laundries. Sealion barrier washer extractors are designed to reduces risk of Hospital-Acquired-Infection (HAI) in hospital theatre linen laundries.",
         "The 6th generation microprocessors enables a simple and easy to use control system for the user. This free-standing machine has a stainless-steel cabinet, drum and tub. The door of this machine is big enough to allow easy loading and unloading of clothes. This is an ideal solution for sanitary washing in hospitals because it can prevent the washing stuff from being contaminated after cleaned by the germs during the loading and unloading process in the un-clean area."
       ],
-      "category": "Commercial Laundry"
+      "category": "Commercial Laundry",
+      "specs": [
+        "Barrier Washer Extractor with clean/unclean sides provide the ideal solution for processing laundry in hospitals and laundries. Sealion barrier washer extractors are designed to reduces risk of Hospital-Acquired-Infection (HAI) in hospital theatre linen laundries.",
+        "The 6th generation microprocessors enables a simple and easy to use control system for the user. This free-standing machine has a stainless-steel cabinet, drum and tub. The door of this machine is big enough to allow easy loading and unloading of clothes. This is an ideal solution for sanitary washing in hospitals because it can prevent the washing stuff from being contaminated after cleaned by the germs during the loading and unloading process in the un-clean area."
+      ]
     },
     {
       "id": "p14",
@@ -896,14 +954,20 @@
       "description": "dryers have been developed to ensure high productivity with a minimal use of energy. Shorter drying time means less wear of the fabric resulting in a longer life time and significant cost savings.\n\nWith the function of automatic control and timer drying; the drum can run in clockwise and anti-lock wise. Large self-cleaning lint screen and large lint compartment for easy maintenance. Our energy saving features, plus our robust design ensures low cost ownership & infrequent maintenance.\n\nOur tumblers achieve the perfect balance between drying temperature, airflow pattern and usable cylinder space for maximum energy efficiency, shortening drying times - and reducing your utility and labor costs. The large diameter of the door opening on our tumble dryers ensures easy loading and unloading.",
       "image": "/images/ppt/slide14_img00.jpg",
       "gallery": [
-        "/images/ppt/slide14_img00.jpg"
+        "/images/ppt/slide14_img00.jpg",
+        "/images/ppt/slide23_img07.jpg"
       ],
       "features": [
         "dryers have been developed to ensure high productivity with a minimal use of energy. Shorter drying time means less wear of the fabric resulting in a longer life time and significant cost savings.",
         "With the function of automatic control and timer drying; the drum can run in clockwise and anti-lock wise. Large self-cleaning lint screen and large lint compartment for easy maintenance. Our energy saving features, plus our robust design ensures low cost ownership & infrequent maintenance.",
         "Our tumblers achieve the perfect balance between drying temperature, airflow pattern and usable cylinder space for maximum energy efficiency, shortening drying times - and reducing your utility and labor costs. The large diameter of the door opening on our tumble dryers ensures easy loading and unloading."
       ],
-      "category": "Commercial Laundry"
+      "category": "Commercial Laundry",
+      "specs": [
+        "dryers have been developed to ensure high productivity with a minimal use of energy. Shorter drying time means less wear of the fabric resulting in a longer life time and significant cost savings.",
+        "With the function of automatic control and timer drying; the drum can run in clockwise and anti-lock wise. Large self-cleaning lint screen and large lint compartment for easy maintenance. Our energy saving features, plus our robust design ensures low cost ownership & infrequent maintenance.",
+        "Our tumblers achieve the perfect balance between drying temperature, airflow pattern and usable cylinder space for maximum energy efficiency, shortening drying times - and reducing your utility and labor costs. The large diameter of the door opening on our tumble dryers ensures easy loading and unloading."
+      ]
     },
     {
       "id": "p15",
@@ -911,14 +975,22 @@
       "title": "Automatic Clamp Feeder",
       "shortDescription": "Automatic Clamp Feeder is a revolutionary product in our profile which ease the linen feeding problems to the ironer. Usually, manual feeding leads to a less productivity but this machine combines opt",
       "description": "Automatic Clamp Feeder is a revolutionary product in our profile which ease the linen feeding problems to the ironer. Usually, manual feeding leads to a less productivity but this machine combines optimal feeding with high speed. The Clamp feeder is available in single, two and three feeding stations with 3 meters and 3.3 meters width.\n\nEach feeding station has two sets of feeding clamps, positioned opposite to each other. This allows the operator to feed the linen sheets faster.\n\nThe feeding clamps hand over the linen to the two sets of spreading clamps. The spreading clamps are servo driven and run on motor driven toothed belts, which ensures that the linen is swiftly and accurately spread. he spreading clamps can transfer the item immediately after spreading and pick up the next one from one of the three stations. This way, availability of the clamps for the operators is increased.",
-      "image": "/images/ppt/slide08_img07.jpg",
-      "gallery": [],
+      "image": "/images/ppt/slide16_img00.png",
+      "gallery": [
+        "/images/ppt/slide16_img00.png",
+        "/images/ppt/slide23_img09.png"
+      ],
       "features": [
         "Automatic Clamp Feeder is a revolutionary product in our profile which ease the linen feeding problems to the ironer. Usually, manual feeding leads to a less productivity but this machine combines optimal feeding with high speed. The Clamp feeder is available in single, two and three feeding stations with 3 meters and 3.3 meters width.",
         "Each feeding station has two sets of feeding clamps, positioned opposite to each other. This allows the operator to feed the linen sheets faster.",
         "The feeding clamps hand over the linen to the two sets of spreading clamps. The spreading clamps are servo driven and run on motor driven toothed belts, which ensures that the linen is swiftly and accurately spread. he spreading clamps can transfer the item immediately after spreading and pick up the next one from one of the three stations. This way, availability of the clamps for the operators is increased."
       ],
-      "category": "Commercial Laundry"
+      "category": "Commercial Laundry",
+      "specs": [
+        "Automatic Clamp Feeder is a revolutionary product in our profile which ease the linen feeding problems to the ironer. Usually, manual feeding leads to a less productivity but this machine combines optimal feeding with high speed. The Clamp feeder is available in single, two and three feeding stations with 3 meters and 3.3 meters width.",
+        "Each feeding station has two sets of feeding clamps, positioned opposite to each other. This allows the operator to feed the linen sheets faster.",
+        "The feeding clamps hand over the linen to the two sets of spreading clamps. The spreading clamps are servo driven and run on motor driven toothed belts, which ensures that the linen is swiftly and accurately spread. he spreading clamps can transfer the item immediately after spreading and pick up the next one from one of the three stations. This way, availability of the clamps for the operators is increased."
+      ]
     },
     {
       "id": "p16",
@@ -928,13 +1000,18 @@
       "description": "Vacuum Feeder is a powerful and extremely compact feeder designed to produce more linen with the best quality leading and trailing edges and minimum effort in high volume feeding applications. Vacuum feeder is fitted with a high efficiency ventilator system, which provides an excellent vacuum and rapid agitating air stream with lower power characteristics than other comparable products.\n\nThe high-speed input rollers together with vacuum hold on the feed bands will ensure maximum tail end agitating and smoothing even the smaller articles. The operator just has to place the linen above the front edge of the specially designed vacuum chamber which then stretches and holds wet linen firmly on the feed conveyor. A high-speed roll helps to rapidly advice pieces through the system so operators can quickly handle the next linen.",
       "image": "/images/ppt/slide16_img00.png",
       "gallery": [
-        "/images/ppt/slide16_img00.png"
+        "/images/ppt/slide16_img00.png",
+        "/images/ppt/slide24_img01.png"
       ],
       "features": [
         "Vacuum Feeder is a powerful and extremely compact feeder designed to produce more linen with the best quality leading and trailing edges and minimum effort in high volume feeding applications. Vacuum feeder is fitted with a high efficiency ventilator system, which provides an excellent vacuum and rapid agitating air stream with lower power characteristics than other comparable products.",
         "The high-speed input rollers together with vacuum hold on the feed bands will ensure maximum tail end agitating and smoothing even the smaller articles. The operator just has to place the linen above the front edge of the specially designed vacuum chamber which then stretches and holds wet linen firmly on the feed conveyor. A high-speed roll helps to rapidly advice pieces through the system so operators can quickly handle the next linen."
       ],
-      "category": "Commercial Laundry"
+      "category": "Commercial Laundry",
+      "specs": [
+        "Vacuum Feeder is a powerful and extremely compact feeder designed to produce more linen with the best quality leading and trailing edges and minimum effort in high volume feeding applications. Vacuum feeder is fitted with a high efficiency ventilator system, which provides an excellent vacuum and rapid agitating air stream with lower power characteristics than other comparable products.",
+        "The high-speed input rollers together with vacuum hold on the feed bands will ensure maximum tail end agitating and smoothing even the smaller articles. The operator just has to place the linen above the front edge of the specially designed vacuum chamber which then stretches and holds wet linen firmly on the feed conveyor. A high-speed roll helps to rapidly advice pieces through the system so operators can quickly handle the next linen."
+      ]
     },
     {
       "id": "p17",
@@ -944,14 +1021,20 @@
       "description": "Flat Work Ironers produces high quality linen finishes easily and efficiently. The cylinder is mirror polished and supported by heavy-duty lubricated bearings. A highly sensitive hand protection board ensures ultimate safety in each phase of the ironing process. Our frequency conversion speed adjustment system allows for a continual even flow of speed which brings more energy saving.\n\nThe frame is built with high quality carbon steel primed and painted for long life. The cylinder is mirror polished and supported by heavy-duty lubricated bearings.\n\nA large efficient fan pulls evaporated moisture away from the cylinder. Nomex ironing straps that prevent absorption of moisture while ironing extends the life of all feed compartments. The compact design occupies very little space as the finished linen can be discharged to the front or in the back to a folder",
       "image": "/images/ppt/slide17_img00.jpg",
       "gallery": [
-        "/images/ppt/slide17_img00.jpg"
+        "/images/ppt/slide17_img00.jpg",
+        "/images/ppt/slide24_img02.png"
       ],
       "features": [
         "Flat Work Ironers produces high quality linen finishes easily and efficiently. The cylinder is mirror polished and supported by heavy-duty lubricated bearings. A highly sensitive hand protection board ensures ultimate safety in each phase of the ironing process. Our frequency conversion speed adjustment system allows for a continual even flow of speed which brings more energy saving.",
         "The frame is built with high quality carbon steel primed and painted for long life. The cylinder is mirror polished and supported by heavy-duty lubricated bearings.",
         "A large efficient fan pulls evaporated moisture away from the cylinder. Nomex ironing straps that prevent absorption of moisture while ironing extends the life of all feed compartments. The compact design occupies very little space as the finished linen can be discharged to the front or in the back to a folder"
       ],
-      "category": "Commercial Laundry"
+      "category": "Commercial Laundry",
+      "specs": [
+        "Flat Work Ironers produces high quality linen finishes easily and efficiently. The cylinder is mirror polished and supported by heavy-duty lubricated bearings. A highly sensitive hand protection board ensures ultimate safety in each phase of the ironing process. Our frequency conversion speed adjustment system allows for a continual even flow of speed which brings more energy saving.",
+        "The frame is built with high quality carbon steel primed and painted for long life. The cylinder is mirror polished and supported by heavy-duty lubricated bearings.",
+        "A large efficient fan pulls evaporated moisture away from the cylinder. Nomex ironing straps that prevent absorption of moisture while ironing extends the life of all feed compartments. The compact design occupies very little space as the finished linen can be discharged to the front or in the back to a folder"
+      ]
     },
     {
       "id": "p18",
@@ -961,12 +1044,16 @@
       "description": "Chest ironer is a high-speed ironer with the upper and lower chest heating. 800mm dia rollers ensures the quality of drying & ironing with the chest. Chests are made of mirror polished stainless steel. This high-speed ironer increases the productivity and finishing with reduced energy consumption. The precise structure of double chests, spring and heating proof felt ensure the rollers to keep enough elasticity and spring cushion. A highly sensitive hand protection board ensures ultimate safety in each phase of the ironing process.  Our frequency conversion speed adjustment system allows for a continual even flow of speed which brings more energy saving.",
       "image": "/images/ppt/slide18_img07.jpg",
       "gallery": [
-        "/images/ppt/slide18_img07.jpg"
+        "/images/ppt/slide18_img07.jpg",
+        "/images/ppt/slide24_img04.png"
       ],
       "features": [
         "Chest ironer is a high-speed ironer with the upper and lower chest heating. 800mm dia rollers ensures the quality of drying & ironing with the chest. Chests are made of mirror polished stainless steel. This high-speed ironer increases the productivity and finishing with reduced energy consumption. The precise structure of double chests, spring and heating proof felt ensure the rollers to keep enough elasticity and spring cushion. A highly sensitive hand protection board ensures ultimate safety in each phase of the ironing process.  Our frequency conversion speed adjustment system allows for a continual even flow of speed which brings more energy saving."
       ],
-      "category": "Commercial Laundry"
+      "category": "Commercial Laundry",
+      "specs": [
+        "Chest ironer is a high-speed ironer with the upper and lower chest heating. 800mm dia rollers ensures the quality of drying & ironing with the chest. Chests are made of mirror polished stainless steel. This high-speed ironer increases the productivity and finishing with reduced energy consumption. The precise structure of double chests, spring and heating proof felt ensure the rollers to keep enough elasticity and spring cushion. A highly sensitive hand protection board ensures ultimate safety in each phase of the ironing process.  Our frequency conversion speed adjustment system allows for a continual even flow of speed which brings more energy saving."
+      ]
     },
     {
       "id": "p19",
@@ -976,8 +1063,9 @@
       "description": "Folders can fold the dried & ironed linens automatically with perfect folding. Fully automatic and intelligent control system with big LCD screen enables extremely efficient Linen folding. The computer screen has dialogic function. Inverter driven to synchronize with the speed of Ironer\n\nFolding programs can be selected according to different types of linen. 2-5 folds can be performed under the control of the computer. Five times of folding can be controlled under the monitor of intelligent computer system.\n\nPhotoelectric detection and speed testing system control cloth transmission speed and precisely fold based on measuring cloth size.\n\nSelf-diagnostic and safety protection system, easy operation and daily maintenance.",
       "image": "/images/ppt/slide19_img06.jpg",
       "gallery": [
+        "/images/ppt/slide19_img02.jpg",
         "/images/ppt/slide19_img06.jpg",
-        "/images/ppt/slide19_img06.jpg"
+        "/images/ppt/slide24_img05.png"
       ],
       "features": [
         "Folders can fold the dried & ironed linens automatically with perfect folding. Fully automatic and intelligent control system with big LCD screen enables extremely efficient Linen folding. The computer screen has dialogic function. Inverter driven to synchronize with the speed of Ironer",
@@ -985,7 +1073,13 @@
         "Photoelectric detection and speed testing system control cloth transmission speed and precisely fold based on measuring cloth size.",
         "Self-diagnostic and safety protection system, easy operation and daily maintenance."
       ],
-      "category": "Commercial Laundry"
+      "category": "Commercial Laundry",
+      "specs": [
+        "Folders can fold the dried & ironed linens automatically with perfect folding. Fully automatic and intelligent control system with big LCD screen enables extremely efficient Linen folding. The computer screen has dialogic function. Inverter driven to synchronize with the speed of Ironer",
+        "Folding programs can be selected according to different types of linen. 2-5 folds can be performed under the control of the computer. Five times of folding can be controlled under the monitor of intelligent computer system.",
+        "Photoelectric detection and speed testing system control cloth transmission speed and precisely fold based on measuring cloth size.",
+        "Self-diagnostic and safety protection system, easy operation and daily maintenance."
+      ]
     },
     {
       "id": "p20",
@@ -995,15 +1089,21 @@
       "description": "Dry-cleaning machines are packed with high-performance and exclusive features that guarantee you the finest cleaning possible at the lowest cost. The ergonomic design produces exceptional cleaning as well as convenient and easy access to all components for quick maintenance. 6th generation computerized control system with separated manual operations. Easy to use, totally programmable, with a series of programs studied within the factory.\n\nProminent level recoveries up to 99.6% provide a very low workable cost per Garment. Eco friendly dual lint filter, large loading door with automatic locking and automatic tank to tank solvent transfer.\n\nThe design of larger wash basket with smaller depths ensures more stability and vibration even on highest extraction speeds and on greater G force.",
       "image": "/images/ppt/slide20_img07.jpg",
       "gallery": [
+        "/images/ppt/slide20_img06.jpg",
         "/images/ppt/slide20_img07.jpg",
-        "/images/ppt/slide20_img07.jpg"
+        "/images/ppt/slide24_img09.png"
       ],
       "features": [
         "Dry-cleaning machines are packed with high-performance and exclusive features that guarantee you the finest cleaning possible at the lowest cost. The ergonomic design produces exceptional cleaning as well as convenient and easy access to all components for quick maintenance. 6th generation computerized control system with separated manual operations. Easy to use, totally programmable, with a series of programs studied within the factory.",
         "Prominent level recoveries up to 99.6% provide a very low workable cost per Garment. Eco friendly dual lint filter, large loading door with automatic locking and automatic tank to tank solvent transfer.",
         "The design of larger wash basket with smaller depths ensures more stability and vibration even on highest extraction speeds and on greater G force."
       ],
-      "category": "Commercial Laundry"
+      "category": "Commercial Laundry",
+      "specs": [
+        "Dry-cleaning machines are packed with high-performance and exclusive features that guarantee you the finest cleaning possible at the lowest cost. The ergonomic design produces exceptional cleaning as well as convenient and easy access to all components for quick maintenance. 6th generation computerized control system with separated manual operations. Easy to use, totally programmable, with a series of programs studied within the factory.",
+        "Prominent level recoveries up to 99.6% provide a very low workable cost per Garment. Eco friendly dual lint filter, large loading door with automatic locking and automatic tank to tank solvent transfer.",
+        "The design of larger wash basket with smaller depths ensures more stability and vibration even on highest extraction speeds and on greater G force."
+      ]
     },
     {
       "id": "p21",
@@ -1013,12 +1113,16 @@
       "description": "Pcts Press USA pressing machines are one of the most versatile machine in the industry which offers the best pressing for laundry & dry cleaning of garments. Designed with efficiency in mind, the machines will provide the best possible finish in the least amount of time. Two Cylinder Design - one cylinder closes press head at consistent speeds and a second cylinder applies desired pressure. Equipped with Sleeve and stainless-steel iron stand. Timer operated. Rigid construction with Stainless steel heat proof vacuum cylinder. Simple installation and require a less space and energy.",
       "image": "/images/ppt/slide21_img00.jpg",
       "gallery": [
-        "/images/ppt/slide21_img00.jpg"
+        "/images/ppt/slide21_img00.jpg",
+        "/images/ppt/slide25_img01.png"
       ],
       "features": [
         "Pcts Press USA pressing machines are one of the most versatile machine in the industry which offers the best pressing for laundry & dry cleaning of garments. Designed with efficiency in mind, the machines will provide the best possible finish in the least amount of time. Two Cylinder Design - one cylinder closes press head at consistent speeds and a second cylinder applies desired pressure. Equipped with Sleeve and stainless-steel iron stand. Timer operated. Rigid construction with Stainless steel heat proof vacuum cylinder. Simple installation and require a less space and energy."
       ],
-      "category": "Commercial Laundry"
+      "category": "Commercial Laundry",
+      "specs": [
+        "Pcts Press USA pressing machines are one of the most versatile machine in the industry which offers the best pressing for laundry & dry cleaning of garments. Designed with efficiency in mind, the machines will provide the best possible finish in the least amount of time. Two Cylinder Design - one cylinder closes press head at consistent speeds and a second cylinder applies desired pressure. Equipped with Sleeve and stainless-steel iron stand. Timer operated. Rigid construction with Stainless steel heat proof vacuum cylinder. Simple installation and require a less space and energy."
+      ]
     },
     {
       "id": "p22",
@@ -1028,7 +1132,7 @@
       "description": "Dry-cleaning Press\n\nLaundry  Press\n\nShirt Press\n\nTrouser Press\n\nMushroom Press\n\nCuff & Collar Press\n\nForm Finisher\n\n51” Laundry Press\n\n42” Laundry Press\n\nDry-clean Utility Press",
       "image": "/images/ppt/slide22_img06.jpg",
       "gallery": [
-        "/images/ppt/slide22_img06.jpg",
+        "/images/ppt/slide22_img02.jpg",
         "/images/ppt/slide22_img03.jpg",
         "/images/ppt/slide22_img04.jpg",
         "/images/ppt/slide22_img05.jpg",
@@ -1036,7 +1140,8 @@
         "/images/ppt/slide22_img13.jpg",
         "/images/ppt/slide22_img16.jpg",
         "/images/ppt/slide22_img19.jpg",
-        "/images/ppt/slide22_img20.jpg"
+        "/images/ppt/slide22_img20.jpg",
+        "/images/ppt/slide25_img02.png"
       ],
       "features": [
         "Dry-cleaning Press",
@@ -1046,9 +1151,19 @@
         "Mushroom Press",
         "Cuff & Collar Press",
         "Form Finisher",
-        "51” Laundry Press"
+        "51” Laundry Press",
+        "42” Laundry Press",
+        "Dry-clean Utility Press"
       ],
-      "category": "Commercial Laundry"
+      "category": "Commercial Laundry",
+      "specs": [
+        "Dry-cleaning Press",
+        "Laundry  Press",
+        "Shirt Press",
+        "Trouser Press",
+        "Mushroom Press",
+        "Cuff & Collar Press"
+      ]
     }
   ],
   "productsPage": {
@@ -1261,5 +1376,252 @@
       "id": "c51",
       "name": "Hero Motors Group – New Delhi"
     }
+  ],
+  "installationGallery": {
+    "title": "Installations & Equipment Gallery",
+    "subtitle": "Pan India installations of Transferon CBW systems, washer extractors, ironers and complete laundry lines.",
+    "images": [
+      {
+        "src": "/images/ppt/slide23_img01.png",
+        "caption": ""
+      },
+      {
+        "src": "/images/ppt/slide23_img02.png",
+        "caption": ""
+      },
+      {
+        "src": "/images/ppt/slide23_img04.png",
+        "caption": ""
+      },
+      {
+        "src": "/images/ppt/slide23_img05.png",
+        "caption": ""
+      },
+      {
+        "src": "/images/ppt/slide23_img07.jpg",
+        "caption": ""
+      },
+      {
+        "src": "/images/ppt/slide23_img09.png",
+        "caption": ""
+      },
+      {
+        "src": "/images/ppt/slide24_img01.png",
+        "caption": ""
+      },
+      {
+        "src": "/images/ppt/slide24_img02.png",
+        "caption": ""
+      },
+      {
+        "src": "/images/ppt/slide24_img04.png",
+        "caption": ""
+      },
+      {
+        "src": "/images/ppt/slide24_img05.png",
+        "caption": ""
+      },
+      {
+        "src": "/images/ppt/slide24_img09.png",
+        "caption": ""
+      },
+      {
+        "src": "/images/ppt/slide25_img01.png",
+        "caption": ""
+      },
+      {
+        "src": "/images/ppt/slide25_img02.png",
+        "caption": ""
+      },
+      {
+        "src": "/images/ppt/slide25_img04.png",
+        "caption": ""
+      },
+      {
+        "src": "/images/ppt/slide25_img05.png",
+        "caption": ""
+      },
+      {
+        "src": "/images/ppt/slide25_img08.jpg",
+        "caption": ""
+      },
+      {
+        "src": "/images/ppt/slide25_img09.jpg",
+        "caption": ""
+      },
+      {
+        "src": "/images/ppt/slide26_img01.png",
+        "caption": ""
+      },
+      {
+        "src": "/images/ppt/slide26_img02.png",
+        "caption": ""
+      },
+      {
+        "src": "/images/ppt/slide26_img04.png",
+        "caption": ""
+      },
+      {
+        "src": "/images/ppt/slide26_img05.png",
+        "caption": ""
+      },
+      {
+        "src": "/images/ppt/slide26_img08.jpg",
+        "caption": ""
+      },
+      {
+        "src": "/images/ppt/slide26_img10.png",
+        "caption": ""
+      },
+      {
+        "src": "/images/ppt/slide27_img01.png",
+        "caption": ""
+      },
+      {
+        "src": "/images/ppt/slide27_img02.png",
+        "caption": ""
+      },
+      {
+        "src": "/images/ppt/slide27_img04.png",
+        "caption": ""
+      },
+      {
+        "src": "/images/ppt/slide27_img05.png",
+        "caption": ""
+      },
+      {
+        "src": "/images/ppt/slide27_img07.jpg",
+        "caption": ""
+      },
+      {
+        "src": "/images/ppt/slide28_img01.png",
+        "caption": ""
+      },
+      {
+        "src": "/images/ppt/slide28_img02.png",
+        "caption": ""
+      },
+      {
+        "src": "/images/ppt/slide28_img04.png",
+        "caption": ""
+      },
+      {
+        "src": "/images/ppt/slide28_img05.png",
+        "caption": ""
+      },
+      {
+        "src": "/images/ppt/slide28_img07.jpg",
+        "caption": ""
+      },
+      {
+        "src": "/images/ppt/slide29_img01.png",
+        "caption": ""
+      },
+      {
+        "src": "/images/ppt/slide29_img02.png",
+        "caption": ""
+      },
+      {
+        "src": "/images/ppt/slide29_img04.png",
+        "caption": ""
+      },
+      {
+        "src": "/images/ppt/slide29_img05.png",
+        "caption": ""
+      },
+      {
+        "src": "/images/ppt/slide29_img07.jpg",
+        "caption": ""
+      }
+    ]
+  },
+  "pressingMachines": {
+    "title": "Pressing Machines Portfolio",
+    "subtitle": "Professional garment pressing machines for laundry and dry-cleaning operations.",
+    "items": [
+      {
+        "name": "Dry-cleaning Press",
+        "image": "/images/ppt/slide22_img02.jpg"
+      },
+      {
+        "name": "Laundry  Press",
+        "image": "/images/ppt/slide22_img03.jpg"
+      },
+      {
+        "name": "Shirt Press",
+        "image": "/images/ppt/slide22_img04.jpg"
+      },
+      {
+        "name": "Trouser Press",
+        "image": "/images/ppt/slide22_img05.jpg"
+      },
+      {
+        "name": "Mushroom Press",
+        "image": "/images/ppt/slide22_img06.jpg"
+      },
+      {
+        "name": "Cuff & Collar Press",
+        "image": "/images/ppt/slide22_img13.jpg"
+      },
+      {
+        "name": "Form Finisher",
+        "image": "/images/ppt/slide22_img16.jpg"
+      },
+      {
+        "name": "51” Laundry Press",
+        "image": "/images/ppt/slide22_img19.jpg"
+      },
+      {
+        "name": "42” Laundry Press",
+        "image": "/images/ppt/slide22_img20.jpg"
+      },
+      {
+        "name": "Dry-clean Utility Press",
+        "image": "/images/ppt/slide22_img20.jpg"
+      }
+    ]
+  },
+  "pptMediaArchive": [
+    "/images/ppt/media_image1.jpeg",
+    "/images/ppt/media_image2.png",
+    "/images/ppt/media_image3.png",
+    "/images/ppt/media_image4.png",
+    "/images/ppt/media_image5.png",
+    "/images/ppt/media_image6.jpeg",
+    "/images/ppt/media_image7.png",
+    "/images/ppt/media_image8.jpg",
+    "/images/ppt/media_image9.png",
+    "/images/ppt/media_image10.jpg",
+    "/images/ppt/media_image11.png",
+    "/images/ppt/media_image12.jpg",
+    "/images/ppt/media_image13.jpg",
+    "/images/ppt/media_image14.png",
+    "/images/ppt/media_image15.jpg",
+    "/images/ppt/media_image16.jpg",
+    "/images/ppt/media_image17.jpg",
+    "/images/ppt/media_image18.jpg",
+    "/images/ppt/media_image19.jpg",
+    "/images/ppt/media_image20.jpg",
+    "/images/ppt/media_image21.jpeg",
+    "/images/ppt/media_image22.jpg",
+    "/images/ppt/media_image23.jpg",
+    "/images/ppt/media_image24.jpg",
+    "/images/ppt/media_image25.jpg",
+    "/images/ppt/media_image26.jpg",
+    "/images/ppt/media_image27.jpg",
+    "/images/ppt/media_image28.jpg",
+    "/images/ppt/media_image29.jpg",
+    "/images/ppt/media_image30.jpg",
+    "/images/ppt/media_image31.jpg",
+    "/images/ppt/media_image32.jpg",
+    "/images/ppt/media_image33.png",
+    "/images/ppt/media_image34.png",
+    "/images/ppt/media_image35.jpg",
+    "/images/ppt/media_image36.jpg",
+    "/images/ppt/media_image37.jpg",
+    "/images/ppt/media_image38.png",
+    "/images/ppt/media_image39.jpg",
+    "/images/ppt/media_image40.jpg",
+    "/images/ppt/media_image41.jpg"
   ]
 }

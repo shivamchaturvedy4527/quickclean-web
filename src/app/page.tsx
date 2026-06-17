@@ -10,11 +10,14 @@ import { NewsletterForm } from "@/components/NewsletterForm";
 import { SectionReveal } from "@/components/SectionReveal";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { InstallationGallery } from "@/components/InstallationGallery";
+import { PressingMachinesGrid } from "@/components/PressingMachinesGrid";
 import { getCMS } from "@/lib/cms-store";
 
 export default async function HomePage() {
   const cms = await getCMS();
-  const { home, solutions, testimonials, brands, blog, products } = cms;
+  const { home, solutions, testimonials, brands, blog, products, installationGallery, pressingMachines } = cms;
+  const machineProducts = products.filter((p) => p.category === "Commercial Laundry");
 
   return (
     <SiteLayout>
@@ -23,7 +26,7 @@ export default async function HomePage() {
         <Container className="grid min-h-[28rem] items-center gap-10 py-20 lg:grid-cols-2 lg:gap-16 lg:py-24">
           <SectionReveal>
             <p className="eyebrow-line mb-4 text-xs font-bold uppercase tracking-wider text-accent">
-              {cms.settings.tagline}
+              {home.heroEyebrow || cms.settings.tagline}
             </p>
             <h1 className="text-4xl font-bold leading-tight tracking-tight text-primary sm:text-5xl lg:text-6xl">
               {home.heroTitle}
@@ -121,16 +124,20 @@ export default async function HomePage() {
         </Container>
       </section>
 
-      {/* Products */}
-      {products?.length > 0 && home.productsTitle && (
+      {/* Products Portfolio — all machines */}
+      {machineProducts.length > 0 && home.productsTitle && (
         <section className="section-alt section-pad">
           <Container>
             <SectionReveal>
-              <SectionHeading title={home.productsTitle} subtitle={home.productsSubtitle} />
+              <SectionHeading
+                eyebrow="Machines"
+                title={home.productsTitle}
+                subtitle={home.productsSubtitle}
+              />
             </SectionReveal>
-            <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-              {products.slice(0, 4).map((product, i) => (
-                <SectionReveal key={product.id} delay={i * 0.06}>
+            <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+              {machineProducts.map((product, i) => (
+                <SectionReveal key={product.id} delay={(i % 4) * 0.04}>
                   <Link
                     href={`/products/${product.slug}`}
                     className="card card-lift group flex h-full flex-col overflow-hidden p-0"
@@ -141,16 +148,23 @@ export default async function HomePage() {
                         alt={product.title}
                         fill
                         className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
-                        sizes="(max-width: 768px) 100vw, 25vw"
+                        sizes="(max-width: 768px) 50vw, 25vw"
                       />
                     </div>
                     <div className="flex flex-1 flex-col p-5">
-                      <h3 className="font-semibold text-primary transition-colors group-hover:text-accent">
+                      <h3 className="font-semibold leading-snug text-primary transition-colors group-hover:text-accent">
                         {product.title}
                       </h3>
-                      <p className="mt-2 flex-1 text-sm leading-relaxed text-gray-600">
-                        {product.shortDescription}
-                      </p>
+                      {product.specs && product.specs.length > 0 && (
+                        <ul className="mt-3 space-y-1.5 text-xs text-gray-500">
+                          {product.specs.slice(0, 2).map((spec) => (
+                            <li key={spec} className="flex gap-2">
+                              <span className="text-accent">•</span>
+                              <span className="line-clamp-2">{spec}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      )}
                       <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-accent">
                         View Product
                         <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
@@ -160,16 +174,28 @@ export default async function HomePage() {
                 </SectionReveal>
               ))}
             </div>
-            {products.length > 4 && (
-              <div className="mt-10 text-center">
-                <Link href="/products" className="btn-outline">
-                  View All Products
-                  <ArrowRight className="h-4 w-4" />
-                </Link>
-              </div>
-            )}
+            <div className="mt-10 text-center">
+              <Link href="/products" className="btn-outline">
+                Full Products Catalogue
+                <ArrowRight className="h-4 w-4" />
+              </Link>
+            </div>
           </Container>
         </section>
+      )}
+
+      {/* Pressing machines */}
+      {pressingMachines && pressingMachines.items.length > 0 && (
+        <PressingMachinesGrid content={pressingMachines} />
+      )}
+
+      {/* Installation gallery from slides 23-29 */}
+      {installationGallery && installationGallery.images.length > 0 && (
+        <InstallationGallery
+          title={installationGallery.title}
+          subtitle={installationGallery.subtitle}
+          images={installationGallery.images}
+        />
       )}
 
       {/* Clients */}

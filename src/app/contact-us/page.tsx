@@ -36,7 +36,7 @@ export default async function ContactPage() {
 
     <SiteLayout>
 
-      <PageHero title={contact.title} subtitle={contact.intro} breadcrumb="Get in touch" />
+      <PageHero title={contact.title} subtitle={contact.intro.split("\n")[0]} image={contact.heroImage} breadcrumb="Get in touch" />
 
 
 

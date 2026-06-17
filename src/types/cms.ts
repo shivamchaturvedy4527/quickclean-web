@@ -36,7 +36,30 @@ export interface Product {
   image: string;
   gallery?: string[];
   features: string[];
+  specs?: string[];
   category?: string;
+}
+
+export interface GalleryImage {
+  src: string;
+  caption?: string;
+}
+
+export interface InstallationGalleryContent {
+  title: string;
+  subtitle?: string;
+  images: GalleryImage[];
+}
+
+export interface PressingMachineItem {
+  name: string;
+  image: string;
+}
+
+export interface PressingMachinesContent {
+  title: string;
+  subtitle?: string;
+  items: PressingMachineItem[];
 }
 
 export interface Client {
@@ -189,6 +212,8 @@ export interface HomeContent {
   newsletterSubtitle: string;
   productsTitle?: string;
   productsSubtitle?: string;
+  companyProfile?: string;
+  heroEyebrow?: string;
 }
 
 export interface FooterContent {
@@ -322,10 +347,13 @@ export interface CMSData {
     title: string;
     intro: string;
     mapEmbed: string;
+    heroImage?: string;
     serviceCentres?: string[];
   };
   products: Product[];
   productsPage: ProductsPageContent;
+  installationGallery?: InstallationGalleryContent;
+  pressingMachines?: PressingMachinesContent;
   clients: Client[];
   footer: FooterContent;
   cookieConsent: CookieConsentContent;
