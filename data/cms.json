@@ -1,0 +1,280 @@
+{
+  "settings": {
+    "siteName": "ProLaundry Solutions",
+    "tagline": "Commercial Laundry Machines & Operations",
+    "logo": "/images/logo.svg",
+    "favicon": "/favicon.ico",
+    "whatsappNumber": "919876543210",
+    "whatsappMessage": "Hello, I would like to know more about your commercial laundry solutions.",
+    "liveChatEmbed": "",
+    "contactEmail": "info@prolaundrysolutions.com",
+    "contactPhone": "+91 124 456 7890",
+    "addressLine1": "Tower A, Cyber Greens",
+    "addressLine2": "DLF Cyber City, Phase III",
+    "city": "Gurugram, Haryana 122002",
+    "country": "India",
+    "linkedin": "https://linkedin.com",
+    "twitter": "https://twitter.com",
+    "facebook": "https://facebook.com"
+  },
+  "navigation": [
+    { "label": "Home", "href": "/" },
+    {
+      "label": "Company",
+      "href": "/about",
+      "children": [
+        { "label": "About Us", "href": "/about" },
+        { "label": "Our Team", "href": "/company/team" },
+        { "label": "Sustainability", "href": "/company/sustainability" },
+        { "label": "Investors", "href": "/company/investors" },
+        { "label": "Careers", "href": "/careers" }
+      ]
+    },
+    {
+      "label": "Solutions",
+      "href": "/solutions",
+      "children": [
+        { "label": "Build Own & Operate", "href": "/solutions/build-own-operate" },
+        { "label": "Turnkey Projects", "href": "/solutions/turnkey" },
+        { "label": "Linen Rental", "href": "/solutions/linen-rental" },
+        { "label": "Equipment on Lease", "href": "/solutions/equipment-on-lease" }
+      ]
+    },
+    { "label": "Contact", "href": "/contact" }
+  ],
+  "home": {
+    "heroTitle": "Industrial Laundry Solutions for Hotels, Hospitals & Institutions",
+    "heroSubtitle": "From machine supply to full-scale on-premise laundry operations — we design, install, and manage commercial laundry ecosystems across India and internationally.",
+    "heroCtaText": "Explore Solutions",
+    "heroCtaLink": "/solutions",
+    "heroImage": "/images/hero-laundry.jpg",
+    "stats": [
+      { "value": 110, "suffix": "+", "label": "On-Premise Laundry Sites" },
+      { "value": 1500, "suffix": "+", "label": "Skilled Professionals" },
+      { "value": 38, "suffix": "+", "label": "Cities Across India" },
+      { "value": 100000, "suffix": " kg", "label": "Linen Processed Daily" }
+    ],
+    "sustainabilityTitle": "Sustainability at Scale",
+    "sustainabilityStats": [
+      { "value": 24, "suffix": " L/kg", "label": "Industry Standard Water Use" },
+      { "value": 8, "suffix": " L/kg", "label": "Our Water Consumption" },
+      { "value": 457, "suffix": "M+ L", "label": "Total Water Saved" },
+      { "value": 60, "suffix": "M kg", "label": "Carbon Emissions Reduced" }
+    ],
+    "founderTitle": "From the Founder's Desk",
+    "founderMessage": "What began as a vision to bring structured, technology-driven laundry to India has grown into a nationwide operations network trusted by leading hospitality and healthcare brands. Every installation reflects our commitment to hygiene, uptime, and measurable sustainability. We remain focused on building partnerships that last — not transactions that end at commissioning.",
+    "founderName": "Rajesh Mehta",
+    "founderRole": "Founder & CEO",
+    "founderImage": "/images/founder.jpg",
+    "sinceYear": "2010",
+    "brandsTitle": "Preferred Laundry Partner of Leading Brands",
+    "clientsTitle": "What Our Partners Say",
+    "newsTitle": "Industry Insights",
+    "newsSubtitle": "Stay informed on commercial laundry trends, hygiene standards, and operational best practices."
+  },
+  "solutions": [
+    {
+      "id": "boo",
+      "slug": "build-own-operate",
+      "title": "Build Own & Operate",
+      "shortDescription": "We design, own, and operate your on-premise laundry — zero capital investment, predictable performance.",
+      "description": "Our Build Own & Operate (BOO) model eliminates upfront capital expenditure while delivering a fully managed on-premise laundry facility. We handle design, equipment procurement, staffing, chemicals, maintenance, and compliance — you receive consistent linen quality with transparent SLAs. Ideal for 5-star hotels, hospital groups, and large institutional campuses seeking operational certainty without balance-sheet burden.",
+      "image": "/images/solution-boo.jpg",
+      "features": [
+        "Zero capex — we invest in equipment and infrastructure",
+        "End-to-end operations including staffing and consumables",
+        "Performance-linked SLAs with uptime guarantees",
+        "Scalable capacity as your linen volumes grow"
+      ],
+      "priceFromINR": 0,
+      "priceFromUSD": 0,
+      "priceFromEUR": 0,
+      "priceFromAED": 0
+    },
+    {
+      "id": "turnkey",
+      "slug": "turnkey",
+      "title": "Turnkey Projects",
+      "shortDescription": "Complete laundry systems — from layout design and machine installation to staff training and commissioning.",
+      "description": "Our turnkey approach delivers a production-ready commercial laundry from concept to first load. Engineering teams design layouts optimised for workflow, hygiene zoning, and energy efficiency. We procure and install washer-extractors, dryers, ironers, and finishing equipment from global OEM partners, then train your team and hand over documented SOPs.",
+      "image": "/images/solution-turnkey.jpg",
+      "features": [
+        "Site assessment and engineering design",
+        "OEM equipment procurement and installation",
+        "Utility planning — steam, water, drainage, electrical",
+        "Commissioning, staff training, and SOP documentation"
+      ],
+      "priceFromINR": 2500000,
+      "priceFromUSD": 30000,
+      "priceFromEUR": 28000,
+      "priceFromAED": 110000
+    },
+    {
+      "id": "linen",
+      "slug": "linen-rental",
+      "title": "Linen Rental",
+      "shortDescription": "Professionally laundered linens delivered on schedule — freeing your team to focus on core operations.",
+      "description": "Outsource your linen lifecycle entirely. We supply quality-assured textiles, collect soiled inventory, process through certified commercial laundries, and deliver fresh stock to your facility on agreed schedules. Inventory tracking, hygiene certification, and replacement management are included.",
+      "image": "/images/solution-linen.jpg",
+      "features": [
+        "Full linen inventory management and tracking",
+        "Scheduled pickup and delivery cycles",
+        "Hygiene-certified processing with audit trails",
+        "Flexible volume scaling for seasonal demand"
+      ],
+      "priceFromINR": 15,
+      "priceFromUSD": 0.18,
+      "priceFromEUR": 0.17,
+      "priceFromAED": 0.66
+    },
+    {
+      "id": "lease",
+      "slug": "equipment-on-lease",
+      "title": "Equipment on Lease",
+      "shortDescription": "High-capacity commercial laundry machines on flexible lease terms — no ownership burden.",
+      "description": "Access industrial-grade washer-extractors, tumble dryers, flatwork ironers, and finishing lines without large capital outlays. Lease structures include maintenance packages, upgrade options, and terms aligned to your contract cycles. Suitable for expanding properties, pilot operations, and capex-constrained budgets.",
+      "image": "/images/solution-lease.jpg",
+      "features": [
+        "Flexible lease tenures from 24 to 60 months",
+        "Comprehensive maintenance and breakdown cover",
+        "Upgrade paths to newer, more efficient models",
+        "Tax-efficient structuring for corporate finance teams"
+      ],
+      "priceFromINR": 45000,
+      "priceFromUSD": 540,
+      "priceFromEUR": 500,
+      "priceFromAED": 1980
+    }
+  ],
+  "testimonials": [
+    {
+      "id": "t1",
+      "quote": "The BOO model transformed our on-premise laundry from a cost centre into a reliable operational asset. Uptime has exceeded 98% since commissioning.",
+      "author": "Vikram Desai",
+      "company": "Regional GM, Luxury Hospitality Group"
+    },
+    {
+      "id": "t2",
+      "quote": "Their turnkey team delivered our 800 kg/day facility ahead of schedule. Training documentation and SOPs made handover seamless for our engineering staff.",
+      "author": "Dr. Priya Nair",
+      "company": "Director of Operations, Multi-Specialty Hospital"
+    },
+    {
+      "id": "t3",
+      "quote": "Linen rental eliminated inventory headaches across our 12-property portfolio. Consistent quality and predictable per-piece costing simplified our P&L planning.",
+      "author": "Arun Khanna",
+      "company": "VP Supply Chain, Hotel Chain"
+    }
+  ],
+  "brands": [
+    { "id": "b1", "name": "Marriott", "image": "/images/brands/marriott.svg" },
+    { "id": "b2", "name": "Taj Hotels", "image": "/images/brands/taj.svg" },
+    { "id": "b3", "name": "Radisson", "image": "/images/brands/radisson.svg" },
+    { "id": "b4", "name": "AIIMS", "image": "/images/brands/aiims.svg" },
+    { "id": "b5", "name": "Fortis", "image": "/images/brands/fortis.svg" },
+    { "id": "b6", "name": "ITC Hotels", "image": "/images/brands/itc.svg" }
+  ],
+  "blog": [
+    {
+      "id": "blog1",
+      "slug": "water-efficiency-commercial-laundry",
+      "title": "Reducing Water Consumption in High-Volume Commercial Laundries",
+      "excerpt": "How modern washer-extractors and process optimisation cut water use from 24 L/kg to under 8 L/kg without compromising hygiene standards.",
+      "category": "Sustainability",
+      "image": "/images/blog/water.jpg",
+      "date": "2025-11-15"
+    },
+    {
+      "id": "blog2",
+      "slug": "hospital-linen-hygiene-standards",
+      "title": "Hospital Linen Hygiene: Meeting NABH and International Accreditation Requirements",
+      "excerpt": "A practical guide to designing on-premise hospital laundries that satisfy infection control protocols and audit requirements.",
+      "category": "Healthcare",
+      "image": "/images/blog/hospital.jpg",
+      "date": "2025-10-22"
+    },
+    {
+      "id": "blog3",
+      "slug": "boo-model-hospitality",
+      "title": "Why Five-Star Hotels Are Adopting the BOO Model for On-Premise Laundries",
+      "excerpt": "Capital efficiency, operational expertise, and SLA-backed performance are driving a shift from owned laundries to managed partnerships.",
+      "category": "Hospitality",
+      "image": "/images/blog/hotel.jpg",
+      "date": "2025-09-08"
+    }
+  ],
+  "about": {
+    "title": "About ProLaundry Solutions",
+    "intro": "Since 2010, ProLaundry Solutions has been India's leading provider of commercial laundry machines, on-premise laundry operations, and linen management services. Headquartered in Gurugram, we serve hospitality, healthcare, defence, and institutional clients across 38+ cities with a team of 1,500+ trained professionals.",
+    "mission": "To deliver reliable, sustainable, and cost-effective commercial laundry solutions that let our partners focus on their core business.",
+    "vision": "To be the most trusted commercial laundry partner in South Asia and emerging international markets.",
+    "timeline": [
+      { "year": "2010", "title": "Foundation", "description": "Founded in Gurugram with a vision to bring structured, technology-driven commercial laundry to India." },
+      { "year": "2012", "title": "OEM Partnerships", "description": "Partnered with leading global laundry equipment manufacturers to bring energy-efficient machines to the Indian market." },
+      { "year": "2015", "title": "Healthcare Expansion", "description": "Expanded into hospital and institutional laundries, serving major healthcare networks nationwide." },
+      { "year": "2020", "title": "BOO Model Launch", "description": "Introduced Build Own & Operate — enabling hotels and hospitals to run on-premise laundries with zero capex." },
+      { "year": "2024", "title": "Scale Milestone", "description": "Processing 100,000+ kg of linen daily across 110+ on-premise sites with industry-leading water efficiency." }
+    ]
+  },
+  "sustainability": {
+    "title": "Sustainability Commitment",
+    "intro": "Commercial laundry is resource-intensive. We invest in technology, process design, and operator training to minimise water, energy, and chemical consumption across every site we manage.",
+    "metrics": [
+      { "value": 67, "suffix": "%", "label": "Water Reduction vs Industry Average" },
+      { "value": 457, "suffix": "M+ L", "label": "Litres of Water Saved" },
+      { "value": 60, "suffix": "M kg", "label": "CO₂ Emissions Avoided" },
+      { "value": 35, "suffix": "%", "label": "Energy Savings per kg Linen" }
+    ],
+    "initiatives": [
+      { "title": "Water Recovery Systems", "description": "Advanced water recycling and heat recovery on high-volume sites reduces freshwater draw by up to 70%." },
+      { "title": "Eco-Efficient Equipment", "description": "We specify washer-extractors and dryers with best-in-class specific consumption ratings from certified OEM partners." },
+      { "title": "Circular Textile Programme", "description": "End-of-life linen is diverted from landfill through our textile recovery and repurposing initiative." }
+    ]
+  },
+  "team": {
+    "title": "Leadership Team",
+    "intro": "Our leadership combines deep operational expertise in commercial laundry with experience scaling B2B service businesses across India.",
+    "members": [
+      { "id": "m1", "name": "Rajesh Mehta", "role": "Founder & CEO", "image": "/images/team/ceo.jpg", "bio": "25+ years in commercial laundry operations and hospitality supply chain." },
+      { "id": "m2", "name": "Anita Sharma", "role": "COO", "image": "/images/team/coo.jpg", "bio": "Former operations head at a leading hotel group; expert in on-premise laundry SLAs." },
+      { "id": "m3", "name": "David Chen", "role": "Head of International Business", "image": "/images/team/intl.jpg", "bio": "Leads expansion into Middle East and Southeast Asian markets." },
+      { "id": "m4", "name": "Sanjay Patel", "role": "Chief Technology Officer", "image": "/images/team/cto.jpg", "bio": "Drives IoT-enabled laundry monitoring and predictive maintenance platforms." }
+    ]
+  },
+  "investors": {
+    "title": "Investors",
+    "intro": "ProLaundry Solutions is backed by growth capital partners who share our commitment to operational excellence and sustainable industrial services.",
+    "highlights": [
+      "Series A funding led by institutional growth investors",
+      "Strong unit economics across BOO and managed operations contracts",
+      "Expanding addressable market in healthcare and hospitality infrastructure",
+      "Proven track record of 14+ years profitable operations"
+    ]
+  },
+  "careers": {
+    "title": "Careers",
+    "intro": "Join 1,500+ professionals building India's commercial laundry infrastructure. We offer structured growth paths in operations, engineering, sales, and corporate functions.",
+    "benefits": [
+      "Competitive compensation with performance incentives",
+      "Health insurance for employees and dependents",
+      "Technical training on commercial laundry equipment",
+      "Career progression across 38+ city operations"
+    ],
+    "openings": [
+      { "title": "Regional Operations Manager", "location": "Gurugram", "type": "Full-time" },
+      { "title": "Sales Manager — Hospitality", "location": "Mumbai", "type": "Full-time" },
+      { "title": "Maintenance Engineer", "location": "Bangalore", "type": "Full-time" },
+      { "title": "Business Development — International", "location": "Dubai / Remote", "type": "Full-time" }
+    ]
+  },
+  "contact": {
+    "title": "Contact Us",
+    "intro": "Speak with our solutions team about commercial laundry machines, on-premise operations, or partnership models. We respond within one business day.",
+    "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3506.2233913121413!2d77.0899!3d28.4945!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDI5JzQwLjIiTiA3N8KwMDUnMjMuNiJF!5e0!3m2!1sen!2sin!4v1600000000000"
+  },
+  "footer": {
+    "aboutText": "ProLaundry Solutions delivers commercial laundry machines, turnkey installations, and managed on-premise operations for hospitality, healthcare, and institutional clients across India and internationally.",
+    "copyright": "© 2026 ProLaundry Solutions. All rights reserved."
+  },
+  "contactSubmissions": []
+}
