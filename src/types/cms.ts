@@ -120,6 +120,7 @@ export interface SiteSettings {
   favicon: string;
   whatsappNumber: string;
   whatsappMessage: string;
+  whatsappGreetingTemplate: string;
   liveChatEmbed: string;
   contactEmail: string;
   contactPhone: string;

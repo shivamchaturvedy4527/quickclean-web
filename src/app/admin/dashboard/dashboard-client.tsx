@@ -301,6 +301,7 @@ export default function AdminDashboard() {
             data={{
               whatsappNumber: data.settings.whatsappNumber,
               whatsappMessage: data.settings.whatsappMessage,
+              whatsappGreetingTemplate: data.settings.whatsappGreetingTemplate,
               liveChatEmbed: data.settings.liveChatEmbed,
             }}
             onChange={(v) =>
@@ -310,6 +311,7 @@ export default function AdminDashboard() {
                   ...data.settings,
                   whatsappNumber: v.whatsappNumber as string,
                   whatsappMessage: v.whatsappMessage as string,
+                  whatsappGreetingTemplate: v.whatsappGreetingTemplate as string,
                   liveChatEmbed: v.liveChatEmbed as string,
                 },
               })

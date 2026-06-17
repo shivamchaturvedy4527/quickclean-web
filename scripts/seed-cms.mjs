@@ -18,6 +18,8 @@ const cms = {
     favicon: "/images/favicon-32.png",
     whatsappNumber: "917358258229",
     whatsappMessage: "Hello, I would like to know more about QuickClean.",
+    whatsappGreetingTemplate:
+      "Hi, I'm {name}. My number is {phone}. I'd like to inquire about your laundry machines/services.",
     liveChatEmbed: "",
     contactEmail: "hello@quickclean.co.in",
     contactPhone: "+91 98213 54872 / +91 86899 11455",

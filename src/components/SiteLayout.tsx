@@ -22,7 +22,11 @@ export async function SiteLayout({ children }: { children: React.ReactNode }) {
       />
       <WhatsAppButton
         number={cms.settings.whatsappNumber}
-        message={cms.settings.whatsappMessage}
+        defaultPrefix={cms.settings.whatsappMessage}
+        greetingTemplate={
+          cms.settings.whatsappGreetingTemplate ||
+          "Hi, I'm {name}. My number is {phone}. I'd like to inquire about your laundry machines/services."
+        }
       />
       <LiveChatWidget embedCode={cms.settings.liveChatEmbed} />
       <CookieConsent content={cms.cookieConsent} />
