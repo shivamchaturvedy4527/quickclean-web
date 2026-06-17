@@ -68,7 +68,8 @@ npm run lint     # ESLint
 
 ## Deployment
 
-- **Vercel**: Connect GitHub repo, deploy automatically
+- **GitHub**: https://github.com/shivamchaturvedy4527/quickclean-web
+- **Vercel (live)**: https://quickclean-clone.vercel.app
 - **Hostinger**: See [HOSTINGER_DEPLOY.md](./HOSTINGER_DEPLOY.md)
 
 ## License
