@@ -37,15 +37,21 @@ function MarqueeRow({ brands, reverse }: { brands: BrandLogo[]; reverse?: boolea
         {items.map((b, i) => (
           <div
             key={`${b.id}-${i}`}
-            className="flex h-16 w-36 shrink-0 items-center justify-center grayscale transition-all duration-300 hover:grayscale-0"
+            className="flex h-16 min-w-[9rem] shrink-0 items-center justify-center px-4 grayscale transition-all duration-300 hover:grayscale-0"
           >
-            <CmsImage
-              src={b.image}
-              alt={b.name}
-              width={120}
-              height={48}
-              className="max-h-12 w-auto object-contain opacity-70 transition-opacity hover:opacity-100"
-            />
+            {b.image ? (
+              <CmsImage
+                src={b.image}
+                alt={b.name}
+                width={120}
+                height={48}
+                className="max-h-12 w-auto object-contain opacity-70 transition-opacity hover:opacity-100"
+              />
+            ) : (
+              <span className="text-center text-xs font-semibold uppercase tracking-wide text-slate-500">
+                {b.name}
+              </span>
+            )}
           </div>
         ))}
       </div>

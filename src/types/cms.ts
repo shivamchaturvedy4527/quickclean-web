@@ -27,6 +27,29 @@ export interface Solution {
   priceFromAED: number;
 }
 
+export interface Product {
+  id: string;
+  slug: string;
+  title: string;
+  shortDescription: string;
+  description: string;
+  image: string;
+  gallery?: string[];
+  features: string[];
+  category?: string;
+}
+
+export interface Client {
+  id: string;
+  name: string;
+}
+
+export interface ProductsPageContent {
+  title: string;
+  intro: string;
+  heroImage?: string;
+}
+
 export interface TeamMember {
   id: string;
   name: string;
@@ -163,6 +186,8 @@ export interface HomeContent {
   newsSubtitle: string;
   newsletterTitle: string;
   newsletterSubtitle: string;
+  productsTitle?: string;
+  productsSubtitle?: string;
 }
 
 export interface FooterContent {
@@ -260,6 +285,10 @@ export interface CMSData {
     missionTitle: string;
     visionTitle: string;
     journeyTitle: string;
+    expertSolutions?: {
+      title: string;
+      sections: { title: string; items: string[] }[];
+    };
   };
   sustainability: {
     title: string;
@@ -292,7 +321,11 @@ export interface CMSData {
     title: string;
     intro: string;
     mapEmbed: string;
+    serviceCentres?: string[];
   };
+  products: Product[];
+  productsPage: ProductsPageContent;
+  clients: Client[];
   footer: FooterContent;
   cookieConsent: CookieConsentContent;
   reweave360: Reweave360Content;

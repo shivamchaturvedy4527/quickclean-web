@@ -4,6 +4,7 @@ import { SiteLayout } from "@/components/SiteLayout";
 import { AnimatedCounter } from "@/components/AnimatedCounter";
 import { CmsImage } from "@/components/CmsImage";
 import { LogoMarquee } from "@/components/LogoMarquee";
+import { ClientsGrid } from "@/components/ClientsGrid";
 import { VideoSection } from "@/components/VideoSection";
 import { NewsletterForm } from "@/components/NewsletterForm";
 import { SectionReveal } from "@/components/SectionReveal";
@@ -18,7 +19,7 @@ const SUSTAINABILITY_IMAGES = [
 
 export default async function HomePage() {
   const cms = await getCMS();
-  const { home, solutions, testimonials, brands, blog } = cms;
+  const { home, solutions, testimonials, brands, blog, products, clients } = cms;
 
   return (
     <SiteLayout>
@@ -31,7 +32,7 @@ export default async function HomePage() {
         <Container className="relative flex min-h-[520px] flex-col justify-center py-20 sm:min-h-[580px] sm:py-24">
           <SectionReveal className="max-w-2xl">
             <p className="eyebrow-line mb-5 text-xs font-bold uppercase tracking-[0.22em] text-accent">
-              Commercial Laundry Excellence
+              {cms.settings.tagline || "Commercial Laundry Excellence"}
             </p>
             <h1 className="font-display text-[2.5rem] font-medium leading-[1.06] tracking-tight text-navy sm:text-5xl lg:text-[3.5rem]">
               {home.heroTitle}
@@ -79,7 +80,8 @@ export default async function HomePage() {
         </Container>
       </section>
 
-      {/* Linen + Water */}
+      {/* Linen + Water — hidden when no numeric comparison data */}
+      {(home.linenWashedValue > 0 || home.waterComparison.monthlySaved > 0) && (
       <section className="section-pad">
         <Container>
           <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
@@ -93,6 +95,8 @@ export default async function HomePage() {
               <div className="mt-1 text-sm text-slate-500">{home.linenWashedUnit}</div>
             </SectionReveal>
 
+            {home.waterComparison.monthlySaved > 0 && (
+              <>
             <SectionReveal delay={0.06} className="card card-lift card-premium p-8 text-center">
               <div className="text-xs font-bold uppercase tracking-[0.15em] text-slate-400">
                 {home.waterComparison.title}
@@ -127,9 +131,12 @@ export default async function HomePage() {
               </div>
               <div className="mt-1 text-xs text-slate-500">Litres saved this year</div>
             </SectionReveal>
+              </>
+            )}
           </div>
         </Container>
       </section>
+      )}
 
       {/* Solutions */}
       <section className="section-alt section-pad">
@@ -141,7 +148,7 @@ export default async function HomePage() {
             {solutions.map((solution, i) => (
               <SectionReveal key={solution.id} delay={i * 0.06}>
                 <Link
-                  href={`/${solution.slug}`}
+                  href={`/solutions/${solution.slug}`}
                   className="card card-lift group flex h-full flex-col overflow-hidden p-0"
                 >
                   <div className="relative aspect-[4/3] overflow-hidden">
@@ -173,7 +180,59 @@ export default async function HomePage() {
         </Container>
       </section>
 
+      {/* Products */}
+      {products?.length > 0 && home.productsTitle && (
+        <section className="section-pad">
+          <Container>
+            <SectionReveal>
+              <SectionHeading title={home.productsTitle} subtitle={home.productsSubtitle} />
+            </SectionReveal>
+            <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+              {products.slice(0, 8).map((product, i) => (
+                <SectionReveal key={product.id} delay={i * 0.06}>
+                  <Link
+                    href={`/products/${product.slug}`}
+                    className="card card-lift group flex h-full flex-col overflow-hidden p-0"
+                  >
+                    <div className="relative aspect-[4/3] overflow-hidden">
+                      <CmsImage
+                        src={product.image}
+                        alt={product.title}
+                        fill
+                        className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.06]"
+                        sizes="(max-width: 768px) 100vw, 25vw"
+                      />
+                    </div>
+                    <div className="flex flex-1 flex-col p-6">
+                      <h3 className="font-semibold text-navy transition-colors group-hover:text-accent">
+                        {product.title}
+                      </h3>
+                      <p className="mt-3 flex-1 text-sm leading-relaxed text-slate-600">
+                        {product.shortDescription}
+                      </p>
+                      <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-accent">
+                        View Product
+                        <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1.5" />
+                      </span>
+                    </div>
+                  </Link>
+                </SectionReveal>
+              ))}
+            </div>
+            {products.length > 8 && (
+              <div className="mt-10 text-center">
+                <Link href="/products" className="btn-primary">
+                  View All Products
+                  <ArrowRight className="h-4 w-4" />
+                </Link>
+              </div>
+            )}
+          </Container>
+        </section>
+      )}
+
       {/* Founder */}
+      {home.founderName && (
       <section className="section-pad">
         <Container>
           <div className="grid gap-14 lg:grid-cols-2 lg:items-center lg:gap-20">
@@ -203,17 +262,22 @@ export default async function HomePage() {
           </div>
         </Container>
       </section>
+      )}
 
+      {home.videoUrl && (
       <VideoSection
         title={home.videoTitle}
         videoUrl={home.videoUrl}
         thumbnail={home.videoThumbnail}
         sinceYear={home.sinceYear}
       />
+      )}
 
       <LogoMarquee brands={brands} title={home.brandsTitle} />
+      <ClientsGrid clients={clients} title={home.clientsTitle} />
 
       {/* Sustainability impact */}
+      {home.sustainabilityStats.length > 0 && (
       <section className="section-pad">
         <Container>
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
@@ -239,8 +303,10 @@ export default async function HomePage() {
           </div>
         </Container>
       </section>
+      )}
 
       {/* Testimonials */}
+      {testimonials.length > 0 && (
       <section className="section-alt section-pad">
         <Container>
           <SectionReveal>
@@ -265,6 +331,7 @@ export default async function HomePage() {
           ))}
         </Container>
       </section>
+      )}
 
       {/* News */}
       <section className="section-pad">

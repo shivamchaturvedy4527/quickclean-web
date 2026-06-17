@@ -66,6 +66,15 @@ export default async function ContactPage() {
                   </a>
                 </li>
               </ul>
+
+              {contact.serviceCentres && contact.serviceCentres.length > 0 && (
+                <div className="mt-10">
+                  <h3 className="font-semibold text-navy">Service Centres</h3>
+                  <p className="mt-3 text-sm leading-relaxed text-slate-600">
+                    {contact.serviceCentres.join(" · ")}
+                  </p>
+                </div>
+              )}
             </div>
             <div className="card card-premium p-8 sm:p-10">
               <h3 className="font-display text-xl font-medium text-navy">Send a Message</h3>

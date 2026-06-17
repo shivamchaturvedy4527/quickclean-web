@@ -58,6 +58,7 @@ export default async function AboutPage() {
         </Container>
       </section>
 
+      {about.timeline.length > 0 && about.journeyTitle && (
       <section className="section-alt section-pad">
         <Container className="max-w-3xl">
           <SectionReveal>
@@ -83,6 +84,36 @@ export default async function AboutPage() {
           </div>
         </Container>
       </section>
+      )}
+
+      {about.expertSolutions && about.expertSolutions.sections.length > 0 && (
+        <section className="section-alt section-pad">
+          <Container>
+            <SectionReveal>
+              <h2 className="font-display text-2xl font-medium text-navy sm:text-3xl">
+                {about.expertSolutions.title}
+              </h2>
+            </SectionReveal>
+            <div className="mt-12 grid gap-8 lg:grid-cols-3">
+              {about.expertSolutions.sections.map((section, i) => (
+                <SectionReveal key={section.title} delay={i * 0.08}>
+                  <div className="card card-premium h-full p-8">
+                    <h3 className="font-semibold text-navy">{section.title}</h3>
+                    <ul className="mt-4 space-y-2 text-sm text-slate-600">
+                      {section.items.map((item) => (
+                        <li key={item} className="flex gap-2">
+                          <span className="text-accent">•</span>
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </SectionReveal>
+              ))}
+            </div>
+          </Container>
+        </section>
+      )}
     </SiteLayout>
   );
 }

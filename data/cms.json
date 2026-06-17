@@ -2,11 +2,11 @@
   "settings": {
     "siteName": "Pcts Infrastructures",
     "companyLegalName": "Pcts infrastructures Pvt Ltd",
-    "tagline": "",
-    "logo": "/images/logo.png",
+    "tagline": "Laundry & Dry Cleaning Room Solutions",
+    "logo": "/images/ppt/slide08_img01.png",
     "favicon": "/images/favicon-32.png",
     "whatsappNumber": "919821354872",
-    "whatsappMessage": "Hello, I would like to know more about Pcts Infrastructures laundry solutions.",
+    "whatsappMessage": "Hello, I would like to know more about Pcts Infrastructures laundry equipment and consultancy.",
     "liveChatEmbed": "",
     "contactEmail": "kjandrew67@gmail.com",
     "contactPhone": "+91 98213 54872 / +91 86899 11455",
@@ -14,9 +14,9 @@
     "addressLine2": "",
     "city": "Mumbai, Maharashtra 400079",
     "country": "India",
-    "linkedin": "https://linkedin.com/company/quickclean",
-    "twitter": "https://twitter.com/quickclean",
-    "facebook": "https://facebook.com/quickclean",
+    "linkedin": "",
+    "twitter": "",
+    "facebook": "",
     "businessHours": "Mon - Sat: 9:00 - 19:00",
     "headerCtaText": "Contact Us",
     "headerCtaLink": "/contact-us"
@@ -35,48 +35,32 @@
           "href": "/about-us"
         },
         {
-          "label": "Our Team",
-          "href": "/our-team"
-        },
-        {
           "label": "Sustainability",
           "href": "/sustainability"
-        },
-        {
-          "label": "Our Investors",
-          "href": "/our-investors"
-        },
-        {
-          "label": "Financial Planning",
-          "href": "/financial-planning"
         }
       ]
     },
     {
-      "label": "Our Solutions",
-      "href": "/build-own-and-operate",
+      "label": "Solutions",
+      "href": "/solutions",
       "children": [
         {
-          "label": "Build Own & Operate",
-          "href": "/build-own-and-operate"
+          "label": "Basic Analysis & Planning",
+          "href": "/solutions/basic-analysis-planning"
         },
         {
-          "label": "Turnkey Project",
-          "href": "/turnkey-project"
+          "label": "Process Improvement",
+          "href": "/solutions/process-improvement"
         },
         {
-          "label": "Linen Rental",
-          "href": "/linen-rental"
-        },
-        {
-          "label": "Equipment on Lease",
-          "href": "/equipment-on-lease"
+          "label": "Laundry Consultancy",
+          "href": "/solutions/laundry-consultancy"
         }
       ]
     },
     {
-      "label": "Reweave 360",
-      "href": "/reweave-360"
+      "label": "Products",
+      "href": "/products"
     },
     {
       "label": "Contact Us",
@@ -85,115 +69,96 @@
   ],
   "home": {
     "heroTitle": "Your Trusted Partner",
-    "heroTitleLine2": "In Sustainable Laundry Solutions",
-    "heroSubtitle": "",
-    "heroCtaText": "Our Solutions",
-    "heroCtaLink": "/build-own-and-operate",
+    "heroTitleLine2": "In Laundry & Dry Cleaning Solutions",
+    "heroSubtitle": "Thoughtfully designed, innovative and sustainable laundry & dry-cleaning equipment and consultancy — pan India.",
+    "heroCtaText": "Our Products",
+    "heroCtaLink": "/products",
     "heroSecondaryCtaText": "Contact Us",
     "heroSecondaryCtaLink": "/contact-us",
-    "heroImage": "/images/hero.jpg",
+    "heroImage": "/images/ppt/slide08_img01.png",
     "stats": [
       {
-        "value": 110,
+        "value": 10,
         "suffix": "+",
-        "label": "On-Premise Laundry Sites"
+        "label": "Years of Industry Experience"
       },
       {
-        "value": 1500,
+        "value": 12,
         "suffix": "+",
-        "label": "Skilled employees"
+        "label": "Product Categories"
       },
       {
-        "value": 38,
+        "value": 51,
         "suffix": "+",
-        "label": "Cities Across India"
+        "label": "Prestigious Clients"
       }
     ],
-    "linenWashedLabel": "Linen Washed / Day",
-    "linenWashedValue": 100,
-    "linenWashedSuffix": "K",
-    "linenWashedUnit": "kg linen handled",
+    "linenWashedLabel": "Pan India Presence",
+    "linenWashedValue": 12,
+    "linenWashedSuffix": "+",
+    "linenWashedUnit": "cities with service centres",
     "waterComparison": {
-      "title": "Water Usage",
-      "industryLabel": "Water Used by Industry Standard (24 L/kg)",
-      "industryDisplayValue": 2400000,
-      "industryValue": 24,
-      "industryUnit": " L/kg",
-      "qcLabel": "Water Used by QC (8 L/kg)",
-      "qcDisplayValue": 800000,
-      "qcValue": 8,
-      "qcUnit": " L/kg",
-      "monthlySavedLabel": "Monthly Water Saved",
-      "monthlySaved": 27200000,
-      "yearlySavedLabel": "Yearly Water Saved",
-      "yearlySaved": 268800000
+      "title": "Energy Efficiency",
+      "industryLabel": "Low energy consumption machines",
+      "industryDisplayValue": 0,
+      "industryValue": 0,
+      "industryUnit": "",
+      "qcLabel": "Low production cost — best value for money",
+      "qcDisplayValue": 0,
+      "qcValue": 0,
+      "qcUnit": "",
+      "monthlySavedLabel": "Wide Installations",
+      "monthlySaved": 0,
+      "yearlySavedLabel": "Proven Quality",
+      "yearlySaved": 0
     },
-    "solutionsTitle": "Our Solutions",
-    "solutionsSubtitle": "Sustainable laundry solutions that save water, cut energy use, and boost operational efficiency.",
+    "solutionsTitle": "Our Expert Solutions",
+    "solutionsSubtitle": "From feasibility analysis and facility planning to process improvement and full laundry consultancy.",
     "sustainabilityTitle": "",
-    "sustainabilityStats": [
-      {
-        "value": 457,
-        "suffix": "+",
-        "label": "million liters of water saved"
-      },
-      {
-        "value": 60,
-        "suffix": "M kg",
-        "label": "carbon emissions reduced"
-      }
-    ],
+    "sustainabilityStats": [],
     "sustainabilityImpactTitle": "",
-    "founderTitle": "From the Founder's Desk",
-    "founderMessage": "Quick Clean started as a dream I carried with me. Today it has a home, a family, and a heartbeat of its own. I'm just grateful— for our team, for the people who believed in us, and for every challenge that made us better. This isn't just laundry; it's hope, belief, and the fire to keep building. Here's to the next chapter.",
-    "founderName": "Anshul Gupta",
-    "founderRole": "CEO",
-    "founderImage": "/images/founder.jpg",
-    "sinceYear": "2010",
-    "videoTitle": "Since 2010",
-    "videoUrl": "https://www.youtube.com/embed/R4_bNukULNE",
-    "videoThumbnail": "/images/hero.jpg",
-    "brandsTitle": "Preferred Laundry Partner of<br /><strong>Leading Brands</strong>",
-    "clientsTitle": "What Our Partners Say",
+    "founderTitle": "",
+    "founderMessage": "",
+    "founderName": "",
+    "founderRole": "",
+    "founderImage": "",
+    "sinceYear": "",
+    "videoTitle": "",
+    "videoUrl": "",
+    "videoThumbnail": "",
+    "brandsTitle": "Few of our <strong>Prestigious Clients</strong>",
+    "clientsTitle": "Trusted Across India",
     "newsTitle": "News",
     "newsSubtitle": "Subscribe for the latest news. Stay updated on the latest trends.",
     "newsletterTitle": "Subscribe for the latest news",
-    "newsletterSubtitle": "Stay updated on the latest trends."
+    "newsletterSubtitle": "Stay updated on the latest trends.",
+    "productsTitle": "Products Portfolio",
+    "productsSubtitle": "Transferon series CBW systems and commercial laundry machines — proven quality, pan India."
   },
   "solutions": [
     {
-      "id": "boo",
-      "slug": "build-own-and-operate",
-      "title": "Build Own & Operate",
-      "shortDescription": "We design, own, operate your laundry—effortless setup, zero investment, predictable efficiency.",
-      "description": "Quick Clean's Build, Own & Operate (BOO) model delivers a complete, on-premise laundry that is designed, installed, owned, and fully operated by us—at zero capex to you. Your property receives a high-performance laundry inside the premises, and you simply pay a transparent per-kg processing price based on actual usage.\n\nWe build. We own. We operate.\n\nWith 110+ on-premise laundries, 3,000+ machines installed, and 70,000+ kg processed per day across India, Quick Clean brings unmatched reliability, sustainability, and operational consistency to hotels and hospitals nationwide.",
-      "image": "/images/solution-boo.jpg",
+      "id": "analysis",
+      "slug": "basic-analysis-planning",
+      "title": "Basic Analysis & Facility Planning",
+      "shortDescription": "Market research, load analysis, budget and facility planning for laundry projects.",
+      "description": "Our expert solutions cover end-to-end basic analysis and facility planning for laundry and dry-cleaning operations.",
+      "image": "/images/ppt/slide08_img01.png",
       "features": [
-        "Zero Capital Investment",
-        "End-to-End Operational Ease",
-        "Consistent Hygiene & Quality",
-        "Sustainable, High-Efficiency Operations",
-        "Predictable, Transparent Billing"
-      ],
-      "ctaText": "Get Started",
-      "ctaLink": "/contact-us",
-      "priceFromINR": 0,
-      "priceFromUSD": 0,
-      "priceFromEUR": 0,
-      "priceFromAED": 0
-    },
-    {
-      "id": "turnkey",
-      "slug": "turnkey-project",
-      "title": "Turnkey Project",
-      "shortDescription": "Complete laundry system handled—from design to staff training, installation, and seamless launch.",
-      "description": "Our turnkey approach delivers a production-ready on-premise commercial laundry from concept to first load. Engineering teams design layouts optimised for workflow, hygiene zoning, and energy efficiency.",
-      "image": "/images/solution-turnkey.jpg",
-      "features": [
-        "Site assessment and engineering design",
-        "OEM equipment procurement and installation",
-        "Utility planning — steam, water, drainage, electrical",
-        "Commissioning, staff training, and SOP documentation"
+        "Basic Analysis",
+        "Market Research & Feasibility Analysis",
+        "Laundry & Dry-Cleaning Load Analysis",
+        "Budget Analysis",
+        "Work Flow projection & analysis",
+        "Production Analysis",
+        "Electricity, Water, Steam Analysis",
+        "Cost Analysis Computation",
+        "Facility  Planning",
+        "Equipment analysis",
+        "Location Analysis",
+        "Plant Layout Design",
+        "Utility Design",
+        "HVAC Design",
+        "Manpower Analysis"
       ],
       "ctaText": "Contact Us",
       "ctaLink": "/contact-us",
@@ -203,17 +168,24 @@
       "priceFromAED": 0
     },
     {
-      "id": "linen",
-      "slug": "linen-rental",
-      "title": "Linen Rental",
-      "shortDescription": "Receive hygienic, professionally cleaned linens on schedule, freeing your resources for core operations.",
-      "description": "Outsource your institutional linen lifecycle to Quick Clean. We supply quality-assured textiles, collect soiled inventory, process through certified commercial laundries, and deliver fresh stock on agreed schedules.",
-      "image": "/images/solution-linen.jpg",
+      "id": "process",
+      "slug": "process-improvement",
+      "title": "Process Improvement & Project Management",
+      "shortDescription": "Operational development, quality control, energy review and continuous improvement.",
+      "description": "We help streamline operational processes, improve productivity and quality, and manage laundry projects from installation through post-installation review.",
+      "image": "/images/ppt/slide10_img01.png",
       "features": [
-        "Full linen inventory management",
-        "Scheduled collection and delivery cycles",
-        "Hygiene-certified processing",
-        "Flexible volume scaling"
+        "Process Improvement",
+        "Operational development & Planning",
+        "Productivity, Quality & Cost Control",
+        "Energy review",
+        "Identifying flaws & remedy",
+        "Installation & post installation review",
+        "Project Management",
+        "Streamline operational process & procedures",
+        "Quality assessment & training",
+        "Continuous improvement",
+        "Risk assessment"
       ],
       "ctaText": "Contact Us",
       "ctaLink": "/contact-us",
@@ -223,17 +195,28 @@
       "priceFromAED": 0
     },
     {
-      "id": "lease",
-      "slug": "equipment-on-lease",
-      "title": "Equipment on Lease",
-      "shortDescription": "Lease high‑capacity eco‑efficient laundry machines with flexible terms—no ownership burdens.",
-      "description": "Access industrial-grade washer-extractors, tumble dryers, flatwork ironers, and finishing lines without large capital outlays. Lease structures include maintenance packages and upgrade options.",
-      "image": "/images/solution-lease.jpg",
+      "id": "consultancy",
+      "slug": "laundry-consultancy",
+      "title": "Laundry Consultancy Services",
+      "shortDescription": "Full consultancy from feasibility study through equipment supply, layout design and training.",
+      "description": "Pcts Infrastructures provides comprehensive laundry consultancy — from market feasibility and load assessment to equipment planning, HVAC analysis, training and post-installation evaluation.",
+      "image": "/images/ppt/slide11_img00.jpg",
       "features": [
-        "Flexible lease tenures",
-        "Comprehensive maintenance cover",
-        "Upgrade paths to newer models",
-        "Tax-efficient structuring"
+        "Market & Feasibility study of the project",
+        "Laundry load/volume assessment",
+        "Initial analysis and recommendation",
+        "Work load analysis",
+        "Preliminary design development & equipment planning.",
+        "Financial Budget Analysis.",
+        "Supply of suitable equipment.",
+        "Architectural Design Process Flow and Layout Plan.",
+        "Equipment Layout, Specifications & budgets.",
+        "HVAC requirement analysis and installation",
+        "Final project timelines & scheduling.",
+        "Production & Operational cost analysis.",
+        "Machine operation at site training.",
+        "Technical data documentation.",
+        "Post Installation evaluation."
       ],
       "ctaText": "Contact Us",
       "ctaLink": "/contact-us",
@@ -243,106 +226,262 @@
       "priceFromAED": 0
     }
   ],
-  "testimonials": [
-    {
-      "id": "t1",
-      "quote": "Quick Clean's BOO model made our laundry setup effortless and cost-free. Their team manages everything with great efficiency, and the results have been consistently excellent.",
-      "author": "Nitin Sharma",
-      "company": "",
-      "image": "/images/testimonial-nitin.jpg",
-      "rating": 5
-    }
-  ],
+  "testimonials": [],
   "brands": [
     {
-      "id": "b1",
-      "name": "Partner 1",
-      "image": "/images/brands/1.jpg"
+      "id": "c1",
+      "name": "Fabrique Laundromat Services – Chennai",
+      "image": ""
     },
     {
-      "id": "b2",
-      "name": "Partner 2",
-      "image": "/images/brands/2.jpg"
+      "id": "c2",
+      "name": "Fabrique Laundromat Services – Bangalore",
+      "image": ""
     },
     {
-      "id": "b3",
-      "name": "Partner 3",
-      "image": "/images/brands/3.jpg"
+      "id": "c3",
+      "name": "Sparkles Laundry Services - Vizhag",
+      "image": ""
     },
     {
-      "id": "b4",
-      "name": "Partner 4",
-      "image": "/images/brands/4.jpg"
+      "id": "c4",
+      "name": "Taj Krishna – Hyderabad",
+      "image": ""
     },
     {
-      "id": "b5",
-      "name": "Partner 5",
-      "image": "/images/brands/5.jpg"
+      "id": "c5",
+      "name": "Taj Falukhnama – Hyderabad",
+      "image": ""
     },
     {
-      "id": "b6",
-      "name": "Partner 6",
-      "image": "/images/brands/6.jpg"
+      "id": "c6",
+      "name": "Radisson Blu – Hyderabad",
+      "image": ""
     },
     {
-      "id": "b7",
-      "name": "Partner 7",
-      "image": "/images/brands/7.jpg"
+      "id": "c7",
+      "name": "The Golkonda Hotel – Hyderabad",
+      "image": ""
     },
     {
-      "id": "b8",
-      "name": "Partner 8",
-      "image": "/images/brands/8.jpg"
+      "id": "c8",
+      "name": "Celebrity Resorts – Hyderabad",
+      "image": ""
     },
     {
-      "id": "b9",
-      "name": "Partner 9",
-      "image": "/images/brands/9.jpg"
+      "id": "c9",
+      "name": "Holiday Inn – Goa",
+      "image": ""
     },
     {
-      "id": "b10",
-      "name": "Partner 10",
-      "image": "/images/brands/10.jpg"
+      "id": "c10",
+      "name": "JW Marriot – Goa",
+      "image": ""
     },
     {
-      "id": "b11",
-      "name": "Partner 11",
-      "image": "/images/brands/11.jpg"
+      "id": "c11",
+      "name": "Kenilworth Hotel & Resorts – Goa",
+      "image": ""
     },
     {
-      "id": "b12",
-      "name": "Partner 12",
-      "image": "/images/brands/12.jpg"
+      "id": "c12",
+      "name": "Four Point Sheraton – Pune",
+      "image": ""
     },
     {
-      "id": "b13",
-      "name": "Partner 13",
-      "image": "/images/brands/13.jpg"
+      "id": "c13",
+      "name": "Raj Palace – Udaipur",
+      "image": ""
     },
     {
-      "id": "b14",
-      "name": "Partner 14",
-      "image": "/images/brands/14.jpg"
+      "id": "c14",
+      "name": "Jai Mahal Palace – Jaipur",
+      "image": ""
     },
     {
-      "id": "b15",
-      "name": "Partner 15",
-      "image": "/images/brands/15.jpg"
+      "id": "c15",
+      "name": "Ram Bagh Palace - Jaipur",
+      "image": ""
     },
     {
-      "id": "b16",
-      "name": "Partner 16",
-      "image": "/images/brands/16.jpg"
+      "id": "c16",
+      "name": "Club Mahindra Resort - Pune",
+      "image": ""
     },
     {
-      "id": "b17",
-      "name": "Partner 17",
-      "image": "/images/brands/17.jpg"
+      "id": "c17",
+      "name": "GK Residency- Ranipet",
+      "image": ""
     },
     {
-      "id": "b18",
-      "name": "Partner 18",
-      "image": "/images/brands/18.jpg"
+      "id": "c18",
+      "name": "Rajavalsam Hotels - Guruvayoor",
+      "image": ""
+    },
+    {
+      "id": "c19",
+      "name": "Fragrant Nature Resorts - Kollam",
+      "image": ""
+    },
+    {
+      "id": "c20",
+      "name": "Hotel Lepebble - Tirupur",
+      "image": ""
+    },
+    {
+      "id": "c21",
+      "name": "Hotel Vishnu Inn – Guruvayoor",
+      "image": ""
+    },
+    {
+      "id": "c22",
+      "name": "Ruby Hall Clinic – Pune",
+      "image": ""
+    },
+    {
+      "id": "c23",
+      "name": "Asian Heart Hospital – Mumbai",
+      "image": ""
+    },
+    {
+      "id": "c24",
+      "name": "Max Healthcare - Noida",
+      "image": ""
+    },
+    {
+      "id": "c25",
+      "name": "JSS Hospital – Mysore",
+      "image": ""
+    },
+    {
+      "id": "c26",
+      "name": "Prasad Hospital – Hyderabad",
+      "image": ""
+    },
+    {
+      "id": "c27",
+      "name": "SCS Hospital – Hosur",
+      "image": ""
+    },
+    {
+      "id": "c28",
+      "name": "Supreme Laundry Services - Hyderabad",
+      "image": ""
+    },
+    {
+      "id": "c29",
+      "name": "Sparkles Laundry Services - Jaipur",
+      "image": ""
+    },
+    {
+      "id": "c30",
+      "name": "Sparkles Laundry Services - Tirupati",
+      "image": ""
+    },
+    {
+      "id": "c31",
+      "name": "Sparkles Laundry Services - Kakinada",
+      "image": ""
+    },
+    {
+      "id": "c32",
+      "name": "Sparkles Laundry Services - Hyderabad",
+      "image": ""
+    },
+    {
+      "id": "c33",
+      "name": "Premier Garment Processor - Chennai",
+      "image": ""
+    },
+    {
+      "id": "c34",
+      "name": "Clothespa Laundry Services - Pune",
+      "image": ""
+    },
+    {
+      "id": "c35",
+      "name": "Texline Impex Services - Bangalore",
+      "image": ""
+    },
+    {
+      "id": "c36",
+      "name": "Maxclean Laundry – Bangalore",
+      "image": ""
+    },
+    {
+      "id": "c37",
+      "name": "Galaxy Laundry Services – Bangalore",
+      "image": ""
+    },
+    {
+      "id": "c38",
+      "name": "SGS India Pvt Ltd - Bangalore",
+      "image": ""
+    },
+    {
+      "id": "c39",
+      "name": "Revanna’s Fabric Care - Mysore",
+      "image": ""
+    },
+    {
+      "id": "c40",
+      "name": "Stone Hill International School - Bangalore",
+      "image": ""
+    },
+    {
+      "id": "c41",
+      "name": "Sri Vidhya Niketan School - Tirupathi",
+      "image": ""
+    },
+    {
+      "id": "c42",
+      "name": "SRM University – Chennai",
+      "image": ""
+    },
+    {
+      "id": "c43",
+      "name": "AMET University – Chennai",
+      "image": ""
+    },
+    {
+      "id": "c44",
+      "name": "Hydra Laundry Services – Chennai",
+      "image": ""
+    },
+    {
+      "id": "c45",
+      "name": "Big Laundry – Chennai",
+      "image": ""
+    },
+    {
+      "id": "c46",
+      "name": "Thriveni Earthmovers – Odisha",
+      "image": ""
+    },
+    {
+      "id": "c47",
+      "name": "Therdose Pharma – Hyderabad",
+      "image": ""
+    },
+    {
+      "id": "c48",
+      "name": "Medo Pharma – Bangalore",
+      "image": ""
+    },
+    {
+      "id": "c49",
+      "name": "Urvina India - Pune",
+      "image": ""
+    },
+    {
+      "id": "c50",
+      "name": "Super Wash Laundry – Coimbatore",
+      "image": ""
+    },
+    {
+      "id": "c51",
+      "name": "Hero Motors Group – New Delhi",
+      "image": ""
     }
   ],
   "blogCategories": [
@@ -393,75 +532,75 @@
   ],
   "about": {
     "title": "About Us",
-    "intro": "Pcts infrastructures Pvt Ltd is a reliable partner in laundry & dry cleaning room solutions since a decade. We offer thoughtfully designed, innovative and sustainable solutions for laundry & dry-cleaning industry, with products such as Washer Extractors, Barrier Washers, Tumble Driers, Flat Work Ironers, Chest Ironers, Automatic Feeders, Automatic Folders and Stackers & Tunnel Washers. Working in partnership with the best brands in the industry allows us to bring you the latest innovations to keep your business operating in most economical way by saving energy. All our products are technologically innovative, with exceptional quality which exceeds the highest Industrial standards.\n\nWe deal with the world's best & leading laundry machine manufacturing Companies. We believe in bringing brands who are having constant innovation in the design and manufacturing processes of the machines to influence the energy and water saving which are the key points in today's environmentally conscious world. We constantly striving to produce reliable and durable solutions which are satisfying quality requirements of the most demanding customers. By offering the high-quality products, we ensure the trouble-free working environment at your laundry & dry-cleaning unit.",
-    "mission": "We are one of the known supplier of laundry, dry cleaning & pressing machines in India. We mix high quality equipment, continuous technological innovation and an unmatched level of high quality service into single package. Experience, dedication and qualification are the key components which ensure that our services are delivered with the highest standards of quality.\n\nPcts infrastructures pvt ltd provide an efficient solution for any type of requirement concerning the provision of Laundry & Dry-cleaning machines & consultancy services. We listen from the customers carefully and in depth to provide solutions specifically suitable to them. We structure your needs in a clear and transparent development plan that focuses on achieving both practical and efficient solutions.\n\nWe represent some of the world's leading laundry equipment manufacturers. So when you're looking for a solution for your needs, we'll help you find the right fit - faster. We offer the best suitable equipment at affordable investment. We provide outstanding sales, service and support based on pro-active relationship building, in-depth product knowledge, seasoned industry experience and dependable follow through.",
-    "vision": "Quality: We constantly striving to produce reliable and durable solutions which are satisfying quality requirements of the most demanding customers. By offering the high-quality products, we ensure the trouble-free working environment at your laundry & dry-cleaning unit. Because of our high-quality machines, we can achieve the energy cost significantly.\n\nComprehensive Service: After-sales service is very important to us as a way of ensuring that you are always able to work with our products safely and with prominent level of satisfaction. Our technicians and installation engineers advise customers on site and plan systems depending on their specific demands, using our vast knowledge and expertise.\n\nMaintenance: Correctly maintained machinery is equivalent to a guarantee of quality. Therefore, we look after the minutest detail of the machinery on which we are working. We distribute the preventive maintenance manuals and train your staff to maintain the machines as per the standards. Our online machine maintenance & service reporting system will help you & us to maintain the machines.",
-    "heroImage": "/images/hero.jpg",
+    "intro": "Pcts infrastructures Pvt Ltd is a reliable partner in laundry & dry cleaning room solutions since a decade. We offer thoughtfully designed, innovative and sustainable solutions for laundry & dry-cleaning industry, with products such as Washer Extractors, Barrier Washers, Tumble Driers, Flat Work Ironers, Chest Ironers, Automatic Feeders, Automatic Folders and Stackers & Tunnel Washers. Working in partnership with the best brands in the industry allows us to bring you the latest innovations to keep your business operating in most economical way by saving energy. All our products are technologically innovative, with exceptional quality which exceeds the highest Industrial standards.\n\nWe deal with the world's best & leading laundry machine manufacturing Companies.\n\nWe believe in bringing brands who are having constant innovation in the design and manufacturing processes of the machines to influence the energy and water saving which are the key points in today's environmentally conscious world.\n\nWe constantly striving to produce reliable and durable solutions which are satisfying quality requirements of the most demanding customers. By offering the high-quality products, we ensure the trouble-free working environment at your laundry & dry-cleaning unit.",
+    "mission": "We are one of the known supplier of laundry, dry cleaning & pressing machines in India. We mix high quality equipment, continuous technological innovation and an unmatched level of high quality service into single package. Experience, dedication and qualification are the key components which ensure that our services are delivered with the highest standards of quality.\n\nPcts infrastructures pvt ltd provide an efficient solution for any type of requirement concerning the provision of Laundry & Dry-cleaning machines & consultancy services. We listen from the customers carefully and in depth to provide solutions specifically suitable to them. We structure your needs in a clear and transparent development plan that focuses on achieving both practical and efficient solutions.\n\nWe represent some of the world's leading laundry equipment manufacturers. So when you're looking for a solution for your needs, we'll help you find the right fit - faster. We offer the best suitable equipment at affordable investment.\n\nWe provide outstanding sales, service and support based on pro-active relationship building, in-depth product knowledge, seasoned industry experience and dependable follow through.",
+    "vision": "Quality\n\nWe constantly striving to produce reliable and durable solutions which are satisfying quality requirements of the most demanding customers. By offering the high-quality products, we ensure the trouble-free working environment at your laundry & dry-cleaning unit. Because of our high-quality machines, we can achieve the energy cost significantly.\n\nComprehensive Service:\n\nAfter-sales service is very important to us as a way of ensuring that you are always able to work with our products safely and with prominent level of satisfaction. Our technicians and installation engineers advise customers on site and plan systems depending on their specific demands, using our vast knowledge and expertise.\n\nMaintenance:\n\nCorrectly maintained machinery is equivalent to a guarantee of quality. Therefore, we look after the minutest detail of the machinery on which we are working. We distribute the preventive maintenance manuals and train your staff to maintain the machines as per the standards. Our online machine maintenance & service reporting system will help you & us to maintain the machines.",
+    "heroImage": "/images/ppt/slide08_img01.png",
     "missionTitle": "What We Do",
     "visionTitle": "Why Choose Us",
-    "journeyTitle": "Our Journey",
-    "timeline": [
-      {
-        "year": "2010",
-        "title": "Foundation",
-        "description": "A visit to a U.S. laundromat sparked Anshul Gupta's vision: India deserved structured, tech-driven laundry too. He shared it with his brother, Ankur Gupta—and together they set out to bring the laundromat revolution to India."
-      },
-      {
-        "year": "2011",
-        "title": "Expansion",
-        "description": "The idea caught fire. Quick Clean opened 40+ laundromats across India, proving demand for organized, reliable laundry services."
-      },
-      {
-        "year": "2012",
-        "title": "OEM Partnerships",
-        "description": "Partnered with Electrolux Professional to introduce energy-efficient, gas-based machines—raising the bar for performance and sustainability in India."
-      },
-      {
-        "year": "2013",
-        "title": "Healthcare & Hospitality",
-        "description": "Expanded into hotels and hospitals, delivering professional laundry solutions to leading brands like Marriott and Taj."
-      },
-      {
-        "year": "2014",
-        "title": "Growth",
-        "description": "Abhishek Gupta joined to power the next phase of growth and strengthen capital discipline. Signed an agreement with TREVIL to bring premium finishing solutions to India."
-      },
-      {
-        "year": "2015",
-        "title": "Defence",
-        "description": "Executed a landmark on-premise laundry for the Indian Military Academy—a showcase of scale, hygiene, and reliability."
-      },
-      {
-        "year": "2016",
-        "title": "LG Partnership",
-        "description": "Joined hands with LG Commercial Laundry to revolutionize semi-commercial laundries across India—faster installs, smarter operations, better outcomes."
-      },
-      {
-        "year": "2018",
-        "title": "Experience Center",
-        "description": "Opened India's first Laundry Experience Center in New Delhi—educating customers on process, hygiene, and sustainable technology."
-      },
-      {
-        "year": "2019",
-        "title": "Scale",
-        "description": "Crossed 350+ employees and 3,000+ machines installed, serving many of India's biggest brands nationwide."
-      },
-      {
-        "year": "2020",
-        "title": "BOO Model",
-        "description": "Introduced the Build-Own-Operate (BOO) model—helping 5-star hotels and hospitals run on-premise laundries with zero capex and professional management."
-      },
-      {
-        "year": "2024",
-        "title": "Milestone",
-        "description": "Now processing 50,000 kg of linen daily for partners including Marriott, Radisson, and AIIMS—with uptime, quality, and sustainability at the core."
-      },
-      {
-        "year": "2025",
-        "title": "Funding & ReWeave",
-        "description": "Raised $6 million from Alkemi Growth Capital and Blue Ashva Capital. Launched ReWeave 360—our circular initiative turning waste into worth."
-      }
-    ]
+    "journeyTitle": "",
+    "timeline": [],
+    "expertSolutions": {
+      "title": "Our Expert Solutions",
+      "sections": [
+        {
+          "title": "Our Expert Solutions",
+          "items": [
+            "Basic Analysis",
+            "Market Research & Feasibility Analysis",
+            "Laundry & Dry-Cleaning Load Analysis",
+            "Budget Analysis",
+            "Work Flow projection & analysis",
+            "Production Analysis",
+            "Electricity, Water, Steam Analysis",
+            "Cost Analysis Computation",
+            "Facility  Planning",
+            "Equipment analysis",
+            "Location Analysis",
+            "Plant Layout Design",
+            "Utility Design",
+            "HVAC Design",
+            "Manpower Analysis"
+          ]
+        },
+        {
+          "title": "Process Improvement",
+          "items": [
+            "Process Improvement",
+            "Operational development & Planning",
+            "Productivity, Quality & Cost Control",
+            "Energy review",
+            "Identifying flaws & remedy",
+            "Installation & post installation review",
+            "Project Management",
+            "Streamline operational process & procedures",
+            "Quality assessment & training",
+            "Continuous improvement",
+            "Risk assessment"
+          ]
+        },
+        {
+          "title": "Laundry Consultancy Services",
+          "items": [
+            "Market & Feasibility study of the project",
+            "Laundry load/volume assessment",
+            "Initial analysis and recommendation",
+            "Work load analysis",
+            "Preliminary design development & equipment planning.",
+            "Financial Budget Analysis.",
+            "Supply of suitable equipment.",
+            "Architectural Design Process Flow and Layout Plan.",
+            "Equipment Layout, Specifications & budgets.",
+            "HVAC requirement analysis and installation",
+            "Final project timelines & scheduling.",
+            "Production & Operational cost analysis.",
+            "Machine operation at site training.",
+            "Technical data documentation.",
+            "Post Installation evaluation."
+          ]
+        }
+      ]
+    }
   },
   "sustainability": {
     "title": "Sustainability",
@@ -495,85 +634,7 @@
     "title": "Our Team",
     "intro": "",
     "heroImage": "/images/hero.jpg",
-    "members": [
-      {
-        "id": "m1",
-        "name": "Anshul Gupta",
-        "role": "CEO",
-        "image": "/images/founder.jpg",
-        "bio": ""
-      },
-      {
-        "id": "m2",
-        "name": "Abhishek Gupta",
-        "role": "CFO",
-        "image": "",
-        "bio": ""
-      },
-      {
-        "id": "m3",
-        "name": "Ankur Gupta",
-        "role": "CTO",
-        "image": "",
-        "bio": ""
-      },
-      {
-        "id": "m4",
-        "name": "Anand Dharmadhyaksha",
-        "role": "CGO",
-        "image": "",
-        "bio": ""
-      },
-      {
-        "id": "m5",
-        "name": "Neeti Kalra",
-        "role": "General Manager – HR",
-        "image": "",
-        "bio": ""
-      },
-      {
-        "id": "m6",
-        "name": "Antima Gautam",
-        "role": "Sr. Manager - Financial Planning & Analysis",
-        "image": "",
-        "bio": ""
-      },
-      {
-        "id": "m7",
-        "name": "Dadasaheb Bhagwan S",
-        "role": "Sr. Vice President - Engineering & Business",
-        "image": "",
-        "bio": ""
-      },
-      {
-        "id": "m8",
-        "name": "Manibhadra Sahu",
-        "role": "Finance Controller",
-        "image": "",
-        "bio": ""
-      },
-      {
-        "id": "m9",
-        "name": "Prashant Vaidya",
-        "role": "Regional Operational Lead",
-        "image": "",
-        "bio": ""
-      },
-      {
-        "id": "m10",
-        "name": "Anil Dobhal",
-        "role": "Logistics Head",
-        "image": "",
-        "bio": ""
-      },
-      {
-        "id": "m11",
-        "name": "CD Sharma",
-        "role": "Regional Operational Lead",
-        "image": "",
-        "bio": ""
-      }
-    ]
+    "members": []
   },
   "investors": {
     "title": "Our Investors",
@@ -582,7 +643,7 @@
     "partners": []
   },
   "careers": {
-    "title": "Careers",
+    "title": "",
     "intro": "",
     "benefitsTitle": "",
     "benefits": [],
@@ -591,13 +652,27 @@
   },
   "contact": {
     "title": "Contact Us",
-    "intro": "Call us or fill the form. Service Centres: Bangalore, Coimbatore, Chennai, Hyderabad, Hubli, Jaipur, Mumbai, New Delhi, Pune, Tirupati, Vijayawada, Visakhapatnam.",
-    "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3506.2233913121413!2d77.0899!3d28.4945!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDI5JzQwLjIiTiA3N8KwMDUnMjMuNiJF!5e0!3m2!1sen!2sin!4v1600000000000"
+    "intro": "Pcts infrastructures Pvt Ltd — C-909, Kailas Business Park, Vikroli West, Mumbai 400079. Mobile: +91 98213 54872 / +91 86899 11455. Email: kjandrew67@gmail.com. Service Centres: Bangalore, Coimbatore, Chennai, Hyderabad, Hubli, Jaipur, Mumbai, New Delhi, Pune, Tirupati, Vijayawada, Visakhapatnam.",
+    "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3506.2233913121413!2d77.0899!3d28.4945!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDI5JzQwLjIiTiA3N8KwMDUnMjMuNiJF!5e0!3m2!1sen!2sin!4v1600000000000",
+    "serviceCentres": [
+      "Bangalore",
+      "Coimbatore",
+      "Chennai",
+      "Hyderabad",
+      "Hubli",
+      "Jaipur",
+      "Mumbai",
+      "New Delhi",
+      "Pune",
+      "Tirupati",
+      "Vijayawada",
+      "Visakhapatnam"
+    ]
   },
   "footer": {
     "aboutText": "Pcts infrastructures Pvt Ltd — reliable partner in laundry & dry cleaning room solutions, supplying world-class equipment and consultancy across India.",
     "copyright": "© Pcts infrastructures Pvt Ltd",
-    "solutionsTitle": "Our Solutions",
+    "solutionsTitle": "Solutions & Products",
     "companyTitle": "Company",
     "headOfficeTitle": "Head Office",
     "legalLinks": [
@@ -672,7 +747,7 @@
       "sections": [
         {
           "heading": "Privacy Policy",
-          "body": "Quick Clean Laundry Systems Pvt. Ltd. privacy policy."
+          "body": "Pcts infrastructures Pvt Ltd — Privacy Policy."
         }
       ]
     },
@@ -682,7 +757,7 @@
       "sections": [
         {
           "heading": "Terms",
-          "body": "Quick Clean Laundry Systems Pvt. Ltd. terms of service."
+          "body": "Pcts infrastructures Pvt Ltd — Terms of Service."
         }
       ]
     },
@@ -692,11 +767,498 @@
       "sections": [
         {
           "heading": "Code of Conduct",
-          "body": "Quick Clean Laundry Systems Pvt. Ltd. code of conduct."
+          "body": "Pcts infrastructures Pvt Ltd — Code of Conduct."
         }
       ]
     }
   },
   "contactSubmissions": [],
-  "newsletterSubmissions": []
+  "newsletterSubmissions": [],
+  "products": [
+    {
+      "id": "p8",
+      "slug": "products-portfolio",
+      "title": "Products Portfolio",
+      "shortDescription": "Introducing our Transferon series CBW System and series laundry machines which is the best in the industry. High standards of quality which is already proven in the market since a decade.",
+      "description": "Introducing our Transferon series CBW System and series laundry machines which is the best in the industry. High standards of quality which is already proven in the market since a decade.\n\nManufactured in one of the largest manufacturing plant in the world with the best technological advancement.\n\nSeries machines are “Best value for Money” due to it’s low energy consumption & low production cost.\n\nlaundry & dry cleaning equipment has wide installations in pan India.",
+      "image": "/images/ppt/slide08_img01.png",
+      "gallery": [
+        "/images/ppt/slide08_img01.png",
+        "/images/ppt/slide08_img02.png",
+        "/images/ppt/slide08_img04.png",
+        "/images/ppt/slide08_img05.png",
+        "/images/ppt/slide08_img07.jpg"
+      ],
+      "features": [
+        "laundry & dry cleaning equipment has wide installations in pan India."
+      ],
+      "category": "Products Portfolio"
+    },
+    {
+      "id": "p9",
+      "slug": "product-portfolio",
+      "title": "Product Portfolio",
+      "shortDescription": "Continuous Batch Washer (CBW)",
+      "description": "Continuous Batch Washer (CBW)\n\nWasher Extractor\n\nOpen Pocket Washer Extractor\n\nBarrier Washer\n\nTumble Dryer\n\nAutomatic Clamp Feeder\n\nAutomatic Vacuum Feeder\n\nFlatwork Ironers\n\nChest Ironers\n\nAutomatic Linen Folders\n\nDry-cleaning Machines\n\nPressing Machines",
+      "image": "/images/ppt/slide09_img01.png",
+      "gallery": [
+        "/images/ppt/slide09_img01.png",
+        "/images/ppt/slide09_img02.png",
+        "/images/ppt/slide09_img04.png",
+        "/images/ppt/slide09_img05.png"
+      ],
+      "features": [
+        "Continuous Batch Washer (CBW)",
+        "Washer Extractor",
+        "Open Pocket Washer Extractor",
+        "Barrier Washer",
+        "Tumble Dryer",
+        "Automatic Clamp Feeder",
+        "Automatic Vacuum Feeder",
+        "Flatwork Ironers"
+      ],
+      "category": "Products Portfolio"
+    },
+    {
+      "id": "p10",
+      "slug": "continuous-batch-washer-cbw-1200-2000-kg-production-per-hour",
+      "title": "Continuous Batch Washer (CBW) – 1200 – 2000 Kg production per hour – Transferon",
+      "shortDescription": "CBW loading capacity ranging from 50 Kg to 100 Kg.",
+      "description": "CBW loading capacity ranging from 50 Kg to 100 Kg.\n\nThe number of batches from 7 up to 20 compartments.\n\nThe Hydraulic Press capacity ranging from 36 Kg, to 100 Kg\n\nStandard Membrane pressure 35 bar or high pressure 50 bar.\n\nThe Batch Dryers as stand-alone   capacity ranging from 50 Kg to 200 Kg.\n\nThe deep chest Ironers size starts from diameter 1000-1200-1300 and 1600mm and the working width from 2000 to 4500 mm.",
+      "image": "/images/ppt/slide10_img01.png",
+      "gallery": [
+        "/images/ppt/slide10_img01.png"
+      ],
+      "features": [
+        "CBW loading capacity ranging from 50 Kg to 100 Kg.",
+        "The number of batches from 7 up to 20 compartments.",
+        "The Hydraulic Press capacity ranging from 36 Kg, to 100 Kg",
+        "Standard Membrane pressure 35 bar or high pressure 50 bar.",
+        "The Batch Dryers as stand-alone   capacity ranging from 50 Kg to 200 Kg."
+      ],
+      "category": "Commercial Laundry"
+    },
+    {
+      "id": "p11",
+      "slug": "washer-extractor",
+      "title": "Washer Extractor",
+      "shortDescription": "Washer Extractors are characterized by their compact, robust design and reliable technology. The computer panel has super UI and excellent programs to ease the washing process. User can control work l",
+      "description": "Washer Extractors are characterized by their compact, robust design and reliable technology. The computer panel has super UI and excellent programs to ease the washing process. User can control work liquid-level, wash temperature, wash time and efficiently satisfy with wash request in different situations. The high extraction speeds considerably reduce drying time, resulting in energy and time savings in the drying process.\n\nConstructed with the latest advanced technologies, our Washer Extractor are rugged and can operate in heavy load conditions.",
+      "image": "/images/ppt/slide11_img00.jpg",
+      "gallery": [
+        "/images/ppt/slide11_img00.jpg"
+      ],
+      "features": [
+        "Washer Extractors are characterized by their compact, robust design and reliable technology. The computer panel has super UI and excellent programs to ease the washing process. User can control work liquid-level, wash temperature, wash time and efficiently satisfy with wash request in different situations. The high extraction speeds considerably reduce drying time, resulting in energy and time savings in the drying process.",
+        "Constructed with the latest advanced technologies, our Washer Extractor are rugged and can operate in heavy load conditions."
+      ],
+      "category": "Commercial Laundry"
+    },
+    {
+      "id": "p12",
+      "slug": "open-pocket-washer-extractor",
+      "title": "Open Pocket Washer Extractor",
+      "shortDescription": "Open Pocket Washer/Extractors feature are designed as two-way tilting for safe, easy loading and unloading. Sealion makes the most of G-forces in the extraction process with increased cylinder diamete",
+      "description": "Open Pocket Washer/Extractors feature are designed as two-way tilting for safe, easy loading and unloading. Sealion makes the most of G-forces in the extraction process with increased cylinder diameters, providing maximum, efficient water removal.\n\nOpen Pocket Washer/Extractors were designed to smoothly integrate into various plant layouts. These machines offer the largest processing capability in the industry to conserve the floor space. This is significant as operators look to maximize their productivity in their existing facilities. These type of washer extractors are designed and engineered for ease of use, space allocation limitation concerns and ergonomics. A unique feature to these machines is that the suspension has been redesigned to reduce the washer/extractor’s profile and to provide a reduction in vibration.",
+      "image": "/images/ppt/slide12_img02.png",
+      "gallery": [
+        "/images/ppt/slide12_img02.png"
+      ],
+      "features": [
+        "Open Pocket Washer/Extractors feature are designed as two-way tilting for safe, easy loading and unloading. Sealion makes the most of G-forces in the extraction process with increased cylinder diameters, providing maximum, efficient water removal.",
+        "Open Pocket Washer/Extractors were designed to smoothly integrate into various plant layouts. These machines offer the largest processing capability in the industry to conserve the floor space. This is significant as operators look to maximize their productivity in their existing facilities. These type of washer extractors are designed and engineered for ease of use, space allocation limitation concerns and ergonomics. A unique feature to these machines is that the suspension has been redesigned to reduce the washer/extractor’s profile and to provide a reduction in vibration."
+      ],
+      "category": "Commercial Laundry"
+    },
+    {
+      "id": "p13",
+      "slug": "barrier-washer-extractor",
+      "title": "Barrier Washer Extractor",
+      "shortDescription": "Barrier Washer Extractor with clean/unclean sides provide the ideal solution for processing laundry in hospitals and laundries. Sealion barrier washer extractors are designed to reduces risk of Hospit",
+      "description": "Barrier Washer Extractor with clean/unclean sides provide the ideal solution for processing laundry in hospitals and laundries. Sealion barrier washer extractors are designed to reduces risk of Hospital-Acquired-Infection (HAI) in hospital theatre linen laundries.\n\nThe 6th generation microprocessors enables a simple and easy to use control system for the user. This free-standing machine has a stainless-steel cabinet, drum and tub. The door of this machine is big enough to allow easy loading and unloading of clothes. This is an ideal solution for sanitary washing in hospitals because it can prevent the washing stuff from being contaminated after cleaned by the germs during the loading and unloading process in the un-clean area.",
+      "image": "/images/ppt/slide13_img03.jpg",
+      "gallery": [
+        "/images/ppt/slide13_img03.jpg",
+        "/images/ppt/slide13_img05.png"
+      ],
+      "features": [
+        "Barrier Washer Extractor with clean/unclean sides provide the ideal solution for processing laundry in hospitals and laundries. Sealion barrier washer extractors are designed to reduces risk of Hospital-Acquired-Infection (HAI) in hospital theatre linen laundries.",
+        "The 6th generation microprocessors enables a simple and easy to use control system for the user. This free-standing machine has a stainless-steel cabinet, drum and tub. The door of this machine is big enough to allow easy loading and unloading of clothes. This is an ideal solution for sanitary washing in hospitals because it can prevent the washing stuff from being contaminated after cleaned by the germs during the loading and unloading process in the un-clean area."
+      ],
+      "category": "Commercial Laundry"
+    },
+    {
+      "id": "p14",
+      "slug": "tumble-driers",
+      "title": "Tumble Driers",
+      "shortDescription": "dryers have been developed to ensure high productivity with a minimal use of energy. Shorter drying time means less wear of the fabric resulting in a longer life time and significant cost savings.",
+      "description": "dryers have been developed to ensure high productivity with a minimal use of energy. Shorter drying time means less wear of the fabric resulting in a longer life time and significant cost savings.\n\nWith the function of automatic control and timer drying; the drum can run in clockwise and anti-lock wise. Large self-cleaning lint screen and large lint compartment for easy maintenance. Our energy saving features, plus our robust design ensures low cost ownership & infrequent maintenance.\n\nOur tumblers achieve the perfect balance between drying temperature, airflow pattern and usable cylinder space for maximum energy efficiency, shortening drying times - and reducing your utility and labor costs. The large diameter of the door opening on our tumble dryers ensures easy loading and unloading.",
+      "image": "/images/ppt/slide14_img00.jpg",
+      "gallery": [
+        "/images/ppt/slide14_img00.jpg"
+      ],
+      "features": [
+        "dryers have been developed to ensure high productivity with a minimal use of energy. Shorter drying time means less wear of the fabric resulting in a longer life time and significant cost savings.",
+        "With the function of automatic control and timer drying; the drum can run in clockwise and anti-lock wise. Large self-cleaning lint screen and large lint compartment for easy maintenance. Our energy saving features, plus our robust design ensures low cost ownership & infrequent maintenance.",
+        "Our tumblers achieve the perfect balance between drying temperature, airflow pattern and usable cylinder space for maximum energy efficiency, shortening drying times - and reducing your utility and labor costs. The large diameter of the door opening on our tumble dryers ensures easy loading and unloading."
+      ],
+      "category": "Commercial Laundry"
+    },
+    {
+      "id": "p15",
+      "slug": "automatic-clamp-feeder",
+      "title": "Automatic Clamp Feeder",
+      "shortDescription": "Automatic Clamp Feeder is a revolutionary product in our profile which ease the linen feeding problems to the ironer. Usually, manual feeding leads to a less productivity but this machine combines opt",
+      "description": "Automatic Clamp Feeder is a revolutionary product in our profile which ease the linen feeding problems to the ironer. Usually, manual feeding leads to a less productivity but this machine combines optimal feeding with high speed. The Clamp feeder is available in single, two and three feeding stations with 3 meters and 3.3 meters width.\n\nEach feeding station has two sets of feeding clamps, positioned opposite to each other. This allows the operator to feed the linen sheets faster.\n\nThe feeding clamps hand over the linen to the two sets of spreading clamps. The spreading clamps are servo driven and run on motor driven toothed belts, which ensures that the linen is swiftly and accurately spread. he spreading clamps can transfer the item immediately after spreading and pick up the next one from one of the three stations. This way, availability of the clamps for the operators is increased.",
+      "image": "/images/ppt/slide08_img01.png",
+      "gallery": [],
+      "features": [
+        "Automatic Clamp Feeder is a revolutionary product in our profile which ease the linen feeding problems to the ironer. Usually, manual feeding leads to a less productivity but this machine combines optimal feeding with high speed. The Clamp feeder is available in single, two and three feeding stations with 3 meters and 3.3 meters width.",
+        "Each feeding station has two sets of feeding clamps, positioned opposite to each other. This allows the operator to feed the linen sheets faster.",
+        "The feeding clamps hand over the linen to the two sets of spreading clamps. The spreading clamps are servo driven and run on motor driven toothed belts, which ensures that the linen is swiftly and accurately spread. he spreading clamps can transfer the item immediately after spreading and pick up the next one from one of the three stations. This way, availability of the clamps for the operators is increased."
+      ],
+      "category": "Commercial Laundry"
+    },
+    {
+      "id": "p16",
+      "slug": "automatic-vacuum-feeder",
+      "title": "Automatic Vacuum Feeder",
+      "shortDescription": "Vacuum Feeder is a powerful and extremely compact feeder designed to produce more linen with the best quality leading and trailing edges and minimum effort in high volume feeding applications. Vacuum ",
+      "description": "Vacuum Feeder is a powerful and extremely compact feeder designed to produce more linen with the best quality leading and trailing edges and minimum effort in high volume feeding applications. Vacuum feeder is fitted with a high efficiency ventilator system, which provides an excellent vacuum and rapid agitating air stream with lower power characteristics than other comparable products.\n\nThe high-speed input rollers together with vacuum hold on the feed bands will ensure maximum tail end agitating and smoothing even the smaller articles. The operator just has to place the linen above the front edge of the specially designed vacuum chamber which then stretches and holds wet linen firmly on the feed conveyor. A high-speed roll helps to rapidly advice pieces through the system so operators can quickly handle the next linen.",
+      "image": "/images/ppt/slide16_img00.png",
+      "gallery": [
+        "/images/ppt/slide16_img00.png"
+      ],
+      "features": [
+        "Vacuum Feeder is a powerful and extremely compact feeder designed to produce more linen with the best quality leading and trailing edges and minimum effort in high volume feeding applications. Vacuum feeder is fitted with a high efficiency ventilator system, which provides an excellent vacuum and rapid agitating air stream with lower power characteristics than other comparable products.",
+        "The high-speed input rollers together with vacuum hold on the feed bands will ensure maximum tail end agitating and smoothing even the smaller articles. The operator just has to place the linen above the front edge of the specially designed vacuum chamber which then stretches and holds wet linen firmly on the feed conveyor. A high-speed roll helps to rapidly advice pieces through the system so operators can quickly handle the next linen."
+      ],
+      "category": "Commercial Laundry"
+    },
+    {
+      "id": "p17",
+      "slug": "flat-work-ironer",
+      "title": "Flat Work Ironer",
+      "shortDescription": "Flat Work Ironers produces high quality linen finishes easily and efficiently. The cylinder is mirror polished and supported by heavy-duty lubricated bearings. A highly sensitive hand protection board",
+      "description": "Flat Work Ironers produces high quality linen finishes easily and efficiently. The cylinder is mirror polished and supported by heavy-duty lubricated bearings. A highly sensitive hand protection board ensures ultimate safety in each phase of the ironing process. Our frequency conversion speed adjustment system allows for a continual even flow of speed which brings more energy saving.\n\nThe frame is built with high quality carbon steel primed and painted for long life. The cylinder is mirror polished and supported by heavy-duty lubricated bearings.\n\nA large efficient fan pulls evaporated moisture away from the cylinder. Nomex ironing straps that prevent absorption of moisture while ironing extends the life of all feed compartments. The compact design occupies very little space as the finished linen can be discharged to the front or in the back to a folder",
+      "image": "/images/ppt/slide17_img00.jpg",
+      "gallery": [
+        "/images/ppt/slide17_img00.jpg"
+      ],
+      "features": [
+        "Flat Work Ironers produces high quality linen finishes easily and efficiently. The cylinder is mirror polished and supported by heavy-duty lubricated bearings. A highly sensitive hand protection board ensures ultimate safety in each phase of the ironing process. Our frequency conversion speed adjustment system allows for a continual even flow of speed which brings more energy saving.",
+        "The frame is built with high quality carbon steel primed and painted for long life. The cylinder is mirror polished and supported by heavy-duty lubricated bearings.",
+        "A large efficient fan pulls evaporated moisture away from the cylinder. Nomex ironing straps that prevent absorption of moisture while ironing extends the life of all feed compartments. The compact design occupies very little space as the finished linen can be discharged to the front or in the back to a folder"
+      ],
+      "category": "Commercial Laundry"
+    },
+    {
+      "id": "p18",
+      "slug": "chest-ironer",
+      "title": "Chest Ironer",
+      "shortDescription": "Chest ironer is a high-speed ironer with the upper and lower chest heating. 800mm dia rollers ensures the quality of drying & ironing with the chest. Chests are made of mirror polished stainless steel",
+      "description": "Chest ironer is a high-speed ironer with the upper and lower chest heating. 800mm dia rollers ensures the quality of drying & ironing with the chest. Chests are made of mirror polished stainless steel. This high-speed ironer increases the productivity and finishing with reduced energy consumption. The precise structure of double chests, spring and heating proof felt ensure the rollers to keep enough elasticity and spring cushion. A highly sensitive hand protection board ensures ultimate safety in each phase of the ironing process.  Our frequency conversion speed adjustment system allows for a continual even flow of speed which brings more energy saving.",
+      "image": "/images/ppt/slide18_img07.jpg",
+      "gallery": [
+        "/images/ppt/slide18_img07.jpg"
+      ],
+      "features": [
+        "Chest ironer is a high-speed ironer with the upper and lower chest heating. 800mm dia rollers ensures the quality of drying & ironing with the chest. Chests are made of mirror polished stainless steel. This high-speed ironer increases the productivity and finishing with reduced energy consumption. The precise structure of double chests, spring and heating proof felt ensure the rollers to keep enough elasticity and spring cushion. A highly sensitive hand protection board ensures ultimate safety in each phase of the ironing process.  Our frequency conversion speed adjustment system allows for a continual even flow of speed which brings more energy saving."
+      ],
+      "category": "Commercial Laundry"
+    },
+    {
+      "id": "p19",
+      "slug": "automatic-linen-folder",
+      "title": "Automatic Linen Folder",
+      "shortDescription": "Folders can fold the dried & ironed linens automatically with perfect folding. Fully automatic and intelligent control system with big LCD screen enables extremely efficient Linen folding. The compute",
+      "description": "Folders can fold the dried & ironed linens automatically with perfect folding. Fully automatic and intelligent control system with big LCD screen enables extremely efficient Linen folding. The computer screen has dialogic function. Inverter driven to synchronize with the speed of Ironer\n\nFolding programs can be selected according to different types of linen. 2-5 folds can be performed under the control of the computer. Five times of folding can be controlled under the monitor of intelligent computer system.\n\nPhotoelectric detection and speed testing system control cloth transmission speed and precisely fold based on measuring cloth size.\n\nSelf-diagnostic and safety protection system, easy operation and daily maintenance.",
+      "image": "/images/ppt/slide19_img02.jpg",
+      "gallery": [
+        "/images/ppt/slide19_img02.jpg",
+        "/images/ppt/slide19_img06.jpg"
+      ],
+      "features": [
+        "Folders can fold the dried & ironed linens automatically with perfect folding. Fully automatic and intelligent control system with big LCD screen enables extremely efficient Linen folding. The computer screen has dialogic function. Inverter driven to synchronize with the speed of Ironer",
+        "Folding programs can be selected according to different types of linen. 2-5 folds can be performed under the control of the computer. Five times of folding can be controlled under the monitor of intelligent computer system.",
+        "Photoelectric detection and speed testing system control cloth transmission speed and precisely fold based on measuring cloth size.",
+        "Self-diagnostic and safety protection system, easy operation and daily maintenance."
+      ],
+      "category": "Commercial Laundry"
+    },
+    {
+      "id": "p20",
+      "slug": "dry-cleaning-machine",
+      "title": "Dry Cleaning Machine",
+      "shortDescription": "Dry-cleaning machines are packed with high-performance and exclusive features that guarantee you the finest cleaning possible at the lowest cost. The ergonomic design produces exceptional cleaning as ",
+      "description": "Dry-cleaning machines are packed with high-performance and exclusive features that guarantee you the finest cleaning possible at the lowest cost. The ergonomic design produces exceptional cleaning as well as convenient and easy access to all components for quick maintenance. 6th generation computerized control system with separated manual operations. Easy to use, totally programmable, with a series of programs studied within the factory.\n\nProminent level recoveries up to 99.6% provide a very low workable cost per Garment. Eco friendly dual lint filter, large loading door with automatic locking and automatic tank to tank solvent transfer.\n\nThe design of larger wash basket with smaller depths ensures more stability and vibration even on highest extraction speeds and on greater G force.",
+      "image": "/images/ppt/slide20_img06.jpg",
+      "gallery": [
+        "/images/ppt/slide20_img06.jpg",
+        "/images/ppt/slide20_img07.jpg"
+      ],
+      "features": [
+        "Dry-cleaning machines are packed with high-performance and exclusive features that guarantee you the finest cleaning possible at the lowest cost. The ergonomic design produces exceptional cleaning as well as convenient and easy access to all components for quick maintenance. 6th generation computerized control system with separated manual operations. Easy to use, totally programmable, with a series of programs studied within the factory.",
+        "Prominent level recoveries up to 99.6% provide a very low workable cost per Garment. Eco friendly dual lint filter, large loading door with automatic locking and automatic tank to tank solvent transfer.",
+        "The design of larger wash basket with smaller depths ensures more stability and vibration even on highest extraction speeds and on greater G force."
+      ],
+      "category": "Commercial Laundry"
+    },
+    {
+      "id": "p21",
+      "slug": "professional-garment-pressing-machines",
+      "title": "Professional Garment Pressing Machines",
+      "shortDescription": "Pcts Press USA pressing machines are one of the most versatile machine in the industry which offers the best pressing for laundry & dry cleaning of garments. Designed with efficiency in mind, the mach",
+      "description": "Pcts Press USA pressing machines are one of the most versatile machine in the industry which offers the best pressing for laundry & dry cleaning of garments. Designed with efficiency in mind, the machines will provide the best possible finish in the least amount of time. Two Cylinder Design - one cylinder closes press head at consistent speeds and a second cylinder applies desired pressure. Equipped with Sleeve and stainless-steel iron stand. Timer operated. Rigid construction with Stainless steel heat proof vacuum cylinder. Simple installation and require a less space and energy.",
+      "image": "/images/ppt/slide21_img00.jpg",
+      "gallery": [
+        "/images/ppt/slide21_img00.jpg"
+      ],
+      "features": [
+        "Pcts Press USA pressing machines are one of the most versatile machine in the industry which offers the best pressing for laundry & dry cleaning of garments. Designed with efficiency in mind, the machines will provide the best possible finish in the least amount of time. Two Cylinder Design - one cylinder closes press head at consistent speeds and a second cylinder applies desired pressure. Equipped with Sleeve and stainless-steel iron stand. Timer operated. Rigid construction with Stainless steel heat proof vacuum cylinder. Simple installation and require a less space and energy."
+      ],
+      "category": "Commercial Laundry"
+    },
+    {
+      "id": "p22",
+      "slug": "pressing-machines-portfolio",
+      "title": "Pressing Machines Portfolio",
+      "shortDescription": "Dry-cleaning Press",
+      "description": "Dry-cleaning Press\n\nLaundry  Press\n\nShirt Press\n\nTrouser Press\n\nMushroom Press\n\nCuff & Collar Press\n\nForm Finisher\n\n51” Laundry Press\n\n42” Laundry Press\n\nDry-clean Utility Press",
+      "image": "/images/ppt/slide22_img02.jpg",
+      "gallery": [
+        "/images/ppt/slide22_img02.jpg",
+        "/images/ppt/slide22_img03.jpg",
+        "/images/ppt/slide22_img04.jpg",
+        "/images/ppt/slide22_img05.jpg",
+        "/images/ppt/slide22_img06.jpg",
+        "/images/ppt/slide22_img13.jpg",
+        "/images/ppt/slide22_img16.jpg",
+        "/images/ppt/slide22_img19.jpg",
+        "/images/ppt/slide22_img20.jpg"
+      ],
+      "features": [
+        "Dry-cleaning Press",
+        "Laundry  Press",
+        "Shirt Press",
+        "Trouser Press",
+        "Mushroom Press",
+        "Cuff & Collar Press",
+        "Form Finisher",
+        "51” Laundry Press"
+      ],
+      "category": "Commercial Laundry"
+    }
+  ],
+  "productsPage": {
+    "title": "Products Portfolio",
+    "intro": "Introducing our Transferon series CBW System and series laundry machines which is the best in the industry. High standards of quality which is already proven in the market since a decade.\n\nManufactured in one of the largest manufacturing plant in the world with the best technological advancement.\n\nSeries machines are “Best value for Money” due to it’s low energy consumption & low production cost.\n\nlaundry & dry cleaning equipment has wide installations in pan India.",
+    "heroImage": "/images/ppt/slide08_img01.png"
+  },
+  "clients": [
+    {
+      "id": "c1",
+      "name": "Fabrique Laundromat Services – Chennai"
+    },
+    {
+      "id": "c2",
+      "name": "Fabrique Laundromat Services – Bangalore"
+    },
+    {
+      "id": "c3",
+      "name": "Sparkles Laundry Services - Vizhag"
+    },
+    {
+      "id": "c4",
+      "name": "Taj Krishna – Hyderabad"
+    },
+    {
+      "id": "c5",
+      "name": "Taj Falukhnama – Hyderabad"
+    },
+    {
+      "id": "c6",
+      "name": "Radisson Blu – Hyderabad"
+    },
+    {
+      "id": "c7",
+      "name": "The Golkonda Hotel – Hyderabad"
+    },
+    {
+      "id": "c8",
+      "name": "Celebrity Resorts – Hyderabad"
+    },
+    {
+      "id": "c9",
+      "name": "Holiday Inn – Goa"
+    },
+    {
+      "id": "c10",
+      "name": "JW Marriot – Goa"
+    },
+    {
+      "id": "c11",
+      "name": "Kenilworth Hotel & Resorts – Goa"
+    },
+    {
+      "id": "c12",
+      "name": "Four Point Sheraton – Pune"
+    },
+    {
+      "id": "c13",
+      "name": "Raj Palace – Udaipur"
+    },
+    {
+      "id": "c14",
+      "name": "Jai Mahal Palace – Jaipur"
+    },
+    {
+      "id": "c15",
+      "name": "Ram Bagh Palace - Jaipur"
+    },
+    {
+      "id": "c16",
+      "name": "Club Mahindra Resort - Pune"
+    },
+    {
+      "id": "c17",
+      "name": "GK Residency- Ranipet"
+    },
+    {
+      "id": "c18",
+      "name": "Rajavalsam Hotels - Guruvayoor"
+    },
+    {
+      "id": "c19",
+      "name": "Fragrant Nature Resorts - Kollam"
+    },
+    {
+      "id": "c20",
+      "name": "Hotel Lepebble - Tirupur"
+    },
+    {
+      "id": "c21",
+      "name": "Hotel Vishnu Inn – Guruvayoor"
+    },
+    {
+      "id": "c22",
+      "name": "Ruby Hall Clinic – Pune"
+    },
+    {
+      "id": "c23",
+      "name": "Asian Heart Hospital – Mumbai"
+    },
+    {
+      "id": "c24",
+      "name": "Max Healthcare - Noida"
+    },
+    {
+      "id": "c25",
+      "name": "JSS Hospital – Mysore"
+    },
+    {
+      "id": "c26",
+      "name": "Prasad Hospital – Hyderabad"
+    },
+    {
+      "id": "c27",
+      "name": "SCS Hospital – Hosur"
+    },
+    {
+      "id": "c28",
+      "name": "Supreme Laundry Services - Hyderabad"
+    },
+    {
+      "id": "c29",
+      "name": "Sparkles Laundry Services - Jaipur"
+    },
+    {
+      "id": "c30",
+      "name": "Sparkles Laundry Services - Tirupati"
+    },
+    {
+      "id": "c31",
+      "name": "Sparkles Laundry Services - Kakinada"
+    },
+    {
+      "id": "c32",
+      "name": "Sparkles Laundry Services - Hyderabad"
+    },
+    {
+      "id": "c33",
+      "name": "Premier Garment Processor - Chennai"
+    },
+    {
+      "id": "c34",
+      "name": "Clothespa Laundry Services - Pune"
+    },
+    {
+      "id": "c35",
+      "name": "Texline Impex Services - Bangalore"
+    },
+    {
+      "id": "c36",
+      "name": "Maxclean Laundry – Bangalore"
+    },
+    {
+      "id": "c37",
+      "name": "Galaxy Laundry Services – Bangalore"
+    },
+    {
+      "id": "c38",
+      "name": "SGS India Pvt Ltd - Bangalore"
+    },
+    {
+      "id": "c39",
+      "name": "Revanna’s Fabric Care - Mysore"
+    },
+    {
+      "id": "c40",
+      "name": "Stone Hill International School - Bangalore"
+    },
+    {
+      "id": "c41",
+      "name": "Sri Vidhya Niketan School - Tirupathi"
+    },
+    {
+      "id": "c42",
+      "name": "SRM University – Chennai"
+    },
+    {
+      "id": "c43",
+      "name": "AMET University – Chennai"
+    },
+    {
+      "id": "c44",
+      "name": "Hydra Laundry Services – Chennai"
+    },
+    {
+      "id": "c45",
+      "name": "Big Laundry – Chennai"
+    },
+    {
+      "id": "c46",
+      "name": "Thriveni Earthmovers – Odisha"
+    },
+    {
+      "id": "c47",
+      "name": "Therdose Pharma – Hyderabad"
+    },
+    {
+      "id": "c48",
+      "name": "Medo Pharma – Bangalore"
+    },
+    {
+      "id": "c49",
+      "name": "Urvina India - Pune"
+    },
+    {
+      "id": "c50",
+      "name": "Super Wash Laundry – Coimbatore"
+    },
+    {
+      "id": "c51",
+      "name": "Hero Motors Group – New Delhi"
+    }
+  ]
 }
