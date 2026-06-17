@@ -2,28 +2,51 @@
 
 import { useCurrency } from "@/context/CurrencyContext";
 import type { CurrencyCode } from "@/lib/currency";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, Globe } from "lucide-react";
 import { useState } from "react";
+import { cn } from "@/lib/utils";
 
-export function CurrencySwitcher() {
+interface CurrencySwitcherProps {
+  variant?: "default" | "footer";
+}
+
+export function CurrencySwitcher({ variant = "default" }: CurrencySwitcherProps) {
   const { currency, setCurrency, currencies } = useCurrency();
   const [open, setOpen] = useState(false);
+  const isFooter = variant === "footer";
 
   return (
     <div className="relative">
       <button
         onClick={() => setOpen(!open)}
-        className="flex items-center gap-1 rounded-md border border-slate-200 bg-white px-2.5 py-1.5 text-sm font-medium text-slate-700 hover:bg-slate-50"
+        className={cn(
+          "flex items-center gap-1.5 text-sm font-medium transition-colors",
+          isFooter
+            ? "rounded-md border border-white/15 bg-white/5 px-2.5 py-1.5 text-slate-400 hover:border-white/25 hover:text-slate-200"
+            : "rounded-md border border-slate-200 bg-white px-2.5 py-1.5 text-slate-700 hover:bg-slate-50"
+        )}
         aria-label="Select currency"
       >
-        {currencies[currency].symbol}
-        {currency}
-        <ChevronDown className="h-3.5 w-3.5" />
+        {isFooter ? (
+          <Globe className="h-3.5 w-3.5 opacity-70" aria-hidden />
+        ) : null}
+        <span>
+          {currencies[currency].symbol}
+          {currency}
+        </span>
+        <ChevronDown className="h-3.5 w-3.5 opacity-60" />
       </button>
       {open && (
         <>
           <div className="fixed inset-0 z-40" onClick={() => setOpen(false)} />
-          <div className="absolute right-0 top-full z-50 mt-1 min-w-[140px] rounded-md border border-slate-200 bg-white py-1 shadow-lg">
+          <div
+            className={cn(
+              "absolute right-0 top-full z-50 mt-1 min-w-[148px] rounded-md border py-1 shadow-lg",
+              isFooter
+                ? "border-white/15 bg-navy-light text-slate-200 shadow-black/30"
+                : "border-slate-200 bg-white"
+            )}
+          >
             {(Object.keys(currencies) as CurrencyCode[]).map((code) => (
               <button
                 key={code}
@@ -31,9 +54,17 @@ export function CurrencySwitcher() {
                   setCurrency(code);
                   setOpen(false);
                 }}
-                className={`block w-full px-3 py-2 text-left text-sm hover:bg-slate-50 ${
-                  code === currency ? "font-semibold text-teal-700" : "text-slate-700"
-                }`}
+                className={cn(
+                  "block w-full px-3 py-2 text-left text-sm transition-colors",
+                  isFooter ? "hover:bg-white/8" : "hover:bg-slate-50",
+                  code === currency
+                    ? isFooter
+                      ? "font-semibold text-[#48CAE4]"
+                      : "font-semibold text-[#0077B6]"
+                    : isFooter
+                      ? "text-slate-300"
+                      : "text-slate-700"
+                )}
               >
                 {currencies[code].symbol}
                 {code} — {currencies[code].name}

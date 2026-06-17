@@ -23,13 +23,12 @@ export default async function HomePage() {
   return (
     <SiteLayout>
       {/* Hero */}
-      <section className="relative min-h-[580px] overflow-hidden bg-hero-tint sm:min-h-[660px]">
+      <section className="relative min-h-[520px] overflow-hidden bg-hero-tint sm:min-h-[580px]">
         <CmsImage src={home.heroImage} alt="" fill priority className="object-cover" sizes="100vw" />
-        <div className="absolute inset-0 bg-gradient-to-r from-white/96 via-white/82 to-white/25" />
-        <div className="absolute inset-0 gradient-mesh opacity-60" />
+        <div className="absolute inset-0 bg-gradient-to-r from-white/97 via-white/88 to-white/35" />
         <div className="absolute bottom-0 left-0 right-0 section-divider" />
 
-        <Container className="relative flex min-h-[580px] flex-col justify-center py-24 sm:min-h-[660px]">
+        <Container className="relative flex min-h-[520px] flex-col justify-center py-20 sm:min-h-[580px] sm:py-24">
           <SectionReveal className="max-w-2xl">
             <p className="eyebrow-line mb-5 text-xs font-bold uppercase tracking-[0.22em] text-accent">
               Commercial Laundry Excellence

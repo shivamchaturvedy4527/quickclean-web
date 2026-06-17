@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Mail, MapPin, Phone } from "lucide-react";
 import type { FooterContent, NavItem, SiteSettings } from "@/types/cms";
+import { CurrencySwitcher } from "./CurrencySwitcher";
 import { Container } from "./ui/Container";
 
 interface FooterProps {
@@ -104,7 +105,8 @@ export function Footer({ navigation, settings, footer }: FooterProps) {
 
         <div className="mt-16 flex flex-col items-center justify-between gap-5 border-t border-white/8 pt-8 sm:flex-row">
           <p className="text-sm text-slate-500">{footer.copyright}</p>
-          <div className="flex flex-wrap justify-center gap-6 text-sm">
+          <div className="flex flex-wrap items-center justify-center gap-6 text-sm">
+            <CurrencySwitcher variant="footer" />
             {footer.legalLinks.map((link) => (
               <Link key={link.href} href={link.href} className="text-slate-500 transition-colors hover:text-accent-bright">
                 {link.label}
