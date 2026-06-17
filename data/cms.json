@@ -19,8 +19,7 @@
     "facebook": "https://facebook.com/quickclean",
     "businessHours": "Mon - Sat: 9:00 - 19:00",
     "headerCtaText": "Contact Us",
-    "headerCtaLink": "/contact-us",
-    "careersLabel": "Careers"
+    "headerCtaLink": "/contact-us"
   },
   "navigation": [
     {
@@ -46,10 +45,6 @@
         {
           "label": "Our Investors",
           "href": "/our-investors"
-        },
-        {
-          "label": "Careers",
-          "href": "/careers"
         },
         {
           "label": "Financial Planning",

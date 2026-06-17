@@ -8,12 +8,7 @@ import {
   useCallback,
   type ReactNode,
 } from "react";
-import {
-  type CurrencyCode,
-  CURRENCIES,
-  detectCurrencyFromLocale,
-  detectCurrencyFromCountry,
-} from "@/lib/currency";
+import { type CurrencyCode, CURRENCIES } from "@/lib/currency";
 
 interface CurrencyContextValue {
   currency: CurrencyCode;
@@ -34,21 +29,15 @@ export function CurrencyProvider({ children }: { children: ReactNode }) {
     const stored = localStorage.getItem(STORAGE_KEY) as CurrencyCode | null;
     if (stored && CURRENCIES[stored]) {
       setCurrencyState(stored);
-      return;
     }
-
-    const locale =
-      typeof navigator !== "undefined" ? navigator.language : "en-IN";
-    const detected = detectCurrencyFromLocale(locale);
-    setCurrencyState(detected);
 
     fetch("/api/geo")
       .then((r) => r.json())
       .then((data: { country?: string }) => {
         if (data.country) {
           setCountry(data.country);
-          if (!stored) {
-            setCurrencyState(detectCurrencyFromCountry(data.country));
+          if (!stored && data.country.toUpperCase() === "IN") {
+            setCurrencyState("INR");
           }
         }
       })

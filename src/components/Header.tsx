@@ -86,7 +86,7 @@ export function Header({ navigation, settings }: HeaderProps) {
             className="hidden items-center gap-1.5 rounded-lg px-2 py-1.5 text-sm font-medium text-slate-500 transition-colors hover:bg-slate-50 hover:text-accent md:flex"
           >
             <Phone className="h-4 w-4" />
-            <span className="hidden xl:inline max-w-[180px] truncate">{settings.contactPhone}</span>
+            <span className="hidden xl:inline">{settings.contactPhone}</span>
           </a>
           <Link href={settings.headerCtaLink} className="btn-primary hidden !py-2.5 !px-5 sm:inline-flex">
             {settings.headerCtaText}

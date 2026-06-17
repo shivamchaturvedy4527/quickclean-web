@@ -110,7 +110,6 @@ export interface SiteSettings {
   businessHours: string;
   headerCtaText: string;
   headerCtaLink: string;
-  careersLabel: string;
 }
 
 export interface WaterComparison {

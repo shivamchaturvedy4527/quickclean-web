@@ -22,6 +22,7 @@ const nextConfig: NextConfig = {
       { source: "/solutions/equipment-on-lease", destination: "/equipment-on-lease", permanent: true },
       { source: "/blog", destination: "/news", permanent: true },
       { source: "/blog/:slug", destination: "/:slug", permanent: true },
+      { source: "/careers", destination: "/", permanent: true },
     ];
   },
 };

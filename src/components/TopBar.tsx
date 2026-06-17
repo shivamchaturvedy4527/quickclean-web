@@ -1,5 +1,4 @@
 import { Phone, Clock } from "lucide-react";
-import Link from "next/link";
 import type { SiteSettings } from "@/types/cms";
 
 export function TopBar({ settings }: { settings: SiteSettings }) {
@@ -7,7 +6,7 @@ export function TopBar({ settings }: { settings: SiteSettings }) {
 
   return (
     <div className="hidden border-b border-white/8 bg-navy text-xs text-slate-400 lg:block">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-2 sm:px-6 lg:px-8">
+      <div className="mx-auto flex max-w-7xl items-center px-4 py-2 sm:px-6 lg:px-8">
         <div className="flex items-center gap-8">
           <a
             href={`tel:${primaryPhone}`}
@@ -21,12 +20,6 @@ export function TopBar({ settings }: { settings: SiteSettings }) {
             {settings.businessHours}
           </span>
         </div>
-        <Link
-          href="/careers"
-          className="font-semibold tracking-wide text-accent-bright transition-colors hover:text-white"
-        >
-          {settings.careersLabel} →
-        </Link>
       </div>
     </div>
   );

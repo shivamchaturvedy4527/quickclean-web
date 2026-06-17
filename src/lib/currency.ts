@@ -49,11 +49,11 @@ export function detectCurrencyFromLocale(locale?: string): CurrencyCode {
   if (LOCALE_CURRENCY[normalized]) return LOCALE_CURRENCY[normalized];
   const region = normalized.split("-")[1]?.toUpperCase();
   if (region && COUNTRY_CURRENCY[region]) return COUNTRY_CURRENCY[region];
-  return "USD";
+  return "INR";
 }
 
 export function detectCurrencyFromCountry(countryCode: string): CurrencyCode {
-  return COUNTRY_CURRENCY[countryCode.toUpperCase()] ?? "USD";
+  return COUNTRY_CURRENCY[countryCode.toUpperCase()] ?? "INR";
 }
 
 export function formatPrice(amount: number, currency: CurrencyCode): string {
