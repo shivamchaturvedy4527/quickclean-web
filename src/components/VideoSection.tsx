@@ -18,7 +18,7 @@ export function VideoSection({ title, videoUrl, thumbnail, sinceYear }: VideoSec
 
   return (
     <section className="relative overflow-hidden gradient-primary py-20 text-white sm:py-24">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(79,70,229,0.12)_0%,transparent_55%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(0,180,216,0.1)_0%,transparent_55%)]" />
       <Container className="relative">
         <SectionReveal>
           <div className="text-center">

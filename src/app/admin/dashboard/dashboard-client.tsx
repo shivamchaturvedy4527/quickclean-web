@@ -327,7 +327,7 @@ export default function AdminDashboard() {
     <div className="flex min-h-screen bg-slate-100">
       <aside className="w-64 shrink-0 overflow-y-auto border-r border-slate-200 bg-white">
         <div className="border-b border-slate-200 p-4">
-          <h1 className="font-bold text-[primary]">CMS Admin</h1>
+          <h1 className="font-bold text-primary">CMS Admin</h1>
           <p className="text-xs text-slate-500">{cms.settings.siteName}</p>
         </div>
         <nav className="p-2">
@@ -359,7 +359,7 @@ export default function AdminDashboard() {
 
       <main className="flex-1 overflow-auto">
         <div className="sticky top-0 z-10 flex items-center justify-between border-b border-slate-200 bg-white px-6 py-4">
-          <h2 className="text-lg font-semibold text-[primary]">
+          <h2 className="text-lg font-semibold text-primary">
             {tabs.find((t) => t.id === tab)?.label}
           </h2>
           <div className="flex items-center gap-3">

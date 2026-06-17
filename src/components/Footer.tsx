@@ -18,8 +18,7 @@ export function Footer({ navigation, settings, footer }: FooterProps) {
 
   return (
     <footer className="relative mt-auto overflow-hidden gradient-primary text-gray-300">
-      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-accent/30 to-transparent" />
-      <div className="absolute -right-32 -top-32 h-64 w-64 rounded-full bg-accent/5 blur-3xl" />
+      <div className="absolute inset-x-0 top-0 h-px bg-white/10" />
 
       <Container className="relative py-20">
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4 lg:gap-10">

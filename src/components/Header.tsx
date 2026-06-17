@@ -43,7 +43,7 @@ export function Header({ navigation, settings }: HeaderProps) {
     );
 
   return (
-    <header className="sticky top-0 z-50 border-b border-gray-200/80 bg-white/80 backdrop-blur-md">
+    <header className="sticky top-0 z-50 border-b border-gray-200 bg-white/95 shadow-sm backdrop-blur-sm">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-3 lg:grid lg:grid-cols-[1fr_auto_1fr] lg:items-stretch lg:px-8">
         <Link href="/" className="group flex shrink-0 items-center justify-self-start">
           {settings.logo ? (
