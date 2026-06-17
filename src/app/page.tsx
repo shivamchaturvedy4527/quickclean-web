@@ -114,18 +114,29 @@ export default async function HomePage() {
               <SectionReveal key={solution.id} delay={i * 0.06}>
                 <Link
                   href={`/${solution.slug}`}
-                  className="card card-lift group flex h-full flex-col p-6"
+                  className="card card-lift group flex h-full flex-col overflow-hidden p-0"
                 >
-                  <h3 className="font-semibold text-navy transition-colors group-hover:text-accent">
-                    {solution.title}
-                  </h3>
-                  <p className="mt-3 flex-1 text-sm leading-relaxed text-slate-600">
-                    {solution.shortDescription}
-                  </p>
-                  <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-accent">
-                    Read More
-                    <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-                  </span>
+                  <div className="relative aspect-[4/3] overflow-hidden">
+                    <CmsImage
+                      src={solution.image}
+                      alt={solution.title}
+                      fill
+                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                      sizes="(max-width: 768px) 100vw, 25vw"
+                    />
+                  </div>
+                  <div className="flex flex-1 flex-col p-6">
+                    <h3 className="font-semibold text-navy transition-colors group-hover:text-accent">
+                      {solution.title}
+                    </h3>
+                    <p className="mt-3 flex-1 text-sm leading-relaxed text-slate-600">
+                      {solution.shortDescription}
+                    </p>
+                    <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-accent">
+                      Read More
+                      <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                    </span>
+                  </div>
                 </Link>
               </SectionReveal>
             ))}

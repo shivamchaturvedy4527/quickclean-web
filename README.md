@@ -2,17 +2,12 @@
 
 A **feature-complete clone** of [quickclean.co.in](https://quickclean.co.in) with a premium international B2B redesign. Built with **Next.js 16**, **TypeScript**, **Tailwind CSS 4**, and **Framer Motion**.
 
+## Deployment
+
 **Canonical production URL:** https://quickclean-clone.vercel.app  
 **GitHub:** https://github.com/shivamchaturvedy4527/quickclean-web
 
-### Vercel deployment
-
-| Project | URL | Status |
-|---------|-----|--------|
-| `quickclean-clone` | https://quickclean-clone.vercel.app | **Production (canonical)** |
-| `laundry-luxe` | https://laundry-luxe-woad.vercel.app | Separate project — do not merge |
-
-Only one Vercel **project** exists for QuickClean (`quickclean-clone`), linked to the `quickclean-web` GitHub repo. Older deployment URLs under the same project are deployment history, not duplicate projects.
+This is the **only active QuickClean client project** on Vercel (`quickclean-clone`), linked to the `quickclean-web` repo.
 
 ## Feature Parity
 
