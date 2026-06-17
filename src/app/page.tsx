@@ -64,7 +64,7 @@ export default async function HomePage() {
       {/* Stats */}
       <section className="section-alt section-pad !py-14">
         <Container>
-          <div className="grid grid-cols-1 gap-8 sm:grid-cols-3 sm:gap-6">
+          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 sm:gap-6 lg:grid-cols-4">
             {home.stats.map((stat, i) => (
               <SectionReveal key={stat.label} delay={i * 0.08}>
                 <div className="group relative text-center">
@@ -76,27 +76,26 @@ export default async function HomePage() {
                 </div>
               </SectionReveal>
             ))}
+            {home.linenWashedValue > 0 && (
+              <SectionReveal key={home.linenWashedLabel} delay={home.stats.length * 0.08}>
+                <div className="group relative text-center">
+                  <div className="mx-auto mb-4 h-px w-12 bg-gradient-to-r from-transparent via-accent to-transparent opacity-60 transition-all group-hover:w-20 group-hover:opacity-100" />
+                  <div className="stat-value">
+                    <AnimatedCounter end={home.linenWashedValue} suffix={home.linenWashedSuffix} />
+                  </div>
+                  <p className="mt-2 text-sm font-medium tracking-wide text-slate-500">{home.linenWashedLabel}</p>
+                </div>
+              </SectionReveal>
+            )}
           </div>
         </Container>
       </section>
 
       {/* Linen + Water — hidden when no numeric comparison data */}
-      {(home.linenWashedValue > 0 || home.waterComparison.monthlySaved > 0) && (
+      {home.waterComparison.monthlySaved > 0 && (
       <section className="section-pad">
         <Container>
           <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
-            <SectionReveal className="card card-lift card-premium p-8 text-center">
-              <div className="text-xs font-bold uppercase tracking-[0.15em] text-slate-400">
-                {home.linenWashedLabel}
-              </div>
-              <div className="stat-value mt-4">
-                <AnimatedCounter end={home.linenWashedValue} suffix={home.linenWashedSuffix} />
-              </div>
-              <div className="mt-1 text-sm text-slate-500">{home.linenWashedUnit}</div>
-            </SectionReveal>
-
-            {home.waterComparison.monthlySaved > 0 && (
-              <>
             <SectionReveal delay={0.06} className="card card-lift card-premium p-8 text-center">
               <div className="text-xs font-bold uppercase tracking-[0.15em] text-slate-400">
                 {home.waterComparison.title}
@@ -131,8 +130,6 @@ export default async function HomePage() {
               </div>
               <div className="mt-1 text-xs text-slate-500">Litres saved this year</div>
             </SectionReveal>
-              </>
-            )}
           </div>
         </Container>
       </section>
