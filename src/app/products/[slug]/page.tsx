@@ -76,7 +76,7 @@ export default async function ProductDetailPage({ params }: Props) {
             <div className="card h-fit p-6 lg:sticky lg:top-24">
               <h3 className="text-lg font-bold text-primary">Enquire About This Product</h3>
               <p className="mt-3 text-sm leading-relaxed text-gray-600">
-                Contact Pcts Infrastructures for specifications, pricing and installation support across India.
+                Contact Laundrex for specifications, pricing and installation support across India.
               </p>
               {product.category && (
                 <p className="mt-4 text-xs font-bold uppercase tracking-wider text-accent">{product.category}</p>

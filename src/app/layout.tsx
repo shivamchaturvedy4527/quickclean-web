@@ -10,11 +10,11 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "Pcts Infrastructures",
-    template: "%s | Pcts Infrastructures",
+    default: "Laundrex",
+    template: "%s | Laundrex",
   },
   description:
-    "Pcts infrastructures Pvt Ltd — laundry & dry cleaning equipment, consultancy and service across India.",
+    "Laundrex — laundry & dry cleaning equipment, consultancy and service across India.",
   icons: { icon: "/images/favicon-32.png" },
 };
 

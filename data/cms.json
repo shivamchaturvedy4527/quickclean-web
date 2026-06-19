@@ -1,12 +1,12 @@
 {
   "settings": {
-    "siteName": "Pcts Infrastructures",
-    "companyLegalName": "Pcts infrastructures Pvt Ltd",
+    "siteName": "Laundrex",
+    "companyLegalName": "Laundrex",
     "tagline": "Laundry & Dry Cleaning Room Solutions",
-    "logo": "/images/ppt/slide10_img01.png",
+    "logo": "",
     "favicon": "/images/favicon-32.png",
     "whatsappNumber": "919821354872",
-    "whatsappMessage": "Hello, I would like to know more about Pcts Infrastructures laundry equipment and consultancy.",
+    "whatsappMessage": "Hello, I would like to know more about Laundrex laundry equipment and consultancy.",
     "whatsappGreetingTemplate": "Hi, I'm {name}. My number is {phone}. I'd like to inquire about your laundry machines/services.",
     "liveChatEmbed": "",
     "contactEmail": "kjandrew67@gmail.com",
@@ -135,8 +135,8 @@
     "newsletterSubtitle": "Stay updated on the latest trends.",
     "productsTitle": "Products Portfolio",
     "productsSubtitle": "Transferon series CBW systems and commercial laundry machines — proven quality, pan India.",
-    "companyProfile": "Company Profile\nPcts infrastructURES PVT LTD",
-    "heroEyebrow": "Pcts infrastructURES PVT LTD"
+    "companyProfile": "Laundrex",
+    "heroEyebrow": "Laundrex"
   },
   "solutions": [
     {
@@ -202,7 +202,7 @@
       "slug": "laundry-consultancy",
       "title": "Laundry Consultancy Services",
       "shortDescription": "Full consultancy from feasibility study through equipment supply, layout design and training.",
-      "description": "Pcts Infrastructures provides comprehensive laundry consultancy — from market feasibility and load assessment to equipment planning, HVAC analysis, training and post-installation evaluation.",
+      "description": "Laundrex provides comprehensive laundry consultancy — from market feasibility and load assessment to equipment planning, HVAC analysis, training and post-installation evaluation.",
       "image": "/images/ppt/slide11_img00.jpg",
       "features": [
         "Market & Feasibility study of the project",
@@ -535,8 +535,8 @@
   ],
   "about": {
     "title": "About Us",
-    "intro": "Pcts infrastructures Pvt Ltd is a reliable partner in laundry & dry cleaning room solutions since a decade. We offer thoughtfully designed, innovative and sustainable solutions for laundry & dry-cleaning industry, with products such as Washer Extractors, Barrier Washers, Tumble Driers, Flat Work Ironers, Chest Ironers, Automatic Feeders, Automatic Folders and Stackers & Tunnel Washers. Working in partnership with the best brands in the industry allows us to bring you the latest innovations to keep your business operating in most economical way by saving energy. All our products are technologically innovative, with exceptional quality which exceeds the highest Industrial standards.\n\nWe deal with the world's best & leading laundry machine manufacturing Companies.\n\nWe believe in bringing brands who are having constant innovation in the design and manufacturing processes of the machines to influence the energy and water saving which are the key points in today's environmentally conscious world.\n\nWe constantly striving to produce reliable and durable solutions which are satisfying quality requirements of the most demanding customers. By offering the high-quality products, we ensure the trouble-free working environment at your laundry & dry-cleaning unit.",
-    "mission": "We are one of the known supplier of laundry, dry cleaning & pressing machines in India. We mix high quality equipment, continuous technological innovation and an unmatched level of high quality service into single package. Experience, dedication and qualification are the key components which ensure that our services are delivered with the highest standards of quality.\n\nPcts infrastructures pvt ltd provide an efficient solution for any type of requirement concerning the provision of Laundry & Dry-cleaning machines & consultancy services. We listen from the customers carefully and in depth to provide solutions specifically suitable to them. We structure your needs in a clear and transparent development plan that focuses on achieving both practical and efficient solutions.\n\nWe represent some of the world's leading laundry equipment manufacturers. So when you're looking for a solution for your needs, we'll help you find the right fit - faster. We offer the best suitable equipment at affordable investment.\n\nWe provide outstanding sales, service and support based on pro-active relationship building, in-depth product knowledge, seasoned industry experience and dependable follow through.",
+    "intro": "Laundrex is a reliable partner in laundry & dry cleaning room solutions since a decade. We offer thoughtfully designed, innovative and sustainable solutions for laundry & dry-cleaning industry, with products such as Washer Extractors, Barrier Washers, Tumble Driers, Flat Work Ironers, Chest Ironers, Automatic Feeders, Automatic Folders and Stackers & Tunnel Washers. Working in partnership with the best brands in the industry allows us to bring you the latest innovations to keep your business operating in most economical way by saving energy. All our products are technologically innovative, with exceptional quality which exceeds the highest Industrial standards.\n\nWe deal with the world's best & leading laundry machine manufacturing Companies.\n\nWe believe in bringing brands who are having constant innovation in the design and manufacturing processes of the machines to influence the energy and water saving which are the key points in today's environmentally conscious world.\n\nWe constantly striving to produce reliable and durable solutions which are satisfying quality requirements of the most demanding customers. By offering the high-quality products, we ensure the trouble-free working environment at your laundry & dry-cleaning unit.",
+    "mission": "We are one of the known supplier of laundry, dry cleaning & pressing machines in India. We mix high quality equipment, continuous technological innovation and an unmatched level of high quality service into single package. Experience, dedication and qualification are the key components which ensure that our services are delivered with the highest standards of quality.\n\nLaundrex provide an efficient solution for any type of requirement concerning the provision of Laundry & Dry-cleaning machines & consultancy services. We listen from the customers carefully and in depth to provide solutions specifically suitable to them. We structure your needs in a clear and transparent development plan that focuses on achieving both practical and efficient solutions.\n\nWe represent some of the world's leading laundry equipment manufacturers. So when you're looking for a solution for your needs, we'll help you find the right fit - faster. We offer the best suitable equipment at affordable investment.\n\nWe provide outstanding sales, service and support based on pro-active relationship building, in-depth product knowledge, seasoned industry experience and dependable follow through.",
     "vision": "Quality\n\nWe constantly striving to produce reliable and durable solutions which are satisfying quality requirements of the most demanding customers. By offering the high-quality products, we ensure the trouble-free working environment at your laundry & dry-cleaning unit. Because of our high-quality machines, we can achieve the energy cost significantly.\n\nComprehensive Service:\n\nAfter-sales service is very important to us as a way of ensuring that you are always able to work with our products safely and with prominent level of satisfaction. Our technicians and installation engineers advise customers on site and plan systems depending on their specific demands, using our vast knowledge and expertise.\n\nMaintenance:\n\nCorrectly maintained machinery is equivalent to a guarantee of quality. Therefore, we look after the minutest detail of the machinery on which we are working. We distribute the preventive maintenance manuals and train your staff to maintain the machines as per the standards. Our online machine maintenance & service reporting system will help you & us to maintain the machines.",
     "heroImage": "/images/ppt/slide08_img07.jpg",
     "missionTitle": "What We Do",
@@ -556,7 +556,7 @@
       {
         "year": "51+",
         "title": "Prestigious Clients",
-        "description": "Hotels, hospitals, universities and commercial laundries trust Pcts Infrastructures."
+        "description": "Hotels, hospitals, universities and commercial laundries trust Laundrex."
       },
       {
         "year": "12",
@@ -676,7 +676,7 @@
   },
   "contact": {
     "title": "Contact Us",
-    "intro": "Pcts infrastructures Pvt Ltd,\nC-909, KAILAS BUSINESS PARK,VIKHROLI WEST\nMUMBAI - 400079\nMobile : 9821354872/8689911455\nEmail : kjandrew67@gmail.com\nService Centres: Bangalore, Coimbatore, Chennai, Hyderabad, Hubli, Jaipur, Mumbai, New Delhi, Pune, Tirupati, Vijayawada, Visakhapatnam.",
+    "intro": "Laundrex\nC-909, KAILAS BUSINESS PARK,VIKHROLI WEST\nMUMBAI - 400079\nMobile : 9821354872/8689911455\nEmail : kjandrew67@gmail.com\nService Centres: Bangalore, Coimbatore, Chennai, Hyderabad, Hubli, Jaipur, Mumbai, New Delhi, Pune, Tirupati, Vijayawada, Visakhapatnam.",
     "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3506.2233913121413!2d77.0899!3d28.4945!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDI5JzQwLjIiTiA3N8KwMDUnMjMuNiJF!5e0!3m2!1sen!2sin!4v1600000000000",
     "serviceCentres": [
       "Bangalore",
@@ -695,8 +695,8 @@
     "heroImage": "/images/ppt/slide32_img03.png"
   },
   "footer": {
-    "aboutText": "Pcts infrastructures Pvt Ltd — reliable partner in laundry & dry cleaning room solutions, supplying world-class equipment and consultancy across India.",
-    "copyright": "© Pcts infrastructures Pvt Ltd",
+    "aboutText": "Laundrex — reliable partner in laundry & dry cleaning room solutions, supplying world-class equipment and consultancy across India.",
+    "copyright": "© Laundrex",
     "solutionsTitle": "Solutions & Products",
     "companyTitle": "Company",
     "headOfficeTitle": "Head Office",
@@ -772,7 +772,7 @@
       "sections": [
         {
           "heading": "Privacy Policy",
-          "body": "Pcts infrastructures Pvt Ltd — Privacy Policy."
+          "body": "Laundrex — Privacy Policy."
         }
       ]
     },
@@ -782,7 +782,7 @@
       "sections": [
         {
           "heading": "Terms",
-          "body": "Pcts infrastructures Pvt Ltd — Terms of Service."
+          "body": "Laundrex — Terms of Service."
         }
       ]
     },
@@ -792,7 +792,7 @@
       "sections": [
         {
           "heading": "Code of Conduct",
-          "body": "Pcts infrastructures Pvt Ltd — Code of Conduct."
+          "body": "Laundrex — Code of Conduct."
         }
       ]
     }
@@ -1109,19 +1109,19 @@
       "id": "p21",
       "slug": "professional-garment-pressing-machines",
       "title": "Professional Garment Pressing Machines",
-      "shortDescription": "Pcts Press USA pressing machines are one of the most versatile machine in the industry which offers the best pressing for laundry & dry cleaning of garments. Designed with efficiency in mind, the mach",
-      "description": "Pcts Press USA pressing machines are one of the most versatile machine in the industry which offers the best pressing for laundry & dry cleaning of garments. Designed with efficiency in mind, the machines will provide the best possible finish in the least amount of time. Two Cylinder Design - one cylinder closes press head at consistent speeds and a second cylinder applies desired pressure. Equipped with Sleeve and stainless-steel iron stand. Timer operated. Rigid construction with Stainless steel heat proof vacuum cylinder. Simple installation and require a less space and energy.",
+      "shortDescription": "Laundrex Press USA pressing machines are one of the most versatile machine in the industry which offers the best pressing for laundry & dry cleaning of garments. Designed with efficiency in mind, the mach",
+      "description": "Laundrex Press USA pressing machines are one of the most versatile machine in the industry which offers the best pressing for laundry & dry cleaning of garments. Designed with efficiency in mind, the machines will provide the best possible finish in the least amount of time. Two Cylinder Design - one cylinder closes press head at consistent speeds and a second cylinder applies desired pressure. Equipped with Sleeve and stainless-steel iron stand. Timer operated. Rigid construction with Stainless steel heat proof vacuum cylinder. Simple installation and require a less space and energy.",
       "image": "/images/ppt/slide21_img00.jpg",
       "gallery": [
         "/images/ppt/slide21_img00.jpg",
         "/images/ppt/slide25_img01.png"
       ],
       "features": [
-        "Pcts Press USA pressing machines are one of the most versatile machine in the industry which offers the best pressing for laundry & dry cleaning of garments. Designed with efficiency in mind, the machines will provide the best possible finish in the least amount of time. Two Cylinder Design - one cylinder closes press head at consistent speeds and a second cylinder applies desired pressure. Equipped with Sleeve and stainless-steel iron stand. Timer operated. Rigid construction with Stainless steel heat proof vacuum cylinder. Simple installation and require a less space and energy."
+        "Laundrex Press USA pressing machines are one of the most versatile machine in the industry which offers the best pressing for laundry & dry cleaning of garments. Designed with efficiency in mind, the machines will provide the best possible finish in the least amount of time. Two Cylinder Design - one cylinder closes press head at consistent speeds and a second cylinder applies desired pressure. Equipped with Sleeve and stainless-steel iron stand. Timer operated. Rigid construction with Stainless steel heat proof vacuum cylinder. Simple installation and require a less space and energy."
       ],
       "category": "Commercial Laundry",
       "specs": [
-        "Pcts Press USA pressing machines are one of the most versatile machine in the industry which offers the best pressing for laundry & dry cleaning of garments. Designed with efficiency in mind, the machines will provide the best possible finish in the least amount of time. Two Cylinder Design - one cylinder closes press head at consistent speeds and a second cylinder applies desired pressure. Equipped with Sleeve and stainless-steel iron stand. Timer operated. Rigid construction with Stainless steel heat proof vacuum cylinder. Simple installation and require a less space and energy."
+        "Laundrex Press USA pressing machines are one of the most versatile machine in the industry which offers the best pressing for laundry & dry cleaning of garments. Designed with efficiency in mind, the machines will provide the best possible finish in the least amount of time. Two Cylinder Design - one cylinder closes press head at consistent speeds and a second cylinder applies desired pressure. Equipped with Sleeve and stainless-steel iron stand. Timer operated. Rigid construction with Stainless steel heat proof vacuum cylinder. Simple installation and require a less space and energy."
       ]
     },
     {
