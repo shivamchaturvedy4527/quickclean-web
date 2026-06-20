@@ -26,7 +26,7 @@ export default async function ContactPage() {
 
   const cms = await getCMS();
 
-  const { contact, settings } = cms;
+  const { contact, settings, footer } = cms;
 
   const primaryPhone = settings.contactPhone.replace(/\s/g, "").split("/")[0];
 
@@ -87,6 +87,27 @@ export default async function ContactPage() {
                   </span>
 
                 </li>
+
+                {footer.manufacturedByLabel && footer.manufacturedByCompany && (
+                  <li className="card p-5">
+                    <p className="font-semibold text-gray-900">{footer.manufacturedByLabel}</p>
+                    <p className="mt-2 leading-relaxed text-gray-700">{footer.manufacturedByCompany}</p>
+                    {footer.manufacturedByDivision && (
+                      <p className="leading-relaxed text-gray-700">{footer.manufacturedByDivision}</p>
+                    )}
+                    <p className="mt-2 leading-relaxed text-gray-600">
+                      {settings.addressLine1}
+                      {settings.addressLine2 && (
+                        <>
+                          <br />
+                          {settings.addressLine2}
+                        </>
+                      )}
+                      <br />
+                      {settings.city}, {settings.country}
+                    </p>
+                  </li>
+                )}
 
                 <li className="card flex gap-4 p-5">
 

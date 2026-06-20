@@ -50,9 +50,9 @@ export function Header({ navigation, settings }: HeaderProps) {
             <CmsImage
               src={settings.logo}
               alt={settings.siteName}
-              width={250}
-              height={44}
-              className="h-9 w-auto max-w-[160px] object-contain transition-opacity group-hover:opacity-90 sm:h-10 sm:max-w-[200px]"
+              width={280}
+              height={110}
+              className="h-10 w-auto max-w-[180px] object-contain object-left transition-opacity group-hover:opacity-90 sm:h-12 sm:max-w-[220px]"
             />
           ) : (
             <span className="text-xl font-bold tracking-tight text-gray-900">{settings.siteName}</span>

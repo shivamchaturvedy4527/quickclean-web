@@ -1,10 +1,13 @@
 import { NextRequest, NextResponse } from "next/server";
-import { verifyPassword, createSession, COOKIE_NAME } from "@/lib/auth";
+import { verifyCredentials, createSession, COOKIE_NAME } from "@/lib/auth";
 
 export async function POST(request: NextRequest) {
-  const { password } = (await request.json()) as { password?: string };
+  const { username, password } = (await request.json()) as {
+    username?: string;
+    password?: string;
+  };
 
-  if (!password || !(await verifyPassword(password))) {
+  if (!username || !password || !(await verifyCredentials(username, password))) {
     return NextResponse.json({ error: "Invalid credentials" }, { status: 401 });
   }
 

@@ -1,9 +1,9 @@
 {
   "settings": {
     "siteName": "Laundrex",
-    "companyLegalName": "Laundrex",
-    "tagline": "Laundry & Dry Cleaning Room Solutions",
-    "logo": "",
+    "companyLegalName": "PCTS Infrastructure Pvt. Ltd.",
+    "tagline": "Commercial Laundry Solutions",
+    "logo": "/images/laundrex-logo-transparent.png",
     "favicon": "/images/favicon-32.png",
     "whatsappNumber": "919821354872",
     "whatsappMessage": "Hello, I would like to know more about Laundrex laundry equipment and consultancy.",
@@ -696,7 +696,10 @@
   },
   "footer": {
     "aboutText": "Laundrex — reliable partner in laundry & dry cleaning room solutions, supplying world-class equipment and consultancy across India.",
-    "copyright": "© Laundrex",
+    "manufacturedByLabel": "Manufactured & Marketed by:",
+    "manufacturedByCompany": "PCTS Infrastructure Pvt. Ltd.",
+    "manufacturedByDivision": "(Laundrex Division)",
+    "copyright": "© Laundrex — PCTS Infrastructure Pvt. Ltd.",
     "solutionsTitle": "Solutions & Products",
     "companyTitle": "Company",
     "headOfficeTitle": "Head Office",

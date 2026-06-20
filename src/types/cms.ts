@@ -218,6 +218,9 @@ export interface HomeContent {
 
 export interface FooterContent {
   aboutText: string;
+  manufacturedByLabel?: string;
+  manufacturedByCompany?: string;
+  manufacturedByDivision?: string;
   copyright: string;
   solutionsTitle: string;
   companyTitle: string;
@@ -366,4 +369,5 @@ export interface CMSData {
   };
   contactSubmissions: ContactSubmission[];
   newsletterSubmissions: NewsletterSubmission[];
+  pptMediaArchive?: string[];
 }

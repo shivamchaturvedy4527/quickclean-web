@@ -15,10 +15,12 @@ import {
   Phone,
   Navigation,
   Image,
+  Package,
   Scale,
   Recycle,
   Mail,
   Cookie,
+  KeyRound,
 } from "lucide-react";
 import { ObjectEditor } from "@/components/admin/ObjectEditor";
 import type { CMSData } from "@/types/cms";
@@ -28,6 +30,12 @@ type Tab =
   | "navigation"
   | "home"
   | "solutions"
+  | "productsPage"
+  | "products"
+  | "clients"
+  | "installationGallery"
+  | "pressingMachines"
+  | "pptMediaArchive"
   | "brands"
   | "about"
   | "team"
@@ -44,7 +52,8 @@ type Tab =
   | "cookie"
   | "submissions"
   | "newsletter"
-  | "integrations";
+  | "integrations"
+  | "security";
 
 export default function AdminDashboard() {
   const router = useRouter();
@@ -52,6 +61,11 @@ export default function AdminDashboard() {
   const [tab, setTab] = useState<Tab>("settings");
   const [saving, setSaving] = useState(false);
   const [message, setMessage] = useState("");
+  const [passwordForm, setPasswordForm] = useState({
+    currentPassword: "",
+    newPassword: "",
+    confirmPassword: "",
+  });
 
   const load = useCallback(async () => {
     const res = await fetch("/api/admin/cms");
@@ -85,6 +99,36 @@ export default function AdminDashboard() {
     router.push("/admin");
   }
 
+  async function updatePassword(e: React.FormEvent) {
+    e.preventDefault();
+    setMessage("");
+
+    if (passwordForm.newPassword !== passwordForm.confirmPassword) {
+      setMessage("New passwords do not match");
+      return;
+    }
+
+    setSaving(true);
+    const res = await fetch("/api/admin/password", {
+      method: "PUT",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        currentPassword: passwordForm.currentPassword,
+        newPassword: passwordForm.newPassword,
+      }),
+    });
+    const body = (await res.json().catch(() => ({}))) as { error?: string };
+    setSaving(false);
+
+    if (!res.ok) {
+      setMessage(body.error ?? "Password update failed");
+      return;
+    }
+
+    setPasswordForm({ currentPassword: "", newPassword: "", confirmPassword: "" });
+    setMessage("Password updated successfully");
+  }
+
   if (!cms) {
     return (
       <div className="flex min-h-screen items-center justify-center bg-slate-100">
@@ -98,6 +142,12 @@ export default function AdminDashboard() {
     { id: "navigation", label: "Navigation", icon: <Navigation className="h-4 w-4" /> },
     { id: "home", label: "Home Page", icon: <Home className="h-4 w-4" /> },
     { id: "solutions", label: "Solutions", icon: <Briefcase className="h-4 w-4" /> },
+    { id: "productsPage", label: "Products Page", icon: <Package className="h-4 w-4" /> },
+    { id: "products", label: "Products", icon: <Package className="h-4 w-4" /> },
+    { id: "clients", label: "Clients", icon: <Users className="h-4 w-4" /> },
+    { id: "installationGallery", label: "Install Gallery", icon: <Image className="h-4 w-4" /> },
+    { id: "pressingMachines", label: "Pressing Machines", icon: <Package className="h-4 w-4" /> },
+    { id: "pptMediaArchive", label: "PPT Media", icon: <Image className="h-4 w-4" /> },
     { id: "brands", label: "Brand Logos", icon: <Image className="h-4 w-4" /> },
     { id: "about", label: "About", icon: <FileText className="h-4 w-4" /> },
     { id: "team", label: "Team", icon: <Users className="h-4 w-4" /> },
@@ -115,6 +165,7 @@ export default function AdminDashboard() {
     { id: "submissions", label: "Contact Forms", icon: <MessageSquare className="h-4 w-4" /> },
     { id: "newsletter", label: "Newsletter", icon: <Mail className="h-4 w-4" /> },
     { id: "integrations", label: "WhatsApp & Chat", icon: <Phone className="h-4 w-4" /> },
+    { id: "security", label: "Change Password", icon: <KeyRound className="h-4 w-4" /> },
   ];
 
   function renderEditor(data: CMSData) {
@@ -145,6 +196,73 @@ export default function AdminDashboard() {
           <ObjectEditor
             data={{ solutions: data.solutions } as unknown as Record<string, unknown>}
             onChange={(v) => setCms({ ...data, solutions: v.solutions as CMSData["solutions"] })}
+          />
+        );
+      case "productsPage":
+        return (
+          <ObjectEditor
+            data={data.productsPage as unknown as Record<string, unknown>}
+            onChange={(v) => setCms({ ...data, productsPage: v as unknown as CMSData["productsPage"] })}
+          />
+        );
+      case "products":
+        return (
+          <ObjectEditor
+            data={{ products: data.products } as unknown as Record<string, unknown>}
+            onChange={(v) => setCms({ ...data, products: v.products as CMSData["products"] })}
+          />
+        );
+      case "clients":
+        return (
+          <ObjectEditor
+            data={{ clients: data.clients } as unknown as Record<string, unknown>}
+            onChange={(v) => setCms({ ...data, clients: v.clients as CMSData["clients"] })}
+          />
+        );
+      case "installationGallery":
+        return (
+          <ObjectEditor
+            data={
+              (data.installationGallery ?? { title: "", subtitle: "", images: [] }) as unknown as Record<
+                string,
+                unknown
+              >
+            }
+            onChange={(v) =>
+              setCms({
+                ...data,
+                installationGallery: v as unknown as CMSData["installationGallery"],
+              })
+            }
+          />
+        );
+      case "pressingMachines":
+        return (
+          <ObjectEditor
+            data={
+              (data.pressingMachines ?? { title: "", subtitle: "", items: [] }) as unknown as Record<
+                string,
+                unknown
+              >
+            }
+            onChange={(v) =>
+              setCms({
+                ...data,
+                pressingMachines: v as unknown as CMSData["pressingMachines"],
+              })
+            }
+          />
+        );
+      case "pptMediaArchive":
+        return (
+          <ObjectEditor
+            data={{ pptMediaArchive: data.pptMediaArchive ?? [] } as unknown as Record<string, unknown>}
+            onChange={(v) =>
+              setCms({
+                ...data,
+                pptMediaArchive: v.pptMediaArchive as CMSData["pptMediaArchive"],
+              })
+            }
           />
         );
       case "brands":
@@ -318,24 +436,83 @@ export default function AdminDashboard() {
             }
           />
         );
+      case "security":
+        return (
+          <form onSubmit={updatePassword} className="space-y-5">
+            <div>
+              <h3 className="text-base font-semibold text-primary">Change Password</h3>
+              <p className="mt-1 text-sm text-slate-500">
+                Current login username is <span className="font-medium text-slate-700">admin</span>.
+              </p>
+            </div>
+            <div className="grid gap-4 sm:grid-cols-2">
+              <label className="block sm:col-span-2">
+                <span className="text-sm font-medium text-slate-700">Current Password</span>
+                <input
+                  type="password"
+                  required
+                  value={passwordForm.currentPassword}
+                  onChange={(e) =>
+                    setPasswordForm({ ...passwordForm, currentPassword: e.target.value })
+                  }
+                  className="mt-1 w-full rounded-md border border-slate-300 px-3 py-2.5 text-sm focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent"
+                />
+              </label>
+              <label className="block">
+                <span className="text-sm font-medium text-slate-700">New Password</span>
+                <input
+                  type="password"
+                  required
+                  minLength={6}
+                  value={passwordForm.newPassword}
+                  onChange={(e) =>
+                    setPasswordForm({ ...passwordForm, newPassword: e.target.value })
+                  }
+                  className="mt-1 w-full rounded-md border border-slate-300 px-3 py-2.5 text-sm focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent"
+                />
+              </label>
+              <label className="block">
+                <span className="text-sm font-medium text-slate-700">Confirm New Password</span>
+                <input
+                  type="password"
+                  required
+                  minLength={6}
+                  value={passwordForm.confirmPassword}
+                  onChange={(e) =>
+                    setPasswordForm({ ...passwordForm, confirmPassword: e.target.value })
+                  }
+                  className="mt-1 w-full rounded-md border border-slate-300 px-3 py-2.5 text-sm focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent"
+                />
+              </label>
+            </div>
+            <button
+              type="submit"
+              disabled={saving}
+              className="inline-flex w-full items-center justify-center gap-2 rounded-md bg-accent px-4 py-2.5 text-sm font-semibold text-white hover:bg-accent-hover disabled:opacity-60 sm:w-auto"
+            >
+              <KeyRound className="h-4 w-4" />
+              {saving ? "Updating..." : "Update Password"}
+            </button>
+          </form>
+        );
       default:
         return null;
     }
   }
 
   return (
-    <div className="flex min-h-screen bg-slate-100">
-      <aside className="w-64 shrink-0 overflow-y-auto border-r border-slate-200 bg-white">
+    <div className="min-h-screen bg-slate-100 lg:flex">
+      <aside className="border-b border-slate-200 bg-white lg:h-screen lg:w-64 lg:shrink-0 lg:overflow-y-auto lg:border-b-0 lg:border-r">
         <div className="border-b border-slate-200 p-4">
           <h1 className="font-bold text-primary">CMS Admin</h1>
           <p className="text-xs text-slate-500">{cms.settings.siteName}</p>
         </div>
-        <nav className="p-2">
+        <nav className="flex gap-1 overflow-x-auto p-2 lg:block lg:overflow-visible">
           {tabs.map((t) => (
             <button
               key={t.id}
               onClick={() => setTab(t.id)}
-              className={`mb-0.5 flex w-full items-center gap-2 rounded-md px-3 py-2 text-left text-sm ${
+              className={`mb-0.5 flex shrink-0 items-center gap-2 rounded-md px-3 py-2 text-left text-sm lg:w-full ${
                 tab === t.id
                   ? "bg-accent/5 font-medium text-accent-hover"
                   : "text-slate-600 hover:bg-slate-50"
@@ -358,11 +535,11 @@ export default function AdminDashboard() {
       </aside>
 
       <main className="flex-1 overflow-auto">
-        <div className="sticky top-0 z-10 flex items-center justify-between border-b border-slate-200 bg-white px-6 py-4">
+        <div className="sticky top-0 z-10 flex flex-col gap-3 border-b border-slate-200 bg-white px-4 py-4 sm:flex-row sm:items-center sm:justify-between sm:px-6">
           <h2 className="text-lg font-semibold text-primary">
             {tabs.find((t) => t.id === tab)?.label}
           </h2>
-          <div className="flex items-center gap-3">
+          <div className="flex flex-wrap items-center gap-3">
             {message && (
               <span
                 className={`text-sm ${message.includes("failed") ? "text-red-600" : "text-accent"}`}
@@ -370,18 +547,20 @@ export default function AdminDashboard() {
                 {message}
               </span>
             )}
-            <button
-              onClick={save}
-              disabled={saving}
-              className="inline-flex items-center gap-2 rounded-md bg-accent px-4 py-2 text-sm font-semibold text-white hover:bg-accent-hover disabled:opacity-60"
-            >
-              <Save className="h-4 w-4" />
-              {saving ? "Saving..." : "Save Changes"}
-            </button>
+            {tab !== "security" && (
+              <button
+                onClick={save}
+                disabled={saving}
+                className="inline-flex items-center gap-2 rounded-md bg-accent px-4 py-2 text-sm font-semibold text-white hover:bg-accent-hover disabled:opacity-60"
+              >
+                <Save className="h-4 w-4" />
+                {saving ? "Saving..." : "Save Changes"}
+              </button>
+            )}
           </div>
         </div>
 
-        <div className="p-6">
+        <div className="p-4 sm:p-6">
           <div className="max-w-4xl rounded-xl border border-slate-200 bg-white p-6">
             {renderEditor(cms)}
           </div>

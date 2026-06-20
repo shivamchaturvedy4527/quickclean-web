@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Mail, MapPin, Phone } from "lucide-react";
 import type { FooterContent, NavItem, SiteSettings } from "@/types/cms";
+import { CmsImage } from "./CmsImage";
 import { CurrencySwitcher } from "./CurrencySwitcher";
 import { Container } from "./ui/Container";
 
@@ -23,10 +24,39 @@ export function Footer({ navigation, settings, footer }: FooterProps) {
       <Container className="relative py-20">
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4 lg:gap-10">
           <div className="lg:col-span-1">
-            <p className="text-xl font-bold tracking-tight text-white">
-              {settings.companyLegalName || settings.siteName}
-            </p>
+            {settings.logo ? (
+              <div className="inline-block rounded-lg bg-white px-3 py-2">
+                <CmsImage
+                  src={settings.logo}
+                  alt={settings.siteName}
+                  width={220}
+                  height={86}
+                  className="h-auto w-full max-w-[180px] object-contain"
+                />
+              </div>
+            ) : (
+              <p className="text-xl font-bold tracking-tight text-white">{settings.siteName}</p>
+            )}
             <p className="mt-4 text-sm leading-relaxed text-gray-400">{footer.aboutText}</p>
+            {footer.manufacturedByLabel && footer.manufacturedByCompany && (
+              <div className="mt-6 rounded-lg border border-white/10 bg-white/5 p-4 text-sm leading-relaxed text-gray-300">
+                <p className="font-semibold text-white">{footer.manufacturedByLabel}</p>
+                <p className="mt-1">{footer.manufacturedByCompany}</p>
+                {footer.manufacturedByDivision && <p>{footer.manufacturedByDivision}</p>}
+                <p className="mt-2 text-gray-400">
+                  {settings.addressLine1}
+                  {settings.addressLine2 && (
+                    <>
+                      <br />
+                      {settings.addressLine2}
+                    </>
+                  )}
+                  <br />
+                  {settings.city}
+                  {settings.country ? `, ${settings.country}` : ""}
+                </p>
+              </div>
+            )}
           </div>
 
           <div>
