@@ -14,10 +14,39 @@ import { InstallationGallery } from "@/components/InstallationGallery";
 import { PressingMachinesGrid } from "@/components/PressingMachinesGrid";
 import { getCMS } from "@/lib/cms-store";
 
+function toYouTubeEmbedUrl(url?: string): string {
+  if (!url) return "";
+  try {
+    const parsed = new URL(url);
+    if (parsed.hostname.includes("youtube.com")) {
+      if (parsed.pathname === "/watch") {
+        const id = parsed.searchParams.get("v");
+        return id ? `https://www.youtube.com/embed/${id}` : "";
+      }
+      if (parsed.pathname.startsWith("/embed/")) {
+        return url;
+      }
+      if (parsed.pathname.startsWith("/shorts/")) {
+        const id = parsed.pathname.split("/")[2];
+        return id ? `https://www.youtube.com/embed/${id}` : "";
+      }
+    }
+    if (parsed.hostname.includes("youtu.be")) {
+      const id = parsed.pathname.replace(/^\//, "");
+      return id ? `https://www.youtube.com/embed/${id}` : "";
+    }
+  } catch {
+    return "";
+  }
+  return "";
+}
+
 export default async function HomePage() {
   const cms = await getCMS();
   const { home, solutions, testimonials, brands, blog, products, installationGallery, pressingMachines, labels } = cms;
   const machineProducts = products.filter((p) => p.category === "Commercial Laundry");
+  const stripVideoUrl = home.productsVideoUrl || home.videoUrl;
+  const stripVideoEmbedUrl = toYouTubeEmbedUrl(stripVideoUrl);
 
   return (
     <SiteLayout>
@@ -249,15 +278,38 @@ export default async function HomePage() {
         </Container>
       </section>
 
-      {/* CTA */}
+      {/* Video strip above footer */}
       <section className="gradient-primary section-pad text-center text-white">
         <Container>
           <SectionReveal>
             <p className="text-lg text-gray-300">{cms.settings.tagline}</p>
-            <Link href={home.heroSecondaryCtaLink} className="btn-primary mt-6">
-              {home.heroSecondaryCtaText}
-              <ArrowRight className="h-4 w-4" />
-            </Link>
+            {stripVideoEmbedUrl ? (
+              <div className="mx-auto mt-6 max-w-4xl overflow-hidden rounded-2xl border border-white/20 bg-black/30 p-3">
+                <div className="relative aspect-video overflow-hidden rounded-xl">
+                  <iframe
+                    src={stripVideoEmbedUrl}
+                    title="Laundrex video"
+                    className="h-full w-full"
+                    loading="lazy"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerPolicy="strict-origin-when-cross-origin"
+                    allowFullScreen
+                  />
+                </div>
+              </div>
+            ) : (
+              stripVideoUrl && (
+                <a
+                  href={stripVideoUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-primary mt-6 inline-flex"
+                >
+                  Watch Video
+                  <ArrowRight className="h-4 w-4" />
+                </a>
+              )
+            )}
           </SectionReveal>
         </Container>
       </section>
