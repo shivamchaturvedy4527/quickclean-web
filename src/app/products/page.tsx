@@ -8,16 +8,17 @@ import { SectionReveal } from "@/components/SectionReveal";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { getCMS } from "@/lib/cms-store";
-import type { Product } from "@/types/cms";
+import type { Product, ProductsPageContent } from "@/types/cms";
 import type { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "Products",
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const cms = await getCMS();
+  return { title: cms.labels.meta.products };
+}
 
 export default async function ProductsPage() {
   const cms = await getCMS();
-  const { products, productsPage, pressingMachines } = cms;
+  const { products, productsPage, pressingMachines, labels } = cms;
   const overview = products.filter((p) => p.category === "Products Portfolio");
   const machines = products.filter((p) => p.category === "Commercial Laundry");
 
@@ -27,6 +28,7 @@ export default async function ProductsPage() {
         title={productsPage.title}
         subtitle={productsPage.intro.split("\n\n")[0]}
         image={productsPage.heroImage}
+        breadcrumb={labels.breadcrumbs.products}
       />
 
       <section className="section-pad">
@@ -44,12 +46,17 @@ export default async function ProductsPage() {
           {overview.length > 0 && (
             <>
               <SectionReveal>
-                <SectionHeading eyebrow="Overview" title="Product Range" align="left" className="max-w-none text-left" />
+                <SectionHeading
+                  eyebrow={productsPage.overviewEyebrow ?? "Overview"}
+                  title={productsPage.overviewTitle ?? "Product Range"}
+                  align="left"
+                  className="max-w-none text-left"
+                />
               </SectionReveal>
               <div className="mt-10 grid gap-8 sm:grid-cols-2">
                 {overview.map((product, i) => (
                   <SectionReveal key={product.id} delay={i * 0.05}>
-                    <ProductCard product={product} />
+                    <ProductCard product={product} page={productsPage} viewDetailsLabel={productsPage.viewDetailsText ?? labels.products.viewDetails} />
                   </SectionReveal>
                 ))}
               </div>
@@ -58,9 +65,9 @@ export default async function ProductsPage() {
 
           <SectionReveal>
             <SectionHeading
-              eyebrow="Commercial Laundry"
-              title="Machines & Equipment"
-              subtitle="Full PPT specifications for each machine category."
+              eyebrow={productsPage.machinesEyebrow ?? "Commercial Laundry"}
+              title={productsPage.machinesTitle ?? "Machines & Equipment"}
+              subtitle={productsPage.machinesSubtitle ?? "Full specifications for each machine category."}
               align="left"
               className="mt-20 max-w-none text-left"
             />
@@ -68,7 +75,7 @@ export default async function ProductsPage() {
           <div className="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {machines.map((product, i) => (
               <SectionReveal key={product.id} delay={i * 0.04}>
-                <ProductCard product={product} showSpecs />
+                <ProductCard product={product} page={productsPage} showSpecs viewDetailsLabel={productsPage.viewDetailsText ?? labels.products.viewDetails} />
               </SectionReveal>
             ))}
           </div>
@@ -86,25 +93,32 @@ export default async function ProductsPage() {
 
 function ProductCard({
   product,
+  page,
   showSpecs,
+  viewDetailsLabel,
 }: {
   product: Product;
+  page: ProductsPageContent;
   showSpecs?: boolean;
+  viewDetailsLabel: string;
 }) {
   const specs = product.specs?.length ? product.specs : product.features;
+  const aspectRatio = product.imageAspectRatio ?? page.productImageAspectRatio ?? "4/3";
+  const objectFit = product.imageObjectFit ?? page.productImageObjectFit ?? "cover";
 
   return (
     <Link
       href={`/products/${product.slug}`}
       className="card card-lift group flex h-full flex-col overflow-hidden p-0"
     >
-      <div className="relative aspect-[4/3] overflow-hidden">
+      <div className="relative w-full overflow-hidden" style={{ aspectRatio }}>
         <CmsImage
           src={product.image}
           alt={product.title}
           fill
           sizes="(max-width: 768px) 100vw, 33vw"
-          className="object-cover transition-transform duration-700 group-hover:scale-105"
+          className="transition-transform duration-700 group-hover:scale-105"
+          style={{ objectFit }}
         />
       </div>
       <div className="flex flex-1 flex-col p-6">
@@ -126,7 +140,7 @@ function ProductCard({
           </ul>
         )}
         <span className="mt-5 inline-flex items-center gap-1 text-sm font-semibold text-accent">
-          View details <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+          {viewDetailsLabel} <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
         </span>
       </div>
     </Link>

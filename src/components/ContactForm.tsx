@@ -1,7 +1,10 @@
 "use client";
 
 import { useState } from "react";
+import { useLabels } from "@/context/LabelsContext";
+
 export function ContactForm() {
+  const labels = useLabels().contact;
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [form, setForm] = useState({
     name: "",
@@ -32,7 +35,7 @@ export function ContactForm() {
     <form onSubmit={handleSubmit} className="space-y-5">
       <div className="grid gap-5 sm:grid-cols-2">
         <div>
-          <label className="block text-sm font-medium text-gray-700">Name *</label>
+          <label className="block text-sm font-medium text-gray-700">{labels.formName}</label>
           <input
             required
             value={form.name}
@@ -41,7 +44,7 @@ export function ContactForm() {
           />
         </div>
         <div>
-          <label className="block text-sm font-medium text-gray-700">Email *</label>
+          <label className="block text-sm font-medium text-gray-700">{labels.formEmail}</label>
           <input
             type="email"
             required
@@ -53,16 +56,16 @@ export function ContactForm() {
       </div>
       <div className="grid gap-5 sm:grid-cols-2">
         <div>
-          <label className="block text-sm font-medium text-gray-700">Phone</label>
+          <label className="block text-sm font-medium text-gray-700">{labels.formPhone}</label>
           <input
             value={form.phone}
             onChange={(e) => setForm({ ...form, phone: e.target.value })}
-            placeholder="+91"
+            placeholder={labels.formPhonePlaceholder}
             className="input-field mt-1"
           />
         </div>
         <div>
-          <label className="block text-sm font-medium text-gray-700">Company</label>
+          <label className="block text-sm font-medium text-gray-700">{labels.formCompany}</label>
           <input
             value={form.company}
             onChange={(e) => setForm({ ...form, company: e.target.value })}
@@ -71,7 +74,7 @@ export function ContactForm() {
         </div>
       </div>
       <div>
-        <label className="block text-sm font-medium text-gray-700">Message *</label>
+        <label className="block text-sm font-medium text-gray-700">{labels.formMessage}</label>
         <textarea
           required
           rows={5}
@@ -80,19 +83,11 @@ export function ContactForm() {
           className="input-field mt-1"
         />
       </div>
-      <button
-        type="submit"
-        disabled={status === "loading"}
-        className="btn-primary disabled:opacity-60"
-      >
-        {status === "loading" ? "Sending..." : "Send Message"}
+      <button type="submit" disabled={status === "loading"} className="btn-primary disabled:opacity-60">
+        {status === "loading" ? labels.formSubmitting : labels.formSubmit}
       </button>
-      {status === "success" && (
-        <p className="text-sm text-accent">Thank you. We will respond within one business day.</p>
-      )}
-      {status === "error" && (
-        <p className="text-sm text-red-600">Something went wrong. Please try again.</p>
-      )}
+      {status === "success" && <p className="text-sm text-accent">{labels.formSuccess}</p>}
+      {status === "error" && <p className="text-sm text-red-600">{labels.formError}</p>}
     </form>
   );
 }

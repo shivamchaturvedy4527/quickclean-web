@@ -7,9 +7,10 @@ import { SectionReveal } from "@/components/SectionReveal";
 import { getCMS } from "@/lib/cms-store";
 import type { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "News & Insights",
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const cms = await getCMS();
+  return { title: cms.labels.meta.blog };
+}
 
 export default async function BlogPage({
   searchParams,

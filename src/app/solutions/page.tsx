@@ -8,12 +8,14 @@ import { Container } from "@/components/ui/Container";
 import { getCMS } from "@/lib/cms-store";
 import type { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "Solutions",
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const cms = await getCMS();
+  return { title: cms.labels.meta.solutions };
+}
 
 export default async function SolutionsPage() {
   const cms = await getCMS();
+  const { labels } = cms;
 
   return (
     <SiteLayout>
@@ -40,7 +42,7 @@ export default async function SolutionsPage() {
                     </h2>
                     <p className="mt-4 flex-1 text-gray-600">{solution.shortDescription}</p>
                     <span className="mt-6 inline-flex items-center gap-1 text-sm font-semibold text-accent">
-                      Learn more <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                      {labels.solutions.learnMore} <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                     </span>
                   </div>
                 </Link>

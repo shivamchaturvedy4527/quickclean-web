@@ -1,7 +1,9 @@
 "use client";
 
-import Image from "next/image";
+import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
+
+const FALLBACK_IMAGE = "/images/ppt/slide23_img07.jpg";
 
 interface CmsImageProps {
   src: string;
@@ -12,10 +14,7 @@ interface CmsImageProps {
   height?: number;
   priority?: boolean;
   sizes?: string;
-}
-
-function isExternal(src: string) {
-  return src.startsWith("http://") || src.startsWith("https://");
+  style?: React.CSSProperties;
 }
 
 function objectFitClass(className?: string) {
@@ -25,6 +24,7 @@ function objectFitClass(className?: string) {
   return "object-cover";
 }
 
+/** Native img for all sources so inline styles (logo size) work on Blob URLs too. */
 export function CmsImage({
   src,
   alt,
@@ -33,8 +33,17 @@ export function CmsImage({
   width,
   height,
   priority,
+  style,
 }: CmsImageProps) {
-  if (!src) {
+  const [currentSrc, setCurrentSrc] = useState(src || FALLBACK_IMAGE);
+  const [failed, setFailed] = useState(false);
+
+  useEffect(() => {
+    setCurrentSrc(src || FALLBACK_IMAGE);
+    setFailed(false);
+  }, [src]);
+
+  if (!src && failed) {
     return (
       <div
         className={cn("bg-gradient-to-br from-slate-200 to-slate-300", className)}
@@ -44,55 +53,39 @@ export function CmsImage({
   }
 
   const imageClass = cn(objectFitClass(className), className);
-
-  if (!isExternal(src)) {
-    if (fill) {
-      return (
-        <img
-          src={src}
-          alt={alt}
-          className={cn("absolute inset-0 h-full w-full", imageClass)}
-          loading={priority ? "eager" : "lazy"}
-          decoding="async"
-        />
-      );
+  const handleError = () => {
+    if (currentSrc !== FALLBACK_IMAGE) {
+      setCurrentSrc(FALLBACK_IMAGE);
+      return;
     }
-
-    return (
-      <img
-        src={src}
-        alt={alt}
-        width={width ?? 800}
-        height={height ?? 600}
-        className={imageClass}
-        loading={priority ? "eager" : "lazy"}
-        decoding="async"
-      />
-    );
-  }
+    setFailed(true);
+  };
 
   if (fill) {
     return (
-      <Image
-        src={src}
+      <img
+        src={currentSrc}
         alt={alt}
-        fill
-        className={imageClass}
-        priority={priority}
-        unoptimized
+        className={cn("absolute inset-0 h-full w-full", imageClass)}
+        style={style}
+        loading={priority ? "eager" : "lazy"}
+        decoding="async"
+        onError={handleError}
       />
     );
   }
 
   return (
-    <Image
-      src={src}
+    <img
+      src={currentSrc}
       alt={alt}
-      width={width ?? 800}
-      height={height ?? 600}
+      width={style?.width ? undefined : (width ?? 800)}
+      height={style?.height ? undefined : (height ?? 600)}
       className={imageClass}
-      priority={priority}
-      unoptimized
+      style={style}
+      loading={priority ? "eager" : "lazy"}
+      decoding="async"
+      onError={handleError}
     />
   );
 }

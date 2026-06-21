@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Mail, MapPin, Phone } from "lucide-react";
 import type { FooterContent, NavItem, SiteSettings } from "@/types/cms";
-import { CmsImage } from "./CmsImage";
+import { SiteLogo } from "./SiteLogo";
 import { CurrencySwitcher } from "./CurrencySwitcher";
 import { Container } from "./ui/Container";
 
@@ -25,15 +25,7 @@ export function Footer({ navigation, settings, footer }: FooterProps) {
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4 lg:gap-10">
           <div className="lg:col-span-1">
             {settings.logo ? (
-              <div className="inline-block rounded-lg bg-white px-3 py-2">
-                <CmsImage
-                  src={settings.logo}
-                  alt={settings.siteName}
-                  width={220}
-                  height={86}
-                  className="h-auto w-full max-w-[180px] object-contain"
-                />
-              </div>
+              <SiteLogo settings={settings} variant="footer" />
             ) : (
               <p className="text-xl font-bold tracking-tight text-white">{settings.siteName}</p>
             )}
@@ -102,18 +94,38 @@ export function Footer({ navigation, settings, footer }: FooterProps) {
             <ul className="space-y-4 text-sm">
               <li className="flex gap-3">
                 <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-accent-bright" />
-                <span className="leading-relaxed text-gray-400">
-                  {settings.addressLine1}
-                  {settings.addressLine2 && (
-                    <>
-                      <br />
-                      {settings.addressLine2}
-                    </>
-                  )}
-                  <br />
-                  {settings.city}
-                  {settings.country ? `, ${settings.country}` : ""}
-                </span>
+                {settings.mapLatitude && settings.mapLongitude ? (
+                  <a
+                    href={`https://maps.google.com/?q=${settings.mapLatitude},${settings.mapLongitude}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="leading-relaxed text-gray-400 transition-colors hover:text-accent-bright hover:underline"
+                  >
+                    {settings.addressLine1}
+                    {settings.addressLine2 && (
+                      <>
+                        <br />
+                        {settings.addressLine2}
+                      </>
+                    )}
+                    <br />
+                    {settings.city}
+                    {settings.country ? `, ${settings.country}` : ""}
+                  </a>
+                ) : (
+                  <span className="leading-relaxed text-gray-400">
+                    {settings.addressLine1}
+                    {settings.addressLine2 && (
+                      <>
+                        <br />
+                        {settings.addressLine2}
+                      </>
+                    )}
+                    <br />
+                    {settings.city}
+                    {settings.country ? `, ${settings.country}` : ""}
+                  </span>
+                )}
               </li>
               <li className="flex gap-3">
                 <Phone className="h-4 w-4 shrink-0 text-accent-bright" />

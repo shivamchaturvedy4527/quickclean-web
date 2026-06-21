@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
 import type { NavItem, SiteSettings } from "@/types/cms";
-import { CmsImage } from "./CmsImage";
+import { SiteLogo } from "./SiteLogo";
 import { cn } from "@/lib/utils";
 
 interface HeaderProps {
@@ -43,20 +43,18 @@ export function Header({ navigation, settings }: HeaderProps) {
     );
 
   return (
-    <header className="sticky top-0 z-50 border-b border-gray-200/50 bg-white/70 shadow-sm backdrop-blur-xl transition-all">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-3 lg:grid lg:grid-cols-[1fr_auto_1fr] lg:items-stretch lg:px-8">
-        <Link href="/" className="group flex shrink-0 items-center justify-self-start">
-          {settings.logo ? (
-            <CmsImage
-              src={settings.logo}
-              alt={settings.siteName}
-              width={280}
-              height={110}
-              className="h-10 w-auto max-w-[180px] object-contain object-left transition-opacity group-hover:opacity-90 sm:h-12 sm:max-w-[220px]"
-            />
-          ) : (
-            <span className="text-xl font-bold tracking-tight text-gray-900">{settings.siteName}</span>
-          )}
+    <header className="sticky top-0 z-50 overflow-visible border-b border-gray-200/50 bg-white/70 shadow-sm backdrop-blur-xl">
+      <div className="mx-auto flex h-16 max-w-[1380px] items-center justify-between gap-4 overflow-visible px-6 lg:grid lg:grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] lg:items-center lg:px-8">
+        <Link
+          href="/"
+          className="group relative z-20 flex h-16 min-w-[80px] shrink-0 items-center justify-self-start overflow-visible"
+          aria-label={settings.siteName}
+        >
+          <SiteLogo
+            settings={settings}
+            priority
+            className="absolute left-0 top-1/2 -translate-y-1/2 transition-opacity group-hover:opacity-90"
+          />
         </Link>
 
         <nav className="hidden items-center justify-center gap-1 lg:flex">
@@ -112,10 +110,7 @@ export function Header({ navigation, settings }: HeaderProps) {
         </nav>
 
         <div className="flex items-center justify-end gap-2">
-          <Link
-            href={settings.headerCtaLink}
-            className="btn-primary hidden sm:inline-flex"
-          >
+          <Link href={settings.headerCtaLink} className="btn-primary hidden sm:inline-flex">
             {settings.headerCtaText}
           </Link>
           <button

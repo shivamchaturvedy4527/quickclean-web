@@ -64,7 +64,7 @@ function MarqueeRow({
                 height={56}
                 loading="lazy"
                 decoding="async"
-                className="max-h-12 w-auto object-contain opacity-60 grayscale transition-all duration-300 group-hover:opacity-100 group-hover:grayscale-0 sm:max-h-14"
+                className="max-h-12 w-auto object-contain opacity-100 sm:max-h-14"
               />
             </div>
           );

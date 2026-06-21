@@ -6,9 +6,10 @@ import { SectionReveal } from "@/components/SectionReveal";
 import { getCMS } from "@/lib/cms-store";
 import type { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "Sustainability",
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const cms = await getCMS();
+  return { title: cms.labels.meta.sustainability };
+}
 
 export default async function SustainabilityPage() {
   const cms = await getCMS();

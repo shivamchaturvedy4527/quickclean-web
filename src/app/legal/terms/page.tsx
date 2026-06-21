@@ -1,9 +1,11 @@
 import { LegalPageTemplate } from "@/components/LegalPageTemplate";
+import { getCMS } from "@/lib/cms-store";
 import type { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "Terms of Service",
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const cms = await getCMS();
+  return { title: cms.labels.meta.terms };
+}
 
 export default function TermsPage() {
   return <LegalPageTemplate contentKey="terms" />;

@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react";
 import { SiteLayout } from "@/components/SiteLayout";
 import { AnimatedCounter } from "@/components/AnimatedCounter";
 import { CmsImage } from "@/components/CmsImage";
-import { HeroVisual } from "@/components/HeroVisual";
+import { HomeHero } from "@/components/HomeHero";
 import { ClientsMarquee } from "@/components/ClientsMarquee";
 import { NewsletterForm } from "@/components/NewsletterForm";
 import { SectionReveal } from "@/components/SectionReveal";
@@ -16,44 +16,12 @@ import { getCMS } from "@/lib/cms-store";
 
 export default async function HomePage() {
   const cms = await getCMS();
-  const { home, solutions, testimonials, brands, blog, products, installationGallery, pressingMachines } = cms;
+  const { home, solutions, testimonials, brands, blog, products, installationGallery, pressingMachines, labels } = cms;
   const machineProducts = products.filter((p) => p.category === "Commercial Laundry");
 
   return (
     <SiteLayout>
-      {/* Hero */}
-      <section className="hero-pattern border-b border-gray-200">
-        <Container className="grid min-h-[28rem] items-center gap-10 py-20 lg:grid-cols-2 lg:gap-16 lg:py-24">
-          <SectionReveal>
-            <p className="eyebrow-line mb-4 text-xs font-bold uppercase tracking-wider text-accent">
-              {home.heroEyebrow || cms.settings.tagline}
-            </p>
-            <h1 className="text-balance text-5xl font-extrabold leading-[1.1] tracking-tight text-primary sm:text-6xl lg:text-7xl">
-              {home.heroTitle}
-              <br />
-              <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">{home.heroTitleLine2}</span>
-            </h1>
-            {home.heroSubtitle && (
-              <p className="mt-6 max-w-xl text-balance text-lg leading-relaxed text-gray-500 sm:text-xl">
-                {home.heroSubtitle}
-              </p>
-            )}
-            <div className="mt-8 flex flex-wrap gap-4">
-              <Link href={home.heroCtaLink} className="btn-primary">
-                {home.heroCtaText}
-                <ArrowRight className="h-4 w-4" />
-              </Link>
-              <Link href={home.heroSecondaryCtaLink} className="btn-outline">
-                {home.heroSecondaryCtaText}
-              </Link>
-            </div>
-          </SectionReveal>
-
-          <SectionReveal delay={0.1}>
-            <HeroVisual image={home.heroImage} />
-          </SectionReveal>
-        </Container>
-      </section>
+      <HomeHero home={home} settings={cms.settings} imageAlt={labels.home.heroImageAlt} />
 
       {/* Stats */}
       <section className="section-alt section-pad">
@@ -113,7 +81,7 @@ export default async function HomePage() {
                       {solution.shortDescription}
                     </p>
                     <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-accent">
-                      Read More
+                      {labels.home.readMore}
                       <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                     </span>
                   </div>
@@ -129,11 +97,24 @@ export default async function HomePage() {
         <section className="section-alt section-pad">
           <Container>
             <SectionReveal>
-              <SectionHeading
-                eyebrow="Machines"
-                title={home.productsTitle}
-                subtitle={home.productsSubtitle}
-              />
+              <div className="flex flex-col items-center justify-between sm:flex-row sm:items-end">
+                <SectionHeading
+                  eyebrow={labels.home.machinesEyebrow}
+                  title={home.productsTitle}
+                  subtitle={home.productsSubtitle}
+                />
+                {home.productsVideoUrl && (
+                  <a
+                    href={home.productsVideoUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn-secondary whitespace-nowrap mt-4 sm:mt-0"
+                  >
+                    Watch Video
+                    <ArrowRight className="h-4 w-4" />
+                  </a>
+                )}
+              </div>
             </SectionReveal>
             <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
               {machineProducts.map((product, i) => (
@@ -142,12 +123,13 @@ export default async function HomePage() {
                     href={`/products/${product.slug}`}
                     className="card card-lift group flex h-full flex-col overflow-hidden rounded-2xl p-0"
                   >
-                    <div className="relative aspect-[4/3] overflow-hidden">
+                    <div className="relative aspect-[4/3] overflow-hidden" style={{ aspectRatio: cms.productsPage.productImageAspectRatio ?? "4/3" }}>
                       <CmsImage
                         src={product.image}
-                        alt={product.title}
+                        alt={product.heroImageAlt ?? product.title}
                         fill
-                        className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                        className="transition-transform duration-500 group-hover:scale-[1.03]"
+                        style={{ objectFit: cms.productsPage.productImageObjectFit ?? "cover" }}
                         sizes="(max-width: 768px) 50vw, 25vw"
                       />
                     </div>
@@ -166,7 +148,7 @@ export default async function HomePage() {
                         </ul>
                       )}
                       <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-accent">
-                        View Product
+                        {labels.home.viewProduct}
                         <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                       </span>
                     </div>
@@ -176,7 +158,7 @@ export default async function HomePage() {
             </div>
             <div className="mt-10 text-center">
               <Link href="/products" className="btn-outline">
-                Full Products Catalogue
+                {labels.home.fullCatalogue}
                 <ArrowRight className="h-4 w-4" />
               </Link>
             </div>
@@ -206,7 +188,7 @@ export default async function HomePage() {
         <section className="section-alt section-pad">
           <Container>
             <SectionReveal>
-              <SectionHeading eyebrow="Clients" title={home.clientsTitle} />
+              <SectionHeading eyebrow={labels.home.clientsEyebrow} title={home.clientsTitle} />
             </SectionReveal>
             {testimonials.map((t, i) => (
               <SectionReveal key={t.id} delay={i * 0.1}>

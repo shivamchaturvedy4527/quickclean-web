@@ -28,6 +28,7 @@ export default async function SolutionDetailPage({ params }: Props) {
   const { slug } = await params;
   const cms = await getCMS();
   const solution = cms.solutions.find((s) => s.slug === slug);
+  const { labels } = cms;
 
   if (!solution) notFound();
 
@@ -37,7 +38,7 @@ export default async function SolutionDetailPage({ params }: Props) {
         title={solution.title}
         subtitle={solution.shortDescription}
         image={solution.heroImage || solution.image}
-        breadcrumb="Our Solutions"
+        breadcrumb={solution.breadcrumb ?? labels.breadcrumbs.ourSolutions}
       />
 
       <section className="section-pad">
@@ -48,7 +49,9 @@ export default async function SolutionDetailPage({ params }: Props) {
                 <CmsImage src={solution.image} alt={solution.title} fill sizes="(max-width: 1024px) 100vw, 66vw" />
               </div>
               <p className="text-lg leading-relaxed text-gray-700">{solution.description}</p>
-              <h2 className="mt-10 text-xl font-semibold text-gray-900">Key Benefits</h2>
+              <h2 className="mt-10 text-xl font-semibold text-gray-900">
+                {solution.benefitsHeading ?? labels.solutions.benefitsHeading}
+              </h2>
               <ul className="mt-4 space-y-3">
                 {solution.features.map((feature) => (
                   <li key={feature} className="flex gap-3 text-gray-700">
@@ -59,16 +62,17 @@ export default async function SolutionDetailPage({ params }: Props) {
               </ul>
             </div>
             <div className="card h-fit p-6">
-              <h3 className="font-semibold text-gray-900">Partner With Us</h3>
+              <h3 className="font-semibold text-gray-900">
+                {solution.sidebarTitle ?? labels.solutions.partnerTitle}
+              </h3>
               <p className="mt-3 text-sm leading-relaxed text-gray-600">
-                Every on-premise laundry is unique. Speak with our solutions team for a tailored
-                proposal — BOO, turnkey, linen, or equipment lease models scoped to your facility.
+                {solution.sidebarText ?? labels.solutions.partnerText}
               </p>
               <Link
                 href={solution.ctaLink ?? "/contact-us"}
                 className="btn-primary mt-6 w-full"
               >
-                {solution.ctaText ?? "Contact Us"} <ArrowRight className="h-4 w-4" />
+                {solution.ctaText ?? labels.solutions.contactCta} <ArrowRight className="h-4 w-4" />
               </Link>
             </div>
           </div>

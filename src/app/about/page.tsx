@@ -4,9 +4,10 @@ import { SectionReveal } from "@/components/SectionReveal";
 import { getCMS } from "@/lib/cms-store";
 import type { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "About Us",
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const cms = await getCMS();
+  return { title: cms.labels.meta.about };
+}
 
 export default async function AboutPage() {
   const cms = await getCMS();

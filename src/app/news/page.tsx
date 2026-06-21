@@ -7,14 +7,22 @@ import { Container } from "@/components/ui/Container";
 import { getCMS } from "@/lib/cms-store";
 import type { Metadata } from "next";
 
-export const metadata: Metadata = { title: "News & Media" };
+export async function generateMetadata(): Promise<Metadata> {
+  const cms = await getCMS();
+  return { title: cms.labels.meta.news };
+}
 
 export default async function NewsPage() {
   const cms = await getCMS();
+  const { labels } = cms;
 
   return (
     <SiteLayout>
-      <PageHero title={cms.home.newsTitle} subtitle={cms.home.newsSubtitle} />
+      <PageHero
+        title={cms.home.newsTitle}
+        subtitle={cms.home.newsSubtitle}
+        breadcrumb={labels.meta.news}
+      />
       <section className="py-16 sm:py-24">
         <Container>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">

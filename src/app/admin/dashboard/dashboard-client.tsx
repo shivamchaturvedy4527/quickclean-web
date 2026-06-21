@@ -7,58 +7,42 @@ import {
   LogOut,
   Home,
   Settings,
-  Users,
   MessageSquare,
   FileText,
   Leaf,
   Briefcase,
   Phone,
-  Navigation,
-  Image,
   Package,
-  Scale,
-  Recycle,
-  Mail,
-  Cookie,
   KeyRound,
 } from "lucide-react";
 import { ObjectEditor } from "@/components/admin/ObjectEditor";
+import { ProductsEditor } from "@/components/admin/ProductsEditor";
+import { SiteSettingsEditor } from "@/components/admin/SiteSettingsEditor";
+import { SolutionsEditor } from "@/components/admin/SolutionsEditor";
+import { BlogEditor } from "@/components/admin/BlogEditor";
+import { ContactEditor } from "@/components/admin/ContactEditor";
+import { HomePageEditor } from "@/components/admin/HomePageEditor";
+import { TabHelp } from "@/components/admin/TabHelp";
 import type { CMSData } from "@/types/cms";
+
+const LIVE_SITE = "https://quickclean-clone.vercel.app";
 
 type Tab =
   | "settings"
-  | "navigation"
   | "home"
-  | "solutions"
-  | "productsPage"
-  | "products"
-  | "clients"
-  | "installationGallery"
-  | "pressingMachines"
-  | "pptMediaArchive"
-  | "brands"
   | "about"
-  | "team"
-  | "testimonials"
-  | "blog"
   | "sustainability"
-  | "investors"
-  | "careers"
+  | "solutions"
+  | "products"
   | "contact"
-  | "footer"
-  | "reweave360"
-  | "financial"
-  | "legal"
-  | "cookie"
-  | "submissions"
-  | "newsletter"
-  | "integrations"
+  | "news"
+  | "messages"
   | "security";
 
 export default function AdminDashboard() {
   const router = useRouter();
   const [cms, setCms] = useState<CMSData | null>(null);
-  const [tab, setTab] = useState<Tab>("settings");
+  const [tab, setTab] = useState<Tab>("products");
   const [saving, setSaving] = useState(false);
   const [message, setMessage] = useState("");
   const [passwordForm, setPasswordForm] = useState({
@@ -68,7 +52,7 @@ export default function AdminDashboard() {
   });
 
   const load = useCallback(async () => {
-    const res = await fetch("/api/admin/cms");
+    const res = await fetch("/api/admin/cms", { cache: "no-store" });
     if (res.status === 401) {
       router.push("/admin");
       return;
@@ -89,9 +73,43 @@ export default function AdminDashboard() {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(cms),
+      cache: "no-store",
     });
     setSaving(false);
-    setMessage(res.ok ? "Saved successfully" : "Save failed");
+    if (res.ok) {
+      const payload = (await res.json()) as {
+        warning?: string;
+        storage?: string;
+        data?: CMSData;
+        confirm?: {
+          products?: number;
+          solutions?: number;
+          testimonials?: number;
+          blog?: number;
+        };
+      };
+
+      // Use saved data from server — do NOT reload (reload could restore old bundled defaults).
+      if (payload.data) {
+        setCms(payload.data);
+      }
+
+      const counts = payload.confirm;
+      const detail = counts
+        ? `${counts.products ?? 0} products · ${counts.solutions ?? 0} solutions · ${counts.testimonials ?? 0} testimonials`
+        : "";
+
+      if (payload.warning) {
+        setMessage(`Saved but not permanent — ${payload.warning}`);
+      } else {
+        setMessage(
+          `Published live (${payload.storage ?? "saved"})${detail ? ` — ${detail}` : ""}. Deleted items stay deleted.`
+        );
+      }
+    } else {
+      const err = (await res.json().catch(() => null)) as { error?: string } | null;
+      setMessage(err?.error ?? "Save failed — please try again or log in again.");
+    }
   }
 
   async function logout() {
@@ -139,32 +157,14 @@ export default function AdminDashboard() {
 
   const tabs: { id: Tab; label: string; icon: React.ReactNode }[] = [
     { id: "settings", label: "Site Settings", icon: <Settings className="h-4 w-4" /> },
-    { id: "navigation", label: "Navigation", icon: <Navigation className="h-4 w-4" /> },
     { id: "home", label: "Home Page", icon: <Home className="h-4 w-4" /> },
-    { id: "solutions", label: "Solutions", icon: <Briefcase className="h-4 w-4" /> },
-    { id: "productsPage", label: "Products Page", icon: <Package className="h-4 w-4" /> },
-    { id: "products", label: "Products", icon: <Package className="h-4 w-4" /> },
-    { id: "clients", label: "Clients", icon: <Users className="h-4 w-4" /> },
-    { id: "installationGallery", label: "Install Gallery", icon: <Image className="h-4 w-4" /> },
-    { id: "pressingMachines", label: "Pressing Machines", icon: <Package className="h-4 w-4" /> },
-    { id: "pptMediaArchive", label: "PPT Media", icon: <Image className="h-4 w-4" /> },
-    { id: "brands", label: "Brand Logos", icon: <Image className="h-4 w-4" /> },
-    { id: "about", label: "About", icon: <FileText className="h-4 w-4" /> },
-    { id: "team", label: "Team", icon: <Users className="h-4 w-4" /> },
-    { id: "testimonials", label: "Testimonials", icon: <MessageSquare className="h-4 w-4" /> },
-    { id: "blog", label: "Blog / News", icon: <FileText className="h-4 w-4" /> },
+    { id: "about", label: "About Us", icon: <FileText className="h-4 w-4" /> },
     { id: "sustainability", label: "Sustainability", icon: <Leaf className="h-4 w-4" /> },
-    { id: "investors", label: "Investors", icon: <Briefcase className="h-4 w-4" /> },
-    { id: "careers", label: "Careers", icon: <Briefcase className="h-4 w-4" /> },
-    { id: "reweave360", label: "ReWeave 360", icon: <Recycle className="h-4 w-4" /> },
-    { id: "financial", label: "Financial Planning", icon: <Scale className="h-4 w-4" /> },
-    { id: "contact", label: "Contact Page", icon: <Phone className="h-4 w-4" /> },
-    { id: "footer", label: "Footer", icon: <FileText className="h-4 w-4" /> },
-    { id: "legal", label: "Legal Pages", icon: <Scale className="h-4 w-4" /> },
-    { id: "cookie", label: "Cookie Consent", icon: <Cookie className="h-4 w-4" /> },
-    { id: "submissions", label: "Contact Forms", icon: <MessageSquare className="h-4 w-4" /> },
-    { id: "newsletter", label: "Newsletter", icon: <Mail className="h-4 w-4" /> },
-    { id: "integrations", label: "WhatsApp & Chat", icon: <Phone className="h-4 w-4" /> },
+    { id: "solutions", label: "Solutions", icon: <Briefcase className="h-4 w-4" /> },
+    { id: "products", label: "Products", icon: <Package className="h-4 w-4" /> },
+    { id: "contact", label: "Contact Us", icon: <Phone className="h-4 w-4" /> },
+    { id: "news", label: "News", icon: <FileText className="h-4 w-4" /> },
+    { id: "messages", label: "Messages", icon: <MessageSquare className="h-4 w-4" /> },
     { id: "security", label: "Change Password", icon: <KeyRound className="h-4 w-4" /> },
   ];
 
@@ -172,104 +172,30 @@ export default function AdminDashboard() {
     switch (tab) {
       case "settings":
         return (
-          <ObjectEditor
-            data={data.settings as unknown as Record<string, unknown>}
-            onChange={(v) => setCms({ ...data, settings: v as unknown as CMSData["settings"] })}
-          />
-        );
-      case "navigation":
-        return (
-          <ObjectEditor
-            data={{ navigation: data.navigation } as unknown as Record<string, unknown>}
-            onChange={(v) => setCms({ ...data, navigation: v.navigation as CMSData["navigation"] })}
+          <SiteSettingsEditor
+            settings={data.settings}
+            footer={data.footer}
+            navigation={data.navigation}
+            onSettingsChange={(settings) => setCms({ ...data, settings })}
+            onFooterChange={(footer) => setCms({ ...data, footer })}
+            onNavigationChange={(navigation) => setCms({ ...data, navigation })}
           />
         );
       case "home":
         return (
-          <ObjectEditor
-            data={data.home as unknown as Record<string, unknown>}
-            onChange={(v) => setCms({ ...data, home: v as unknown as CMSData["home"] })}
-          />
-        );
-      case "solutions":
-        return (
-          <ObjectEditor
-            data={{ solutions: data.solutions } as unknown as Record<string, unknown>}
-            onChange={(v) => setCms({ ...data, solutions: v.solutions as CMSData["solutions"] })}
-          />
-        );
-      case "productsPage":
-        return (
-          <ObjectEditor
-            data={data.productsPage as unknown as Record<string, unknown>}
-            onChange={(v) => setCms({ ...data, productsPage: v as unknown as CMSData["productsPage"] })}
-          />
-        );
-      case "products":
-        return (
-          <ObjectEditor
-            data={{ products: data.products } as unknown as Record<string, unknown>}
-            onChange={(v) => setCms({ ...data, products: v.products as CMSData["products"] })}
-          />
-        );
-      case "clients":
-        return (
-          <ObjectEditor
-            data={{ clients: data.clients } as unknown as Record<string, unknown>}
-            onChange={(v) => setCms({ ...data, clients: v.clients as CMSData["clients"] })}
-          />
-        );
-      case "installationGallery":
-        return (
-          <ObjectEditor
-            data={
-              (data.installationGallery ?? { title: "", subtitle: "", images: [] }) as unknown as Record<
-                string,
-                unknown
-              >
+          <HomePageEditor
+            home={data.home}
+            homeLabels={data.labels.home}
+            brands={data.brands}
+            testimonials={data.testimonials}
+            installationGallery={data.installationGallery}
+            onHomeChange={(home) => setCms({ ...data, home })}
+            onHomeLabelsChange={(homeLabels) =>
+              setCms({ ...data, labels: { ...data.labels, home: homeLabels } })
             }
-            onChange={(v) =>
-              setCms({
-                ...data,
-                installationGallery: v as unknown as CMSData["installationGallery"],
-              })
-            }
-          />
-        );
-      case "pressingMachines":
-        return (
-          <ObjectEditor
-            data={
-              (data.pressingMachines ?? { title: "", subtitle: "", items: [] }) as unknown as Record<
-                string,
-                unknown
-              >
-            }
-            onChange={(v) =>
-              setCms({
-                ...data,
-                pressingMachines: v as unknown as CMSData["pressingMachines"],
-              })
-            }
-          />
-        );
-      case "pptMediaArchive":
-        return (
-          <ObjectEditor
-            data={{ pptMediaArchive: data.pptMediaArchive ?? [] } as unknown as Record<string, unknown>}
-            onChange={(v) =>
-              setCms({
-                ...data,
-                pptMediaArchive: v.pptMediaArchive as CMSData["pptMediaArchive"],
-              })
-            }
-          />
-        );
-      case "brands":
-        return (
-          <ObjectEditor
-            data={{ brands: data.brands } as unknown as Record<string, unknown>}
-            onChange={(v) => setCms({ ...data, brands: v.brands as CMSData["brands"] })}
+            onBrandsChange={(brands) => setCms({ ...data, brands })}
+            onTestimonialsChange={(testimonials) => setCms({ ...data, testimonials })}
+            onGalleryChange={(installationGallery) => setCms({ ...data, installationGallery })}
           />
         );
       case "about":
@@ -279,33 +205,6 @@ export default function AdminDashboard() {
             onChange={(v) => setCms({ ...data, about: v as unknown as CMSData["about"] })}
           />
         );
-      case "team":
-        return (
-          <ObjectEditor
-            data={data.team as unknown as Record<string, unknown>}
-            onChange={(v) => setCms({ ...data, team: v as unknown as CMSData["team"] })}
-          />
-        );
-      case "testimonials":
-        return (
-          <ObjectEditor
-            data={{ testimonials: data.testimonials } as unknown as Record<string, unknown>}
-            onChange={(v) => setCms({ ...data, testimonials: v.testimonials as CMSData["testimonials"] })}
-          />
-        );
-      case "blog":
-        return (
-          <ObjectEditor
-            data={{ blogCategories: data.blogCategories, blog: data.blog } as unknown as Record<string, unknown>}
-            onChange={(v) =>
-              setCms({
-                ...data,
-                blogCategories: v.blogCategories as CMSData["blogCategories"],
-                blog: v.blog as CMSData["blog"],
-              })
-            }
-          />
-        );
       case "sustainability":
         return (
           <ObjectEditor
@@ -313,128 +212,76 @@ export default function AdminDashboard() {
             onChange={(v) => setCms({ ...data, sustainability: v as unknown as CMSData["sustainability"] })}
           />
         );
-      case "investors":
+      case "solutions":
         return (
-          <ObjectEditor
-            data={data.investors as unknown as Record<string, unknown>}
-            onChange={(v) => setCms({ ...data, investors: v as unknown as CMSData["investors"] })}
+          <SolutionsEditor
+            solutions={data.solutions}
+            onChange={(solutions) => setCms({ ...data, solutions })}
           />
         );
-      case "careers":
+      case "products":
         return (
-          <ObjectEditor
-            data={data.careers as unknown as Record<string, unknown>}
-            onChange={(v) => setCms({ ...data, careers: v as unknown as CMSData["careers"] })}
-          />
-        );
-      case "reweave360":
-        return (
-          <ObjectEditor
-            data={data.reweave360 as unknown as Record<string, unknown>}
-            onChange={(v) => setCms({ ...data, reweave360: v as unknown as CMSData["reweave360"] })}
-          />
-        );
-      case "financial":
-        return (
-          <ObjectEditor
-            data={data.financialPlanning as unknown as Record<string, unknown>}
-            onChange={(v) => setCms({ ...data, financialPlanning: v as unknown as CMSData["financialPlanning"] })}
+          <ProductsEditor
+            productsPage={data.productsPage}
+            products={data.products}
+            pressingMachines={data.pressingMachines}
+            onProductsPageChange={(productsPage) => setCms({ ...data, productsPage })}
+            onProductsChange={(products) => setCms({ ...data, products })}
+            onPressingMachinesChange={(pressingMachines) => setCms({ ...data, pressingMachines })}
           />
         );
       case "contact":
         return (
-          <ObjectEditor
-            data={data.contact as unknown as Record<string, unknown>}
-            onChange={(v) => setCms({ ...data, contact: v as unknown as CMSData["contact"] })}
+          <ContactEditor
+            contact={data.contact}
+            onChange={(contact) => setCms({ ...data, contact })}
           />
         );
-      case "footer":
+      case "news":
         return (
-          <ObjectEditor
-            data={data.footer as unknown as Record<string, unknown>}
-            onChange={(v) => setCms({ ...data, footer: v as unknown as CMSData["footer"] })}
+          <BlogEditor
+            posts={data.blog}
+            onChange={(blog) => setCms({ ...data, blog })}
           />
         );
-      case "legal":
+      case "messages":
         return (
-          <ObjectEditor
-            data={data.legal as unknown as Record<string, unknown>}
-            onChange={(v) => setCms({ ...data, legal: v as unknown as CMSData["legal"] })}
-          />
-        );
-      case "cookie":
-        return (
-          <ObjectEditor
-            data={data.cookieConsent as unknown as Record<string, unknown>}
-            onChange={(v) => setCms({ ...data, cookieConsent: v as unknown as CMSData["cookieConsent"] })}
-          />
-        );
-      case "submissions":
-        return (
-          <div className="space-y-4">
-            {data.contactSubmissions.length === 0 ? (
-              <p className="text-slate-500">No submissions yet.</p>
-            ) : (
-              data.contactSubmissions.map((sub) => (
-                <div key={sub.id} className="rounded-xl border border-slate-200 bg-white p-4">
-                  <div className="flex justify-between">
-                    <strong>{sub.name}</strong>
-                    <span className="text-xs text-slate-400">
-                      {new Date(sub.createdAt).toLocaleString()}
-                    </span>
-                  </div>
-                  <p className="text-sm text-slate-600">
-                    {sub.email} · {sub.phone}
-                  </p>
-                  {sub.company && <p className="text-sm text-slate-500">{sub.company}</p>}
-                  <p className="mt-2 text-sm">{sub.message}</p>
+          <div className="space-y-8">
+            <section>
+              <h3 className="mb-3 font-bold text-primary">Contact Form Messages</h3>
+              {data.contactSubmissions.length === 0 ? (
+                <p className="text-slate-500">No messages yet.</p>
+              ) : (
+                <div className="space-y-3">
+                  {data.contactSubmissions.map((sub) => (
+                    <div key={sub.id} className="rounded-xl border border-slate-200 p-4">
+                      <div className="flex justify-between">
+                        <strong>{sub.name}</strong>
+                        <span className="text-xs text-slate-400">{new Date(sub.createdAt).toLocaleString()}</span>
+                      </div>
+                      <p className="text-sm text-slate-600">{sub.email} · {sub.phone}</p>
+                      <p className="mt-2 text-sm">{sub.message}</p>
+                    </div>
+                  ))}
                 </div>
-              ))
-            )}
-          </div>
-        );
-      case "newsletter":
-        return (
-          <div className="space-y-4">
-            {data.newsletterSubmissions.length === 0 ? (
-              <p className="text-slate-500">No newsletter subscribers yet.</p>
-            ) : (
-              data.newsletterSubmissions.map((sub) => (
-                <div key={sub.id} className="rounded-xl border border-slate-200 bg-white p-4">
-                  <div className="flex justify-between">
-                    <strong>{sub.name}</strong>
-                    <span className="text-xs text-slate-400">
-                      {new Date(sub.createdAt).toLocaleString()}
-                    </span>
-                  </div>
-                  <p className="text-sm text-slate-600">{sub.email}</p>
+              )}
+            </section>
+            <section>
+              <h3 className="mb-3 font-bold text-primary">Newsletter Signups</h3>
+              {data.newsletterSubmissions.length === 0 ? (
+                <p className="text-slate-500">No subscribers yet.</p>
+              ) : (
+                <div className="space-y-3">
+                  {data.newsletterSubmissions.map((sub) => (
+                    <div key={sub.id} className="rounded-xl border border-slate-200 p-4">
+                      <strong>{sub.name}</strong>
+                      <p className="text-sm text-slate-600">{sub.email}</p>
+                    </div>
+                  ))}
                 </div>
-              ))
-            )}
+              )}
+            </section>
           </div>
-        );
-      case "integrations":
-        return (
-          <ObjectEditor
-            data={{
-              whatsappNumber: data.settings.whatsappNumber,
-              whatsappMessage: data.settings.whatsappMessage,
-              whatsappGreetingTemplate: data.settings.whatsappGreetingTemplate,
-              liveChatEmbed: data.settings.liveChatEmbed,
-            }}
-            onChange={(v) =>
-              setCms({
-                ...data,
-                settings: {
-                  ...data.settings,
-                  whatsappNumber: v.whatsappNumber as string,
-                  whatsappMessage: v.whatsappMessage as string,
-                  whatsappGreetingTemplate: v.whatsappGreetingTemplate as string,
-                  liveChatEmbed: v.liveChatEmbed as string,
-                },
-              })
-            }
-          />
         );
       case "security":
         return (
@@ -442,7 +289,7 @@ export default function AdminDashboard() {
             <div>
               <h3 className="text-base font-semibold text-primary">Change Password</h3>
               <p className="mt-1 text-sm text-slate-500">
-                Current login username is <span className="font-medium text-slate-700">admin</span>.
+                Login username: <span className="font-medium text-slate-700">admin</span>
               </p>
             </div>
             <div className="grid gap-4 sm:grid-cols-2">
@@ -452,10 +299,8 @@ export default function AdminDashboard() {
                   type="password"
                   required
                   value={passwordForm.currentPassword}
-                  onChange={(e) =>
-                    setPasswordForm({ ...passwordForm, currentPassword: e.target.value })
-                  }
-                  className="mt-1 w-full rounded-md border border-slate-300 px-3 py-2.5 text-sm focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent"
+                  onChange={(e) => setPasswordForm({ ...passwordForm, currentPassword: e.target.value })}
+                  className="mt-1 w-full rounded-md border border-slate-300 px-3 py-2.5 text-sm"
                 />
               </label>
               <label className="block">
@@ -465,10 +310,8 @@ export default function AdminDashboard() {
                   required
                   minLength={6}
                   value={passwordForm.newPassword}
-                  onChange={(e) =>
-                    setPasswordForm({ ...passwordForm, newPassword: e.target.value })
-                  }
-                  className="mt-1 w-full rounded-md border border-slate-300 px-3 py-2.5 text-sm focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent"
+                  onChange={(e) => setPasswordForm({ ...passwordForm, newPassword: e.target.value })}
+                  className="mt-1 w-full rounded-md border border-slate-300 px-3 py-2.5 text-sm"
                 />
               </label>
               <label className="block">
@@ -478,19 +321,12 @@ export default function AdminDashboard() {
                   required
                   minLength={6}
                   value={passwordForm.confirmPassword}
-                  onChange={(e) =>
-                    setPasswordForm({ ...passwordForm, confirmPassword: e.target.value })
-                  }
-                  className="mt-1 w-full rounded-md border border-slate-300 px-3 py-2.5 text-sm focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent"
+                  onChange={(e) => setPasswordForm({ ...passwordForm, confirmPassword: e.target.value })}
+                  className="mt-1 w-full rounded-md border border-slate-300 px-3 py-2.5 text-sm"
                 />
               </label>
             </div>
-            <button
-              type="submit"
-              disabled={saving}
-              className="inline-flex w-full items-center justify-center gap-2 rounded-md bg-accent px-4 py-2.5 text-sm font-semibold text-white hover:bg-accent-hover disabled:opacity-60 sm:w-auto"
-            >
-              <KeyRound className="h-4 w-4" />
+            <button type="submit" disabled={saving} className="rounded-md bg-accent px-4 py-2.5 text-sm font-semibold text-white">
               {saving ? "Updating..." : "Update Password"}
             </button>
           </form>
@@ -504,8 +340,8 @@ export default function AdminDashboard() {
     <div className="min-h-screen bg-slate-100 lg:flex">
       <aside className="border-b border-slate-200 bg-white lg:h-screen lg:w-64 lg:shrink-0 lg:overflow-y-auto lg:border-b-0 lg:border-r">
         <div className="border-b border-slate-200 p-4">
-          <h1 className="font-bold text-primary">CMS Admin</h1>
-          <p className="text-xs text-slate-500">{cms.settings.siteName}</p>
+          <h1 className="font-bold text-primary">Website Editor</h1>
+          <p className="text-xs text-slate-500">Menu jitne pages, utne tabs</p>
         </div>
         <nav className="flex gap-1 overflow-x-auto p-2 lg:block lg:overflow-visible">
           {tabs.map((t) => (
@@ -542,26 +378,39 @@ export default function AdminDashboard() {
           <div className="flex flex-wrap items-center gap-3">
             {message && (
               <span
-                className={`text-sm ${message.includes("failed") ? "text-red-600" : "text-accent"}`}
+                className={`text-sm ${message.includes("failed") || message.includes("not permanent") ? "text-red-600" : "text-emerald-700"}`}
               >
                 {message}
               </span>
             )}
-            {tab !== "security" && (
+            <a
+              href={LIVE_SITE}
+              target="_blank"
+              rel="noreferrer"
+              className="text-sm font-medium text-slate-600 underline hover:text-accent"
+            >
+              View live website
+            </a>
+            {tab !== "security" && tab !== "messages" && (
               <button
                 onClick={save}
                 disabled={saving}
-                className="inline-flex items-center gap-2 rounded-md bg-accent px-4 py-2 text-sm font-semibold text-white hover:bg-accent-hover disabled:opacity-60"
+                className="inline-flex items-center gap-2 rounded-md bg-emerald-600 px-4 py-2 text-sm font-semibold text-white hover:bg-emerald-700 disabled:opacity-60"
               >
                 <Save className="h-4 w-4" />
-                {saving ? "Saving..." : "Save Changes"}
+                {saving ? "Publishing..." : "Publish to Website"}
               </button>
             )}
           </div>
         </div>
 
         <div className="p-4 sm:p-6">
-          <div className="max-w-4xl rounded-xl border border-slate-200 bg-white p-6">
+          <TabHelp tab={tab} />
+          <div
+            className={`rounded-xl border border-slate-200 bg-white p-6 ${
+              tab === "products" || tab === "home" ? "max-w-none" : "max-w-4xl"
+            }`}
+          >
             {renderEditor(cms)}
           </div>
         </div>

@@ -5,9 +5,10 @@ import { SectionReveal } from "@/components/SectionReveal";
 import { getCMS } from "@/lib/cms-store";
 import type { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "Investors",
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const cms = await getCMS();
+  return { title: cms.labels.meta.investors };
+}
 
 export default async function InvestorsPage() {
   const cms = await getCMS();
@@ -34,7 +35,9 @@ export default async function InvestorsPage() {
       {investors.partners.length > 0 && (
         <section className="bg-slate-50 py-16">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <h2 className="text-center text-2xl font-bold text-primary">Our Partners</h2>
+            <h2 className="text-center text-2xl font-bold text-primary">
+              {investors.partnersTitle ?? "Our Partners"}
+            </h2>
             <div className="mt-10 grid gap-6 sm:grid-cols-2">
               {investors.partners.map((partner, i) => (
                 <SectionReveal key={partner.id} delay={i * 0.1}>

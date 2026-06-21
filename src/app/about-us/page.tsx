@@ -8,32 +8,24 @@ import { Container } from "@/components/ui/Container";
 
 import { InstallationGallery } from "@/components/InstallationGallery";
 import { getCMS } from "@/lib/cms-store";
-
 import type { Metadata } from "next";
 
-
-
-export const metadata: Metadata = {
-
-  title: "About Us",
-
-};
-
-
+export async function generateMetadata(): Promise<Metadata> {
+  const cms = await getCMS();
+  return { title: cms.labels.meta.about };
+}
 
 export default async function AboutPage() {
-
   const cms = await getCMS();
-
-  const { about, installationGallery } = cms;
-
-
+  const { about, installationGallery, labels } = cms;
 
   return (
-
     <SiteLayout>
-
-      <PageHero title={about.title} image={about.heroImage} breadcrumb="Company" />
+      <PageHero
+        title={about.title}
+        image={about.heroImage}
+        breadcrumb={about.breadcrumb ?? labels.breadcrumbs.company}
+      />
 
 
 

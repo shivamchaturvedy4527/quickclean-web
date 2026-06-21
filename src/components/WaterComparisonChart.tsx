@@ -21,9 +21,9 @@ export function WaterComparisonChart({ data }: { data: WaterComparison }) {
           </div>
           <div className="mt-2 text-sm text-slate-500">{data.industryLabel}</div>
           <div className="mt-4 text-4xl font-semibold text-[#00b67a]">
-            <AnimatedCounter end={data.qcDisplayValue || 800000} />
+            <AnimatedCounter end={data.laundrexDisplayValue || data.qcDisplayValue || 800000} />
           </div>
-          <div className="mt-2 text-sm text-slate-500">{data.qcLabel}</div>
+          <div className="mt-2 text-sm text-slate-500">{data.laundrexLabel || data.qcLabel}</div>
         </div>
         <div className="rounded border border-slate-200 p-6 text-center sm:col-span-1">
           <div className="text-sm font-medium text-slate-600">{data.monthlySavedLabel}</div>

@@ -7,25 +7,20 @@ import {
   isValidIndianPhone,
   normalizeIndianPhone,
 } from "@/lib/whatsapp";
-
-const INQUIRY_OPTIONS = [
-  { value: "", label: "General inquiry" },
-  { value: "Laundry machines & equipment", label: "Laundry machines & equipment" },
-  { value: "Dry cleaning solutions", label: "Dry cleaning solutions" },
-  { value: "Consultancy & setup", label: "Consultancy & setup" },
-  { value: "Service & maintenance", label: "Service & maintenance" },
-];
+import type { SiteLabels } from "@/types/cms";
 
 interface WhatsAppButtonProps {
   number: string;
   defaultPrefix?: string;
   greetingTemplate: string;
+  labels: SiteLabels["whatsapp"];
 }
 
 export function WhatsAppButton({
   number,
   defaultPrefix,
   greetingTemplate,
+  labels,
 }: WhatsAppButtonProps) {
   const [open, setOpen] = useState(false);
   const [name, setName] = useState("");
@@ -67,7 +62,7 @@ export function WhatsAppButton({
     setPhoneError("");
 
     if (!isValidIndianPhone(phone)) {
-      setPhoneError("Enter a valid Indian mobile number (+91, 10 digits).");
+      setPhoneError(labels.phoneError);
       return;
     }
 
@@ -106,7 +101,7 @@ export function WhatsAppButton({
         type="button"
         onClick={() => setOpen(true)}
         className="fixed bottom-6 right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg transition-transform hover:scale-105 hover:shadow-xl"
-        aria-label="Chat on WhatsApp"
+        aria-label={labels.ariaLabel}
       >
         <MessageCircle className="h-7 w-7" />
       </button>
@@ -136,11 +131,9 @@ export function WhatsAppButton({
                     id="whatsapp-modal-title"
                     className="text-lg font-semibold text-slate-900"
                   >
-                    Chat on WhatsApp
+                    {labels.modalTitle}
                   </h2>
-                  <p className="text-sm text-slate-500">
-                    अपना नाम और नंबर दर्ज करें · Enter your details
-                  </p>
+                  <p className="text-sm text-slate-500">{labels.modalSubtitle}</p>
                 </div>
               </div>
               <button
@@ -159,14 +152,14 @@ export function WhatsAppButton({
                   htmlFor="wa-name"
                   className="block text-sm font-medium text-slate-700"
                 >
-                  Full Name <span className="text-red-500">*</span>
+                  {labels.nameLabel}
                 </label>
                 <input
                   id="wa-name"
                   required
                   value={name}
                   onChange={(e) => setName(e.target.value)}
-                  placeholder="Your full name"
+                  placeholder={labels.namePlaceholder}
                   className="input-field mt-1.5"
                   autoComplete="name"
                 />
@@ -177,7 +170,7 @@ export function WhatsAppButton({
                   htmlFor="wa-phone"
                   className="block text-sm font-medium text-slate-700"
                 >
-                  Phone Number <span className="text-red-500">*</span>
+                  {labels.phoneLabel}
                 </label>
                 <input
                   id="wa-phone"
@@ -188,7 +181,7 @@ export function WhatsAppButton({
                     setPhone(e.target.value);
                     setPhoneError("");
                   }}
-                  placeholder="+91 98765 43210"
+                  placeholder={labels.phonePlaceholder}
                   className="input-field mt-1.5"
                   autoComplete="tel"
                 />
@@ -202,7 +195,8 @@ export function WhatsAppButton({
                   htmlFor="wa-inquiry"
                   className="block text-sm font-medium text-slate-700"
                 >
-                  Inquiry type <span className="text-slate-400">(optional)</span>
+                  {labels.inquiryLabel}{" "}
+                  <span className="text-slate-400">{labels.inquiryOptional}</span>
                 </label>
                 <select
                   id="wa-inquiry"
@@ -210,7 +204,7 @@ export function WhatsAppButton({
                   onChange={(e) => setInquiryType(e.target.value)}
                   className="input-field mt-1.5"
                 >
-                  {INQUIRY_OPTIONS.map((opt) => (
+                  {labels.inquiryOptions.map((opt) => (
                     <option key={opt.value || "general"} value={opt.value}>
                       {opt.label}
                     </option>
@@ -223,7 +217,7 @@ export function WhatsAppButton({
                 disabled={submitting}
                 className="btn-secondary w-full disabled:opacity-60"
               >
-                {submitting ? "Opening WhatsApp..." : "Start Chat on WhatsApp"}
+                {submitting ? labels.submitting : labels.submit}
               </button>
             </form>
           </div>

@@ -11,12 +11,13 @@ import type { Metadata } from "next";
 export async function generateSolutionMetadata(slug: string): Promise<Metadata> {
   const cms = await getCMS();
   const solution = cms.solutions.find((s) => s.slug === slug);
-  return { title: solution?.title ?? "Solution" };
+  return { title: solution?.title ?? cms.labels.meta.solutions };
 }
 
 export async function SolutionDetail({ slug }: { slug: string }) {
   const cms = await getCMS();
   const solution = cms.solutions.find((s) => s.slug === slug);
+  const { labels } = cms;
   if (!solution) notFound();
 
   return (
@@ -25,7 +26,7 @@ export async function SolutionDetail({ slug }: { slug: string }) {
         title={solution.title}
         subtitle={solution.shortDescription}
         image={solution.image}
-        breadcrumb="Our Solutions"
+        breadcrumb={solution.breadcrumb ?? labels.breadcrumbs.ourSolutions}
       />
       <section className="section-pad">
         <Container>
@@ -43,7 +44,9 @@ export async function SolutionDetail({ slug }: { slug: string }) {
               </div>
               {solution.features.length > 0 && (
                 <>
-                  <h2 className="mt-10 text-2xl font-bold tracking-tight text-gray-900">Key Points</h2>
+                  <h2 className="mt-10 text-2xl font-bold tracking-tight text-gray-900">
+                    {solution.benefitsHeading ?? labels.solutions.keyPointsHeading}
+                  </h2>
                   <ul className="mt-5 space-y-3">
                     {solution.features.map((f) => (
                       <li key={f} className="flex gap-3 text-gray-700">
@@ -54,8 +57,8 @@ export async function SolutionDetail({ slug }: { slug: string }) {
                   </ul>
                 </>
               )}
-              <Link href="/contact-us" className="btn-secondary mt-10 inline-flex">
-                {solution.ctaText ?? "Contact Us"}
+              <Link href={solution.ctaLink ?? "/contact-us"} className="btn-secondary mt-10 inline-flex">
+                {solution.ctaText ?? labels.solutions.contactCta}
                 <ArrowRight className="h-4 w-4" />
               </Link>
             </div>

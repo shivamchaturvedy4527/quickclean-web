@@ -20,7 +20,9 @@
     "facebook": "",
     "businessHours": "Mon - Sat: 9:00 - 19:00",
     "headerCtaText": "Contact Us",
-    "headerCtaLink": "/contact-us"
+    "headerCtaLink": "/contact-us",
+    "logoMaxWidth": 242,
+    "logoMaxHeight": 53
   },
   "navigation": [
     {
@@ -69,14 +71,22 @@
     }
   ],
   "home": {
-    "heroTitle": "Your Trusted Partner",
-    "heroTitleLine2": "In Laundry & Dry Cleaning Solutions",
-    "heroSubtitle": "Thoughtfully designed, innovative and sustainable laundry & dry-cleaning equipment and consultancy — pan India.",
-    "heroCtaText": "Our Products",
+    "heroTitle": "LAUNDRX",
+    "heroTitleLine2": "",
+    "heroSubtitle": "Providing complete laundry solutions with high quality machines for your business.",
+    "heroCtaText": "Explore Products",
     "heroCtaLink": "/products",
     "heroSecondaryCtaText": "Contact Us",
     "heroSecondaryCtaLink": "/contact-us",
     "heroImage": "/images/ppt/slide10_img01.png",
+    "heroFeatures": [
+      { "line1": "High Quality", "line2": "Machines" },
+      { "line1": "Advanced", "line2": "Technology" },
+      { "line1": "Complete", "line2": "Solutions" },
+      { "line1": "24/7", "line2": "Support" },
+      { "line1": "Trusted", "line2": "Company" }
+    ],
+    "heroEyebrow": "ONE STOP LAUNDRY SOLUTION",
     "stats": [
       {
         "value": 10,
@@ -104,14 +114,14 @@
       "industryDisplayValue": 0,
       "industryValue": 0,
       "industryUnit": "",
-      "qcLabel": "Low production cost — best value for money",
-      "qcDisplayValue": 0,
-      "qcValue": 0,
-      "qcUnit": "",
       "monthlySavedLabel": "Wide Installations",
       "monthlySaved": 0,
       "yearlySavedLabel": "Proven Quality",
-      "yearlySaved": 0
+      "yearlySaved": 0,
+      "laundrexLabel": "Low production cost — best value for money",
+      "laundrexDisplayValue": 0,
+      "laundrexValue": 0,
+      "laundrexUnit": ""
     },
     "solutionsTitle": "Our Expert Solutions",
     "solutionsSubtitle": "From feasibility analysis and facility planning to process improvement and full laundry consultancy.",
@@ -134,9 +144,8 @@
     "newsletterTitle": "Subscribe for the latest news",
     "newsletterSubtitle": "Stay updated on the latest trends.",
     "productsTitle": "Products Portfolio",
-    "productsSubtitle": "Transferon series CBW systems and commercial laundry machines — proven quality, pan India.",
-    "companyProfile": "Laundrex",
-    "heroEyebrow": "Laundrex"
+    "productsSubtitle": "Commercial CBW systems and laundry machines — proven quality, pan India.",
+    "companyProfile": "Laundrex"
   },
   "solutions": [
     {
@@ -155,7 +164,7 @@
         "Production Analysis",
         "Electricity, Water, Steam Analysis",
         "Cost Analysis Computation",
-        "Facility  Planning",
+        "Facility Planning",
         "Equipment analysis",
         "Location Analysis",
         "Plant Layout Design",
@@ -499,7 +508,7 @@
       "excerpt": "India has made strong progress in manufacturing across many sectors. However, when it comes to commercial laundry machines for hotels and large institutions, there is still a noticeable gap between locally manufactured systems and globally proven commercial technology.",
       "content": "India has made strong progress in manufacturing across many sectors. However, when it comes to commercial laundry machines for hotels and large institutions, there is still a noticeable gap between locally manufactured systems and globally proven commercial technology.\n\nThis is not a question of intent or affordability. It is a question of performance at scale.\n\nCommercial laundry environments are demanding. Machines operate continuously, handle heavy loads, and are expected to deliver consistent results with minimal downtime. In these conditions, small design and control limitations quickly translate into higher operating costs and reduced reliability.\n\nAt first glance, many locally manufactured machines appear adequate. They perform basic wash and dry functions and may work well in low-volume or intermittent-use settings.\n\nHowever, commercial laundry performance is measured over thousands of cycles, not initial operation. Differences in motor control, extraction capability, water management, automation, and monitoring become increasingly visible as volume and usage intensity increase.\n\nIn real-world operations, these gaps compound quickly. Lower extraction leaves linen wetter, increasing drying time and energy consumption. Manual or less precise dosing raises water and chemical usage while reducing wash consistency. Limited automation and diagnostics delay issue detection and increase operational strain.\n\nOver time, this results in higher utility costs, reduced daily capacity, faster linen wear, and greater vulnerability during peak demand.\n\nThis is not a permanent assessment. Indian manufacturing capability is evolving rapidly, and progress is clearly visible.\n\nBut today, for high-volume, mission-critical commercial laundry operations, consistency, efficiency, and uptime still favor globally proven systems.\n\nThat is why many hotels and large institutions continue to rely on them.",
       "category": "Uncategorized",
-      "image": "/images/blog-manufacturing.jpg",
+      "image": "/images/ppt/slide10_img01.png",
       "date": "2025-09-08"
     },
     {
@@ -509,7 +518,7 @@
       "excerpt": "In most hotels, linen management is treated as a back-of-house function. Necessary, but operational. Something handled quietly behind the scenes.",
       "content": "In most hotels, linen management is treated as a back-of-house function. Necessary, but operational. Something handled quietly behind the scenes.\n\nBut linen quality, availability, and turnaround time directly shape guest experience — and guest experience directly shapes revenue.",
       "category": "Linen hygiene",
-      "image": "/images/blog-hotel-revenue.jpg",
+      "image": "/images/ppt/slide17_img00.jpg",
       "date": "2025-09-05"
     },
     {
@@ -519,7 +528,7 @@
       "excerpt": "India's most trusted hospitals are known for spotless corridors, advanced ICUs, and cutting-edge medical technology.",
       "content": "India's most trusted hospitals are known for spotless corridors, advanced ICUs, and cutting-edge medical technology.\n\nYet behind the scenes, hospital linen hygiene remains one of the most underestimated infection risks in healthcare operations.",
       "category": "Linen hygiene",
-      "image": "/images/blog-hospital-linen.jpg",
+      "image": "/images/ppt/slide13_img05.png",
       "date": "2025-08-29"
     },
     {
@@ -529,7 +538,7 @@
       "excerpt": "Every day, hotels and hospitals lose millions without even noticing. The culprit sits quietly behind the scenes — outdated laundry systems.",
       "content": "Every day, hotels and hospitals lose millions without even noticing. The culprit sits quietly behind the scenes — outdated laundry systems.\n\nHigher water bills, longer cycles, linen damage, and downtime during peak hours all add up to hidden operational losses.",
       "category": "Linen hygiene",
-      "image": "/images/blog-outdated-systems.jpg",
+      "image": "/images/ppt/slide11_img00.jpg",
       "date": "2025-08-19"
     }
   ],
@@ -578,7 +587,7 @@
             "Production Analysis",
             "Electricity, Water, Steam Analysis",
             "Cost Analysis Computation",
-            "Facility  Planning",
+            "Facility Planning",
             "Equipment analysis",
             "Location Analysis",
             "Plant Layout Design",
@@ -624,32 +633,33 @@
           ]
         }
       ]
-    }
+    },
+    "breadcrumb": "Company"
   },
   "sustainability": {
     "title": "Sustainability",
-    "intro": "Sustainability is not just a buzzword for us. It's how we design, build, and run every on-premise hotel laundry—lowering your cost per kg while shrinking water, energy, and chemical footprints, with proof you can audit. Impact at a glance: 40% reduction in water usage, 70% reduction in carbon emissions, 450+ million liters of water saved, and ~160 million kg of carbon cut across partner properties.",
-    "heroImage": "/images/sustainability-water.jpg",
+    "intro": "At Laundrex, sustainability is built into how we specify and supply commercial laundry equipment — prioritising lower energy and water consumption, durable machines, and efficient plant design for hotels, hospitals and industrial laundries across India.",
+    "heroImage": "/images/ppt/slide08_img07.jpg",
     "metrics": [
       {
-        "value": 40,
-        "suffix": "%",
-        "label": "reduction in water usage"
+        "value": 10,
+        "suffix": "+",
+        "label": "Years of industry experience"
       },
       {
-        "value": 70,
-        "suffix": "%",
-        "label": "reduction in carbon emissions"
+        "value": 12,
+        "suffix": "+",
+        "label": "Product categories"
       },
       {
-        "value": 450,
-        "suffix": "+ million liters",
-        "label": "of water saved"
+        "value": 51,
+        "suffix": "+",
+        "label": "Prestigious clients"
       },
       {
-        "value": 160,
-        "suffix": " million kg",
-        "label": "of carbon cut"
+        "value": 12,
+        "suffix": "+",
+        "label": "Pan-India service centres"
       }
     ],
     "initiatives": []
@@ -657,14 +667,15 @@
   "team": {
     "title": "Our Team",
     "intro": "",
-    "heroImage": "/images/hero.jpg",
+    "heroImage": "/images/ppt/slide08_img07.jpg",
     "members": []
   },
   "investors": {
     "title": "Our Investors",
     "intro": "",
     "highlights": [],
-    "partners": []
+    "partners": [],
+    "partnersTitle": "Our Partners"
   },
   "careers": {
     "title": "",
@@ -692,7 +703,13 @@
       "Vijayawada",
       "Visakhapatnam"
     ],
-    "heroImage": "/images/ppt/slide32_img03.png"
+    "heroImage": "/images/ppt/slide32_img03.png",
+    "breadcrumb": "Get in touch",
+    "getInTouchTitle": "Get in Touch",
+    "getInTouchSubtitle": "We're here to help with equipment, consultancy, and service.",
+    "sendMessageTitle": "Send a Message",
+    "sendMessageSubtitle": "Fill out the form and we'll respond promptly.",
+    "serviceCentresTitle": "Service Centres"
   },
   "footer": {
     "aboutText": "Laundrex — reliable partner in laundry & dry cleaning room solutions, supplying world-class equipment and consultancy across India.",
@@ -749,7 +766,7 @@
     "wakeUpTitle": "A Wake-Up Call !",
     "wakeUpParagraphs": [],
     "programTitle": "ReWeave 360",
-    "programDescription": "ReWeave 360 is India's first circular linen economy program by Quick Clean Laundry Solutions.",
+    "programDescription": "ReWeave 360 is India's first circular linen economy programme supported by Laundrex.",
     "howItWorksTitle": "How It Works",
     "steps": [],
     "benefitsTitle": "What Your Brand Gains",
@@ -807,8 +824,8 @@
       "id": "p8",
       "slug": "products-portfolio",
       "title": "Products Portfolio",
-      "shortDescription": "Introducing our Transferon series CBW System and series laundry machines which is the best in the industry. High standards of quality which is already proven in the market since a decade.",
-      "description": "Introducing our Transferon series CBW System and series laundry machines which is the best in the industry. High standards of quality which is already proven in the market since a decade.\n\nManufactured in one of the largest manufacturing plant in the world with the best technological advancement.\n\nSeries machines are “Best value for Money” due to it’s low energy consumption & low production cost.\n\nlaundry & dry cleaning equipment has wide installations in pan India.",
+      "shortDescription": "Introducing our Commercial CBW System and series laundry machines which is the best in the industry. High standards of quality which is already proven in the market since a decade.",
+      "description": "Introducing our Commercial CBW System and series laundry machines which is the best in the industry. High standards of quality which is already proven in the market since a decade.\n\nManufactured in one of the largest manufacturing plant in the world with the best technological advancement.\n\nSeries machines are “Best value for Money” due to it’s low energy consumption & low production cost.\n\nlaundry & dry cleaning equipment has wide installations in pan India.",
       "image": "/images/ppt/slide08_img07.jpg",
       "gallery": [
         "/images/ppt/slide08_img01.png",
@@ -818,7 +835,7 @@
         "/images/ppt/slide08_img07.jpg"
       ],
       "features": [
-        "Introducing our Transferon series CBW System and series laundry machines which is the best in the industry. High standards of quality which is already proven in the market since a decade.",
+        "Introducing our Commercial CBW System and series laundry machines which is the best in the industry. High standards of quality which is already proven in the market since a decade.",
         "Manufactured in one of the largest manufacturing plant in the world with the best technological advancement.",
         "Series machines are “Best value for Money” due to it’s low energy consumption & low production cost.",
         "laundry & dry cleaning equipment has wide installations in pan India."
@@ -859,9 +876,9 @@
     {
       "id": "p10",
       "slug": "continuous-batch-washer-cbw-1200-2000-kg-production-per-hour",
-      "title": "Continuous Batch Washer (CBW) – 1200 – 2000 Kg production per hour – Transferon",
+      "title": "Continuous Batch Washer (CBW) – 1200 – 2000 Kg production per hour",
       "shortDescription": "CBW loading capacity ranging from 50 Kg to 100 Kg.",
-      "description": "CBW loading capacity ranging from 50 Kg to 100 Kg.\n\nThe number of batches from 7 up to 20 compartments.\n\nThe Hydraulic Press capacity ranging from 36 Kg, to 100 Kg\n\nStandard Membrane pressure 35 bar or high pressure 50 bar.\n\nThe Batch Dryers as stand-alone   capacity ranging from 50 Kg to 200 Kg.\n\nThe deep chest Ironers size starts from diameter 1000-1200-1300 and 1600mm and the working width from 2000 to 4500 mm.",
+      "description": "CBW loading capacity ranging from 50 Kg to 100 Kg.\n\nThe number of batches from 7 up to 20 compartments.\n\nThe Hydraulic Press capacity ranging from 36 Kg, to 100 Kg\n\nStandard Membrane pressure 35 bar or high pressure 50 bar.\n\nThe Batch Dryers as stand-alone capacity ranging from 50 Kg to 200 Kg.\n\nThe deep chest Ironers size starts from diameter 1000-1200-1300 and 1600mm and the working width from 2000 to 4500 mm.",
       "image": "/images/ppt/slide10_img01.png",
       "gallery": [
         "/images/ppt/slide10_img01.png",
@@ -872,7 +889,7 @@
         "The number of batches from 7 up to 20 compartments.",
         "The Hydraulic Press capacity ranging from 36 Kg, to 100 Kg",
         "Standard Membrane pressure 35 bar or high pressure 50 bar.",
-        "The Batch Dryers as stand-alone   capacity ranging from 50 Kg to 200 Kg.",
+        "The Batch Dryers as stand-alone capacity ranging from 50 Kg to 200 Kg.",
         "The deep chest Ironers size starts from diameter 1000-1200-1300 and 1600mm and the working width from 2000 to 4500 mm."
       ],
       "category": "Commercial Laundry",
@@ -881,7 +898,7 @@
         "The number of batches from 7 up to 20 compartments.",
         "The Hydraulic Press capacity ranging from 36 Kg, to 100 Kg",
         "Standard Membrane pressure 35 bar or high pressure 50 bar.",
-        "The Batch Dryers as stand-alone   capacity ranging from 50 Kg to 200 Kg.",
+        "The Batch Dryers as stand-alone capacity ranging from 50 Kg to 200 Kg.",
         "The deep chest Ironers size starts from diameter 1000-1200-1300 and 1600mm and the working width from 2000 to 4500 mm."
       ]
     },
@@ -1044,18 +1061,18 @@
       "slug": "chest-ironer",
       "title": "Chest Ironer",
       "shortDescription": "Chest ironer is a high-speed ironer with the upper and lower chest heating. 800mm dia rollers ensures the quality of drying & ironing with the chest. Chests are made of mirror polished stainless steel",
-      "description": "Chest ironer is a high-speed ironer with the upper and lower chest heating. 800mm dia rollers ensures the quality of drying & ironing with the chest. Chests are made of mirror polished stainless steel. This high-speed ironer increases the productivity and finishing with reduced energy consumption. The precise structure of double chests, spring and heating proof felt ensure the rollers to keep enough elasticity and spring cushion. A highly sensitive hand protection board ensures ultimate safety in each phase of the ironing process.  Our frequency conversion speed adjustment system allows for a continual even flow of speed which brings more energy saving.",
+      "description": "Chest ironer is a high-speed ironer with the upper and lower chest heating. 800mm dia rollers ensures the quality of drying & ironing with the chest. Chests are made of mirror polished stainless steel. This high-speed ironer increases the productivity and finishing with reduced energy consumption. The precise structure of double chests, spring and heating proof felt ensure the rollers to keep enough elasticity and spring cushion. A highly sensitive hand protection board ensures ultimate safety in each phase of the ironing process. Our frequency conversion speed adjustment system allows for a continual even flow of speed which brings more energy saving.",
       "image": "/images/ppt/slide18_img07.jpg",
       "gallery": [
         "/images/ppt/slide18_img07.jpg",
         "/images/ppt/slide24_img04.png"
       ],
       "features": [
-        "Chest ironer is a high-speed ironer with the upper and lower chest heating. 800mm dia rollers ensures the quality of drying & ironing with the chest. Chests are made of mirror polished stainless steel. This high-speed ironer increases the productivity and finishing with reduced energy consumption. The precise structure of double chests, spring and heating proof felt ensure the rollers to keep enough elasticity and spring cushion. A highly sensitive hand protection board ensures ultimate safety in each phase of the ironing process.  Our frequency conversion speed adjustment system allows for a continual even flow of speed which brings more energy saving."
+        "Chest ironer is a high-speed ironer with the upper and lower chest heating. 800mm dia rollers ensures the quality of drying & ironing with the chest. Chests are made of mirror polished stainless steel. This high-speed ironer increases the productivity and finishing with reduced energy consumption. The precise structure of double chests, spring and heating proof felt ensure the rollers to keep enough elasticity and spring cushion. A highly sensitive hand protection board ensures ultimate safety in each phase of the ironing process. Our frequency conversion speed adjustment system allows for a continual even flow of speed which brings more energy saving."
       ],
       "category": "Commercial Laundry",
       "specs": [
-        "Chest ironer is a high-speed ironer with the upper and lower chest heating. 800mm dia rollers ensures the quality of drying & ironing with the chest. Chests are made of mirror polished stainless steel. This high-speed ironer increases the productivity and finishing with reduced energy consumption. The precise structure of double chests, spring and heating proof felt ensure the rollers to keep enough elasticity and spring cushion. A highly sensitive hand protection board ensures ultimate safety in each phase of the ironing process.  Our frequency conversion speed adjustment system allows for a continual even flow of speed which brings more energy saving."
+        "Chest ironer is a high-speed ironer with the upper and lower chest heating. 800mm dia rollers ensures the quality of drying & ironing with the chest. Chests are made of mirror polished stainless steel. This high-speed ironer increases the productivity and finishing with reduced energy consumption. The precise structure of double chests, spring and heating proof felt ensure the rollers to keep enough elasticity and spring cushion. A highly sensitive hand protection board ensures ultimate safety in each phase of the ironing process. Our frequency conversion speed adjustment system allows for a continual even flow of speed which brings more energy saving."
       ]
     },
     {
@@ -1132,7 +1149,7 @@
       "slug": "pressing-machines-portfolio",
       "title": "Pressing Machines Portfolio",
       "shortDescription": "Dry-cleaning Press",
-      "description": "Dry-cleaning Press\n\nLaundry  Press\n\nShirt Press\n\nTrouser Press\n\nMushroom Press\n\nCuff & Collar Press\n\nForm Finisher\n\n51” Laundry Press\n\n42” Laundry Press\n\nDry-clean Utility Press",
+      "description": "Dry-cleaning Press\n\nLaundry Press\n\nShirt Press\n\nTrouser Press\n\nMushroom Press\n\nCuff & Collar Press\n\nForm Finisher\n\n51” Laundry Press\n\n42” Laundry Press\n\nDry-clean Utility Press",
       "image": "/images/ppt/slide22_img06.jpg",
       "gallery": [
         "/images/ppt/slide22_img02.jpg",
@@ -1148,7 +1165,7 @@
       ],
       "features": [
         "Dry-cleaning Press",
-        "Laundry  Press",
+        "Laundry Press",
         "Shirt Press",
         "Trouser Press",
         "Mushroom Press",
@@ -1161,7 +1178,7 @@
       "category": "Commercial Laundry",
       "specs": [
         "Dry-cleaning Press",
-        "Laundry  Press",
+        "Laundry Press",
         "Shirt Press",
         "Trouser Press",
         "Mushroom Press",
@@ -1171,8 +1188,21 @@
   ],
   "productsPage": {
     "title": "Products Portfolio",
-    "intro": "Introducing our Transferon series CBW System and series laundry machines which is the best in the industry. High standards of quality which is already proven in the market since a decade.\n\nManufactured in one of the largest manufacturing plant in the world with the best technological advancement.\n\nSeries machines are “Best value for Money” due to it’s low energy consumption & low production cost.\n\nlaundry & dry cleaning equipment has wide installations in pan India.",
-    "heroImage": "/images/ppt/slide08_img07.jpg"
+    "intro": "Introducing our Commercial CBW System and series laundry machines which is the best in the industry. High standards of quality which is already proven in the market since a decade.\n\nManufactured in one of the largest manufacturing plant in the world with the best technological advancement.\n\nSeries machines are “Best value for Money” due to it’s low energy consumption & low production cost.\n\nlaundry & dry cleaning equipment has wide installations in pan India.",
+    "heroImage": "/images/ppt/slide08_img07.jpg",
+    "overviewEyebrow": "Overview",
+    "overviewTitle": "Product Range",
+    "machinesEyebrow": "Commercial Laundry",
+    "machinesTitle": "Machines & Equipment",
+    "machinesSubtitle": "Full specifications for each machine category.",
+    "enquireTitle": "Enquire About This Product",
+    "enquireText": "Contact Laundrex for specifications, pricing and installation support across India.",
+    "enquireCtaText": "Contact Us",
+    "specsHeading": "Specifications",
+    "featuresHeading": "Key Features",
+    "productImageAspectRatio": "4/3",
+    "productImageObjectFit": "cover",
+    "viewDetailsText": "View details"
   },
   "clients": [
     {
@@ -1382,22 +1412,10 @@
   ],
   "installationGallery": {
     "title": "Installations & Equipment Gallery",
-    "subtitle": "Pan India installations of Transferon CBW systems, washer extractors, ironers and complete laundry lines.",
+    "subtitle": "Pan India installations of CBW systems, washer extractors, ironers and complete laundry lines.",
     "images": [
       {
-        "src": "/images/ppt/slide23_img01.png",
-        "caption": ""
-      },
-      {
-        "src": "/images/ppt/slide23_img02.png",
-        "caption": ""
-      },
-      {
-        "src": "/images/ppt/slide23_img04.png",
-        "caption": ""
-      },
-      {
-        "src": "/images/ppt/slide23_img05.png",
+        "src": "/images/ppt/slide23_img09.png",
         "caption": ""
       },
       {
@@ -1405,47 +1423,7 @@
         "caption": ""
       },
       {
-        "src": "/images/ppt/slide23_img09.png",
-        "caption": ""
-      },
-      {
-        "src": "/images/ppt/slide24_img01.png",
-        "caption": ""
-      },
-      {
-        "src": "/images/ppt/slide24_img02.png",
-        "caption": ""
-      },
-      {
-        "src": "/images/ppt/slide24_img04.png",
-        "caption": ""
-      },
-      {
-        "src": "/images/ppt/slide24_img05.png",
-        "caption": ""
-      },
-      {
         "src": "/images/ppt/slide24_img09.png",
-        "caption": ""
-      },
-      {
-        "src": "/images/ppt/slide25_img01.png",
-        "caption": ""
-      },
-      {
-        "src": "/images/ppt/slide25_img02.png",
-        "caption": ""
-      },
-      {
-        "src": "/images/ppt/slide25_img04.png",
-        "caption": ""
-      },
-      {
-        "src": "/images/ppt/slide25_img05.png",
-        "caption": ""
-      },
-      {
-        "src": "/images/ppt/slide25_img08.jpg",
         "caption": ""
       },
       {
@@ -1453,23 +1431,7 @@
         "caption": ""
       },
       {
-        "src": "/images/ppt/slide26_img01.png",
-        "caption": ""
-      },
-      {
-        "src": "/images/ppt/slide26_img02.png",
-        "caption": ""
-      },
-      {
-        "src": "/images/ppt/slide26_img04.png",
-        "caption": ""
-      },
-      {
-        "src": "/images/ppt/slide26_img05.png",
-        "caption": ""
-      },
-      {
-        "src": "/images/ppt/slide26_img08.jpg",
+        "src": "/images/ppt/slide25_img08.jpg",
         "caption": ""
       },
       {
@@ -1477,19 +1439,7 @@
         "caption": ""
       },
       {
-        "src": "/images/ppt/slide27_img01.png",
-        "caption": ""
-      },
-      {
-        "src": "/images/ppt/slide27_img02.png",
-        "caption": ""
-      },
-      {
-        "src": "/images/ppt/slide27_img04.png",
-        "caption": ""
-      },
-      {
-        "src": "/images/ppt/slide27_img05.png",
+        "src": "/images/ppt/slide26_img08.jpg",
         "caption": ""
       },
       {
@@ -1497,43 +1447,63 @@
         "caption": ""
       },
       {
-        "src": "/images/ppt/slide28_img01.png",
-        "caption": ""
-      },
-      {
-        "src": "/images/ppt/slide28_img02.png",
-        "caption": ""
-      },
-      {
-        "src": "/images/ppt/slide28_img04.png",
-        "caption": ""
-      },
-      {
-        "src": "/images/ppt/slide28_img05.png",
-        "caption": ""
-      },
-      {
         "src": "/images/ppt/slide28_img07.jpg",
         "caption": ""
       },
       {
-        "src": "/images/ppt/slide29_img01.png",
-        "caption": ""
-      },
-      {
-        "src": "/images/ppt/slide29_img02.png",
-        "caption": ""
-      },
-      {
-        "src": "/images/ppt/slide29_img04.png",
-        "caption": ""
-      },
-      {
-        "src": "/images/ppt/slide29_img05.png",
-        "caption": ""
-      },
-      {
         "src": "/images/ppt/slide29_img07.jpg",
+        "caption": ""
+      },
+      {
+        "src": "/images/ppt/slide10_img01.png",
+        "caption": ""
+      },
+      {
+        "src": "/images/ppt/slide12_img02.png",
+        "caption": ""
+      },
+      {
+        "src": "/images/ppt/slide14_img00.jpg",
+        "caption": ""
+      },
+      {
+        "src": "/images/ppt/slide17_img00.jpg",
+        "caption": ""
+      },
+      {
+        "src": "/images/ppt/slide19_img06.jpg",
+        "caption": ""
+      },
+      {
+        "src": "/images/ppt/slide19_img02.jpg",
+        "caption": ""
+      },
+      {
+        "src": "/images/ppt/slide21_img00.jpg",
+        "caption": ""
+      },
+      {
+        "src": "/images/ppt/slide22_img06.jpg",
+        "caption": ""
+      },
+      {
+        "src": "/images/ppt/slide22_img05.jpg",
+        "caption": ""
+      },
+      {
+        "src": "/images/ppt/slide22_img16.jpg",
+        "caption": ""
+      },
+      {
+        "src": "/images/ppt/slide22_img03.jpg",
+        "caption": ""
+      },
+      {
+        "src": "/images/ppt/slide22_img04.jpg",
+        "caption": ""
+      },
+      {
+        "src": "/images/ppt/slide08_img07.jpg",
         "caption": ""
       }
     ]
@@ -1547,7 +1517,7 @@
         "image": "/images/ppt/slide22_img02.jpg"
       },
       {
-        "name": "Laundry  Press",
+        "name": "Laundry Press",
         "image": "/images/ppt/slide22_img03.jpg"
       },
       {
@@ -1626,5 +1596,119 @@
     "/images/ppt/media_image39.jpg",
     "/images/ppt/media_image40.jpg",
     "/images/ppt/media_image41.jpg"
-  ]
+  ],
+  "labels": {
+    "breadcrumbs": {
+      "company": "Company",
+      "contact": "Contact",
+      "products": "Products",
+      "solutions": "Solutions",
+      "getInTouch": "Get in touch",
+      "ourSolutions": "Our Solutions"
+    },
+    "home": {
+      "readMore": "Read More",
+      "viewProduct": "View Product",
+      "fullCatalogue": "Full Products Catalogue",
+      "machinesEyebrow": "Machines",
+      "clientsEyebrow": "Clients",
+      "heroImageAlt": "Commercial laundry equipment"
+    },
+    "solutions": {
+      "learnMore": "Learn more",
+      "benefitsHeading": "Key Benefits",
+      "partnerTitle": "Partner With Us",
+      "partnerText": "Every on-premise laundry is unique. Speak with our solutions team for a tailored proposal — equipment supply, consultancy, layout design and installation support across India.",
+      "contactCta": "Contact Us",
+      "keyPointsHeading": "Key Points"
+    },
+    "products": {
+      "viewDetails": "View details",
+      "enquireTitle": "Enquire About This Product",
+      "enquireText": "Contact Laundrex for specifications, pricing and installation support across India.",
+      "enquireCta": "Contact Us",
+      "specsHeading": "Specifications",
+      "featuresHeading": "Key Features"
+    },
+    "contact": {
+      "getInTouchTitle": "Get in Touch",
+      "getInTouchSubtitle": "We're here to help with equipment, consultancy, and service.",
+      "sendMessageTitle": "Send a Message",
+      "sendMessageSubtitle": "Fill out the form and we'll respond promptly.",
+      "serviceCentresTitle": "Service Centres",
+      "formName": "Name *",
+      "formEmail": "Email *",
+      "formPhone": "Phone",
+      "formPhonePlaceholder": "+91",
+      "formCompany": "Company",
+      "formMessage": "Message *",
+      "formSubmit": "Send Message",
+      "formSubmitting": "Sending...",
+      "formSuccess": "Thank you. We will respond within one business day.",
+      "formError": "Something went wrong. Please try again."
+    },
+    "newsletter": {
+      "namePlaceholder": "Your name",
+      "emailPlaceholder": "Your email",
+      "subscribe": "Subscribe",
+      "subscribing": "Subscribing...",
+      "successTitle": "Thank you for subscribing!",
+      "successText": "You'll receive our latest updates soon.",
+      "errorName": "Please enter your name.",
+      "errorEmail": "Please enter a valid email address.",
+      "errorGeneric": "Something went wrong. Please try again."
+    },
+    "whatsapp": {
+      "ariaLabel": "Chat on WhatsApp",
+      "modalTitle": "Chat on WhatsApp",
+      "modalSubtitle": "Enter your details to message us directly",
+      "nameLabel": "Full Name *",
+      "namePlaceholder": "Your full name",
+      "phoneLabel": "Phone Number *",
+      "phonePlaceholder": "+91 98765 43210",
+      "phoneError": "Enter a valid Indian mobile number (+91, 10 digits).",
+      "inquiryLabel": "Inquiry type",
+      "inquiryOptional": "(optional)",
+      "submit": "Start Chat on WhatsApp",
+      "submitting": "Opening WhatsApp...",
+      "inquiryOptions": [
+        {
+          "value": "",
+          "label": "General inquiry"
+        },
+        {
+          "value": "Laundry machines & equipment",
+          "label": "Laundry machines & equipment"
+        },
+        {
+          "value": "Dry cleaning solutions",
+          "label": "Dry cleaning solutions"
+        },
+        {
+          "value": "Consultancy & setup",
+          "label": "Consultancy & setup"
+        },
+        {
+          "value": "Service & maintenance",
+          "label": "Service & maintenance"
+        }
+      ]
+    },
+    "meta": {
+      "about": "About Us",
+      "contact": "Contact",
+      "products": "Products",
+      "solutions": "Solutions",
+      "news": "News & Media",
+      "sustainability": "Sustainability",
+      "financialPlanning": "Financial Planning",
+      "reweave360": "ReWeave 360",
+      "team": "Our Team",
+      "investors": "Investors",
+      "blog": "News & Insights",
+      "terms": "Terms of Service",
+      "privacy": "Privacy Policy",
+      "codeOfConduct": "Code of Conduct"
+    }
+  }
 }

@@ -39,7 +39,7 @@ export default function AdminLoginPage() {
           </div>
           <div>
             <h1 className="text-xl font-bold text-[#0c2340]">Admin Login</h1>
-            <p className="text-sm text-slate-500">Quick Clean Laundry Systems CMS</p>
+            <p className="text-sm text-slate-500">Laundrex CMS</p>
           </div>
         </div>
 

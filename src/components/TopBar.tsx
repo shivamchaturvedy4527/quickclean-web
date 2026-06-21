@@ -6,7 +6,7 @@ export function TopBar({ settings }: { settings: SiteSettings }) {
 
   return (
     <div className="border-b border-white/10 bg-primary text-xs text-gray-300">
-      <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-6 py-2 lg:px-8">
+      <div className="mx-auto flex max-w-[1380px] items-center justify-between gap-4 px-6 py-2 lg:px-8">
         <a
           href={`tel:${primaryPhone}`}
           className="flex min-w-0 items-center gap-1.5 transition-colors hover:text-white"

@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { Send } from "lucide-react";
+import { useLabels } from "@/context/LabelsContext";
 
 interface NewsletterFormProps {
   title: string;
@@ -10,6 +11,7 @@ interface NewsletterFormProps {
 }
 
 export function NewsletterForm({ title, subtitle, compact }: NewsletterFormProps) {
+  const nl = useLabels().newsletter;
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
@@ -19,11 +21,11 @@ export function NewsletterForm({ title, subtitle, compact }: NewsletterFormProps
     e.preventDefault();
     setError("");
     if (!name.trim()) {
-      setError("Please enter your name.");
+      setError(nl.errorName);
       return;
     }
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-      setError("Please enter a valid email address.");
+      setError(nl.errorEmail);
       return;
     }
     setStatus("loading");
@@ -38,15 +40,15 @@ export function NewsletterForm({ title, subtitle, compact }: NewsletterFormProps
       setEmail("");
     } else {
       setStatus("error");
-      setError("Something went wrong. Please try again.");
+      setError(nl.errorGeneric);
     }
   }
 
   if (status === "success") {
     return (
       <div className={`rounded-lg bg-accent/5 p-8 text-center ${compact ? "" : "border border-accent/10"}`}>
-        <p className="font-semibold text-gray-900">Thank you for subscribing!</p>
-        <p className="mt-2 text-sm text-gray-600">You&apos;ll receive our latest updates soon.</p>
+        <p className="font-semibold text-gray-900">{nl.successTitle}</p>
+        <p className="mt-2 text-sm text-gray-600">{nl.successText}</p>
       </div>
     );
   }
@@ -62,26 +64,22 @@ export function NewsletterForm({ title, subtitle, compact }: NewsletterFormProps
       <form onSubmit={handleSubmit} className={`${compact ? "" : "mt-6"} space-y-3`}>
         <input
           type="text"
-          placeholder="Your name"
+          placeholder={nl.namePlaceholder}
           value={name}
           onChange={(e) => setName(e.target.value)}
           className="input-field"
         />
         <input
           type="email"
-          placeholder="Your email"
+          placeholder={nl.emailPlaceholder}
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           className="input-field"
         />
         {error && <p className="text-sm text-red-600">{error}</p>}
-        <button
-          type="submit"
-          disabled={status === "loading"}
-          className="btn-secondary w-full disabled:opacity-60"
-        >
+        <button type="submit" disabled={status === "loading"} className="btn-secondary w-full disabled:opacity-60">
           <Send className="h-4 w-4" />
-          {status === "loading" ? "Subscribing..." : "Subscribe"}
+          {status === "loading" ? nl.subscribing : nl.subscribe}
         </button>
       </form>
     </div>

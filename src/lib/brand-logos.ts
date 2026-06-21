@@ -26,18 +26,14 @@ export function brandLogoUrlForIndex(index: number): string {
   return BRAND_LOGO_CDN[index % BRAND_LOGO_COUNT];
 }
 
-/** Prefer CDN for /images/brands/N.jpg paths so logos load on production. */
+/** Prefer local brand assets; CDN is fallback only when local path is missing. */
 export function resolveBrandLogoUrl(image: string, index = 0): string {
   if (image.startsWith("http://") || image.startsWith("https://")) {
     return image;
   }
 
-  const match = image.match(/\/brands\/(\d+)\.jpg$/i);
-  if (match) {
-    const slot = parseInt(match[1], 10) - 1;
-    if (slot >= 0 && slot < BRAND_LOGO_COUNT) {
-      return BRAND_LOGO_CDN[slot];
-    }
+  if (image.startsWith("/images/brands/")) {
+    return image;
   }
 
   return brandLogoUrlForIndex(index);

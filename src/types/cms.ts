@@ -25,6 +25,10 @@ export interface Solution {
   priceFromUSD: number;
   priceFromEUR: number;
   priceFromAED: number;
+  benefitsHeading?: string;
+  sidebarTitle?: string;
+  sidebarText?: string;
+  breadcrumb?: string;
 }
 
 export interface Product {
@@ -38,6 +42,15 @@ export interface Product {
   features: string[];
   specs?: string[];
   category?: string;
+  imageAspectRatio?: string;
+  imageObjectFit?: "cover" | "contain";
+  heroImageAlt?: string;
+  enquireTitle?: string;
+  enquireText?: string;
+  enquireCtaText?: string;
+  specsHeading?: string;
+  featuresHeading?: string;
+  breadcrumb?: string;
 }
 
 export interface GalleryImage {
@@ -71,6 +84,19 @@ export interface ProductsPageContent {
   title: string;
   intro: string;
   heroImage?: string;
+  overviewEyebrow?: string;
+  overviewTitle?: string;
+  machinesEyebrow?: string;
+  machinesTitle?: string;
+  machinesSubtitle?: string;
+  enquireTitle?: string;
+  enquireText?: string;
+  enquireCtaText?: string;
+  specsHeading?: string;
+  featuresHeading?: string;
+  productImageAspectRatio?: string;
+  productImageObjectFit?: "cover" | "contain";
+  viewDetailsText?: string;
 }
 
 export interface TeamMember {
@@ -157,6 +183,11 @@ export interface SiteSettings {
   businessHours: string;
   headerCtaText: string;
   headerCtaLink: string;
+  logoMaxWidth?: number;
+  logoMaxHeight?: number;
+  mapLatitude?: number;
+  mapLongitude?: number;
+  mapZoom?: number;
 }
 
 export interface WaterComparison {
@@ -165,10 +196,14 @@ export interface WaterComparison {
   industryDisplayValue: number;
   industryValue: number;
   industryUnit: string;
-  qcLabel: string;
-  qcDisplayValue: number;
-  qcValue: number;
-  qcUnit: string;
+  qcLabel?: string;
+  qcDisplayValue?: number;
+  qcValue?: number;
+  qcUnit?: string;
+  laundrexLabel: string;
+  laundrexDisplayValue: number;
+  laundrexValue: number;
+  laundrexUnit: string;
   monthlySavedLabel: string;
   monthlySaved: number;
   yearlySavedLabel: string;
@@ -184,6 +219,9 @@ export interface HomeContent {
   heroSecondaryCtaText: string;
   heroSecondaryCtaLink: string;
   heroImage: string;
+  heroImages?: string[];
+  /** Auto-slide interval in seconds (default 5). */
+  heroSlideInterval?: number;
   stats: StatItem[];
   linenWashedLabel: string;
   linenWashedValue: number;
@@ -212,8 +250,15 @@ export interface HomeContent {
   newsletterSubtitle: string;
   productsTitle?: string;
   productsSubtitle?: string;
+  productsVideoUrl?: string;
   companyProfile?: string;
   heroEyebrow?: string;
+  heroFeatures?: HeroFeatureItem[];
+}
+
+export interface HeroFeatureItem {
+  line1: string;
+  line2: string;
 }
 
 export interface FooterContent {
@@ -289,6 +334,105 @@ export interface FinancialPlanningContent {
   sections: { title: string; content: string }[];
 }
 
+export interface WhatsAppInquiryOption {
+  value: string;
+  label: string;
+}
+
+export interface SiteLabels {
+  breadcrumbs: {
+    company: string;
+    contact: string;
+    products: string;
+    solutions: string;
+    getInTouch: string;
+    ourSolutions: string;
+  };
+  home: {
+    readMore: string;
+    viewProduct: string;
+    fullCatalogue: string;
+    machinesEyebrow: string;
+    clientsEyebrow: string;
+    heroImageAlt: string;
+  };
+  solutions: {
+    learnMore: string;
+    benefitsHeading: string;
+    partnerTitle: string;
+    partnerText: string;
+    contactCta: string;
+    keyPointsHeading: string;
+  };
+  products: {
+    viewDetails: string;
+    enquireTitle: string;
+    enquireText: string;
+    enquireCta: string;
+    specsHeading: string;
+    featuresHeading: string;
+  };
+  contact: {
+    getInTouchTitle: string;
+    getInTouchSubtitle: string;
+    sendMessageTitle: string;
+    sendMessageSubtitle: string;
+    serviceCentresTitle: string;
+    formName: string;
+    formEmail: string;
+    formPhone: string;
+    formPhonePlaceholder: string;
+    formCompany: string;
+    formMessage: string;
+    formSubmit: string;
+    formSubmitting: string;
+    formSuccess: string;
+    formError: string;
+  };
+  newsletter: {
+    namePlaceholder: string;
+    emailPlaceholder: string;
+    subscribe: string;
+    subscribing: string;
+    successTitle: string;
+    successText: string;
+    errorName: string;
+    errorEmail: string;
+    errorGeneric: string;
+  };
+  whatsapp: {
+    ariaLabel: string;
+    modalTitle: string;
+    modalSubtitle: string;
+    nameLabel: string;
+    namePlaceholder: string;
+    phoneLabel: string;
+    phonePlaceholder: string;
+    phoneError: string;
+    inquiryLabel: string;
+    inquiryOptional: string;
+    submit: string;
+    submitting: string;
+    inquiryOptions: WhatsAppInquiryOption[];
+  };
+  meta: {
+    about: string;
+    contact: string;
+    products: string;
+    solutions: string;
+    news: string;
+    sustainability: string;
+    financialPlanning: string;
+    reweave360: string;
+    team: string;
+    investors: string;
+    blog: string;
+    terms: string;
+    privacy: string;
+    codeOfConduct: string;
+  };
+}
+
 export interface LegalPageContent {
   title: string;
   lastUpdated: string;
@@ -314,6 +458,7 @@ export interface CMSData {
     missionTitle: string;
     visionTitle: string;
     journeyTitle: string;
+    breadcrumb?: string;
     expertSolutions?: {
       title: string;
       sections: { title: string; items: string[] }[];
@@ -337,6 +482,7 @@ export interface CMSData {
     intro: string;
     highlights: string[];
     partners: InvestorPartner[];
+    partnersTitle?: string;
   };
   careers: {
     title: string;
@@ -352,6 +498,12 @@ export interface CMSData {
     mapEmbed: string;
     heroImage?: string;
     serviceCentres?: string[];
+    breadcrumb?: string;
+    getInTouchTitle?: string;
+    getInTouchSubtitle?: string;
+    sendMessageTitle?: string;
+    sendMessageSubtitle?: string;
+    serviceCentresTitle?: string;
   };
   products: Product[];
   productsPage: ProductsPageContent;
@@ -370,4 +522,5 @@ export interface CMSData {
   contactSubmissions: ContactSubmission[];
   newsletterSubmissions: NewsletterSubmission[];
   pptMediaArchive?: string[];
+  labels: SiteLabels;
 }

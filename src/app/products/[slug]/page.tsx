@@ -35,6 +35,8 @@ export default async function ProductDetailPage({ params }: Props) {
   const gallery = product.gallery?.length ? product.gallery : [product.image];
   const specs = product.specs?.length ? product.specs : product.features;
   const isPressingPortfolio = product.slug === "pressing-machines-portfolio";
+  const page = cms.productsPage;
+  const { labels } = cms;
 
   return (
     <SiteLayout>
@@ -42,7 +44,7 @@ export default async function ProductDetailPage({ params }: Props) {
         title={product.title}
         subtitle={product.shortDescription}
         image={product.image}
-        breadcrumb="Products"
+        breadcrumb={product.breadcrumb ?? labels.breadcrumbs.products}
       />
 
       <section className="section-pad">
@@ -60,7 +62,9 @@ export default async function ProductDetailPage({ params }: Props) {
               {specs.length > 0 && (
                 <>
                   <h2 className="mt-10 text-2xl font-bold tracking-tight text-primary">
-                    {product.category === "Commercial Laundry" ? "Specifications" : "Key Features"}
+                    {product.category === "Commercial Laundry"
+                      ? (product.specsHeading ?? page.specsHeading ?? labels.products.specsHeading)
+                      : (product.featuresHeading ?? page.featuresHeading ?? labels.products.featuresHeading)}
                   </h2>
                   <ul className="mt-5 space-y-3">
                     {specs.map((feature) => (
@@ -74,15 +78,17 @@ export default async function ProductDetailPage({ params }: Props) {
               )}
             </div>
             <div className="card h-fit p-6 lg:sticky lg:top-24">
-              <h3 className="text-lg font-bold text-primary">Enquire About This Product</h3>
+              <h3 className="text-lg font-bold text-primary">
+                {product.enquireTitle ?? page.enquireTitle ?? labels.products.enquireTitle}
+              </h3>
               <p className="mt-3 text-sm leading-relaxed text-gray-600">
-                Contact Laundrex for specifications, pricing and installation support across India.
+                {product.enquireText ?? page.enquireText ?? labels.products.enquireText}
               </p>
               {product.category && (
                 <p className="mt-4 text-xs font-bold uppercase tracking-wider text-accent">{product.category}</p>
               )}
               <Link href="/contact-us" className="btn-primary mt-6 w-full">
-                Contact Us <ArrowRight className="h-4 w-4" />
+                {product.enquireCtaText ?? page.enquireCtaText ?? labels.products.enquireCta} <ArrowRight className="h-4 w-4" />
               </Link>
             </div>
           </div>

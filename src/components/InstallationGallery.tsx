@@ -27,16 +27,17 @@ export function InstallationGallery({ title, subtitle, images }: InstallationGal
         </SectionReveal>
         <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           {images.map((item, i) => (
-            <SectionReveal key={item.src} delay={(i % 4) * 0.05}>
+            <SectionReveal key={`${item.src}-${i}`} delay={(i % 4) * 0.05}>
               <button
                 type="button"
                 onClick={() => setLightbox(i)}
-                className="group relative aspect-[4/3] w-full overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-slate-200/60 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:ring-slate-300"
+                className="group relative aspect-[4/3] w-full overflow-hidden rounded-2xl bg-slate-100 shadow-sm ring-1 ring-slate-200/60 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:ring-slate-300"
               >
                 <CmsImage
                   src={item.src}
                   alt={item.caption || `Installation ${i + 1}`}
                   fill
+                  priority={i < 8}
                   sizes="(max-width: 768px) 50vw, 25vw"
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
                 />

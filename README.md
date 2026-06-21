@@ -63,11 +63,13 @@ All content is driven by `data/cms.json` and editable via `/admin` dashboard tab
 |----------|-------------|
 | `ADMIN_PASSWORD` | Admin login password (default: `QuickClean@2026`) |
 | `CONTACT_EMAIL_TO` | Optional email for contact form notifications |
+| `BLOB_READ_WRITE_TOKEN` | Auto-set when Vercel Blob store is linked to the project |
 
 ## CMS Storage
 
 - **Local development**: Reads/writes `data/cms.json`
-- **Vercel production**: Writes to `/tmp` (per-instance; commit `cms.json` changes for persistence across deploys)
+- **Vercel production**: Persists to **Vercel Blob** (`cms/cms.json`) when `BLOB_READ_WRITE_TOKEN` is set (linked via Vercel Blob store). Admin saves apply immediately on the live site.
+- **Fallback (no blob token)**: Temporary `/tmp` only — changes do not survive redeploys.
 - **Hostinger Node.js**: Full read/write — see [HOSTINGER_DEPLOY.md](./HOSTINGER_DEPLOY.md)
 
 ## Scripts

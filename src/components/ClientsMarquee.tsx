@@ -43,13 +43,15 @@ function BrandLogoImg({
   src,
   alt,
   fallbackIndex,
+  localSrc,
 }: {
   src: string;
   alt: string;
   fallbackIndex: number;
+  localSrc: string;
 }) {
-  const fallback = brandLogoUrlForIndex(fallbackIndex);
-  const [currentSrc, setCurrentSrc] = useState(src);
+  const cdnFallback = brandLogoUrlForIndex(fallbackIndex);
+  const [currentSrc, setCurrentSrc] = useState(localSrc || src);
 
   return (
     <img
@@ -59,9 +61,13 @@ function BrandLogoImg({
       height={56}
       loading="lazy"
       decoding="async"
-      className="max-h-12 w-auto object-contain opacity-60 grayscale transition-all duration-300 group-hover:opacity-100 group-hover:grayscale-0 sm:max-h-14"
+      className="max-h-12 w-auto object-contain opacity-100 sm:max-h-14"
       onError={() => {
-        if (currentSrc !== fallback) setCurrentSrc(fallback);
+        if (localSrc && currentSrc === localSrc && cdnFallback !== localSrc) {
+          setCurrentSrc(cdnFallback);
+          return;
+        }
+        if (currentSrc !== cdnFallback) setCurrentSrc(cdnFallback);
       }}
     />
   );
@@ -81,6 +87,7 @@ function MarqueeRow({
       <div className={`marquee-track gap-16 px-4 sm:gap-20 ${reverse ? "marquee-reverse" : ""}`}>
         {loop.map((item, index) => {
           const brandIndex = index % items.length;
+          const localSrc = item.image.startsWith("/images/brands/") ? item.image : "";
           const src = resolveBrandLogoUrl(item.image, brandIndex);
           return (
             <div
@@ -88,7 +95,7 @@ function MarqueeRow({
               className="group flex h-20 w-36 shrink-0 items-center justify-center sm:w-40"
               title={item.name}
             >
-              <BrandLogoImg src={src} alt={item.name} fallbackIndex={brandIndex} />
+              <BrandLogoImg src={src} alt={item.name} fallbackIndex={brandIndex} localSrc={localSrc} />
             </div>
           );
         })}
