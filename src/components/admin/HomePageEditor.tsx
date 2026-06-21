@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useRef, useState } from "react";
 import { Plus, Trash2 } from "lucide-react";
 import type { BrandLogo, HomeContent, InstallationGalleryContent, SiteLabels, Testimonial } from "@/types/cms";
 import { GalleryEditor } from "./GalleryEditor";
@@ -44,12 +45,68 @@ export function HomePageEditor({
 }) {
   const patch = (p: Partial<HomeContent>) => onHomeChange({ ...home, ...p });
   const gallery = installationGallery ?? { title: "", subtitle: "", images: [] };
+  const [videoImportState, setVideoImportState] = useState<"idle" | "importing" | "done" | "error">("idle");
+  const [videoImportMessage, setVideoImportMessage] = useState("");
+  const lastImportedRef = useRef(home.productsVideoSourceUrl ?? "");
   const heroImages =
     home.heroImages?.length ? home.heroImages : home.heroImage ? [home.heroImage] : [];
 
   const setHeroImages = (next: string[]) => {
     patch({ heroImages: next, heroImage: next[0] ?? "" });
   };
+
+  useEffect(() => {
+    const videoUrl = (home.productsVideoUrl ?? "").trim();
+    const isYoutube = /youtu\.be|youtube\.com/i.test(videoUrl);
+    if (!isYoutube || !videoUrl || videoUrl === lastImportedRef.current) return;
+
+    const timeoutId = setTimeout(async () => {
+      setVideoImportState("importing");
+      setVideoImportMessage("YouTube video download ho raha hai...");
+      try {
+        const res = await fetch("/api/admin/import-video", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ url: videoUrl }),
+        });
+        const data = (await res.json().catch(() => ({}))) as { url?: string; error?: string };
+        if (!res.ok || !data.url) {
+          throw new Error(data.error ?? "Import failed");
+        }
+        patch({ productsVideoFileUrl: data.url, productsVideoSourceUrl: videoUrl });
+        lastImportedRef.current = videoUrl;
+        setVideoImportState("done");
+        setVideoImportMessage("Video download ho gaya aur player pe set ho gaya.");
+      } catch (error) {
+        setVideoImportState("error");
+        setVideoImportMessage(error instanceof Error ? error.message : "Video import failed");
+      }
+    }, 1200);
+
+    return () => clearTimeout(timeoutId);
+  }, [home.productsVideoUrl]);
+
+  async function handleVideoFileUpload(fileList: FileList | null) {
+    const file = fileList?.[0];
+    if (!file) return;
+    setVideoImportState("importing");
+    setVideoImportMessage("Video upload ho raha hai...");
+    try {
+      const body = new FormData();
+      body.append("file", file);
+      const res = await fetch("/api/admin/upload-video", { method: "POST", body });
+      const data = (await res.json().catch(() => ({}))) as { url?: string; error?: string };
+      if (!res.ok || !data.url) {
+        throw new Error(data.error ?? "Video upload failed");
+      }
+      patch({ productsVideoFileUrl: data.url, productsVideoSourceUrl: "manual" });
+      setVideoImportState("done");
+      setVideoImportMessage("Video upload ho gaya aur player pe set ho gaya.");
+    } catch (error) {
+      setVideoImportState("error");
+      setVideoImportMessage(error instanceof Error ? error.message : "Video upload failed");
+    }
+  }
 
   return (
     <div className="space-y-8">
@@ -251,7 +308,28 @@ export function HomePageEditor({
         <Field label="Solutions Card Link Text" value={homeLabels.readMore} onChange={(readMore) => onHomeLabelsChange({ ...homeLabels, readMore })} />
         <Field label="Products Section Title" value={home.productsTitle ?? ""} onChange={(productsTitle) => patch({ productsTitle })} />
         <Field label="Products Section Subtitle" value={home.productsSubtitle ?? ""} onChange={(productsSubtitle) => patch({ productsSubtitle })} rows={2} />
-        <Field label="Products YouTube Video URL" value={home.productsVideoUrl ?? ""} onChange={(productsVideoUrl) => patch({ productsVideoUrl })} hint="Ager URL hai toh subtitle k neeche 'Watch Video' button dikhega" />
+        <Field label="Products YouTube Video URL" value={home.productsVideoUrl ?? ""} onChange={(productsVideoUrl) => patch({ productsVideoUrl })} hint="YouTube link dalte hi video auto-download hokar footer ke upar player me show hoga" />
+        <div className="rounded-lg border border-slate-200 bg-slate-50 p-3">
+          <label className="block text-sm font-semibold text-slate-800">Products Video File (manual upload)</label>
+          <p className="mt-0.5 text-xs text-slate-500">Agar direct video file deni ho to yahan upload karo (MP4 / WebM / Ogg)</p>
+          <input
+            type="file"
+            accept="video/mp4,video/webm,video/ogg"
+            onChange={(e) => {
+              void handleVideoFileUpload(e.target.files);
+              e.target.value = "";
+            }}
+            className="mt-2 block w-full rounded-md border border-slate-300 px-3 py-2 text-sm"
+          />
+          {home.productsVideoFileUrl && (
+            <p className="mt-2 break-all text-xs text-slate-600">Current video: {home.productsVideoFileUrl}</p>
+          )}
+          {videoImportState !== "idle" && (
+            <p className={`mt-2 text-xs ${videoImportState === "error" ? "text-red-600" : "text-emerald-700"}`}>
+              {videoImportMessage}
+            </p>
+          )}
+        </div>
         <Field label="Products Eyebrow Label" value={homeLabels.machinesEyebrow} onChange={(machinesEyebrow) => onHomeLabelsChange({ ...homeLabels, machinesEyebrow })} />
         <Field label="View Product Link Text" value={homeLabels.viewProduct} onChange={(viewProduct) => onHomeLabelsChange({ ...homeLabels, viewProduct })} />
         <Field label="Full Catalogue Button Text" value={homeLabels.fullCatalogue} onChange={(fullCatalogue) => onHomeLabelsChange({ ...homeLabels, fullCatalogue })} />

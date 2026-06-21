@@ -12,7 +12,7 @@ type ImageGalleryCarouselProps = {
 };
 
 export function ImageGalleryCarousel({ images, alt, className }: ImageGalleryCarouselProps) {
-  const gallery = images.filter(Boolean);
+  const gallery = Array.from(new Set(images.map((image) => image.trim()).filter(Boolean)));
   const [index, setIndex] = useState(0);
 
   if (!gallery.length) return null;

@@ -251,6 +251,8 @@ export interface HomeContent {
   productsTitle?: string;
   productsSubtitle?: string;
   productsVideoUrl?: string;
+  productsVideoFileUrl?: string;
+  productsVideoSourceUrl?: string;
   companyProfile?: string;
   heroEyebrow?: string;
   heroFeatures?: HeroFeatureItem[];

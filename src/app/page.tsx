@@ -46,6 +46,7 @@ export default async function HomePage() {
   const { home, solutions, testimonials, brands, blog, products, installationGallery, pressingMachines, labels } = cms;
   const machineProducts = products.filter((p) => p.category === "Commercial Laundry");
   const stripVideoUrl = home.productsVideoUrl || home.videoUrl;
+  const stripVideoFileUrl = home.productsVideoFileUrl;
   const stripVideoEmbedUrl = toYouTubeEmbedUrl(stripVideoUrl);
 
   return (
@@ -283,7 +284,16 @@ export default async function HomePage() {
         <Container>
           <SectionReveal>
             <p className="text-lg text-gray-300">{cms.settings.tagline}</p>
-            {stripVideoEmbedUrl ? (
+            {stripVideoFileUrl ? (
+              <div className="mx-auto mt-6 max-w-4xl overflow-hidden rounded-2xl border border-white/20 bg-black/30 p-3">
+                <video
+                  src={stripVideoFileUrl}
+                  controls
+                  preload="metadata"
+                  className="w-full rounded-xl"
+                />
+              </div>
+            ) : stripVideoEmbedUrl ? (
               <div className="mx-auto mt-6 max-w-4xl overflow-hidden rounded-2xl border border-white/20 bg-black/30 p-3">
                 <div className="relative aspect-video overflow-hidden rounded-xl">
                   <iframe

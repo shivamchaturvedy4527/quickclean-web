@@ -32,7 +32,9 @@ export default async function ProductDetailPage({ params }: Props) {
 
   if (!product) notFound();
 
-  const gallery = product.gallery?.length ? product.gallery : [product.image];
+  const gallery = Array.from(
+    new Set([product.image, ...(product.gallery ?? [])].map((src) => src.trim()).filter(Boolean))
+  );
   const specs = product.specs?.length ? product.specs : product.features;
   const isPressingPortfolio = product.slug === "pressing-machines-portfolio";
   const page = cms.productsPage;

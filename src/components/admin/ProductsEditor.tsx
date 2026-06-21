@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useMemo, useRef, useState } from "react";
 import { ChevronDown, ChevronUp, ExternalLink, Plus, Trash2 } from "lucide-react";
 import type { PressingMachinesContent, Product, ProductsPageContent } from "@/types/cms";
 import { ImageFieldEditor } from "./ImageFieldEditor";
@@ -50,6 +50,9 @@ export function ProductsEditor({
   const [selectedId, setSelectedId] = useState(products[0]?.id ?? "");
   const [openPage, setOpenPage] = useState(true);
   const [openPressing, setOpenPressing] = useState(false);
+  const [galleryUploading, setGalleryUploading] = useState(false);
+  const [galleryUploadError, setGalleryUploadError] = useState("");
+  const multiUploadRef = useRef<HTMLInputElement>(null);
 
   const selected = useMemo(
     () => products.find((p) => p.id === selectedId) ?? products[0],
@@ -66,6 +69,43 @@ export function ProductsEditor({
   const updateProduct = (patch: Partial<Product>) => {
     onProductsChange(products.map((p) => (p.id === selected.id ? { ...p, ...patch } : p)));
   };
+
+  async function uploadMultipleGalleryImages(files: FileList | null) {
+    if (!files?.length) return;
+
+    setGalleryUploading(true);
+    setGalleryUploadError("");
+
+    const uploadedUrls: string[] = [];
+    let failedCount = 0;
+
+    for (const file of Array.from(files)) {
+      try {
+        const body = new FormData();
+        body.append("file", file);
+        const res = await fetch("/api/admin/upload", { method: "POST", body });
+        const data = (await res.json().catch(() => ({}))) as { url?: string; error?: string };
+        if (!res.ok || !data.url) {
+          failedCount += 1;
+          continue;
+        }
+        uploadedUrls.push(data.url);
+      } catch {
+        failedCount += 1;
+      }
+    }
+
+    if (uploadedUrls.length > 0) {
+      const merged = Array.from(new Set([...(selected.gallery ?? []), ...uploadedUrls].filter(Boolean)));
+      updateProduct({ gallery: merged });
+    }
+
+    if (failedCount > 0) {
+      setGalleryUploadError(`${failedCount} image upload failed. Baaki images add ho gayi.`);
+    }
+
+    setGalleryUploading(false);
+  }
 
   return (
     <div className="space-y-8">
@@ -120,14 +160,36 @@ export function ProductsEditor({
         <div className="space-y-3">
           <div className="flex items-center justify-between">
             <label className="block text-sm font-semibold text-slate-800">Additional Gallery Images</label>
-            <button
-              type="button"
-              onClick={() => updateProduct({ gallery: [...(selected.gallery ?? []), ""] })}
-              className="inline-flex items-center gap-1 rounded-lg bg-accent px-3 py-1.5 text-sm text-white"
-            >
-              <Plus className="h-4 w-4" /> Add Image
-            </button>
+            <div className="flex items-center gap-2">
+              <button
+                type="button"
+                onClick={() => multiUploadRef.current?.click()}
+                disabled={galleryUploading}
+                className="inline-flex items-center gap-1 rounded-lg border border-accent px-3 py-1.5 text-sm text-accent disabled:opacity-60"
+              >
+                <Plus className="h-4 w-4" /> {galleryUploading ? "Uploading..." : "Upload Multiple"}
+              </button>
+              <button
+                type="button"
+                onClick={() => updateProduct({ gallery: [...(selected.gallery ?? []), ""] })}
+                className="inline-flex items-center gap-1 rounded-lg bg-accent px-3 py-1.5 text-sm text-white"
+              >
+                <Plus className="h-4 w-4" /> Add Image
+              </button>
+            </div>
           </div>
+          <input
+            ref={multiUploadRef}
+            type="file"
+            accept="image/jpeg,image/png,image/webp,image/gif,image/svg+xml"
+            multiple
+            className="hidden"
+            onChange={(e) => {
+              void uploadMultipleGalleryImages(e.target.files);
+              e.target.value = "";
+            }}
+          />
+          {galleryUploadError && <p className="text-xs text-red-600">{galleryUploadError}</p>}
           {(selected.gallery ?? []).length === 0 && (
             <p className="text-xs text-slate-500">Koi gallery images nahi — sirf main photo show hoga</p>
           )}
