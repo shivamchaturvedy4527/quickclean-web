@@ -16,6 +16,15 @@ export function Footer({ navigation, settings, footer }: FooterProps) {
     navigation.find((n) => n.label === "Our Solutions" || n.label === "Solutions")?.children ?? [];
   const company = navigation.find((n) => n.label === "Company")?.children ?? [];
   const primaryPhone = settings.contactPhone.replace(/\s/g, "").split("/")[0];
+  const hasMapCoordinates =
+    typeof settings.mapLatitude === "number" && typeof settings.mapLongitude === "number";
+  const mapZoom = settings.mapZoom ?? 15;
+  const mapsUrl = hasMapCoordinates
+    ? `https://www.google.com/maps/search/?api=1&query=${settings.mapLatitude},${settings.mapLongitude}`
+    : "";
+  const mapsEmbedUrl = hasMapCoordinates
+    ? `https://www.google.com/maps?q=${settings.mapLatitude},${settings.mapLongitude}&z=${mapZoom}&output=embed`
+    : "";
 
   return (
     <footer className="relative mt-auto overflow-hidden gradient-primary text-gray-300">
@@ -94,9 +103,9 @@ export function Footer({ navigation, settings, footer }: FooterProps) {
             <ul className="space-y-4 text-sm">
               <li className="flex gap-3">
                 <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-accent-bright" />
-                {settings.mapLatitude && settings.mapLongitude ? (
+                {hasMapCoordinates ? (
                   <a
-                    href={`https://maps.google.com/?q=${settings.mapLatitude},${settings.mapLongitude}`}
+                    href={mapsUrl}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="leading-relaxed text-gray-400 transition-colors hover:text-accent-bright hover:underline"
@@ -140,6 +149,17 @@ export function Footer({ navigation, settings, footer }: FooterProps) {
                 </a>
               </li>
             </ul>
+            {hasMapCoordinates && (
+              <div className="mt-4 overflow-hidden rounded-xl border border-white/10 bg-black/20">
+                <iframe
+                  title="Office location map"
+                  src={mapsEmbedUrl}
+                  className="h-44 w-full"
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                />
+              </div>
+            )}
           </div>
         </div>
 
