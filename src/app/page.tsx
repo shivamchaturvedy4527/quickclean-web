@@ -209,6 +209,7 @@ export default async function HomePage() {
         <InstallationGallery
           title={installationGallery.title}
           subtitle={installationGallery.subtitle}
+          videoUrl={stripVideoUrl}
           images={installationGallery.images}
         />
       )}

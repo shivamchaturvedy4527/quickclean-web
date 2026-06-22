@@ -11,10 +11,11 @@ import type { GalleryImage } from "@/types/cms";
 type InstallationGalleryProps = {
   title: string;
   subtitle?: string;
+  videoUrl?: string;
   images: GalleryImage[];
 };
 
-export function InstallationGallery({ title, subtitle, images }: InstallationGalleryProps) {
+export function InstallationGallery({ title, subtitle, videoUrl, images }: InstallationGalleryProps) {
   const [lightbox, setLightbox] = useState<number | null>(null);
 
   if (!images.length) return null;
@@ -23,7 +24,19 @@ export function InstallationGallery({ title, subtitle, images }: InstallationGal
     <section className="section-alt section-pad">
       <Container>
         <SectionReveal>
-          <SectionHeading title={title} subtitle={subtitle} />
+          <div className="text-center">
+            <SectionHeading title={title} subtitle={subtitle} />
+            {videoUrl && (
+              <a
+                href={videoUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-4 inline-flex text-sm font-semibold text-accent underline underline-offset-4 transition-colors hover:text-primary"
+              >
+                Watch Video
+              </a>
+            )}
+          </div>
         </SectionReveal>
         <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           {images.map((item, i) => (
