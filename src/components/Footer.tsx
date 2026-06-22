@@ -18,13 +18,17 @@ export function Footer({ navigation, settings, footer }: FooterProps) {
   const primaryPhone = settings.contactPhone.replace(/\s/g, "").split("/")[0];
   const hasMapCoordinates =
     typeof settings.mapLatitude === "number" && typeof settings.mapLongitude === "number";
-  const mapZoom = settings.mapZoom ?? 15;
-  const mapsUrl = hasMapCoordinates
-    ? `https://www.google.com/maps/search/?api=1&query=${settings.mapLatitude},${settings.mapLongitude}`
-    : "";
+  const mapZoom = settings.mapZoom ?? 17;
+  const mapAddress = [settings.addressLine1, settings.addressLine2, settings.city, settings.country]
+    .filter(Boolean)
+    .join(", ");
+  const mapQuery = hasMapCoordinates
+    ? `${settings.mapLatitude},${settings.mapLongitude}`
+    : mapAddress;
+  const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(mapQuery)}`;
   const mapsEmbedUrl = hasMapCoordinates
     ? `https://www.google.com/maps?q=${settings.mapLatitude},${settings.mapLongitude}&z=${mapZoom}&output=embed`
-    : "";
+    : `https://www.google.com/maps?q=${encodeURIComponent(mapQuery)}&z=${mapZoom}&output=embed`;
 
   return (
     <footer className="relative mt-auto overflow-hidden gradient-primary text-gray-300">
@@ -149,15 +153,17 @@ export function Footer({ navigation, settings, footer }: FooterProps) {
                 </a>
               </li>
             </ul>
-            {hasMapCoordinates && (
+            {mapQuery && (
               <div className="mt-4 overflow-hidden rounded-xl border border-white/10 bg-black/20">
+                <div className="relative aspect-[16/10] sm:aspect-video">
                 <iframe
                   title="Office location map"
                   src={mapsEmbedUrl}
-                  className="h-44 w-full"
+                  className="absolute inset-0 h-full w-full"
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
                 />
+                </div>
               </div>
             )}
           </div>

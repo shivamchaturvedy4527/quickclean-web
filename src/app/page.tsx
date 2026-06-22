@@ -14,6 +14,9 @@ import { InstallationGallery } from "@/components/InstallationGallery";
 import { PressingMachinesGrid } from "@/components/PressingMachinesGrid";
 import { getCMS } from "@/lib/cms-store";
 
+const FALLBACK_PRODUCTS_VIDEO_URL =
+  "https://www.youtube.com/watch?si=SonCvHpacSdRzxjL&v=G4Dxr3UFHpY&feature=youtu.be";
+
 function toYouTubeEmbedUrl(url?: string): string {
   if (!url) return "";
   try {
@@ -45,7 +48,7 @@ export default async function HomePage() {
   const cms = await getCMS();
   const { home, solutions, testimonials, brands, blog, products, installationGallery, pressingMachines, labels } = cms;
   const machineProducts = products.filter((p) => p.category === "Commercial Laundry");
-  const stripVideoUrl = home.productsVideoUrl || home.videoUrl;
+  const stripVideoUrl = home.productsVideoUrl || home.videoUrl || FALLBACK_PRODUCTS_VIDEO_URL;
   const stripVideoFileUrl = home.productsVideoFileUrl;
   const stripVideoEmbedUrl = toYouTubeEmbedUrl(stripVideoUrl);
 
@@ -133,9 +136,9 @@ export default async function HomePage() {
                   title={home.productsTitle}
                   subtitle={home.productsSubtitle}
                 />
-                {home.productsVideoUrl && (
+                {stripVideoUrl && (
                   <a
-                    href={home.productsVideoUrl}
+                    href={stripVideoUrl}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="btn-secondary whitespace-nowrap mt-4 sm:mt-0"
