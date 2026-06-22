@@ -107,38 +107,23 @@ export function Footer({ navigation, settings, footer }: FooterProps) {
             <ul className="space-y-4 text-sm">
               <li className="flex gap-3">
                 <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-accent-bright" />
-                {hasMapCoordinates ? (
-                  <a
-                    href={mapsUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="leading-relaxed text-gray-400 transition-colors hover:text-accent-bright hover:underline"
-                  >
-                    {settings.addressLine1}
-                    {settings.addressLine2 && (
-                      <>
-                        <br />
-                        {settings.addressLine2}
-                      </>
-                    )}
-                    <br />
-                    {settings.city}
-                    {settings.country ? `, ${settings.country}` : ""}
-                  </a>
-                ) : (
-                  <span className="leading-relaxed text-gray-400">
-                    {settings.addressLine1}
-                    {settings.addressLine2 && (
-                      <>
-                        <br />
-                        {settings.addressLine2}
-                      </>
-                    )}
-                    <br />
-                    {settings.city}
-                    {settings.country ? `, ${settings.country}` : ""}
-                  </span>
-                )}
+                <a
+                  href={mapsUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="leading-relaxed text-gray-400 transition-colors hover:text-accent-bright hover:underline"
+                >
+                  {settings.addressLine1}
+                  {settings.addressLine2 && (
+                    <>
+                      <br />
+                      {settings.addressLine2}
+                    </>
+                  )}
+                  <br />
+                  {settings.city}
+                  {settings.country ? `, ${settings.country}` : ""}
+                </a>
               </li>
               <li className="flex gap-3">
                 <Phone className="h-4 w-4 shrink-0 text-accent-bright" />
