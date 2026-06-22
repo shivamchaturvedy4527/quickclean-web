@@ -48,10 +48,13 @@ async function readFromBlob(): Promise<CMSData | null> {
   if (!hasBlobStorage()) return null;
 
   try {
-    const result = await get(BLOB_PATHNAME, { access: "public" });
-    if (!result || result.statusCode !== 200 || !result.stream) return null;
+    const metadata = await head(BLOB_PATHNAME);
+    if (!metadata?.url) return null;
 
-    const text = await new Response(result.stream).text();
+    const res = await fetch(metadata.url);
+    if (!res.ok) return null;
+
+    const text = await res.text();
     return JSON.parse(text) as CMSData;
   } catch {
     return null;
