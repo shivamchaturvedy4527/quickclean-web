@@ -1,13 +1,19 @@
 import type { NextConfig } from "next";
 
+const isStaticExport = process.env.HOSTINGER_STATIC_EXPORT === "1";
+
 const nextConfig: NextConfig = {
+  output: isStaticExport ? "export" : undefined,
   images: {
+    unoptimized: isStaticExport,
     remotePatterns: [
       { protocol: "https", hostname: "quickclean.co.in" },
       { protocol: "https", hostname: "i.postimg.cc" },
     ],
   },
   async redirects() {
+    if (isStaticExport) return [];
+
     return [
       { source: "/about", destination: "/about-us", permanent: true },
       { source: "/contact", destination: "/contact-us", permanent: true },

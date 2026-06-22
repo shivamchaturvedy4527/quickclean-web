@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "node scripts/verify-images.mjs && next build",
+    "build:hostinger-static": "node scripts/build-hostinger-static.mjs",
     "start": "next start",
     "lint": "eslint"
   },

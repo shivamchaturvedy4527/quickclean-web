@@ -11,12 +11,17 @@ const BLOB_PATHNAME = "cms/cms.json";
 
 let memoryCache: CMSData | null = null;
 
+function isStaticExportBuild(): boolean {
+  return process.env.HOSTINGER_STATIC_EXPORT === "1";
+}
+
 /** Serverless instances keep module state — never cache CMS reads on Vercel. */
 function useMemoryCache(): boolean {
   return !process.env.VERCEL;
 }
 
 function hasBlobStorage(): boolean {
+  if (isStaticExportBuild()) return false;
   return Boolean(process.env.BLOB_READ_WRITE_TOKEN);
 }
 
@@ -126,6 +131,12 @@ async function readFromBlobWithRetry(maxAttempts = 3): Promise<CMSData | null> {
 export async function getCMS(): Promise<CMSData> {
   if (useMemoryCache() && memoryCache) return memoryCache;
 
+  if (isStaticExportBuild()) {
+    const data = await readFromFile(DATA_FILE);
+    if (!data) throw new Error("CMS data file not found");
+    return cacheResult(data);
+  }
+
   if (hasBlobStorage()) {
     const fromBlob = await readFromBlobWithRetry();
     if (fromBlob) return cacheResult(fromBlob);
@@ -159,6 +170,12 @@ export async function getCMS(): Promise<CMSData> {
 export async function saveCMS(data: CMSData): Promise<CMSData> {
   const normalized = normalizeCms(data);
   const json = JSON.stringify(normalized, null, 2);
+
+  if (isStaticExportBuild()) {
+    await fs.writeFile(DATA_FILE, json, "utf-8");
+    memoryCache = normalized;
+    return normalized;
+  }
 
   if (hasBlobStorage()) {
     await writeToBlob(normalized);

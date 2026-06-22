@@ -15,9 +15,10 @@ export async function generateMetadata(): Promise<Metadata> {
 export default async function BlogPage({
   searchParams,
 }: {
-  searchParams: Promise<{ category?: string }>;
+  searchParams?: Promise<{ category?: string }>;
 }) {
-  const { category } = await searchParams;
+  const isStaticExport = process.env.HOSTINGER_STATIC_EXPORT === "1";
+  const { category } = !isStaticExport && searchParams ? await searchParams : { category: undefined };
   const cms = await getCMS();
   const posts = category
     ? cms.blog.filter((p) => p.category === category)
