@@ -11,13 +11,13 @@ const brands = Array.from({ length: 18 }, (_, i) => ({
 
 const cms = {
   settings: {
-    siteName: "QuickClean",
-    companyLegalName: "Quick Clean Laundry Systems Pvt. Ltd.",
+    siteName: "Laundrex",
+    companyLegalName: "Laundrex Laundry Systems Pvt. Ltd.",
     tagline: "",
     logo: "/images/logo.png",
     favicon: "/images/favicon-32.png",
     whatsappNumber: "917358258229",
-    whatsappMessage: "Hello, I would like to know more about QuickClean.",
+    whatsappMessage: "Hello, I would like to know more about Laundrex.",
     whatsappGreetingTemplate:
       "Hi, I'm {name}. My number is {phone}. I'd like to inquire about your laundry machines/services.",
     liveChatEmbed: "",
@@ -104,7 +104,7 @@ const cms = {
     sustainabilityImpactTitle: "",
     founderTitle: "From the Founder's Desk",
     founderMessage:
-      "Quick Clean started as a dream I carried with me. Today it has a home, a family, and a heartbeat of its own. I'm just grateful— for our team, for the people who believed in us, and for every challenge that made us better. This isn't just laundry; it's hope, belief, and the fire to keep building. Here's to the next chapter.",
+      "Laundrex started as a dream I carried with me. Today it has a home, a family, and a heartbeat of its own. I'm just grateful— for our team, for the people who believed in us, and for every challenge that made us better. This isn't just laundry; it's hope, belief, and the fire to keep building. Here's to the next chapter.",
     founderName: "Anshul Gupta",
     founderRole: "CEO",
     founderImage: "/images/founder.jpg",
@@ -127,7 +127,7 @@ const cms = {
       shortDescription:
         "We design, own, operate your laundry—effortless setup, zero investment, predictable efficiency.",
       description:
-        "Quick Clean's Build, Own & Operate (BOO) model delivers a complete, on-premise laundry that is designed, installed, owned, and fully operated by us—at zero capex to you. Your property receives a high-performance laundry inside the premises, and you simply pay a transparent per-kg processing price based on actual usage.\n\nWe build. We own. We operate.\n\nWith 110+ on-premise laundries, 3,000+ machines installed, and 70,000+ kg processed per day across India, Quick Clean brings unmatched reliability, sustainability, and operational consistency to hotels and hospitals nationwide.",
+        "Laundrex's Build, Own & Operate (BOO) model delivers a complete, on-premise laundry that is designed, installed, owned, and fully operated by us—at zero capex to you. Your property receives a high-performance laundry inside the premises, and you simply pay a transparent per-kg processing price based on actual usage.\n\nWe build. We own. We operate.\n\nWith 110+ on-premise laundries, 3,000+ machines installed, and 70,000+ kg processed per day across India, Quick Clean brings unmatched reliability, sustainability, and operational consistency to hotels and hospitals nationwide.",
       image: "/images/hero.jpg",
       features: [
         "Zero Capital Investment",
@@ -172,7 +172,7 @@ const cms = {
       shortDescription:
         "Receive hygienic, professionally cleaned linens on schedule, freeing your resources for core operations.",
       description:
-        "Outsource your institutional linen lifecycle to Quick Clean. We supply quality-assured textiles, collect soiled inventory, process through certified commercial laundries, and deliver fresh stock on agreed schedules.",
+        "Outsource your institutional linen lifecycle to Laundrex. We supply quality-assured textiles, collect soiled inventory, process through certified commercial laundries, and deliver fresh stock on agreed schedules.",
       image: "/images/hero.jpg",
       features: [
         "Full linen inventory management",
@@ -214,7 +214,7 @@ const cms = {
     {
       id: "t1",
       quote:
-        "Quick Clean's BOO model made our laundry setup effortless and cost-free. Their team manages everything with great efficiency, and the results have been consistently excellent.",
+        "Laundrex's BOO model made our laundry setup effortless and cost-free. Their team manages everything with great efficiency, and the results have been consistently excellent.",
       author: "Nitin Sharma",
       company: "",
       image: "/images/testimonial-nitin.jpg",
@@ -275,7 +275,7 @@ const cms = {
   ],
   about: {
     title: "About Us",
-    intro: "Quick Clean Laundry Systems Pvt. Ltd. — India's trusted partner for on-premise commercial laundry since 2010.",
+    intro: "Laundrex Laundry Systems Pvt. Ltd. — India's trusted partner for on-premise commercial laundry since 2010.",
     mission: "",
     vision: "",
     heroImage: "/images/hero.jpg",
@@ -284,7 +284,7 @@ const cms = {
     journeyTitle: "Our Journey",
     timeline: [
       { year: "2010", title: "Foundation", description: "A visit to a U.S. laundromat sparked Anshul Gupta's vision: India deserved structured, tech-driven laundry too. He shared it with his brother, Ankur Gupta—and together they set out to bring the laundromat revolution to India." },
-      { year: "2011", title: "Expansion", description: "The idea caught fire. Quick Clean opened 40+ laundromats across India, proving demand for organized, reliable laundry services." },
+      { year: "2011", title: "Expansion", description: "The idea caught fire. Laundrex opened 40+ laundromats across India, proving demand for organized, reliable laundry services." },
       { year: "2012", title: "OEM Partnerships", description: "Partnered with Electrolux Professional to introduce energy-efficient, gas-based machines—raising the bar for performance and sustainability in India." },
       { year: "2013", title: "Healthcare & Hospitality", description: "Expanded into hotels and hospitals, delivering professional laundry solutions to leading brands like Marriott and Taj." },
       { year: "2014", title: "Growth", description: "Abhishek Gupta joined to power the next phase of growth and strengthen capital discipline. Signed an agreement with TREVIL to bring premium finishing solutions to India." },
@@ -335,8 +335,8 @@ const cms = {
     mapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3506.2233913121413!2d77.0899!3d28.4945!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDI5JzQwLjIiTiA3N8KwMDUnMjMuNiJF!5e0!3m2!1sen!2sin!4v1600000000000",
   },
   footer: {
-    aboutText: "Quick Clean Laundry Systems Pvt. Ltd.",
-    copyright: "© Quick Clean Laundry Systems Pvt. Ltd.",
+    aboutText: "Laundrex Laundry Systems Pvt. Ltd.",
+    copyright: "© Laundrex Laundry Systems Pvt. Ltd.",
     solutionsTitle: "Our Solutions",
     companyTitle: "Company",
     headOfficeTitle: "Head Office",
@@ -365,7 +365,7 @@ const cms = {
     wakeUpTitle: "A Wake-Up Call !",
     wakeUpParagraphs: [],
     programTitle: "ReWeave 360",
-    programDescription: "ReWeave 360 is India's first circular linen economy program by Quick Clean Laundry Solutions.",
+    programDescription: "ReWeave 360 is India's first circular linen economy program by Laundrex.",
     howItWorksTitle: "How It Works",
     steps: [],
     benefitsTitle: "What Your Brand Gains",
@@ -381,9 +381,9 @@ const cms = {
   },
   financialPlanning: { title: "Financial Planning", intro: "", sections: [] },
   legal: {
-    privacy: { title: "Privacy Policy", lastUpdated: "2025-01-01", sections: [{ heading: "Privacy Policy", body: "Quick Clean Laundry Systems Pvt. Ltd. privacy policy." }] },
-    terms: { title: "Terms of Service", lastUpdated: "2025-01-01", sections: [{ heading: "Terms", body: "Quick Clean Laundry Systems Pvt. Ltd. terms of service." }] },
-    codeOfConduct: { title: "Code of Conduct", lastUpdated: "2025-01-01", sections: [{ heading: "Code of Conduct", body: "Quick Clean Laundry Systems Pvt. Ltd. code of conduct." }] },
+    privacy: { title: "Privacy Policy", lastUpdated: "2025-01-01", sections: [{ heading: "Privacy Policy", body: "Laundrex Laundry Systems Pvt. Ltd. privacy policy." }] },
+    terms: { title: "Terms of Service", lastUpdated: "2025-01-01", sections: [{ heading: "Terms", body: "Laundrex Laundry Systems Pvt. Ltd. terms of service." }] },
+    codeOfConduct: { title: "Code of Conduct", lastUpdated: "2025-01-01", sections: [{ heading: "Code of Conduct", body: "Laundrex Laundry Systems Pvt. Ltd. code of conduct." }] },
   },
   contactSubmissions: [],
   newsletterSubmissions: [],

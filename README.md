@@ -1,13 +1,13 @@
-# QuickClean — Commercial Laundry Website Clone
+# Laundrex — Commercial Laundry Website
 
-A **feature-complete clone** of [quickclean.co.in](https://quickclean.co.in) with a premium international B2B redesign. Built with **Next.js 16**, **TypeScript**, **Tailwind CSS 4**, and **Framer Motion**.
+A premium international B2B laundry website. Built with **Next.js 16**, **TypeScript**, **Tailwind CSS 4**, and **Framer Motion**. Built with **Next.js 16**, **TypeScript**, **Tailwind CSS 4**, and **Framer Motion**.
 
 ## Deployment
 
 **Canonical production URL:** https://quickclean-clone.vercel.app  
 **GitHub:** https://github.com/shivamchaturvedy4527/quickclean-web
 
-This is the **only active QuickClean client project** on Vercel (`quickclean-clone`), linked to the `quickclean-web` repo.
+This is the **Only active Laundrex client project** on Vercel (`quickclean-clone`), linked to the `quickclean-web` repo.
 
 ## Feature Parity
 
@@ -39,7 +39,7 @@ Open [http://localhost:3000](http://localhost:3000)
 | Field | Value |
 |-------|-------|
 | URL | `/admin` |
-| Default Password | `QuickClean@2026` |
+| Default Password | `Laundrex@2026` |
 
 Override with environment variable:
 
@@ -61,7 +61,7 @@ All content is driven by `data/cms.json` and editable via `/admin` dashboard tab
 
 | Variable | Description |
 |----------|-------------|
-| `ADMIN_PASSWORD` | Admin login password (default: `QuickClean@2026`) |
+| `ADMIN_PASSWORD` | Admin login password (default: `Laundrex@2026`) |
 | `CONTACT_EMAIL_TO` | Optional email for contact form notifications |
 | `BLOB_READ_WRITE_TOKEN` | Auto-set when Vercel Blob store is linked to the project |
 
@@ -81,12 +81,6 @@ npm run start    # Production server
 npm run lint     # ESLint
 ```
 
-## Differences from quickclean.co.in
-
-- **Premium UI redesign** — Plus Jakarta Sans + Instrument Serif, Framer Motion section reveals, refined cards and hover states
-- **Content** seeded from quickclean.co.in (images in `public/images/`)
-- **Video embed** URL editable in admin Home tab
-- **WordPress-specific plugins** (Elementor, etc.) not replicated — functionality equivalent in Next.js
 
 ## License
 
